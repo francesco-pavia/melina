@@ -143,7 +143,7 @@ export const AmenitiesOverview: React.FC = () => {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#FF385C] hover:bg-[#e03150] text-white text-xs font-semibold transition-colors"
               >
-                <span>Prenota {apt1.name} su Airbnb</span>
+                <span>{translations[language].hero.bookOn} {apt1.name} (Airbnb)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -190,7 +190,7 @@ export const AmenitiesOverview: React.FC = () => {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#003580] hover:bg-[#002660] text-white text-xs font-semibold transition-colors"
               >
-                <span>Prenota {apt2.name} su Booking.com</span>
+                <span>{translations[language].hero.bookOn} {apt2.name} (Booking.com)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>

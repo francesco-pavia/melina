@@ -5,7 +5,7 @@ import type { Language } from '../context/LanguageContext'
 export const baseApartments: Apartment[] = [
   {
     id: 'melina-terrace',
-    name: 'Melina Sunny Terrace',
+    name: 'La Melina sulla Mole',
     subtitle: 'Luminoso appartamento all’ultimo piano con terrazzo panoramico privato',
     platform: 'Airbnb',
     platformUrl: 'https://www.airbnb.com', // Replace with your exact Airbnb listing URL
@@ -22,7 +22,7 @@ export const baseApartments: Apartment[] = [
     description:
       'Un rifugio baciato dal sole in Via Po 51, con un ampio terrazzo privato che domina i tetti di Torino.',
     story:
-      'Melina Sunny Terrace nasce per offrirti momenti indimenticabili. Fai colazione all’aperto guardando il cielo di Torino o rilassati con un calice di vino al tramonto sul terrazzo lounge.',
+      'La Melina sulla Mole nasce per offrirti momenti indimenticabili. Fai colazione all’aperto guardando il cielo di Torino o rilassati con un calice di vino al tramonto sul terrazzo lounge.',
     heroImage:
       'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
@@ -79,7 +79,7 @@ export const baseApartments: Apartment[] = [
   },
   {
     id: 'melina-garden',
-    name: 'Melina Garden Loft',
+    name: 'La Melina su Via Po',
     subtitle: 'Affascinante loft al piano terra con intimo patio giardino botanico privato',
     platform: 'Booking.com',
     platformUrl: 'https://www.booking.com', // Replace with your exact Booking.com listing URL
@@ -96,7 +96,7 @@ export const baseApartments: Apartment[] = [
     description:
       'Un’oasi di quiete nel centro storico: ambienti rifiniti con dettagli di design e accesso diretto a un giardino segreto ombreggiato da piante e gelsomino.',
     story:
-      'Melina Garden Loft unisce la quiete delle storiche corti interne di Via Po 51 alla modernità degli arredi. Situato al piano terra senza barriere architettoniche e senza scale da salire, dispone di un riservato patio esterno.',
+      'La Melina su Via Po unisce la quiete delle storiche corti interne di Via Po 51 alla modernità degli arredi. Situato al piano terra senza barriere architettoniche e senza scale da salire, dispone di un riservato patio esterno.',
     heroImage:
       'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
     galleryImages: [
@@ -247,7 +247,7 @@ export const guestReviews: GuestReview[] = [
     date: 'Settembre 2026',
     rating: 5.0,
     platform: 'Airbnb',
-    apartmentName: 'Melina Sunny Terrace',
+    apartmentName: 'La Melina sulla Mole',
     text: 'Soggiorno da sogno in Via Po! Il terrazzo è qualcosa di spettacolare con vista sui tetti. Posizione comodissima per girare tutta Torino a piedi. Francesco è stato gentilissimo e disponibilissimo.',
   },
   {
@@ -257,7 +257,7 @@ export const guestReviews: GuestReview[] = [
     date: 'Agosto 2026',
     rating: 10,
     platform: 'Booking.com',
-    apartmentName: 'Melina Garden Loft',
+    apartmentName: 'La Melina su Via Po',
     text: 'Wunderschöne Oase mitten im Zentrum von Turin! Der private Garten im Innenhof ist herrlich ruhig nach einem langen Tag in der Stadt. Perfekte Klimaanlage, sehr bequeme Betten und top sauber.',
   },
   {
@@ -267,7 +267,7 @@ export const guestReviews: GuestReview[] = [
     date: 'Luglio 2026',
     rating: 5.0,
     platform: 'Airbnb',
-    apartmentName: 'Melina Sunny Terrace',
+    apartmentName: 'La Melina sulla Mole',
     text: 'Appartamento meraviglioso, pulizia impeccabile e posizione comodissima sotto i portici di Via Po. Il self check-in con tastierino è stato comodissimo e il terrazzo è fantastico.',
   },
   {
@@ -277,7 +277,7 @@ export const guestReviews: GuestReview[] = [
     date: 'Giugno 2026',
     rating: 9.8,
     platform: 'Booking.com',
-    apartmentName: 'Melina Garden Loft',
+    apartmentName: 'La Melina su Via Po',
     text: 'Une pépite au cœur de Turin ! Très calme dans la cour intérieure, aucun escalier à monter, literie parfaite et accueil très attentionné de Francesco. Nous reviendrons sans hésiter.',
   },
 ]

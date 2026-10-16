@@ -8,13 +8,13 @@ The website is designed purely for showcase, presentation, and guest communicati
 
 ## 🏡 Featured Apartments
 
-1. **Melina Sunny Terrace (Rented on Airbnb):**
-   - Top-floor apartment with a private panoramic terrace and al fresco dining.
+1. **La Melina sulla Mole (Rented on Airbnb):**
+   - Top-floor apartment with a private panoramic terrace overlooking Turin and the Mole Antonelliana.
    - Up to 4 guests · 1 King bedroom + sofa bed · 1 bathroom · 68 m².
    - Direct link to book on Airbnb with Superhost verification.
 
-2. **Melina Garden Loft (Rented on Booking.com):**
-   - Peaceful ground-floor loft with private botanical garden patio.
+2. **La Melina su Via Po (Rented on Booking.com):**
+   - Peaceful ground-floor loft with private botanical garden patio facing historic Via Po courtyards.
    - Up to 3 guests · 1 bedroom · 2 beds · 1 bathroom · 56 m².
    - Direct link to book on Booking.com with Traveler Review Award (9.7/10).
 

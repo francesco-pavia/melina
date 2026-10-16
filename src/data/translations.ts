@@ -162,8 +162,8 @@ export const translations: Record<Language, SiteTranslations> = {
   it: {
     nav: {
       apartments: 'Gli Appartamenti',
-      terrace: 'Sunny Terrace',
-      garden: 'Garden Loft',
+      terrace: 'La Melina sulla Mole',
+      garden: 'La Melina su Via Po',
       amenities: 'Servizi',
       location: 'Posizione',
       reviews: 'Recensioni',
@@ -337,14 +337,14 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'Melina Sunny Terrace',
+        name: 'La Melina sulla Mole',
         subtitle:
           'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico privato',
         badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'Un rifugio baciato dal sole in Via Po 51, con un ampio terrazzo privato che domina i tetti di Torino. Ideale per coppie, famiglie o professionisti in cerca di charme autentico e comfort moderni.',
         story:
-          'Melina Sunny Terrace nasce per offrirti momenti indimenticabili. Fai colazione all’aperto guardando il cielo di Torino o rilassati con un calice di vino al tramonto sul terrazzo lounge. La zona giorno presenta soffitti alti, zona pranzo dedicata e una moderna cucina attrezzata per ogni esigenza.',
+          'La Melina sulla Mole nasce per offrirti momenti indimenticabili. Fai colazione all’aperto guardando il cielo di Torino o rilassati con un calice di vino al tramonto sul terrazzo lounge. La zona giorno presenta soffitti alti, zona pranzo dedicata e una moderna cucina attrezzata per ogni esigenza.',
         highlights: [
           'Terrazzo privato all’ultimo piano con tavolo da pranzo esterno e sdraio prendisole',
           'Posizione centralissima in Via Po 51, a due passi da Piazza Vittorio e Mole',
@@ -366,14 +366,14 @@ export const translations: Record<Language, SiteTranslations> = {
         },
       },
       garden: {
-        name: 'Melina Garden Loft',
+        name: 'La Melina su Via Po',
         subtitle:
           'Affascinante loft al piano terra con intimo patio giardino botanico privato',
         badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
         description:
           'Un’oasi di quiete nel centro storico: ambienti rifiniti con dettagli di design e accesso diretto a un giardino segreto ombreggiato da piante e gelsomino. Perfetto per rigenerarsi dopo una giornata in città.',
         story:
-          'Melina Garden Loft unisce la quiete delle storiche corti interne di Via Po 51 alla modernità degli arredi. Situato al piano terra senza barriere architettoniche e senza scale da salire, dispone di un riservato patio esterno ideale per il caffè del mattino o un momento di lettura immersi nel verde.',
+          'La Melina su Via Po unisce la quiete delle storiche corti interne di Via Po 51 alla modernità degli arredi. Situato al piano terra senza barriere architettoniche e senza scale da salire, dispone di un riservato patio esterno ideale per il caffè del mattino o un momento di lettura immersi nel verde.',
         highlights: [
           'Patio giardino privato e recintato con tavolo bistrot e ombrellone',
           'Comodo accesso a piano terra senza scale, ideale per chi viaggia con valigie pesanti',
@@ -399,8 +399,8 @@ export const translations: Record<Language, SiteTranslations> = {
   en: {
     nav: {
       apartments: 'The Apartments',
-      terrace: 'Sunny Terrace',
-      garden: 'Garden Loft',
+      terrace: 'La Melina sulla Mole',
+      garden: 'La Melina su Via Po',
       amenities: 'Amenities',
       location: 'Location',
       reviews: 'Reviews',
@@ -574,14 +574,14 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'Melina Sunny Terrace',
+        name: 'La Melina sulla Mole',
         subtitle:
           'Top-floor bright apartment with private panoramic rooftop terrace',
         badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'A sun-drenched retreat at Via Po 51 featuring an expansive private terrace overlooking the rooftops of Turin. Ideal for couples, families, or remote workers seeking authentic charm and modern comforts.',
         story:
-          'Melina Sunny Terrace was curated to offer guests unforgettable memories. Savor breakfast outdoors under the Italian morning sun or relax with an evening aperitivo watching the sunset from the terrace lounge. The living space features high ceilings, a dining area, and a fully equipped chef’s kitchen.',
+          'La Melina sulla Mole was curated to offer guests unforgettable memories. Savor breakfast outdoors under the Italian morning sun or relax with an evening aperitivo watching the sunset from the terrace lounge. The living space features high ceilings, a dining area, and a fully equipped chef’s kitchen.',
         highlights: [
           'Top-floor private terrace with al fresco dining table & sun loungers',
           'Prime central location in Via Po 51, steps from Piazza Vittorio & Mole',
@@ -603,14 +603,14 @@ export const translations: Record<Language, SiteTranslations> = {
         },
       },
       garden: {
-        name: 'Melina Garden Loft',
+        name: 'La Melina su Via Po',
         subtitle:
           'Charming ground-floor loft with private botanical garden patio',
         badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
         description:
           'A peaceful haven in Turin’s historic center: stylish designer finishes and direct access to a tranquil garden patio shaded by lush plants and jasmine. An idyllic sanctuary after exploring the city.',
         story:
-          'Melina Garden Loft combines the quiet atmosphere of historical Via Po courtyards with modern Italian furnishings. Located on the ground floor with zero stair climbing, it opens up to an enclosed private patio perfect for your morning espresso or relaxing evening read.',
+          'La Melina su Via Po combines the quiet atmosphere of historical Via Po courtyards with modern Italian furnishings. Located on the ground floor with zero stair climbing, it opens up to an enclosed private patio perfect for your morning espresso or relaxing evening read.',
         highlights: [
           'Private enclosed botanical patio with bistro table and parasol',
           'Step-free ground-floor access, ideal for luggage and easy entry',
@@ -636,8 +636,8 @@ export const translations: Record<Language, SiteTranslations> = {
   fr: {
     nav: {
       apartments: 'Les Appartements',
-      terrace: 'Sunny Terrace',
-      garden: 'Garden Loft',
+      terrace: 'La Melina sulla Mole',
+      garden: 'La Melina su Via Po',
       amenities: 'Services',
       location: 'Emplacement',
       reviews: 'Avis',
@@ -811,14 +811,14 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'Melina Sunny Terrace',
+        name: 'La Melina sulla Mole',
         subtitle:
           'Appartement lumineux au dernier étage avec terrasse panoramique privée',
         badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'Un havre baigné de soleil au 51 Via Po avec une immense terrasse privée dominant les toits de Turin. Idéal pour couples, familles ou séjours professionnels alliant élégance et confort.',
         story:
-          'Melina Sunny Terrace a été conçu pour offrir des moments magiques. Prenez votre petit-déjeuner en plein air ou savourez un apéritif au coucher du soleil. L’espace de vie offre de hauts plafonds, un bel espace repas et une cuisine moderne entièrement équipée.',
+          'La Melina sulla Mole a été conçu pour offrir des moments magiques. Prenez votre petit-déjeuner en plein air ou savourez un apéritif au coucher du soleil. L’espace de vie offre de hauts plafonds, un bel espace repas et une cuisine moderne entièrement équipée.',
         highlights: [
           'Terrasse privée au dernier étage avec table pour dîner dehors et transats',
           'Emplacement exceptionnel Via Po 51, à deux pas de Piazza Vittorio et de la Mole',
@@ -840,14 +840,14 @@ export const translations: Record<Language, SiteTranslations> = {
         },
       },
       garden: {
-        name: 'Melina Garden Loft',
+        name: 'La Melina su Via Po',
         subtitle:
           'Loft plein de charme en rez-de-chaussée avec patio jardin privatif',
         badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
         description:
           'Une oasis de sérénité au cœur de la ville : finitions soignées et accès direct à un patio intime entouré de verdure et de jasmin. Le refuge parfait après une belle journée de visite.',
         story:
-          'Melina Garden Loft allie le calme des cours historiques de la Via Po au confort contemporain. Situé en rez-de-chaussée sans marches à monter, il dispose d’un jardin extérieur privé pour vos cafés du matin ou vos lectures apaisantes.',
+          'La Melina su Via Po allie le calme des cours historiques de la Via Po au confort contemporain. Situé en rez-de-chaussée sans marches à monter, il dispose d’un jardin extérieur privé pour vos cafés du matin ou vos lectures apaisantes.',
         highlights: [
           'Patio jardin privatif clos avec table bistrot et parasol',
           'Accès de plain-pied sans marches, très pratique pour les bagages',
@@ -873,8 +873,8 @@ export const translations: Record<Language, SiteTranslations> = {
   de: {
     nav: {
       apartments: 'Die Apartments',
-      terrace: 'Sunny Terrace',
-      garden: 'Garden Loft',
+      terrace: 'La Melina sulla Mole',
+      garden: 'La Melina su Via Po',
       amenities: 'Ausstattung',
       location: 'Lage',
       reviews: 'Bewertungen',
@@ -1048,14 +1048,14 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'Melina Sunny Terrace',
+        name: 'La Melina sulla Mole',
         subtitle:
           'Helles Dachgeschoss-Apartment mit privater Panorama-Dachterrasse',
         badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'Ein sonnendurchflutetes Refugium in der Via Po 51 mit großer privater Terrasse über den Dächern Turins. Ideal für Paare, Familien oder Geschäftsreisende mit Sinn für Stil und Komfort.',
         story:
-          'Melina Sunny Terrace bietet ein unvergessliches Turin-Erlebnis. Frühstücken Sie unter freiem Himmel oder genießen Sie den Sonnenuntergang bei einem Glas Wein. Der Wohnbereich besticht durch hohe Decken, einen großzügigen Essplatz und eine moderne Küche.',
+          'La Melina sulla Mole bietet ein unvergessliches Turin-Erlebnis. Frühstücken Sie unter freiem Himmel oder genießen Sie den Sonnenuntergang bei einem Glas Wein. Der Wohnbereich besticht durch hohe Decken, einen großzügigen Essplatz und eine moderne Küche.',
         highlights: [
           'Private Dachterrasse mit Esstisch im Freien und bequemen Sonnenliegen',
           'Zentrale Top-Lage in der Via Po 51 nahe Piazza Vittorio und Mole',
@@ -1077,14 +1077,14 @@ export const translations: Record<Language, SiteTranslations> = {
         },
       },
       garden: {
-        name: 'Melina Garden Loft',
+        name: 'La Melina su Via Po',
         subtitle:
           'Stilvolles Erdgeschoss-Loft mit privatem begrüntem Garten-Patio',
         badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
         description:
           'Eine Ruheoase mitten in Turin: geschmackvolles Interieur und direkter Zugang zu einem geschützten Innenhof mit Jasmin und mediterranen Pflanzen. Perfekt zum Entspannen nach einem Tag in der Stadt.',
         story:
-          'Melina Garden Loft verbindet den Charme historischer Innenhöfe der Via Po mit modernem italienischem Design. Das stufenlose Erdgeschoss-Apartment bietet einen uneinsehbaren Gartenbereich für den Morgenkaffee oder gemütliche Lesestunden.',
+          'La Melina su Via Po verbindet den Charme historischer Innenhöfe der Via Po mit modernem italienischem Design. Das stufenlose Erdgeschoss-Apartment bietet einen uneinsehbaren Gartenbereich für den Morgenkaffee oder gemütliche Lesestunden.',
         highlights: [
           'Privater begrünter Patio mit Bistrotisch und Sonnenschirm',
           'Stufenloser Erdgeschoss-Zugang, ideal für Reisende mit Gepäck',
@@ -1110,8 +1110,8 @@ export const translations: Record<Language, SiteTranslations> = {
   es: {
     nav: {
       apartments: 'Los Apartamentos',
-      terrace: 'Sunny Terrace',
-      garden: 'Garden Loft',
+      terrace: 'La Melina sulla Mole',
+      garden: 'La Melina su Via Po',
       amenities: 'Servicios',
       location: 'Ubicación',
       reviews: 'Opiniones',
@@ -1285,14 +1285,14 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'Melina Sunny Terrace',
+        name: 'La Melina sulla Mole',
         subtitle:
           'Luminoso apartamento en última planta con terraza panorámica privada',
         badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'Un oasis bañado por el sol en Via Po 51 con una amplia terraza privada con vistas a los tejados de Turín. Ideal para parejas, familias o estancias de trabajo que buscan encanto y comodidades de primer nivel.',
         story:
-          'Melina Sunny Terrace fue creado para regalar momentos memorables. Desayuna al aire libre o contempla el atardecer con un buen vino desde el salón exterior. El apartamento cuenta con techos altos, zona de comedor y una cocina equipada al completo.',
+          'La Melina sulla Mole fue creado para regalar momentos memorables. Desayuna al aire libre o contempla el atardecer con un buen vino desde el salón exterior. El apartamento cuenta con techos altos, zona de comedor y una cocina equipada al completo.',
         highlights: [
           'Terraza privada en la azotea con mesa de comedor y tumbonas',
           'Ubicación céntrica privilegiada en Via Po 51, a pasos de Piazza Vittorio y la Mole',
@@ -1314,14 +1314,14 @@ export const translations: Record<Language, SiteTranslations> = {
         },
       },
       garden: {
-        name: 'Melina Garden Loft',
+        name: 'La Melina su Via Po',
         subtitle:
           'Acogedor loft en planta baja con íntimo patio jardín botánico privado',
         badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
         description:
           'Un remanso de paz en pleno centro histórico: diseño moderno y acceso directo a un tranquilo jardín privado con plantas y jazmines. El lugar perfecto para descansar tras un día explorando la ciudad.',
         story:
-          'Melina Garden Loft combina el sosiego de los patios históricos de Via Po 51 con el diseño contemporáneo. Ubicado en la planta baja sin barreras ni escaleras, dispone de un agradable patio exterior para tomar el café o leer relajadamente.',
+          'La Melina su Via Po combina el sosiego de los patios históricos de Via Po 51 con el diseño contemporáneo. Ubicado en la planta baja sin barreras ni escaleras, dispone de un agradable patio exterior para tomar el café o leer relajadamente.',
         highlights: [
           'Patio jardín privado con mesa bistró y sombrilla',
           'Acceso directo en planta baja sin escalones, muy cómodo para el equipaje',
