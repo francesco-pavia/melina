@@ -1,6 +1,6 @@
-# Melina Apartments — Holiday Rentals Showcase
+# Melina — Holiday Rentals Showcase
 
-A modern, elegant showcase website for **Melina Apartments**, presenting two private holiday apartments in Italy rented on **Airbnb** and **Booking.com**.
+A modern, elegant showcase website for **Melina**, presenting two private holiday apartments in Italy rented on **Airbnb** and **Booking.com**.
 
 The website is designed purely for showcase, presentation, and guest communication — direct reservations are fulfilled via verified **Airbnb** and **Booking.com** listings.
 
@@ -28,7 +28,7 @@ The website is designed purely for showcase, presentation, and guest communicati
 - **Shared Standards:** Highlights fast fiber Wi-Fi, air conditioning, keypad self check-in, and cleanliness standards.
 - **Neighborhood Guide:** Walking distances to historic center, restaurants, beaches, and train station.
 - **Verified Guest Reviews:** Real guest testimonials showcasing high ratings on Airbnb (4.96 ★) and Booking.com (9.7/10).
-- **Direct Host Communication:** Meet Francesco with WhatsApp chat, direct email, phone, and an inquiry form.
+- **Direct Host Communication:** Meet host Alessandra with WhatsApp chat, direct email, phone, and an inquiry form.
 
 ---
 
@@ -54,7 +54,7 @@ Melina/
 │   │   ├── ApartmentSection.tsx  # Detailed apartment presentation & photo grid
 │   │   ├── Footer.tsx            # Footer navigation & platform links
 │   │   ├── Hero.tsx              # Welcoming hero with quick apartment cards
-│   │   ├── HostContact.tsx       # Meet host Francesco, WhatsApp & inquiry form
+│   │   ├── HostContact.tsx       # Meet host Alessandra, WhatsApp & inquiry form
 │   │   ├── Icons.tsx             # Official Airbnb, Booking.com & WhatsApp SVGs
 │   │   ├── ImageLightbox.tsx     # Full-screen photo gallery viewer
 │   │   ├── LocationSection.tsx   # Neighborhood walking distances & sights

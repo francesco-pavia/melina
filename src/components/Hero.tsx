@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Star,
   Users,
   Maximize,
   ExternalLink,
@@ -21,14 +20,25 @@ export const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-stone-950">
+      {/* Background Photo with Lightened, Luminous Overlays */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <img
+          src="/turin_bg.jpg"
+          alt="Turin Panorama"
+          className="w-full h-full object-cover object-center brightness-[0.82] contrast-[1.06]"
+        />
+        {/* Subtle gradient to keep navbar readable and smoothly transition into the section below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/20 to-stone-950" />
+      </div>
+
       {/* Warm Ambient Decorative Blurs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-600/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-rose-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-[350px] h-[350px] bg-sky-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-600/10 rounded-full blur-[140px] pointer-events-none z-0" />
+      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-rose-600/10 rounded-full blur-[120px] pointer-events-none z-0" />
+      <div className="absolute bottom-10 right-1/4 w-[350px] h-[350px] bg-sky-600/10 rounded-full blur-[120px] pointer-events-none z-0" />
 
       {/* Subtle Pattern */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="absolute inset-0 opacity-[0.02] pointer-events-none z-0"
         style={{
           backgroundImage:
             'radial-gradient(circle at 1px 1px, #f59e0b 1px, transparent 0)',
@@ -36,22 +46,17 @@ export const Hero: React.FC = () => {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
         {/* Main Headline & Intro */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-950/60 border border-amber-800/40 text-amber-300 text-xs sm:text-sm font-medium backdrop-blur-sm shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span>{t.welcomeBadge}</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.15] drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             {t.headlineStart}{' '}
             <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-rose-300 bg-clip-text text-transparent">
               {t.headlineHighlight}
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-stone-100 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
             {t.subtitle}
           </p>
         </div>
@@ -63,7 +68,7 @@ export const Hero: React.FC = () => {
             return (
               <div
                 key={apt.id}
-                className="group relative rounded-3xl bg-stone-900/60 border border-stone-800 hover:border-stone-700/80 overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
+                className="group relative rounded-3xl bg-stone-900/80 backdrop-blur-md border border-stone-800 hover:border-stone-700/80 overflow-hidden shadow-2xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
               >
                 {/* Image */}
                 <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-950">
@@ -90,13 +95,6 @@ export const Hero: React.FC = () => {
                       )}
                       <span>{t.listedOn} {apt.platform}</span>
                     </span>
-                  </div>
-
-                  {/* Rating Tag */}
-                  <div className="absolute top-4 right-4 bg-stone-950/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-amber-300 border border-stone-800 flex items-center gap-1">
-                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    <span>{apt.rating}</span>
-                    <span className="text-stone-400">({apt.reviewCount})</span>
                   </div>
 
                   {/* Name overlay */}

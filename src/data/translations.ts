@@ -128,6 +128,9 @@ export interface SiteTranslations {
     badge: string
     title: string
     subtitle: string
+    formTitle: string
+    formSubtitle: string
+    formBadge: string
     hostTitle: string
     hostRole: string
     languagesLabel: string
@@ -170,7 +173,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Contatti',
     },
     hero: {
-      welcomeBadge: 'Benvenuti a Melina Apartments · Torino Centro',
+      welcomeBadge: 'Benvenuti a Melina · Torino Centro',
       headlineStart: 'Due Oasi Esclusive nel Cuore di',
       headlineHighlight: 'Torino',
       subtitle:
@@ -213,7 +216,7 @@ export const translations: Record<Language, SiteTranslations> = {
         'Controlla date disponibili, conferma immediata, politiche di cancellazione flessibili e prenota con garanzia Booking.com.',
       liveCalendar: 'Calendario sempre aggiornato in tempo reale',
       instantConfirmation: 'Conferma immediata e pagamento sicuro',
-      hostSupport: 'Assistenza diretta dell’host Francesco 24/7',
+      hostSupport: 'Assistenza diretta dell’host Alessandra 24/7',
       bookButton: 'Vedi Disponibilità e Prenota su',
       redirectNotice: 'Verrai reindirizzato alla pagina ufficiale dell’annuncio.',
       viewAllPhotos: 'Guarda tutte le foto',
@@ -307,8 +310,11 @@ export const translations: Record<Language, SiteTranslations> = {
       title: 'Hai Domande Prima di Prenotare?',
       subtitle:
         'Le prenotazioni e i calendari avvengono su Airbnb e Booking.com, ma sono a tua completa disposizione per informazioni su parcheggi, trasporti e richieste particolari.',
-      hostTitle: 'Francesco',
-      hostRole: 'Host & Gestore di Melina Apartments',
+      formTitle: 'Invia un Messaggio Diretto',
+      formSubtitle: 'Richiesta informazioni o disponibilità date',
+      formBadge: 'Risposta personale entro poche ore',
+      hostTitle: 'Alessandra Mela',
+      hostRole: 'Host & Property Manager · Melina',
       languagesLabel: 'Lingue parlate:',
       whatsappCta: 'Scrivimi su WhatsApp',
       whatsappSub: 'Risposta rapida',
@@ -322,8 +328,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bothOption: 'Entrambi / Da valutare',
       yourMessage: 'Il tuo messaggio o date desiderate *',
       messagePlaceholder:
-        'Ciao Francesco, stiamo pianificando una visita a Torino. Volevo chiederti se...',
-      sendButton: 'Invia Messaggio a Francesco',
+        'Ciao Alessandra, stiamo pianificando una visita a Torino. Volevo chiederti se...',
+      sendButton: 'Invia Messaggio ad Alessandra',
       sendingButton: 'Invio in corso...',
     },
     footer: {
@@ -340,7 +346,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico privato',
-        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
+        badgeText: 'Booking.com Traveler Review Award',
         description:
           'Un rifugio baciato dal sole in Via Po 51, con un ampio terrazzo privato che domina i tetti di Torino. Ideale per coppie, famiglie o professionisti in cerca di charme autentico e comfort moderni.',
         story:
@@ -349,7 +355,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Terrazzo privato all’ultimo piano con tavolo da pranzo esterno e sdraio prendisole',
           'Posizione centralissima in Via Po 51, a due passi da Piazza Vittorio e Mole',
           'Serratura digitale con codice per un self check-in comodo a qualsiasi ora',
-          'Valutazione 9.8/10 per pulizia e accoglienza dell’host su Booking.com',
+          'Massima cura per pulizia e accoglienza dell’host su Booking.com',
         ],
         galleryCaptions: [
           'Soggiorno accogliente con abbondante luce naturale e accesso diretto al terrazzo',
@@ -369,7 +375,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Affascinante loft al piano terra con intimo patio giardino botanico privato',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Airbnb Superhost Preferred',
         description:
           'Un’oasi di quiete nel centro storico: ambienti rifiniti con dettagli di design e accesso diretto a un giardino segreto ombreggiato da piante e gelsomino. Perfetto per rigenerarsi dopo una giornata in città.',
         story:
@@ -407,7 +413,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Contact',
     },
     hero: {
-      welcomeBadge: 'Welcome to Melina Apartments · Turin Center',
+      welcomeBadge: 'Welcome to Melina · Turin Center',
       headlineStart: 'Two Handcrafted Retreats in the Heart of',
       headlineHighlight: 'Turin',
       subtitle:
@@ -450,7 +456,7 @@ export const translations: Record<Language, SiteTranslations> = {
         'Check instant availability, flexible cancellation options, and book with Booking.com guarantee.',
       liveCalendar: 'Real-time updated calendar availability',
       instantConfirmation: 'Instant confirmation & secure checkout',
-      hostSupport: '24/7 direct host assistance by Francesco',
+      hostSupport: '24/7 direct host assistance by Alessandra',
       bookButton: 'View Availability & Book on',
       redirectNotice: 'You will be redirected to the official listing page.',
       viewAllPhotos: 'View all photos',
@@ -544,8 +550,11 @@ export const translations: Record<Language, SiteTranslations> = {
       title: 'Have Questions Before Booking?',
       subtitle:
         'While reservations are made via Airbnb & Booking.com, I am here to help with travel questions, parking advice, or specific requests.',
-      hostTitle: 'Francesco',
-      hostRole: 'Host & Manager of Melina Apartments',
+      formTitle: 'Send a Direct Message',
+      formSubtitle: 'Inquiry or date availability question',
+      formBadge: 'Personal reply within a few hours',
+      hostTitle: 'Alessandra Mela',
+      hostRole: 'Host & Property Manager · Melina',
       languagesLabel: 'Languages spoken:',
       whatsappCta: 'Chat on WhatsApp',
       whatsappSub: 'Instant reply',
@@ -559,8 +568,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bothOption: 'Either / Both Apartments',
       yourMessage: 'Your question or desired dates *',
       messagePlaceholder:
-        'Hi Francesco, we are planning a trip to Turin. Could you let us know if...',
-      sendButton: 'Send Message to Francesco',
+        'Hi Alessandra, we are planning a trip to Turin. Could you let us know if...',
+      sendButton: 'Send Message to Alessandra',
       sendingButton: 'Sending message...',
     },
     footer: {
@@ -577,7 +586,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Top-floor bright apartment with private panoramic rooftop terrace',
-        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
+        badgeText: 'Booking.com Traveler Review Award',
         description:
           'A sun-drenched retreat at Via Po 51 featuring an expansive private terrace overlooking the rooftops of Turin. Ideal for couples, families, or remote workers seeking authentic charm and modern comforts.',
         story:
@@ -586,7 +595,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Top-floor private terrace with al fresco dining table & sun loungers',
           'Prime central location in Via Po 51, steps from Piazza Vittorio & Mole',
           'Digital keypad smart lock for seamless 24/7 keyless arrival',
-          'Rated 9.8/10 for cleanliness and host service on Booking.com',
+          'Top-tier standards for cleanliness and host service on Booking.com',
         ],
         galleryCaptions: [
           'Spacious living room with natural light and terrace access',
@@ -606,7 +615,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Charming ground-floor loft with private botanical garden patio',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Airbnb Superhost Preferred',
         description:
           'A peaceful haven in Turin’s historic center: stylish designer finishes and direct access to a tranquil garden patio shaded by lush plants and jasmine. An idyllic sanctuary after exploring the city.',
         story:
@@ -644,7 +653,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Contact',
     },
     hero: {
-      welcomeBadge: 'Bienvenue à Melina Apartments · Turin Centre',
+      welcomeBadge: 'Bienvenue à Melina · Turin Centre',
       headlineStart: 'Deux Havres de Paix au Cœur de',
       headlineHighlight: 'Turin',
       subtitle:
@@ -687,7 +696,7 @@ export const translations: Record<Language, SiteTranslations> = {
         'Consultez les disponibilités instantanées, les conditions d’annulation et réservez avec la garantie Booking.com.',
       liveCalendar: 'Calendrier mis à jour en temps réel',
       instantConfirmation: 'Confirmation immédiate et paiement sécurisé',
-      hostSupport: 'Assistance directe 24h/24 par l’hôte Francesco',
+      hostSupport: 'Assistance directe 24h/24 par l’hôte Alessandra',
       bookButton: 'Voir Disponibilités & Réserver sur',
       redirectNotice: 'Vous serez redirigé vers l’annonce officielle.',
       viewAllPhotos: 'Voir toutes les photos',
@@ -781,8 +790,11 @@ export const translations: Record<Language, SiteTranslations> = {
       title: 'Une Question Avant de Réserver ?',
       subtitle:
         'Les réservations s’effectuent sur Airbnb et Booking.com, mais je suis disponible pour tout renseignement sur le quartier, le stationnement ou vos besoins spécifiques.',
-      hostTitle: 'Francesco',
-      hostRole: 'Hôte et Gestionnaire de Melina Apartments',
+      formTitle: 'Envoyer un Message Direct',
+      formSubtitle: 'Demande d’information ou de dates disponibles',
+      formBadge: 'Réponse personnelle en quelques heures',
+      hostTitle: 'Alessandra Mela',
+      hostRole: 'Host & Property Manager · Melina',
       languagesLabel: 'Langues parlées :',
       whatsappCta: 'Discuter sur WhatsApp',
       whatsappSub: 'Réponse rapide',
@@ -796,8 +808,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bothOption: 'L’un ou l’autre / Les deux',
       yourMessage: 'Votre question ou dates souhaitées *',
       messagePlaceholder:
-        'Bonjour Francesco, nous prévoyons un séjour à Turin et nous voulions savoir si...',
-      sendButton: 'Envoyer le Message à Francesco',
+        'Bonjour Alessandra, nous prévoyons un séjour à Turin et nous voulions savoir si...',
+      sendButton: 'Envoyer le Message à Alessandra',
       sendingButton: 'Envoi en cours...',
     },
     footer: {
@@ -814,7 +826,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Appartement lumineux au dernier étage avec terrasse panoramique privée',
-        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
+        badgeText: 'Booking.com Traveler Review Award',
         description:
           'Un havre baigné de soleil au 51 Via Po avec une immense terrasse privée dominant les toits de Turin. Idéal pour couples, familles ou séjours professionnels alliant élégance et confort.',
         story:
@@ -823,7 +835,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Terrasse privée au dernier étage avec table pour dîner dehors et transats',
           'Emplacement exceptionnel Via Po 51, à deux pas de Piazza Vittorio et de la Mole',
           'Serrure numérique à code pour une arrivée autonome et sans stress',
-          'Noté 9.8/10 pour la propreté et l’accueil sur Booking.com',
+          'Excellence pour la propreté et l’accueil sur Booking.com',
         ],
         galleryCaptions: [
           'Séjour spacieux et lumineux avec accès direct à la terrasse',
@@ -843,7 +855,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Loft plein de charme en rez-de-chaussée avec patio jardin privatif',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Airbnb Superhost Preferred',
         description:
           'Une oasis de sérénité au cœur de la ville : finitions soignées et accès direct à un patio intime entouré de verdure et de jasmin. Le refuge parfait après une belle journée de visite.',
         story:
@@ -881,7 +893,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Kontakt',
     },
     hero: {
-      welcomeBadge: 'Willkommen bei Melina Apartments · Turin Zentrum',
+      welcomeBadge: 'Willkommen bei Melina · Turin Zentrum',
       headlineStart: 'Zwei Exklusive Rückzugsorte im Herzen von',
       headlineHighlight: 'Turin',
       subtitle:
@@ -924,7 +936,7 @@ export const translations: Record<Language, SiteTranslations> = {
         'Sofortige Bestätigung, flexible Stornierungsoptionen und Buchung mit Booking.com-Garantie.',
       liveCalendar: 'Echtzeit-Kalender für genaue Verfügbarkeit',
       instantConfirmation: 'Sofortige Bestätigung & sichere Bezahlung',
-      hostSupport: 'Direkte Betreuung rund um die Uhr durch Gastgeber Francesco',
+      hostSupport: 'Direkte Betreuung rund um die Uhr durch Gastgeberin Alessandra',
       bookButton: 'Verfügbarkeit prüfen & buchen auf',
       redirectNotice: 'Sie werden zum offiziellen Inserat weitergeleitet.',
       viewAllPhotos: 'Alle Fotos ansehen',
@@ -1018,8 +1030,11 @@ export const translations: Record<Language, SiteTranslations> = {
       title: 'Haben Sie Fragen vor der Buchung?',
       subtitle:
         'Buchungen erfolgen über Airbnb und Booking.com. Für Fragen zur Anreise, Parkmöglichkeiten oder Sonderwünsche stehe ich Ihnen gerne zur Verfügung.',
-      hostTitle: 'Francesco',
-      hostRole: 'Gastgeber & Verwalter von Melina Apartments',
+      formTitle: 'Direkte Nachricht Senden',
+      formSubtitle: 'Anfrage zu Informationen oder Reisedaten',
+      formBadge: 'Persönliche Antwort in wenigen Stunden',
+      hostTitle: 'Alessandra Mela',
+      hostRole: 'Host & Property Manager · Melina',
       languagesLabel: 'Gesprochene Sprachen:',
       whatsappCta: 'Per WhatsApp schreiben',
       whatsappSub: 'Schnelle Rückmeldung',
@@ -1033,8 +1048,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bothOption: 'Beide / Noch unentschieden',
       yourMessage: 'Ihre Frage oder gewünschte Reisedaten *',
       messagePlaceholder:
-        'Hallo Francesco, wir planen eine Reise nach Turin und möchten gerne wissen, ob...',
-      sendButton: 'Nachricht an Francesco senden',
+        'Hallo Alessandra, wir planen eine Reise nach Turin und möchten gerne wissen, ob...',
+      sendButton: 'Nachricht an Alessandra senden',
       sendingButton: 'Wird gesendet...',
     },
     footer: {
@@ -1051,7 +1066,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Helles Dachgeschoss-Apartment mit privater Panorama-Dachterrasse',
-        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
+        badgeText: 'Booking.com Traveler Review Award',
         description:
           'Ein sonnendurchflutetes Refugium in der Via Po 51 mit großer privater Terrasse über den Dächern Turins. Ideal für Paare, Familien oder Geschäftsreisende mit Sinn für Stil und Komfort.',
         story:
@@ -1060,7 +1075,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Private Dachterrasse mit Esstisch im Freien und bequemen Sonnenliegen',
           'Zentrale Top-Lage in der Via Po 51 nahe Piazza Vittorio und Mole',
           'Digitales Codeschloss für unkomplizierten 24/7 Self Check-in',
-          'Top-Bewertung von 9.8/10 für Sauberkeit und Service auf Booking.com',
+          'Auszeichnung für Sauberkeit und Service auf Booking.com',
         ],
         galleryCaptions: [
           'Großzügiger Wohnbereich mit Tageslicht und Zugang zur Terrasse',
@@ -1080,7 +1095,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Stilvolles Erdgeschoss-Loft mit privatem begrüntem Garten-Patio',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Airbnb Superhost Preferred',
         description:
           'Eine Ruheoase mitten in Turin: geschmackvolles Interieur und direkter Zugang zu einem geschützten Innenhof mit Jasmin und mediterranen Pflanzen. Perfekt zum Entspannen nach einem Tag in der Stadt.',
         story:
@@ -1118,7 +1133,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Contacto',
     },
     hero: {
-      welcomeBadge: 'Bienvenidos a Melina Apartments · Centro de Turín',
+      welcomeBadge: 'Bienvenidos a Melina · Centro de Turín',
       headlineStart: 'Dos Refugios Exclusivos en el Corazón de',
       headlineHighlight: 'Turín',
       subtitle:
@@ -1161,7 +1176,7 @@ export const translations: Record<Language, SiteTranslations> = {
         'Consulta fechas disponibles al instante, cancelación flexible y reserva con la garantía de Booking.com.',
       liveCalendar: 'Calendario actualizado en tiempo real',
       instantConfirmation: 'Confirmación inmediata y pago seguro',
-      hostSupport: 'Atención directa 24/7 de tu anfitrión Francesco',
+      hostSupport: 'Atención directa 24/7 de tu anfitriona Alessandra',
       bookButton: 'Ver Disponibilidad y Reservar en',
       redirectNotice: 'Serás redirigido a la página oficial del anuncio.',
       viewAllPhotos: 'Ver todas las fotos',
@@ -1255,8 +1270,11 @@ export const translations: Record<Language, SiteTranslations> = {
       title: '¿Tienes Preguntas Antes de Reservar?',
       subtitle:
         'Las reservas se gestionan en Airbnb y Booking.com, pero estoy a tu disposición para aconsejarte sobre el viaje, aparcamiento o peticiones especiales.',
-      hostTitle: 'Francesco',
-      hostRole: 'Anfitrión y Gestor de Melina Apartments',
+      formTitle: 'Enviar un Mensaje Directo',
+      formSubtitle: 'Consulta de información o fechas disponibles',
+      formBadge: 'Respuesta personal en pocas horas',
+      hostTitle: 'Alessandra Mela',
+      hostRole: 'Host & Property Manager · Melina',
       languagesLabel: 'Idiomas:',
       whatsappCta: 'Escribir por WhatsApp',
       whatsappSub: 'Respuesta inmediata',
@@ -1270,8 +1288,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bothOption: 'Cualquiera / Ambos',
       yourMessage: 'Tu mensaje o fechas deseadas *',
       messagePlaceholder:
-        'Hola Francesco, estamos organizando un viaje a Turín y queríamos saber si...',
-      sendButton: 'Enviar Mensaje a Francesco',
+        'Hola Alessandra, estamos organizando un viaje a Turín y queríamos saber si...',
+      sendButton: 'Enviar Mensaje a Alessandra',
       sendingButton: 'Enviando mensaje...',
     },
     footer: {
@@ -1288,7 +1306,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Luminoso apartamento en última planta con terraza panorámica privada',
-        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
+        badgeText: 'Booking.com Traveler Review Award',
         description:
           'Un oasis bañado por el sol en Via Po 51 con una amplia terraza privada con vistas a los tejados de Turín. Ideal para parejas, familias o estancias de trabajo que buscan encanto y comodidades de primer nivel.',
         story:
@@ -1297,7 +1315,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Terraza privada en la azotea con mesa de comedor y tumbonas',
           'Ubicación céntrica privilegiada en Via Po 51, a pasos de Piazza Vittorio y la Mole',
           'Cerradura inteligente con código para llegada autónoma sin esperas',
-          'Puntuación 9.8/10 en limpieza y trato en Booking.com',
+          'Máxima distinción en limpieza y trato en Booking.com',
         ],
         galleryCaptions: [
           'Salón espacioso y luminoso con acceso directo a la terraza',
@@ -1317,7 +1335,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Acogedor loft en planta baja con íntimo patio jardín botánico privado',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Airbnb Superhost Preferred',
         description:
           'Un remanso de paz en pleno centro histórico: diseño moderno y acceso directo a un tranquilo jardín privado con plantas y jazmines. El lugar perfecto para descansar tras un día explorando la ciudad.',
         story:

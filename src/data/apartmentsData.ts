@@ -8,10 +8,10 @@ export const baseApartments: Apartment[] = [
     name: 'La Melina sulla Mole',
     subtitle: 'Luminoso appartamento all’ultimo piano con terrazzo panoramico privato',
     platform: 'Booking.com',
-    platformUrl: 'https://www.booking.com', // Replace with your exact Booking.com listing URL
+    platformUrl: 'https://www.booking.com/Share-qytECBi', 
     rating: 9.8,
     reviewCount: 48,
-    badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
+    badgeText: 'Booking.com Traveler Review Award',
     capacity: {
       guests: 4,
       bedrooms: 1,
@@ -65,7 +65,7 @@ export const baseApartments: Apartment[] = [
       'Terrazzo privato all’ultimo piano con tavolo da pranzo esterno e sdraio prendisole',
       'Posizione centralissima in Via Po 51, a due passi da Piazza Vittorio e Mole',
       'Serratura digitale con codice per un self check-in comodo a qualsiasi ora',
-      'Valutazione 9.8/10 per pulizia e accoglienza dell’host su Booking.com',
+      'Ospitalità e pulizia ad alti standard garantite su Booking.com',
     ],
     rules: {
       checkIn: 'Dalle 15:00 (Self check-in con tastierino)',
@@ -82,10 +82,10 @@ export const baseApartments: Apartment[] = [
     name: 'La Melina su Via Po',
     subtitle: 'Affascinante loft al piano terra con intimo patio giardino botanico privato',
     platform: 'Airbnb',
-    platformUrl: 'https://www.airbnb.com', // Replace with your exact Airbnb listing URL
+    platformUrl: 'https://www.airbnb.com/l/3rEzh1pu', 
     rating: 4.96,
     reviewCount: 39,
-    badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+    badgeText: 'Airbnb Superhost Preferred',
     capacity: {
       guests: 3,
       bedrooms: 1,
@@ -199,15 +199,15 @@ export const getLocalizedApartments = (lang: Language): Apartment[] => {
 }
 
 export const hostInfo: HostInfo = {
-  name: 'Francesco',
-  title: 'Host & Property Manager · Melina Apartments',
-  bio: `Benvenuti a Torino! Sono nato e cresciuto qui e mi dedico con passione all'ospitalità per far vivere ai miei ospiti un soggiorno memorabile, sereno e autentico. Rimango sempre a disposizione via WhatsApp prima e durante il viaggio per consigli su ristoranti tipici, musei e itinerari sabaudi.`,
+  name: 'Alessandra Mela',
+  title: 'Host & Property Manager · Melina',
+  bio: `Benvenuti a Torino! Rimango sempre a disposizione via WhatsApp prima e durante il soggiorno per info e consigli su ristoranti tipici, musei e itinerari sabaudi.`,
   avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-  email: 'info@melina-apartments.com',
-  phone: '+39 340 000 0000',
-  whatsapp: 'https://wa.me/393400000000',
+  email: 'mela.alessandragf@gmail.com',
+  phone: '+39 328 329 9346',
+  whatsapp: 'https://wa.me/393283299346',
   address: 'Via Po, 51 - 10124 Torino (TO), Italia',
-  languages: ['Italiano', 'English', 'Français', 'Deutsch', 'Español'],
+  languages: ['Italiano', 'English'],
   superhost: true,
   bookingAward: true,
 }
@@ -248,7 +248,7 @@ export const guestReviews: GuestReview[] = [
     rating: 10,
     platform: 'Booking.com',
     apartmentName: 'La Melina sulla Mole',
-    text: 'Soggiorno da sogno in Via Po! Il terrazzo è qualcosa di spettacolare con vista sui tetti. Posizione comodissima per girare tutta Torino a piedi. Francesco è stato gentilissimo e disponibilissimo.',
+    text: 'Soggiorno da sogno in Via Po! Il terrazzo è qualcosa di spettacolare con vista sui tetti. Posizione comodissima per girare tutta Torino a piedi. Alessandra è stata gentilissima e disponibilissima.',
   },
   {
     id: 'rev-2',
@@ -278,6 +278,6 @@ export const guestReviews: GuestReview[] = [
     rating: 5.0,
     platform: 'Airbnb',
     apartmentName: 'La Melina su Via Po',
-    text: 'Une pépite au cœur de Turin ! Très calme dans la cour intérieure, aucun escalier à monter, literie parfaite et accueil très attentionné de Francesco. Nous reviendrons sans hésiter.',
+    text: 'Une pépite au cœur de Turin ! Très calme dans la cour intérieure, aucun escalier à monter, literie parfaite et accueil très attentionné d’Alessandra. Nous reviendrons sans hésiter.',
   },
 ]

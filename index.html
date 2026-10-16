@@ -2,14 +2,108 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/melina_logo.svg?v=3" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Melina Apartments - Two private holiday retreats in Italy. Discover our sunny rooftop terrace and botanical garden loft. Book on Airbnb and Booking.com." />
-    <meta name="keywords" content="holiday apartment, Italy vacation rental, Airbnb Italy, Booking.com apartment, Melina apartments, holiday rental" />
-    <meta property="og:title" content="Melina Apartments | Holiday Rentals in Italy" />
-    <meta property="og:description" content="Two private holiday retreats with panoramic terrace and private garden patio. Explore photos and book on Airbnb & Booking.com." />
+    <meta name="theme-color" content="#0c0a09" />
+    <meta name="description" content="Melina - Due esclusivi appartamenti vacanze nel cuore del centro storico di Torino in Via Po 51: attico con terrazzo panoramico privato e loft con giardino segreto." />
+    <meta name="keywords" content="Melina Torino, appartamenti vacanza Torino, Via Po 51, alloggio Mole Antonelliana, vacanze Torino centro, holiday rental Turin" />
+    
+    <!-- Open Graph / WhatsApp / Facebook Sharing -->
+    <meta property="og:title" content="Melina | Torino Centro" />
+    <meta property="og:description" content="Due splendidi appartamenti vacanze a Torino in Via Po 51: attico panoramico con terrazzo privato e intimo loft con giardino botanico." />
     <meta property="og:type" content="website" />
-    <title>Melina Apartments | Holiday Rentals in Italy</title>
+    <meta property="og:image" content="/turin_bg.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Melina - Alloggi nel centro storico di Torino" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Melina | Torino Centro" />
+    <meta name="twitter:description" content="Due splendidi alloggi a Torino in Via Po 51: attico panoramico con terrazzo e loft con patio privato." />
+    <meta name="twitter:image" content="/turin_bg.jpg" />
+
+    <title>Melina · Torino Centro</title>
+
+    <!-- Schema.org Structured Data (JSON-LD) for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Melina",
+      "description": "Due esclusivi appartamenti vacanze nel cuore del centro storico di Torino in Via Po 51: attico panoramico con terrazzo privato e loft silenzioso con patio giardino.",
+      "image": "/turin_bg.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Po 51",
+        "addressLocality": "Torino",
+        "postalCode": "10124",
+        "addressRegion": "Piemonte",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.0658,
+        "longitude": 7.6918
+      },
+      "telephone": "+393283299346",
+      "email": "mela.alessandragf@gmail.com",
+      "checkinTime": "15:00",
+      "checkoutTime": "10:30",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Wi-Fi Fibra Ultraveloce",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Aria Condizionata & Riscaldamento",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Self Check-in digitale",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Terrazzo Panoramico Privato",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Patio Giardino Botanico Privato",
+          "value": true
+        }
+      ],
+      "containsPlace": [
+        {
+          "@type": "Accommodation",
+          "name": "La Melina sulla Mole",
+          "description": "Luminoso attico all’ultimo piano con terrazzo panoramico privato e vista verso la Mole Antonelliana.",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 4
+          },
+          "numberOfBedrooms": 1,
+          "numberOfBathroomsTotal": 1
+        },
+        {
+          "@type": "Accommodation",
+          "name": "La Melina su Via Po",
+          "description": "Intimo loft al piano terra senza scale con riservato patio giardino botanico.",
+          "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 3
+          },
+          "numberOfBedrooms": 1,
+          "numberOfBathroomsTotal": 1
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-stone-950 text-stone-100 antialiased selection:bg-amber-500 selection:text-stone-950">
     <div id="root"></div>

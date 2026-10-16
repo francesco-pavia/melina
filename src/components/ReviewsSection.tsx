@@ -43,7 +43,7 @@ export const ReviewsSection: React.FC = () => {
                   <span>9.8 / 10</span>
                 </div>
                 <div className="text-xs text-stone-400">
-                  {bookingApt.name} · Traveler Review Award
+                  {bookingApt.name} · Booking.com
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ export const ReviewsSection: React.FC = () => {
                   <span>4.96 / 5.0</span>
                 </div>
                 <div className="text-xs text-stone-400">
-                  {airbnbApt.name} · Airbnb Superhost
+                  {airbnbApt.name} · Airbnb
                 </div>
               </div>
             </div>

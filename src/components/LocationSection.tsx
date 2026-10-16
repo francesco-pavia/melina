@@ -1,5 +1,5 @@
 import React from 'react'
-import { MapPin, Navigation, Compass, Utensils, Waves, ExternalLink, Building2 } from 'lucide-react'
+import { MapPin, Compass, Utensils, Waves, ExternalLink, Building2 } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 
@@ -110,28 +110,6 @@ export const LocationSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Directions & Arrival Helper */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-stone-900/40 border border-stone-800 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-start gap-4">
-            <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 shrink-0">
-              <Navigation className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="text-lg font-bold text-white mb-1">
-                {t.gettingHereTitle}
-              </h4>
-              <p className="text-xs sm:text-sm text-stone-300 max-w-2xl leading-relaxed">
-                {t.gettingHereDesc}
-              </p>
-            </div>
-          </div>
-          <a
-            href="#contact"
-            className="shrink-0 px-5 py-2.5 rounded-xl bg-stone-800 hover:bg-stone-750 text-white text-xs font-semibold transition-colors"
-          >
-            {t.contactForDirections}
-          </a>
-        </div>
       </div>
     </section>
   )

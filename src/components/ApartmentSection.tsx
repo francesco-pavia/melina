@@ -4,7 +4,6 @@ import {
   Bed,
   Bath,
   Maximize,
-  Star,
   ExternalLink,
   Wifi,
   Wind,
@@ -86,14 +85,6 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
         {/* Apartment Header Banner */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold mb-3 border bg-stone-900 border-stone-800 text-amber-300">
-              {isAirbnb ? (
-                <AirbnbIcon className="w-3.5 h-3.5 text-[#FF385C]" />
-              ) : (
-                <BookingIcon className="w-3.5 h-3.5 text-sky-400" />
-              )}
-              <span>{apartment.badgeText}</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
               {apartment.name}
             </h2>
@@ -178,7 +169,7 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
           {/* Left: Specs, Story, Amenities, and Rules */}
           <div className="lg:col-span-8 space-y-10">
             {/* Specs Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 p-4 rounded-2xl bg-stone-900/50 border border-stone-800 text-stone-200 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-stone-900/50 border border-stone-800 text-stone-200 text-center">
               <div className="flex flex-col items-center justify-center p-2">
                 <Users className="w-4 h-4 text-amber-400 mb-1" />
                 <span className="text-xs text-stone-400">{t.guests}</span>
@@ -205,13 +196,6 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
                 <span className="text-xs text-stone-400">{t.surface}</span>
                 <span className="font-semibold text-sm text-white">
                   {apartment.capacity.areaSqm} m²
-                </span>
-              </div>
-              <div className="flex flex-col items-center justify-center p-2 col-span-2 sm:col-span-1 border-t sm:border-t-0 sm:border-l border-stone-800/80">
-                <Star className="w-4 h-4 text-amber-400 fill-amber-400 mb-1" />
-                <span className="text-xs text-stone-400">{t.rating}</span>
-                <span className="font-semibold text-sm text-amber-300">
-                  {apartment.rating} ★
                 </span>
               </div>
             </div>
@@ -305,13 +289,20 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="flex items-center gap-1 text-amber-300 font-bold text-sm">
-                    <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                    <span>{apartment.rating}</span>
-                  </div>
-                  <div className="text-xs text-stone-400">
-                    {apartment.reviewCount} recensioni
-                  </div>
+                  <span
+                    className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
+                      isAirbnb
+                        ? 'bg-[#FF385C]/20 text-[#FF385C] border border-[#FF385C]/30'
+                        : 'bg-[#003580]/30 text-sky-300 border border-sky-400/30'
+                    }`}
+                  >
+                    {isAirbnb ? (
+                      <AirbnbIcon className="w-3.5 h-3.5" />
+                    ) : (
+                      <BookingIcon className="w-3.5 h-3.5" />
+                    )}
+                    <span>{apartment.platform}</span>
+                  </span>
                 </div>
               </div>
 

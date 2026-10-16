@@ -3,9 +3,7 @@ import { LanguageProvider, useLanguage } from './context/LanguageContext'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { ApartmentSection } from './components/ApartmentSection'
-import { AmenitiesOverview } from './components/AmenitiesOverview'
 import { LocationSection } from './components/LocationSection'
-import { ReviewsSection } from './components/ReviewsSection'
 import { HostContact } from './components/HostContact'
 import { Footer } from './components/Footer'
 import { getLocalizedApartments } from './data/apartmentsData'
@@ -21,9 +19,7 @@ function AppContent() {
       'apartments',
       'melina-terrace',
       'melina-garden',
-      'amenities',
       'location',
-      'reviews',
       'contact',
     ]
 
@@ -43,9 +39,15 @@ function AppContent() {
       }
     }
 
+    const timer = setTimeout(() => {
+      handleScroll()
+    }, 100)
+
     window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return (
@@ -58,20 +60,14 @@ function AppContent() {
         {/* Welcome Hero & Overview */}
         <Hero />
 
-        {/* Detailed Showcase: Apartment 1 (Airbnb) */}
+        {/* Detailed Showcase: Apartment 1 */}
         <ApartmentSection apartment={localizedApartments[0]} />
 
-        {/* Detailed Showcase: Apartment 2 (Booking.com) */}
+        {/* Detailed Showcase: Apartment 2 */}
         <ApartmentSection apartment={localizedApartments[1]} />
-
-        {/* Shared Comforts & Side-by-side comparison */}
-        <AmenitiesOverview />
 
         {/* Neighborhood, Google Maps Embed & Attractions in Turin */}
         <LocationSection />
-
-        {/* Verified Guest Reviews */}
-        <ReviewsSection />
 
         {/* Host Info & Inquiries */}
         <HostContact />

@@ -24,11 +24,15 @@ export const Footer: React.FC = () => {
           {/* Brand info */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-600 to-rose-500 flex items-center justify-center text-white font-serif font-bold text-lg shadow-md">
-                M
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600/20 to-rose-500/20 border border-amber-500/30 flex items-center justify-center p-1.5 shadow-md shadow-black/40">
+                <img
+                  src="/melina_logo.svg"
+                  alt="Melina"
+                  className="w-full h-full object-contain brightness-0 invert"
+                />
               </div>
               <span className="font-serif font-bold text-xl text-white">
-                Melina Apartments
+                Melina
               </span>
             </div>
             <p className="text-stone-400 text-xs sm:text-sm leading-relaxed max-w-sm">
@@ -93,14 +97,8 @@ export const Footer: React.FC = () => {
               <a href="#apartments" className="hover:text-white transition-colors">
                 {navT.apartments}
               </a>
-              <a href="#amenities" className="hover:text-white transition-colors">
-                {navT.amenities}
-              </a>
               <a href="#location" className="hover:text-white transition-colors">
                 {navT.location}
-              </a>
-              <a href="#reviews" className="hover:text-white transition-colors">
-                {navT.reviews}
               </a>
               <a href="#contact" className="hover:text-white transition-colors">
                 {navT.contact}
@@ -112,7 +110,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-stone-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <div>
-            © {year} Melina Apartments. {t.rights}
+            © {year} Melina. {t.rights}
           </div>
           <div className="flex items-center gap-4">
             <button

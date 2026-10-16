@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Menu, X, MapPin, Globe, Check, ChevronDown } from 'lucide-react'
+import { Menu, X, Globe, Check, ChevronDown } from 'lucide-react'
 import { useLanguage, languageOptions, type Language } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 
@@ -17,9 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   const navLinks = [
     { label: t.apartments, href: '#apartments' },
-    { label: t.amenities, href: '#amenities' },
     { label: t.location, href: '#location' },
-    { label: t.reviews, href: '#reviews' },
     { label: t.contact, href: '#contact' },
   ]
 
@@ -68,18 +66,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             href="#hero"
             className="flex items-center gap-2.5 group focus:outline-none"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-600 to-rose-500 flex items-center justify-center text-white font-serif font-bold text-lg shadow-md shadow-amber-900/20 group-hover:scale-105 transition-transform">
-              M
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600/20 to-rose-500/20 border border-amber-500/30 flex items-center justify-center p-1.5 shadow-md shadow-black/40 group-hover:scale-105 group-hover:border-amber-400/60 transition-all">
+              <img
+                src="/melina_logo.svg"
+                alt="Melina"
+                className="w-full h-full object-contain brightness-0 invert"
+              />
             </div>
-            <div className="flex flex-col">
-              <span className="font-serif font-semibold text-lg sm:text-xl tracking-tight text-white group-hover:text-amber-200 transition-colors">
-                Melina
-              </span>
-              <span className="text-[10px] text-stone-400 font-sans tracking-wide -mt-1 flex items-center gap-1">
-                <MapPin className="w-2.5 h-2.5 text-amber-500" />
-                Via Po 51 · Torino
-              </span>
-            </div>
+            <span className="font-serif font-semibold text-lg sm:text-xl tracking-tight text-white group-hover:text-amber-200 transition-colors">
+              Melina
+            </span>
           </a>
 
           {/* Desktop Navigation - Clean, uncrowded, centered */}
