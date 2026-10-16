@@ -111,9 +111,9 @@ export const AmenitiesOverview: React.FC = () => {
                       {apt1.name}
                     </h4>
                   </div>
-                  <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-md bg-[#FF385C]/20 text-[#FF385C] border border-[#FF385C]/30 font-semibold">
-                    <AirbnbIcon className="w-3.5 h-3.5" />
-                    Airbnb
+                  <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-md bg-[#003580]/30 text-sky-400 border border-sky-400/30 font-semibold">
+                    <BookingIcon className="w-3.5 h-3.5" />
+                    {apt1.platform}
                   </span>
                 </div>
 
@@ -141,9 +141,9 @@ export const AmenitiesOverview: React.FC = () => {
                 href={apt1.platformUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#FF385C] hover:bg-[#e03150] text-white text-xs font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#003580] hover:bg-[#002660] text-white text-xs font-semibold transition-colors shadow-md"
               >
-                <span>{translations[language].hero.bookOn} {apt1.name} (Airbnb)</span>
+                <span>{translations[language].hero.bookOn} {apt1.name} ({apt1.platform})</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -158,9 +158,9 @@ export const AmenitiesOverview: React.FC = () => {
                       {apt2.name}
                     </h4>
                   </div>
-                  <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-md bg-[#003580]/30 text-sky-400 border border-sky-400/30 font-semibold">
-                    <BookingIcon className="w-3.5 h-3.5" />
-                    Booking.com
+                  <span className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-md bg-[#FF385C]/20 text-[#FF385C] border border-[#FF385C]/30 font-semibold">
+                    <AirbnbIcon className="w-3.5 h-3.5" />
+                    {apt2.platform}
                   </span>
                 </div>
 
@@ -188,9 +188,9 @@ export const AmenitiesOverview: React.FC = () => {
                 href={apt2.platformUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#003580] hover:bg-[#002660] text-white text-xs font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#FF385C] hover:bg-[#e03150] text-white text-xs font-semibold transition-colors shadow-md"
               >
-                <span>{translations[language].hero.bookOn} {apt2.name} (Booking.com)</span>
+                <span>{translations[language].hero.bookOn} {apt2.name} ({apt2.platform})</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>

@@ -8,7 +8,9 @@ import { translations } from '../data/translations'
 export const ReviewsSection: React.FC = () => {
   const { language } = useLanguage()
   const t = translations[language].reviews
-  const [apt1, apt2] = getLocalizedApartments(language)
+  const localized = getLocalizedApartments(language)
+  const bookingApt = localized.find((a) => a.platform === 'Booking.com') || localized[0]
+  const airbnbApt = localized.find((a) => a.platform === 'Airbnb') || localized[1]
 
   return (
     <section id="reviews" className="py-24 relative bg-stone-950">
@@ -29,6 +31,28 @@ export const ReviewsSection: React.FC = () => {
 
         {/* Aggregate Ratings Banner */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
+          {/* Booking.com Aggregate */}
+          <div className="p-6 rounded-2xl bg-stone-900/60 border border-stone-800 flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-[#003580]/20 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                <BookingIcon className="w-6 h-6" />
+              </div>
+              <div>
+                <div className="flex items-center gap-1.5 text-white font-bold text-lg">
+                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  <span>9.8 / 10</span>
+                </div>
+                <div className="text-xs text-stone-400">
+                  {bookingApt.name} · Traveler Review Award
+                </div>
+              </div>
+            </div>
+            <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1">
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              9.8 Superb
+            </span>
+          </div>
+
           {/* Airbnb Aggregate */}
           <div className="p-6 rounded-2xl bg-stone-900/60 border border-stone-800 flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -41,35 +65,13 @@ export const ReviewsSection: React.FC = () => {
                   <span>4.96 / 5.0</span>
                 </div>
                 <div className="text-xs text-stone-400">
-                  {apt1.name} · Airbnb Superhost
+                  {airbnbApt.name} · Airbnb Superhost
                 </div>
               </div>
             </div>
             <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1">
               <CheckCircle2 className="w-3.5 h-3.5" />
               100% {t.verifiedGuest}
-            </span>
-          </div>
-
-          {/* Booking.com Aggregate */}
-          <div className="p-6 rounded-2xl bg-stone-900/60 border border-stone-800 flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-[#003580]/20 border border-sky-500/30 flex items-center justify-center text-sky-400">
-                <BookingIcon className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="flex items-center gap-1.5 text-white font-bold text-lg">
-                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  <span>9.7 / 10</span>
-                </div>
-                <div className="text-xs text-stone-400">
-                  {apt2.name} · Traveler Review Award
-                </div>
-              </div>
-            </div>
-            <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1">
-              <CheckCircle2 className="w-3.5 h-3.5" />
-              9.7 Superb
             </span>
           </div>
         </div>

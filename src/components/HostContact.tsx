@@ -255,10 +255,10 @@ export const HostContact: React.FC = () => {
                     >
                       <option value={t.bothOption}>{t.bothOption}</option>
                       <option value={apt1.name}>
-                        {apt1.name} (Airbnb)
+                        {apt1.name} ({apt1.platform})
                       </option>
                       <option value={apt2.name}>
-                        {apt2.name} (Booking.com)
+                        {apt2.name} ({apt2.platform})
                       </option>
                     </select>
                   </div>

@@ -46,30 +46,27 @@ export const Footer: React.FC = () => {
               {t.bookOnline}
             </h4>
             <ul className="space-y-2 text-xs">
-              <li>
-                <a
-                  href={apt1.platformUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-stone-300 hover:text-white transition-colors"
-                >
-                  <AirbnbIcon className="w-4 h-4 text-[#FF385C]" />
-                  <span>{apt1.name} (Airbnb)</span>
-                  <ExternalLink className="w-3 h-3 opacity-60" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={apt2.platformUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-stone-300 hover:text-white transition-colors"
-                >
-                  <BookingIcon className="w-4 h-4 text-sky-400" />
-                  <span>{apt2.name} (Booking.com)</span>
-                  <ExternalLink className="w-3 h-3 opacity-60" />
-                </a>
-              </li>
+              {[apt1, apt2].map((apt) => {
+                const isAirbnb = apt.platform === 'Airbnb'
+                return (
+                  <li key={apt.id}>
+                    <a
+                      href={apt.platformUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-stone-300 hover:text-white transition-colors"
+                    >
+                      {isAirbnb ? (
+                        <AirbnbIcon className="w-4 h-4 text-[#FF385C]" />
+                      ) : (
+                        <BookingIcon className="w-4 h-4 text-sky-400" />
+                      )}
+                      <span>{apt.name} ({apt.platform})</span>
+                      <ExternalLink className="w-3 h-3 opacity-60" />
+                    </a>
+                  </li>
+                )
+              })}
               <li className="pt-2">
                 <a
                   href={hostInfo.whatsapp}

@@ -340,7 +340,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico privato',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
         description:
           'Un rifugio baciato dal sole in Via Po 51, con un ampio terrazzo privato che domina i tetti di Torino. Ideale per coppie, famiglie o professionisti in cerca di charme autentico e comfort moderni.',
         story:
@@ -349,7 +349,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Terrazzo privato all’ultimo piano con tavolo da pranzo esterno e sdraio prendisole',
           'Posizione centralissima in Via Po 51, a due passi da Piazza Vittorio e Mole',
           'Serratura digitale con codice per un self check-in comodo a qualsiasi ora',
-          'Ospitalità Superhost con guida personalizzata su Torino e i suoi segreti',
+          'Valutazione 9.8/10 per pulizia e accoglienza dell’host su Booking.com',
         ],
         galleryCaptions: [
           'Soggiorno accogliente con abbondante luce naturale e accesso diretto al terrazzo',
@@ -369,7 +369,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Affascinante loft al piano terra con intimo patio giardino botanico privato',
-        badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
+        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'Un’oasi di quiete nel centro storico: ambienti rifiniti con dettagli di design e accesso diretto a un giardino segreto ombreggiato da piante e gelsomino. Perfetto per rigenerarsi dopo una giornata in città.',
         story:
@@ -377,7 +377,7 @@ export const translations: Record<Language, SiteTranslations> = {
         highlights: [
           'Patio giardino privato e recintato con tavolo bistrot e ombrellone',
           'Comodo accesso a piano terra senza scale, ideale per chi viaggia con valigie pesanti',
-          'Valutazione 9.7/10 per pulizia e cortesia dell’host su Booking.com',
+          'Ospitalità Superhost con guida personalizzata su Torino e i suoi segreti',
           'Cestino di benvenuto omaggio con specialità tipiche piemontesi',
         ],
         galleryCaptions: [
@@ -577,7 +577,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Top-floor bright apartment with private panoramic rooftop terrace',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
         description:
           'A sun-drenched retreat at Via Po 51 featuring an expansive private terrace overlooking the rooftops of Turin. Ideal for couples, families, or remote workers seeking authentic charm and modern comforts.',
         story:
@@ -586,7 +586,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Top-floor private terrace with al fresco dining table & sun loungers',
           'Prime central location in Via Po 51, steps from Piazza Vittorio & Mole',
           'Digital keypad smart lock for seamless 24/7 keyless arrival',
-          'Superhost hospitality with bespoke local guide on Turin secrets',
+          'Rated 9.8/10 for cleanliness and host service on Booking.com',
         ],
         galleryCaptions: [
           'Spacious living room with natural light and terrace access',
@@ -606,7 +606,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Charming ground-floor loft with private botanical garden patio',
-        badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
+        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'A peaceful haven in Turin’s historic center: stylish designer finishes and direct access to a tranquil garden patio shaded by lush plants and jasmine. An idyllic sanctuary after exploring the city.',
         story:
@@ -614,7 +614,7 @@ export const translations: Record<Language, SiteTranslations> = {
         highlights: [
           'Private enclosed botanical patio with bistro table and parasol',
           'Step-free ground-floor access, ideal for luggage and easy entry',
-          'Rated 9.7/10 for cleanliness and host communication on Booking.com',
+          'Superhost hospitality with bespoke local guide on Turin secrets',
           'Complimentary Italian welcome basket with local Piedmontese treats',
         ],
         galleryCaptions: [
@@ -814,7 +814,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Appartement lumineux au dernier étage avec terrasse panoramique privée',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
         description:
           'Un havre baigné de soleil au 51 Via Po avec une immense terrasse privée dominant les toits de Turin. Idéal pour couples, familles ou séjours professionnels alliant élégance et confort.',
         story:
@@ -823,7 +823,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Terrasse privée au dernier étage avec table pour dîner dehors et transats',
           'Emplacement exceptionnel Via Po 51, à deux pas de Piazza Vittorio et de la Mole',
           'Serrure numérique à code pour une arrivée autonome et sans stress',
-          'Hospitalité Superhost avec guide personnalisé des adresses secrètes de Turin',
+          'Noté 9.8/10 pour la propreté et l’accueil sur Booking.com',
         ],
         galleryCaptions: [
           'Séjour spacieux et lumineux avec accès direct à la terrasse',
@@ -843,7 +843,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Loft plein de charme en rez-de-chaussée avec patio jardin privatif',
-        badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
+        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'Une oasis de sérénité au cœur de la ville : finitions soignées et accès direct à un patio intime entouré de verdure et de jasmin. Le refuge parfait après une belle journée de visite.',
         story:
@@ -851,7 +851,7 @@ export const translations: Record<Language, SiteTranslations> = {
         highlights: [
           'Patio jardin privatif clos avec table bistrot et parasol',
           'Accès de plain-pied sans marches, très pratique pour les bagages',
-          'Noté 9.7/10 pour la propreté et la communication sur Booking.com',
+          'Hospitalité Superhost avec guide personnalisé des adresses secrètes de Turin',
           'Panier de bienvenue offert avec des délices piémontais',
         ],
         galleryCaptions: [
@@ -1051,7 +1051,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Helles Dachgeschoss-Apartment mit privater Panorama-Dachterrasse',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
         description:
           'Ein sonnendurchflutetes Refugium in der Via Po 51 mit großer privater Terrasse über den Dächern Turins. Ideal für Paare, Familien oder Geschäftsreisende mit Sinn für Stil und Komfort.',
         story:
@@ -1060,7 +1060,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Private Dachterrasse mit Esstisch im Freien und bequemen Sonnenliegen',
           'Zentrale Top-Lage in der Via Po 51 nahe Piazza Vittorio und Mole',
           'Digitales Codeschloss für unkomplizierten 24/7 Self Check-in',
-          'Superhost-Qualität mit individuellem Reiseführer für Turin',
+          'Top-Bewertung von 9.8/10 für Sauberkeit und Service auf Booking.com',
         ],
         galleryCaptions: [
           'Großzügiger Wohnbereich mit Tageslicht und Zugang zur Terrasse',
@@ -1080,7 +1080,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Stilvolles Erdgeschoss-Loft mit privatem begrüntem Garten-Patio',
-        badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
+        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'Eine Ruheoase mitten in Turin: geschmackvolles Interieur und direkter Zugang zu einem geschützten Innenhof mit Jasmin und mediterranen Pflanzen. Perfekt zum Entspannen nach einem Tag in der Stadt.',
         story:
@@ -1088,7 +1088,7 @@ export const translations: Record<Language, SiteTranslations> = {
         highlights: [
           'Privater begrünter Patio mit Bistrotisch und Sonnenschirm',
           'Stufenloser Erdgeschoss-Zugang, ideal für Reisende mit Gepäck',
-          'Top-Bewertung von 9.7/10 für Sauberkeit und Gastfreundschaft auf Booking.com',
+          'Superhost-Qualität mit individuellem Reiseführer für Turin',
           'Willkommensgruß mit typischen piemontesischen Spezialitäten',
         ],
         galleryCaptions: [
@@ -1288,7 +1288,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sulla Mole',
         subtitle:
           'Luminoso apartamento en última planta con terraza panorámica privada',
-        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
+        badgeText: 'Booking.com Traveler Review Award 9.8 / 10',
         description:
           'Un oasis bañado por el sol en Via Po 51 con una amplia terraza privada con vistas a los tejados de Turín. Ideal para parejas, familias o estancias de trabajo que buscan encanto y comodidades de primer nivel.',
         story:
@@ -1297,7 +1297,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Terraza privada en la azotea con mesa de comedor y tumbonas',
           'Ubicación céntrica privilegiada en Via Po 51, a pasos de Piazza Vittorio y la Mole',
           'Cerradura inteligente con código para llegada autónoma sin esperas',
-          'Hospitalidad Superhost con recomendaciones locales sobre los tesoros de Turín',
+          'Puntuación 9.8/10 en limpieza y trato en Booking.com',
         ],
         galleryCaptions: [
           'Salón espacioso y luminoso con acceso directo a la terraza',
@@ -1317,7 +1317,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Acogedor loft en planta baja con íntimo patio jardín botánico privado',
-        badgeText: 'Booking.com Traveler Review Award 9.7 / 10',
+        badgeText: 'Airbnb Superhost Preferred · 4.96 ★',
         description:
           'Un remanso de paz en pleno centro histórico: diseño moderno y acceso directo a un tranquilo jardín privado con plantas y jazmines. El lugar perfecto para descansar tras un día explorando la ciudad.',
         story:
@@ -1325,7 +1325,7 @@ export const translations: Record<Language, SiteTranslations> = {
         highlights: [
           'Patio jardín privado con mesa bistró y sombrilla',
           'Acceso directo en planta baja sin escalones, muy cómodo para el equipaje',
-          'Puntuación 9.7/10 en limpieza y trato en Booking.com',
+          'Hospitalidad Superhost con recomendaciones locales sobre los tesoros de Turín',
           'Detalle de bienvenida con especialidades gastronómicas del Piamonte',
         ],
         galleryCaptions: [
