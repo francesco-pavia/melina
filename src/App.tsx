@@ -1,0 +1,94 @@
+import { useState, useEffect } from 'react'
+import { LanguageProvider, useLanguage } from './context/LanguageContext'
+import { Navbar } from './components/Navbar'
+import { Hero } from './components/Hero'
+import { ApartmentSection } from './components/ApartmentSection'
+import { AmenitiesOverview } from './components/AmenitiesOverview'
+import { LocationSection } from './components/LocationSection'
+import { ReviewsSection } from './components/ReviewsSection'
+import { HostContact } from './components/HostContact'
+import { Footer } from './components/Footer'
+import { getLocalizedApartments } from './data/apartmentsData'
+
+function AppContent() {
+  const { language } = useLanguage()
+  const localizedApartments = getLocalizedApartments(language)
+  const [activeSection, setActiveSection] = useState<string>('hero')
+
+  useEffect(() => {
+    const sections = [
+      'hero',
+      'apartments',
+      'melina-terrace',
+      'melina-garden',
+      'amenities',
+      'location',
+      'reviews',
+      'contact',
+    ]
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 250
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          const top = element.offsetTop
+          const height = element.offsetHeight
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
+    <div className="min-h-screen bg-stone-950 text-stone-100 selection:bg-amber-500 selection:text-stone-950 font-sans">
+      {/* Sticky Navigation with Language Switcher */}
+      <Navbar activeSection={activeSection} />
+
+      {/* Main Content */}
+      <main>
+        {/* Welcome Hero & Overview */}
+        <Hero />
+
+        {/* Detailed Showcase: Apartment 1 (Airbnb) */}
+        <ApartmentSection apartment={localizedApartments[0]} />
+
+        {/* Detailed Showcase: Apartment 2 (Booking.com) */}
+        <ApartmentSection apartment={localizedApartments[1]} />
+
+        {/* Shared Comforts & Side-by-side comparison */}
+        <AmenitiesOverview />
+
+        {/* Neighborhood, Google Maps Embed & Attractions in Turin */}
+        <LocationSection />
+
+        {/* Verified Guest Reviews */}
+        <ReviewsSection />
+
+        {/* Host Info & Inquiries */}
+        <HostContact />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  )
+}
+
+export function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
+  )
+}
+
+export default App
