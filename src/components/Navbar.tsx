@@ -17,6 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   const navLinks = [
     { label: t.apartments, href: '#apartments' },
+    { label: t.stayGuide, href: '#stay-guide' },
     { label: t.location, href: '#location' },
     { label: t.contact, href: '#contact' },
   ]

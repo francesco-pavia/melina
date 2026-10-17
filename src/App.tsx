@@ -3,6 +3,7 @@ import { LanguageProvider, useLanguage } from './context/LanguageContext'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { ApartmentSection } from './components/ApartmentSection'
+import { StayGuidelinesSection } from './components/StayGuidelinesSection'
 import { LocationSection } from './components/LocationSection'
 import { HostContact } from './components/HostContact'
 import { Footer } from './components/Footer'
@@ -19,6 +20,7 @@ function AppContent() {
       'apartments',
       'melina-mole',
       'melina-po',
+      'stay-guide',
       'location',
       'contact',
     ]
@@ -65,6 +67,9 @@ function AppContent() {
 
         {/* Detailed Showcase: Apartment 2 */}
         <ApartmentSection apartment={localizedApartments[1]} />
+
+        {/* Centralized House Guidelines & Timings */}
+        <StayGuidelinesSection />
 
         {/* Neighborhood, Google Maps Embed & Attractions in Turin */}
         <LocationSection />

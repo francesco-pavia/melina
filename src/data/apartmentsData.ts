@@ -23,27 +23,27 @@ export const baseApartments: Apartment[] = [
       'In una posizione privilegiata nel centro di Torino, La Melina offre una terrazza e un balcone con vista panoramica sulla città. Questo appartamento climatizzato comprende 1 camera da letto, un accogliente soggiorno, una cucina accessoriata con frigorifero e macchina da caffè, e 1 bagno con bidet e doccia.',
     story:
       'Situato in posizione d’eccellenza in Via Po 51, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
-    heroImage: '/images/melina-mole/terrace-mole-view.jpg',
+    heroImage: '/images/melina-mole/living-stairs.jpg',
     galleryImages: [
       {
-        url: '/images/melina-mole/terrace-mole-view.jpg',
-        caption: 'Terrazzo panoramico privato con vista suggestiva sulla Mole Antonelliana e sui tetti',
+        url: '/images/melina-mole/living-stairs.jpg',
+        caption: 'Ambiente living accogliente con scala verso il soppalco',
       },
       {
-        url: '/images/melina-mole/mole-night-lights.jpg',
-        caption: 'Suggestiva vista notturna della Mole Antonelliana illuminata dal terrazzo',
+        url: '/images/melina-mole/mole-night.jpg',
+        caption: 'Suggestiva vista notturna della Mole Antonelliana illuminata',
       },
       {
         url: '/images/melina-mole/dining-room.jpg',
-        caption: 'Zona pranzo luminosa con tavolo e affaccio panoramico',
+        caption: 'Zona pranzo luminosa',
       },
       {
         url: '/images/melina-mole/kitchen.jpg',
         caption: 'Cucina attrezzata con piano cottura, frigorifero e macchina del caffè',
       },
       {
-        url: '/images/melina-mole/bedroom-mezzanine.jpg',
-        caption: 'Camera da letto con soppalco caratteristico e scala a chiocciola',
+        url: '/images/melina-mole/bedroom-view.jpg',
+        caption: 'Vista dal soppalco',
       },
       {
         url: '/images/melina-mole/bathroom.jpg',
@@ -51,15 +51,27 @@ export const baseApartments: Apartment[] = [
       },
       {
         url: '/images/melina-mole/entrance-bench.jpg',
-        caption: 'Ingresso dell’alloggio con comoda panca e dettagli di charme',
+        caption: 'Ingresso dell’alloggio con panca',
       },
       {
-        url: '/images/melina-mole/living-room.jpg',
-        caption: 'Ambiente living accogliente con finiture storiche e luce naturale',
+        url: '/images/melina-mole/bedroom.jpg',
+        caption: 'Camera da letto sul soppalco',
       },
       {
-        url: '/images/melina-mole/balcony-view.jpg',
-        caption: 'Balcone esterno privato con vista su Via Po',
+        url: '/images/melina-mole/living-couch.jpg',
+        caption: 'Salotto con poltrone e tavolino',
+      },
+      {
+        url: '/images/melina-mole/bathroom-details.jpg',
+        caption: 'Specchio illuminato nel bagno',
+      },
+      {
+        url: '/images/melina-mole/kitchen-details.jpg',
+        caption: 'Dettaglio sulla cucina',
+      },
+      {
+        url: '/images/melina-mole/logo.jpg',
+        caption: 'Logo dell’appartamento all’entrata',
       },
     ],
     amenities: [
@@ -112,27 +124,23 @@ export const baseApartments: Apartment[] = [
       'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, camera matrimoniale soppalcata, angolo cottura accessoriato con Nespresso e bagno con bidet e doccia.',
     story:
       'Vivi Torino dalla prospettiva più autentica: affacciati dal balcone privato sui famosi portici di Via Po per gustare un caffè o ammirare la vita cittadina. Situato in un palazzo storico nobiliare provvisto di ascensore, l’appartamento offre un’atmosfera d’altri tempi unita ai più moderni comfort: aria condizionata centralizzata, riscaldamento, Wi-Fi veloce, Smart TV e self check-in con tastierino numerico.',
-    heroImage: '/images/melina-po/balcony-po.jpg',
+    heroImage: '/images/melina-po/living-room.jpg',
     galleryImages: [
       {
-        url: '/images/melina-po/balcony-po.jpg',
-        caption: 'Tavolino sul balcone privato con affaccio caratteristico su Via Po',
-      },
-      {
         url: '/images/melina-po/living-room.jpg',
-        caption: 'Spazioso salotto sabaudo con alti soffitti storici e comodo divano',
+        caption: 'Spazioso salotto con alti soffitti storici e divani',
       },
       {
-        url: '/images/melina-po/bedroom-mezzanine.jpg',
-        caption: 'Camera da letto matrimoniale soppalcata con atmosfera intima e confortevole',
+        url: '/images/melina-po/living-tv.jpg',
+        caption: 'Salotto con Smart TV',
       },
       {
         url: '/images/melina-po/dining-living.jpg',
-        caption: 'Zona giorno con tavolo da pranzo, Smart TV e cucina a vista',
+        caption: 'Zona giorno con tavolo da pranzo e bar a vista',
       },
       {
-        url: '/images/melina-po/mezzanine-view.jpg',
-        caption: 'Prospettiva del soppalco e volumi ariosi del piano nobile',
+        url: '/images/melina-po/bedroom-view.jpg',
+        caption: 'Camera da letto sul soppalco',
       },
       {
         url: '/images/melina-po/bathroom.jpg',
@@ -143,20 +151,20 @@ export const baseApartments: Apartment[] = [
         caption: 'Scorcio panoramico sui portici storici di Via Po dal balcone',
       },
       {
-        url: '/images/melina-po/library-nook.jpg',
-        caption: 'Angolo lettura con selezione di libri, guide e giochi da tavolo',
+        url: '/images/melina-po/entrance.jpg',
+        caption: 'Entrata nell’alloggio con panca',
       },
       {
         url: '/images/melina-po/living-perspective.jpg',
-        caption: 'Elegante prospettiva della zona living inondata di luce',
+        caption: 'Vista sul salotto dal soppalco',
       },
       {
         url: '/images/melina-po/architectural-details.jpg',
-        caption: 'Dettagli architettonici d’epoca e finiture di pregio',
+        caption: 'Dettagli del tavolo',
       },
       {
         url: '/images/melina-po/building-exterior.jpg',
-        caption: 'Facciata dello storico palazzo sabaudo in Via Po 51',
+        caption: 'Via Po illuminata d’inverno',
       },
     ],
     amenities: [

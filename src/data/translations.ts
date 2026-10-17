@@ -16,12 +16,38 @@ export interface ApartmentTranslation {
   }
 }
 
+export interface StayGuideTranslations {
+  badge: string
+  title: string
+  subtitle: string
+  intro: string
+  checkInOutTitle: string
+  checkInOutBadge: string
+  flexibleCheckIn: string
+  checkOutTime: string
+  keyLockbox: string
+  duringStayTitle: string
+  duringStayBadge: string
+  maxGuestsRule: string
+  noSmokingRule: string
+  quietHours: string
+  noPartiesRule: string
+  noPetsRule: string
+  beforeLeavingTitle: string
+  beforeLeavingBadge: string
+  takeTrashRule: string
+  turnOffAllRule: string
+  returnKeysRule: string
+  lockDoorsRule: string
+}
+
 export interface SiteTranslations {
   nav: {
     apartments: string
     terrace: string
     garden: string
     amenities: string
+    stayGuide: string
     location: string
     reviews: string
     contact: string
@@ -171,6 +197,7 @@ export interface SiteTranslations {
     rights: string
     backToTop: string
   }
+  stayGuide: StayGuideTranslations
   apartments: {
     terrace: ApartmentTranslation
     garden: ApartmentTranslation
@@ -184,6 +211,7 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: 'La Melina sulla Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Servizi',
+      stayGuide: 'Guida al Soggiorno',
       location: 'Posizione',
       reviews: 'Recensioni',
       contact: 'Contatti',
@@ -342,7 +370,7 @@ export const translations: Record<Language, SiteTranslations> = {
       badge: 'Comunicazione Diretta',
       title: 'Hai Domande Prima di Prenotare?',
       subtitle:
-        'Le prenotazioni e i calendari avvengono su Airbnb e Booking.com, ma sono a tua completa disposizione per informazioni su parcheggi, trasporti e richieste particolari.',
+        'Le prenotazioni e i calendari avvengono su Airbnb e Booking.com, ma sono a tua completa disposizione per informazioni su parcheggi, trasporti o altre richieste.',
       formTitle: 'Invia un Messaggio Diretto',
       formSubtitle: 'Richiesta informazioni o disponibilità date',
       formBadge: 'Risposta personale entro poche ore',
@@ -374,6 +402,32 @@ export const translations: Record<Language, SiteTranslations> = {
         'Tutti i diritti riservati. Prenotazioni intermediate in sicurezza su Airbnb e Booking.com.',
       backToTop: 'Torna su',
     },
+    stayGuide: {
+      badge: 'Guida al Soggiorno',
+      title: 'Tutto quello che c’è da sapere per il tuo soggiorno',
+      subtitle:
+        'Informazioni pratiche e semplici attenzioni per vivere al meglio gli appartamenti Melina in totale serenità.',
+      intro:
+        'Desideriamo che ti senta a casa tua fin dal primo istante. Ecco poche e chiare indicazioni su orari, cura degli ambienti e massima tranquillità per tutti gli ospiti.',
+      checkInOutTitle: 'Orari & Accesso',
+      checkInOutBadge: 'Flessibilità & Autonomia',
+      flexibleCheckIn: 'Self check-in smart con cassetta chiavi e orario flessibile',
+      checkOutTime: 'Check-out entro le ore 12:00',
+      keyLockbox: 'Codice di accesso inviato prima dell’arrivo per entrare in totale libertà',
+      duringStayTitle: 'Cura degli Spazi',
+      duringStayBadge: 'Il rispetto della casa',
+      maxGuestsRule: 'Capienza massima: 2 ospiti per appartamento',
+      noSmokingRule: 'Ambienti interni 100% non fumatori (balcone e terrazza disponibili all’aperto)',
+      quietHours: 'Ore di riposo e silenzio dalle 22:00 alle 08:00 nel rispetto del palazzo',
+      noPartiesRule: 'Non sono consentiti feste, eventi o shooting commerciali',
+      noPetsRule: 'Alloggi non adatti agli animali domestici per garantire massima igiene',
+      beforeLeavingTitle: 'Prima della Partenza',
+      beforeLeavingBadge: 'Piccoli gesti prima di partire',
+      takeTrashRule: 'Smaltire i rifiuti negli appositi contenitori differenziati',
+      turnOffAllRule: 'Spegnere luci e climatizzazione per un consumo sostenibile',
+      returnKeysRule: 'Riporre con cura le chiavi nella cassetta di sicurezza',
+      lockDoorsRule: 'Chiudere la porta a chiave prima di partire',
+    },
     apartments: {
       terrace: {
         name: 'La Melina sulla Mole',
@@ -391,15 +445,18 @@ export const translations: Record<Language, SiteTranslations> = {
           'Punteggio 10/10 per pulizia, servizi, comfort e accoglienza su Booking.com',
         ],
         galleryCaptions: [
-          'Terrazzo panoramico privato con vista suggestiva sulla Mole Antonelliana e sui tetti',
-          'Suggestiva vista notturna della Mole Antonelliana illuminata dal terrazzo',
-          'Zona pranzo luminosa con tavolo e affaccio panoramico',
+          'Ambiente living accogliente con scala verso il soppalco',
+          'Suggestiva vista notturna della Mole Antonelliana illuminata',
+          'Zona pranzo luminosa',
           'Cucina attrezzata con piano cottura, frigorifero e macchina del caffè',
-          'Camera da letto con soppalco caratteristico e scala a chiocciola',
+          'Vista dal soppalco',
           'Bagno privato con doccia, bidet e set biancheria e asciugamani',
-          'Ingresso dell’alloggio con comoda panca e dettagli di charme',
-          'Ambiente living accogliente con finiture storiche e luce naturale',
-          'Balcone esterno privato con vista su Via Po',
+          'Ingresso dell’alloggio con panca',
+          'Camera da letto sul soppalco',
+          'Salotto con poltrone e tavolino',
+          'Specchio illuminato nel bagno',
+          'Dettaglio sulla cucina',
+          'Logo dell’appartamento all’entrata',
         ],
         rules: {
           checkIn: 'Check-in flessibile (Self check-in con cassetta chiavi)',
@@ -424,17 +481,16 @@ export const translations: Record<Language, SiteTranslations> = {
           'Comfort completo: aria condizionata centralizzata, Wi-Fi veloce e self check-in',
         ],
         galleryCaptions: [
-          'Tavolino sul balcone privato con affaccio caratteristico su Via Po',
-          'Spazioso salotto sabaudo con alti soffitti storici e comodo divano',
-          'Camera da letto matrimoniale soppalcata con atmosfera intima e confortevole',
-          'Zona giorno con tavolo da pranzo, Smart TV e cucina a vista',
-          'Prospettiva del soppalco e volumi ariosi del piano nobile',
+          'Spazioso salotto con alti soffitti storici e divani',
+          'Salotto con Smart TV',
+          'Zona giorno con tavolo da pranzo e bar a vista',
+          'Camera da letto sul soppalco',
           'Bagno privato rifinito con doccia, bidet e set biancheria',
           'Scorcio panoramico sui portici storici di Via Po dal balcone',
-          'Angolo lettura con selezione di libri, guide e giochi da tavolo',
-          'Elegante prospettiva della zona living inondata di luce',
-          'Dettagli architettonici d’epoca e finiture di pregio',
-          'Facciata dello storico palazzo sabaudo in Via Po 51',
+          'Entrata nell’alloggio con panca',
+          'Vista sul salotto dal soppalco',
+          'Dettagli del tavolo',
+          'Via Po illuminata d’inverno',
         ],
         rules: {
           checkIn: 'Check-in flessibile (Self check-in con cassetta chiavi)',
@@ -451,6 +507,7 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: 'La Melina sulla Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Amenities',
+      stayGuide: 'Stay Guide',
       location: 'Location',
       reviews: 'Reviews',
       contact: 'Contact',
@@ -641,6 +698,32 @@ export const translations: Record<Language, SiteTranslations> = {
         'All rights reserved. Bookings fulfilled securely on Airbnb and Booking.com.',
       backToTop: 'Back to Top',
     },
+    stayGuide: {
+      badge: 'Stay Guide',
+      title: 'Helpful details for a smooth, relaxing stay',
+      subtitle:
+        'Practical timings and thoughtful touches to make the most of your time at Melina in complete ease.',
+      intro:
+        'We want you to feel warmly at home in Turin from the very first minute. Here are a few clear details regarding arrival, caring for the space, and peaceful living.',
+      checkInOutTitle: 'Timing & Arrival',
+      checkInOutBadge: 'Flexibility & Autonomy',
+      flexibleCheckIn: 'Smart self check-in with key lockbox and flexible timing',
+      checkOutTime: 'Check-out by 12:00 PM',
+      keyLockbox: 'Secure entry code sent before arrival for seamless 24/7 access',
+      duringStayTitle: 'Caring for the Space',
+      duringStayBadge: 'Caring for the space',
+      maxGuestsRule: 'Maximum capacity: 2 guests per apartment',
+      noSmokingRule: '100% smoke-free interiors (private balcony & terrace available outside)',
+      quietHours: 'Quiet resting hours from 10:00 PM to 8:00 AM out of respect for neighbors',
+      noPartiesRule: 'Parties, gatherings, or commercial photography are not permitted',
+      noPetsRule: 'Pet-free retreats to ensure top allergen & cleanliness standards',
+      beforeLeavingTitle: 'Before Departure',
+      beforeLeavingBadge: 'Simple parting gestures',
+      takeTrashRule: 'Dispose of trash in the designated recycling bins',
+      turnOffAllRule: 'Turn off lights and climate controls for sustainability',
+      returnKeysRule: 'Return the apartment keys safely to the lockbox',
+      lockDoorsRule: 'Lock the entrance door securely upon departure',
+    },
     apartments: {
       terrace: {
         name: 'La Melina sulla Mole',
@@ -658,15 +741,18 @@ export const translations: Record<Language, SiteTranslations> = {
           'Flawless 10/10 rating for cleanliness, amenities, comfort & service on Booking.com',
         ],
         galleryCaptions: [
-          'Private panoramic terrace with breathtaking views of the Mole Antonelliana & rooftops',
-          'Atmospheric nighttime view of the illuminated Mole Antonelliana from the terrace',
-          'Bright dining nook with table and chairs by the scenic window',
-          'Kitchen equipped with stove, refrigerator, cookware, and coffee maker',
-          'Comfortable bedroom with distinctive mezzanine and spiral staircase',
-          'Contemporary private bathroom with walk-in shower, bidet, and fresh linens',
-          'Welcoming entryway with artisanal wooden bench and historical charm',
-          'Inviting living space with historic charm and abundant daylight',
-          'Private outdoor balcony with panoramic perspective of Via Po',
+          'Cozy living area with staircase leading to the mezzanine',
+          'Atmospheric night view of the illuminated Mole Antonelliana',
+          'Bright dining area',
+          'Fully equipped kitchen with stovetop, refrigerator, and coffee machine',
+          'View from the mezzanine',
+          'Private bathroom with shower, bidet, and fresh linen & towel sets',
+          'Apartment entryway with bench',
+          'Mezzanine bedroom',
+          'Living area with armchairs and coffee table',
+          'Illuminated mirror in the bathroom',
+          'Kitchen details',
+          'Apartment logo at the entrance',
         ],
         rules: {
           checkIn: 'Flexible check-in (Self check-in with key lockbox)',
@@ -691,17 +777,16 @@ export const translations: Record<Language, SiteTranslations> = {
           'Complete comfort: central air conditioning, fast Wi-Fi, and smart keypad self check-in',
         ],
         galleryCaptions: [
-          'Bistro table on private balcony with picturesque views over Via Po',
-          'Spacious Savoyard salon with historic high ceilings and comfortable lounge sofa',
-          'Mezzanine double bedroom with cozy, intimate ambiance',
-          'Open dining and living space with dining table, Smart TV, and kitchenette',
-          'Perspective view from the mezzanine highlighting airy noble-floor volumes',
-          'Private bathroom with walk-in shower, bidet, and plush bath linens',
+          'Spacious living room with high historic ceilings and sofas',
+          'Living room with Smart TV',
+          'Living area with dining table and open bar',
+          'Mezzanine bedroom',
+          'Refined private bathroom with shower, bidet, and towel set',
           'Panoramic view over the historic arcades of Via Po from the balcony',
-          'Curated reading nook with books, Turin guides, and board games',
-          'Luminous perspective of the stylish living room flooded with daylight',
-          'Noble architectural details and refined period craftsmanship',
-          'Historic Savoyard building facade along Via Po 51',
+          'Apartment entryway with bench',
+          'View over the living room from the mezzanine',
+          'Table details',
+          'Via Po illuminated in winter',
         ],
         rules: {
           checkIn: 'Flexible check-in (Self check-in with key lockbox)',
@@ -718,6 +803,7 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: 'La Melina sulla Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Services',
+      stayGuide: 'Guide du Séjour',
       location: 'Emplacement',
       reviews: 'Avis',
       contact: 'Contact',
@@ -908,6 +994,32 @@ export const translations: Record<Language, SiteTranslations> = {
         'Tous droits réservés. Réservations traitées en toute sécurité sur Airbnb et Booking.com.',
       backToTop: 'Retour en haut',
     },
+    stayGuide: {
+      badge: 'Guide du Séjour',
+      title: 'Tout ce qu’il faut savoir pour un séjour serein',
+      subtitle:
+        'Horaires pratiques et attentions bienveillantes pour profiter pleinement de votre séjour chez Melina.',
+      intro:
+        'Nous souhaitons que vous vous sentiez comme chez vous à Turin dès la première seconde. Voici quelques repères clairs sur les horaires, le confort et le respect des lieux.',
+      checkInOutTitle: 'Horaires & Accès',
+      checkInOutBadge: 'Flexibilité & Autonomie',
+      flexibleCheckIn: 'Arrivée autonome intelligente avec boîte à clés et horaires flexibles',
+      checkOutTime: 'Départ avant 12h00',
+      keyLockbox: 'Code d’accès sécurisé envoyé avant l’arrivée pour une entrée libre 24h/24',
+      duringStayTitle: 'Soin des Lieux',
+      duringStayBadge: 'Respect des lieux',
+      maxGuestsRule: 'Capacité maximale : 2 personnes par appartement',
+      noSmokingRule: 'Intérieurs 100% non-fumeurs (terrasse et balcon privatifs en extérieur)',
+      quietHours: 'Heures de repos et de calme de 22h00 à 08h00 pour la tranquillité de l’immeuble',
+      noPartiesRule: 'Fêtes, réceptions ou tournages commerciaux non autorisés',
+      noPetsRule: 'Logements sans animaux pour garantir un niveau d’hygiène irréprochable',
+      beforeLeavingTitle: 'Avant le Départ',
+      beforeLeavingBadge: 'Quelques gestes simples',
+      takeTrashRule: 'Déposer les poubelles dans les bacs de tri sélectif dédiés',
+      turnOffAllRule: 'Éteindre les lumières et la climatisation par souci écologique',
+      returnKeysRule: 'Replacer soigneusement les clés dans la boîte sécurisée',
+      lockDoorsRule: 'Verrouiller la porte d’entrée au moment du départ',
+    },
     apartments: {
       terrace: {
         name: 'La Melina sulla Mole',
@@ -925,15 +1037,18 @@ export const translations: Record<Language, SiteTranslations> = {
           'Note parfaite de 10/10 pour la propreté, les équipements et l’accueil sur Booking.com',
         ],
         galleryCaptions: [
-          'Terrasse panoramique privée avec vue spectaculaire sur la Mole et les toits',
-          'Vue nocturne féerique de la Mole Antonelliana illuminée depuis la terrasse',
-          'Espace repas lumineux avec table et chaises face à la fenêtre panoramique',
+          'Espace salon chaleureux avec escalier menant à la mezzanine',
+          'Vue nocturne suggestive de la Mole Antonelliana illuminée',
+          'Espace salle à manger lumineux',
           'Cuisine équipée avec plaques de cuisson, réfrigérateur et machine à café',
-          'Chambre confortable avec mezzanine de caractère et escalier en colimaçon',
-          'Salle de bain privée contemporaine avec douche, bidet et linge fourni',
-          'Entrée chaleureuse avec banc en bois artisanal et cachet d’époque',
-          'Salon raffiné mêlant charme historique et lumière naturelle',
-          'Balcon privatif offrant une vue agréable sur la Via Po',
+          'Vue depuis la mezzanine',
+          'Salle de bain privée avec douche, bidet et linge de maison & serviettes',
+          'Entrée du logement avec banc',
+          'Chambre à coucher en mezzanine',
+          'Salon avec fauteuils et table basse',
+          'Miroir éclairé dans la salle de bain',
+          'Détails de la cuisine',
+          'Logo de l’appartement à l’entrée',
         ],
         rules: {
           checkIn: 'Arrivée flexible (Arrivée autonome avec boîte à clés)',
@@ -958,17 +1073,16 @@ export const translations: Record<Language, SiteTranslations> = {
           'Confort moderne complet : climatisation, Wi-Fi haut débit et check-in autonome',
         ],
         galleryCaptions: [
-          'Table bistrot sur le balcon privé avec vue pittoresque sur la Via Po',
-          'Grand salon savoyard avec hauts plafonds historiques et canapé confortable',
-          'Chambre double en mezzanine dans une atmosphère douce et chaleureuse',
-          'Espace de vie ouvert avec table à manger, Smart TV et kitchenette équipée',
-          'Vue d’ensemble depuis la mezzanine soulignant les beaux volumes de l’étage noble',
-          'Salle de bain privée contemporaine avec douche, bidet et serviettes soyeuses',
+          'Salon spacieux avec hauts plafonds d’époque et canapés',
+          'Salon avec Smart TV',
+          'Pièce de vie avec table à manger et bar ouvert',
+          'Chambre à coucher en mezzanine',
+          'Salle de bain privée raffinée avec douche, bidet et linge de bain',
           'Aperçu panoramique sur les arcades historiques de la Via Po depuis le balcon',
-          'Coin lecture cosy avec sélection de livres, guides touristiques et jeux',
-          'Perspective lumineuse du séjour baigné de lumière naturelle',
-          'Détails architecturaux d’époque et finitions élégantes de l’immeuble',
-          'Façade du palais noble historique au 51 Via Po',
+          'Entrée du logement avec banc',
+          'Vue sur le salon depuis la mezzanine',
+          'Détails de la table',
+          'La Via Po illuminée en hiver',
         ],
         rules: {
           checkIn: 'Arrivée flexible (Arrivée autonome avec boîte à clés)',
@@ -985,6 +1099,7 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: 'La Melina sulla Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Ausstattung',
+      stayGuide: 'Aufenthalts-Guide',
       location: 'Lage',
       reviews: 'Bewertungen',
       contact: 'Kontakt',
@@ -1175,6 +1290,32 @@ export const translations: Record<Language, SiteTranslations> = {
         'Alle Rechte vorbehalten. Buchungen sicher abgewickelt über Airbnb und Booking.com.',
       backToTop: 'Nach oben',
     },
+    stayGuide: {
+      badge: 'Aufenthalts-Guide',
+      title: 'Wissenswertes für einen entspannten Aufenthalt',
+      subtitle:
+        'Praktische Zeiten und einfache Hinweise, um Ihre Zeit bei Melina in vollen Zügen zu genießen.',
+      intro:
+        'Wir möchten, dass Sie sich in Turin vom ersten Moment an wie zu Hause fühlen. Hier finden Sie alle nützlichen Informationen zu Ankunft, Wohnkomfort und ruhigem Beisammensein.',
+      checkInOutTitle: 'Zeiten & Ankunft',
+      checkInOutBadge: 'Flexibilität & Autonomie',
+      flexibleCheckIn: 'Smarter Self Check-in mit Schlüsselbox und flexiblen Ankunftszeiten',
+      checkOutTime: 'Check-out bis 12:00 Uhr',
+      keyLockbox: 'Sicherer Zugangscode vorab für unkomplizierten 24/7 Einlass',
+      duringStayTitle: 'Pflege der Räumlichkeiten',
+      duringStayBadge: 'Respektvoller Umgang',
+      maxGuestsRule: 'Maximale Belegung: 2 Gäste pro Apartment',
+      noSmokingRule: '100% Nichtraucher-Innenräume (privater Balkon & Terrasse im Freien)',
+      quietHours: 'Nachtruhe von 22:00 bis 08:00 Uhr für ein ungestörtes Wohnumfeld',
+      noPartiesRule: 'Partys, Veranstaltungen oder kommerzielle Fotoshootings sind nicht gestattet',
+      noPetsRule: 'Haustierfreie Apartments für höchste Sauberkeits- und Allergenstandards',
+      beforeLeavingTitle: 'Vor der Abreise',
+      beforeLeavingBadge: 'Kleine Handgriffe vor der Abreise',
+      takeTrashRule: 'Müll in den vorgesehenen Recycling-Behältern entsorgen',
+      turnOffAllRule: 'Lichter und Klimaanlage für einen nachhaltigen Umgang ausschalten',
+      returnKeysRule: 'Schlüssel sicher in die Schlüsselbox zurücklegen',
+      lockDoorsRule: 'Wohnungstür beim Verlassen sorgfältig abschließen',
+    },
     apartments: {
       terrace: {
         name: 'La Melina sulla Mole',
@@ -1192,15 +1333,18 @@ export const translations: Record<Language, SiteTranslations> = {
           'Höchstbewertung von 10/10 für Sauberkeit, Ausstattung und Gastfreundschaft auf Booking.com',
         ],
         galleryCaptions: [
-          'Private Panorama-Dachterrasse mit fantastischem Blick auf die Mole und die Stadt',
-          'Stimmungsvolle Nachtansicht der beleuchteten Mole Antonelliana von der Terrasse',
-          'Heller Essbereich mit Tisch und Stühlen am Panoramafenster',
-          'Voll ausgestattete Küche mit Kochfeld, Kühlschrank und Kaffeemaschine',
-          'Gemütliches Schlafzimmer mit charakteristischer Mezzanine und Wendeltreppe',
-          'Modernes Privatbad mit Dusche, Bidet und frischen Handtüchern',
-          'Einladender Eingangsbereich mit Holzbank und historischem Altbau-Charme',
-          'Gemütlicher Wohnbereich mit historischem Flair und viel Tageslicht',
-          'Privater Balkon mit malerischem Blick auf die geschichtsträchtige Via Po',
+          'Gemütlicher Wohnbereich mit Treppe zur Galerie',
+          'Stimmungsvoller nächtlicher Blick auf die beleuchtete Mole Antonelliana',
+          'Heller Essbereich',
+          'Voll ausgestattete Küche mit Herd, Kühlschrank und Kaffeemaschine',
+          'Blick von der Galerie',
+          'Privates Badezimmer mit Dusche, Bidet sowie Bettwäsche- und Handtuchset',
+          'Wohnungseingang mit Sitzbank',
+          'Schlafzimmer auf der Galerie',
+          'Wohnzimmer mit Sesseln und Couchtisch',
+          'Beleuchteter Spiegel im Badezimmer',
+          'Küchendetails',
+          'Wohnungslogo am Eingang',
         ],
         rules: {
           checkIn: 'Flexibler Check-in (Self Check-in mit Schlüsselbox)',
@@ -1225,17 +1369,16 @@ export const translations: Record<Language, SiteTranslations> = {
           'Rundum-Komfort: zentrale Klimaanlage, schnelles WLAN und Self Check-in',
         ],
         galleryCaptions: [
-          'Bistrotisch auf dem privaten Balkon mit malerischem Blick auf die Via Po',
-          'Großzügiger piemontesischer Salon mit hohen Stuckdecken und gemütlichem Sofa',
-          'Mezzanin-Schlafzimmer mit Doppelbett und behaglicher Atmosphäre',
-          'Wohn- und Essbereich mit Esstisch, Smart-TV und offener Küchenzeile',
-          'Blick von der Galerie auf die luftigen Raumhöhen der Beletage',
-          'Privates Badezimmer mit Dusche, Bidet und flauschigen Handtüchern',
-          'Panoramablick auf die belebten Arkaden der Via Po vom Balkon',
-          'Gemütliche Leseecke mit Büchern, Turin-Reiseführern und Brettspielen',
-          'Lichtdurchflutete Perspektive des stilvollen Wohnzimmers',
-          'Historische architektonische Details und hochwertige Ausstattung',
-          'Fassade des historischen Palais in der Via Po 51',
+          'Geräumiges Wohnzimmer mit hohen historischen Decken und Sofas',
+          'Wohnbereich mit Smart-TV',
+          'Wohnbereich mit Esstisch und offener Bar',
+          'Schlafzimmer auf der Galerie',
+          'Elegantes privates Badezimmer mit Dusche, Bidet und Handtuchset',
+          'Panoramablick auf die historischen Arkaden der Via Po vom Balkon',
+          'Wohnungseingang mit Sitzbank',
+          'Blick auf das Wohnzimmer von der Galerie',
+          'Tischdetails',
+          'Via Po im winterlichen Lichterglanz',
         ],
         rules: {
           checkIn: 'Flexibler Check-in (Self Check-in mit Schlüsselbox)',
@@ -1252,6 +1395,7 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: 'La Melina sulla Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Servicios',
+      stayGuide: 'Guía de Estancia',
       location: 'Ubicación',
       reviews: 'Opiniones',
       contact: 'Contacto',
@@ -1442,6 +1586,32 @@ export const translations: Record<Language, SiteTranslations> = {
         'Todos los derechos reservados. Reservas gestionadas de forma segura en Airbnb y Booking.com.',
       backToTop: 'Volver arriba',
     },
+    stayGuide: {
+      badge: 'Guía de Estancia',
+      title: 'Todo lo que necesitas saber para una estancia serena',
+      subtitle:
+        'Horarios prácticos y sencillas pautas para disfrutar de tu estancia en Melina con total comodidad.',
+      intro:
+        'Queremos que te sientas como en tu propia casa desde el primer momento. Aquí tienes algunas indicaciones claras sobre horarios, cuidado del espacio y tranquilidad.',
+      checkInOutTitle: 'Horarios & Acceso',
+      checkInOutBadge: 'Flexibilidad & Autonomía',
+      flexibleCheckIn: 'Llegada autónoma smart con caja de llaves y horario flexible',
+      checkOutTime: 'Salida antes de las 12:00',
+      keyLockbox: 'Código de acceso seguro enviado antes de la llegada para total libertad 24/7',
+      duringStayTitle: 'Cuidado de los Espacios',
+      duringStayBadge: 'Respeto del hogar',
+      maxGuestsRule: 'Capacidad máxima: 2 huéspedes por apartamento',
+      noSmokingRule: 'Interiores 100% libres de humo (balcón y terraza privados disponibles al aire libre)',
+      quietHours: 'Horas de descanso de 22:00 a 08:00 para garantizar la tranquilidad vecinal',
+      noPartiesRule: 'No se permiten fiestas, eventos ni sesiones fotográficas publicitarias',
+      noPetsRule: 'Alojamientos sin mascotas para garantizar un estándar óptimo de higiene',
+      beforeLeavingTitle: 'Antes de la Salida',
+      beforeLeavingBadge: 'Pequeños detalles antes de salir',
+      takeTrashRule: 'Depositar la basura en los cubos de reciclaje indicados',
+      turnOffAllRule: 'Apagar luces y climatización para un consumo energético sostenible',
+      returnKeysRule: 'Guardar las llaves en la caja de seguridad',
+      lockDoorsRule: 'Cerrar la puerta con llave al salir',
+    },
     apartments: {
       terrace: {
         name: 'La Melina sulla Mole',
@@ -1459,15 +1629,18 @@ export const translations: Record<Language, SiteTranslations> = {
           'Puntuación impecable de 10/10 en limpieza, servicios y atención en Booking.com',
         ],
         galleryCaptions: [
-          'Terraza panorámica privada con espectaculares vistas a la Mole Antonelliana y la ciudad',
-          'Evocadora vista nocturna de la Mole Antonelliana iluminada desde la terraza',
-          'Luminosa zona de comedor con mesa y sillas junto al ventanal panorámico',
-          'Cocina equipada con placa de cocción, nevera, menaje y cafetera',
-          'Cómodo dormitorio con altillo característico y escalera de caracol',
-          'Baño privado contemporáneo con ducha, bidet y toallas incluidas',
-          'Acogedora entrada con banco de madera artesanal y encanto histórico',
-          'Salón acogedor con techos altos, carácter histórico y abundante luz natural',
-          'Balcón exterior privado con vistas despejadas a Via Po',
+          'Acogedora sala de estar con escalera hacia el altillo',
+          'Sugerente vista nocturna de la Mole Antonelliana iluminada',
+          'Luminoso comedor',
+          'Cocina equipada con placa de cocción, frigorífico y cafetera',
+          'Vista desde el altillo',
+          'Baño privado con ducha, bidé y juego de sábanas y toallas',
+          'Entrada del apartamento con banco',
+          'Dormitorio en el altillo',
+          'Salón con sillones y mesa de centro',
+          'Espejo iluminado en el baño',
+          'Detalles de la cocina',
+          'Logotipo del apartamento en la entrada',
         ],
         rules: {
           checkIn: 'Check-in flexible (Llegada autónoma con caja de llaves)',
@@ -1487,22 +1660,21 @@ export const translations: Record<Language, SiteTranslations> = {
           'Vive Turín desde su perspectiva más auténtica: asómate a tu balcón privado sobre los soportales históricos de Via Po para degustar un café o contemplar la vida turinesa. Ubicado en un palacio señorial histórico provisto de ascensor, este refugio combina encanto de época y comodidades de hoy: aire acondicionado centralizado, calefacción, Wi-Fi rápido, Smart TV y llegada autónoma con teclado digital.',
         highlights: [
           'Balcón privado con vistas características a los soportales históricos de Via Po',
-          'Planta noble con ascensor, techos altos señoriales y altillo de diseño',
+          'Planta noble con ascensor, techos altos señoriales y altillo de design',
           'Ubicación estratégica a pocos pasos de Piazza Vittorio Veneto y la Mole',
           'Máximo confort: aire acondicionado centralizado, Wi-Fi rápido y self check-in smart',
         ],
         galleryCaptions: [
-          'Mesa bistró en el balcón privado con vistas pintorescas a Via Po',
-          'Amplio salón saboyano con techos altos de época y cómodo sofá',
-          'Dormitorio doble en altillo con ambiente íntimo y confortable',
-          'Zona de estar y comedor diáfana con mesa, Smart TV y cocina integrada',
-          'Perspectiva desde el altillo destacando la gran altura de la planta noble',
-          'Baño privado contemporáneo con ducha, bidet y juego de toallas suaves',
+          'Amplio salón con techos altos de época y sofás',
+          'Salón con Smart TV',
+          'Zona de estar con mesa de comedor y barra abierta',
+          'Dormitorio en el altillo',
+          'Elegante baño privado con ducha, bidé y juego de toallas',
           'Vista panorámica de los soportales históricos de Via Po desde el balcón',
-          'Rincón de lectura con cuidada biblioteca, guías de Turín y juegos de mesa',
-          'Perspectiva luminosa del elegante salón bañado por la luz exterior',
-          'Detalles arquitectónicos de época y acabados nobles del edificio',
-          'Fachada del histórico palacio saboyano en Via Po 51',
+          'Entrada del apartamento con banco',
+          'Vista de la sala de estar desde el altillo',
+          'Detalles de la mesa',
+          'Via Po iluminada en invierno',
         ],
         rules: {
           checkIn: 'Check-in flexible (Llegada autónoma con caja de llaves)',

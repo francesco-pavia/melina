@@ -20,15 +20,17 @@ export const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-stone-950">
-      {/* Background Photo with Lightened, Luminous Overlays */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+      {/* Background Photo with Lightened, Luminous Overlays - Spacious Scenic Hero Stage */}
+      <div className="absolute top-0 left-0 right-0 h-[840px] sm:h-[920px] lg:h-[1020px] pointer-events-none z-0 overflow-hidden">
         <img
           src="/turin_bg.jpg"
           alt="Turin Panorama"
-          className="w-full h-full object-cover object-center brightness-[0.82] contrast-[1.06]"
+          className="w-full h-full object-cover object-[center_30%] brightness-[0.88] contrast-[1.05]"
         />
-        {/* Subtle gradient to keep navbar readable and smoothly transition into the section below */}
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/20 to-stone-950" />
+        {/* Top gradient to keep navbar readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-stone-950/75 via-stone-950/20 to-transparent" />
+        {/* Smooth bottom fade into deep stone background before the apartment cards */}
+        <div className="absolute inset-x-0 bottom-0 h-72 sm:h-80 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent" />
       </div>
 
       {/* Warm Ambient Decorative Blurs */}
@@ -47,16 +49,16 @@ export const Hero: React.FC = () => {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
-        {/* Main Headline & Intro */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.15] drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+        {/* Main Headline & Intro with larger typography and generous spacing between lines */}
+        <div className="text-center max-w-4xl lg:max-w-5xl mx-auto mb-16 sm:mb-20 space-y-8 sm:space-y-10 pt-8 sm:pt-14 lg:pt-18">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white tracking-tight leading-[1.1] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">
             {t.headlineStart}{' '}
             <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-rose-300 bg-clip-text text-transparent">
               {t.headlineHighlight}
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-stone-100 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
+          <p className="text-lg sm:text-xl md:text-2xl font-medium sm:font-semibold text-white max-w-3xl mx-auto leading-relaxed sm:leading-relaxed drop-shadow-[0_2px_16px_rgba(0,0,0,1)]">
             {t.subtitle}
           </p>
         </div>
@@ -198,3 +200,5 @@ export const Hero: React.FC = () => {
     </section>
   )
 }
+
+export default Hero
