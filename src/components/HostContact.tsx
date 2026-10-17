@@ -118,11 +118,17 @@ export const HostContact: React.FC = () => {
             <div className="h-full flex flex-col justify-between p-7 sm:p-8 rounded-3xl bg-stone-900/60 border border-stone-800 shadow-xl">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <img
-                    src={hostInfo.avatarUrl}
-                    alt={t.hostTitle || hostInfo.name}
-                    className="w-16 h-16 rounded-2xl object-cover border-2 border-amber-500/30 shrink-0"
-                  />
+                  <div className="relative shrink-0">
+                    <img
+                      src={hostInfo.avatarUrl}
+                      alt={t.hostTitle || hostInfo.name}
+                      className="w-16 h-16 rounded-2xl object-cover border-2 border-amber-500/30 shadow-md"
+                    />
+                    <span
+                      className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-stone-900 rounded-full"
+                      title="Superhost Verificato"
+                    />
+                  </div>
                   <div>
                     <h3 className="text-xl font-serif font-bold text-white">
                       {t.hostTitle || hostInfo.name}
@@ -217,8 +223,8 @@ export const HostContact: React.FC = () => {
                 <div className="h-full flex flex-col justify-between space-y-6">
                   {/* Matching Header on Form Card */}
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border-2 border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
-                      <Send className="w-7 h-7" />
+                    <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border-2 border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0 shadow-md">
+                      <Mail className="w-7 h-7" />
                     </div>
                     <div>
                       <h3 className="text-xl font-serif font-bold text-white">

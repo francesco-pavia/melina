@@ -17,8 +17,8 @@ function AppContent() {
     const sections = [
       'hero',
       'apartments',
-      'melina-terrace',
-      'melina-garden',
+      'melina-mole',
+      'melina-po',
       'location',
       'contact',
     ]

@@ -74,6 +74,8 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
         return <Home className="w-4 h-4 text-stone-300" />
       case 'Car':
         return <Car className="w-4 h-4 text-blue-400" />
+      case 'Bed':
+        return <Bed className="w-4 h-4 text-emerald-400" />
       default:
         return <Sparkles className="w-4 h-4 text-amber-400" />
     }
@@ -246,31 +248,98 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
             </div>
 
             {/* House Rules */}
-            <div className="p-6 rounded-2xl bg-stone-900/40 border border-stone-800 space-y-4">
-              <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                <Clock className="w-5 h-5 text-amber-400" />
-                <span>{t.houseRulesTitle}</span>
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-stone-300">
-                <div>
-                  <span className="text-stone-500 font-medium block">{t.checkIn}</span>
-                  <span className="text-white font-semibold">
-                    {apartment.rules.checkIn}
-                  </span>
+            <div className="p-6 sm:p-7 rounded-3xl bg-stone-900/50 border border-stone-800 space-y-6">
+              <div>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <div className="p-2 rounded-xl bg-amber-500/10 text-amber-400">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold font-serif text-white">
+                    {t.houseRulesTitle}
+                  </h3>
                 </div>
-                <div>
-                  <span className="text-stone-500 font-medium block">{t.checkOut}</span>
-                  <span className="text-white font-semibold">
-                    {apartment.rules.checkOut}
-                  </span>
+                <p className="text-xs sm:text-sm text-stone-300 italic bg-stone-950/40 border border-stone-850 p-3.5 rounded-xl">
+                  "{t.rulesIntro}"
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+                {/* 1. Check-in & Check-out */}
+                <div className="p-4 rounded-2xl bg-stone-950/50 border border-stone-850 space-y-3">
+                  <div className="flex items-center gap-2 text-amber-400 font-semibold text-sm">
+                    <Clock className="w-4 h-4 shrink-0" />
+                    <span>{t.checkInOutTitle}</span>
+                  </div>
+                  <ul className="space-y-2 text-xs sm:text-sm text-stone-300">
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+                      <span>{t.flexibleCheckIn}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+                      <span className="font-medium text-white">{t.checkOutTime}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+                      <span>{t.keyLockbox}</span>
+                    </li>
+                  </ul>
                 </div>
-                <div>
-                  <span className="text-stone-500 font-medium block">{t.policies}</span>
-                  <span>{apartment.rules.smokingAllowed ? 'Smoking allowed' : 'No smoking'} · {apartment.rules.petsAllowed ? 'Pets allowed' : 'No pets'}</span>
+
+                {/* 2. Durante il soggiorno */}
+                <div className="p-4 rounded-2xl bg-stone-950/50 border border-stone-850 space-y-3">
+                  <div className="flex items-center gap-2 text-amber-400 font-semibold text-sm">
+                    <Users className="w-4 h-4 shrink-0" />
+                    <span>{t.duringStayTitle}</span>
+                  </div>
+                  <ul className="space-y-2 text-xs sm:text-sm text-stone-300">
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+                      <span className="font-medium text-white">{t.maxGuestsRule}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0" />
+                      <span>{t.noPetsRule}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0" />
+                      <span>{t.noPartiesRule}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0" />
+                      <span>{t.noCommercialPhotoRule}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0" />
+                      <span>{t.noSmokingRule}</span>
+                    </li>
+                  </ul>
                 </div>
-                <div>
-                  <span className="text-stone-500 font-medium block">{t.quietHours}</span>
-                  <span>{apartment.rules.quietHours}</span>
+
+                {/* 3. Prima della partenza */}
+                <div className="p-4 rounded-2xl bg-stone-950/50 border border-stone-850 space-y-3">
+                  <div className="flex items-center gap-2 text-amber-400 font-semibold text-sm">
+                    <Sparkles className="w-4 h-4 shrink-0" />
+                    <span>{t.beforeLeavingTitle}</span>
+                  </div>
+                  <ul className="space-y-2 text-xs sm:text-sm text-stone-300">
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                      <span>{t.takeTrashRule}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                      <span>{t.turnOffAllRule}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                      <span>{t.returnKeysRule}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                      <span>{t.lockDoorsRule}</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
