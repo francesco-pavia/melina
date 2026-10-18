@@ -2,7 +2,12 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/melina_logo.svg?v=3" />
+    <link rel="icon" type="image/svg+xml" href="/melina_logo.svg?v=4" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0c0a09" />
     <title>La Melina · Appartamenti Vacanze Torino Centro | Via Po 51</title>
@@ -12,6 +17,7 @@
     <meta name="author" content="Alessandra Mela" />
     
     <!-- Open Graph / WhatsApp / Facebook Sharing -->
+    <meta property="og:site_name" content="La Melina" />
     <meta property="og:title" content="La Melina · Appartamenti Vacanze Torino Centro | Via Po 51" />
     <meta property="og:description" content="Due splendidi appartamenti indipendenti nel centro storico di Torino in Via Po 51: attico panoramico con terrazzo sulla Mole e salotto d'epoca con balcone sui portici." />
     <meta property="og:type" content="website" />
@@ -31,11 +37,22 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LodgingBusiness",
-      "name": "La Melina Apartments",
-      "alternateName": "La Melina Torino",
-      "description": "Due esclusivi appartamenti vacanze nel cuore del centro storico di Torino in Via Po 51: attico panoramico con terrazzo vista Mole Antonelliana e salotto nobiliare con balcone sui portici.",
-      "image": "/turin_bg.jpg",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://melina-xi.vercel.app/#website",
+          "name": "La Melina",
+          "alternateName": ["La Melina Torino", "La Melina Apartments"],
+          "url": "https://melina-xi.vercel.app/"
+        },
+        {
+          "@type": "LodgingBusiness",
+          "@id": "https://melina-xi.vercel.app/#lodging",
+          "name": "La Melina Apartments",
+          "alternateName": "La Melina Torino",
+          "url": "https://melina-xi.vercel.app/",
+          "description": "Due esclusivi appartamenti vacanze nel cuore del centro storico di Torino in Via Po 51: attico panoramico con terrazzo vista Mole Antonelliana e salotto nobiliare con balcone sui portici.",
+          "image": "/turin_bg.jpg",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Po 51",
@@ -110,7 +127,9 @@
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
   </head>
   <body class="bg-stone-950 text-stone-100 antialiased selection:bg-amber-500 selection:text-stone-950">
     <div id="root"></div>
