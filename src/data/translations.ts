@@ -208,7 +208,7 @@ export const translations: Record<Language, SiteTranslations> = {
   it: {
     nav: {
       apartments: 'Gli Appartamenti',
-      terrace: 'La Melina sulla Mole',
+      terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Servizi',
       stayGuide: 'Guida al Soggiorno',
@@ -217,7 +217,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Contatti',
     },
     hero: {
-      welcomeBadge: 'Benvenuti a Melina · Torino Centro',
+      welcomeBadge: 'Benvenuti a La Melina · Torino Centro',
       headlineStart: 'Due Oasi Esclusive nel Cuore di',
       headlineHighlight: 'Torino',
       subtitle:
@@ -375,7 +375,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Richiesta informazioni o disponibilità date',
       formBadge: 'Risposta personale entro poche ore',
       hostTitle: 'Alessandra Mela',
-      hostRole: 'Host & Property Manager · Melina',
+      hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Lingue parlate:',
       whatsappCta: 'Scrivimi su WhatsApp',
       whatsappSub: 'Risposta rapida',
@@ -406,7 +406,7 @@ export const translations: Record<Language, SiteTranslations> = {
       badge: 'Guida al Soggiorno',
       title: 'Tutto quello che c’è da sapere per il tuo soggiorno',
       subtitle:
-        'Informazioni pratiche e semplici attenzioni per vivere al meglio gli appartamenti Melina in totale serenità.',
+        'Informazioni pratiche e semplici attenzioni per vivere al meglio gli appartamenti La Melina in totale serenità.',
       intro:
         'Desideriamo che ti senta a casa tua fin dal primo istante. Ecco poche e chiare indicazioni su orari, cura degli ambienti e massima tranquillità per tutti gli ospiti.',
       checkInOutTitle: 'Orari & Accesso',
@@ -430,7 +430,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'La Melina sulla Mole',
+        name: 'La Melina sotto la Mole',
         subtitle:
           'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico e vista sulla Mole',
         badgeText: 'Booking.com 10/10 Eccezionale',
@@ -504,7 +504,7 @@ export const translations: Record<Language, SiteTranslations> = {
   en: {
     nav: {
       apartments: 'The Apartments',
-      terrace: 'La Melina sulla Mole',
+      terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Amenities',
       stayGuide: 'Stay Guide',
@@ -513,7 +513,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Contact',
     },
     hero: {
-      welcomeBadge: 'Welcome to Melina · Turin Center',
+      welcomeBadge: 'Welcome to La Melina · Turin Center',
       headlineStart: 'Two Handcrafted Retreats in the Heart of',
       headlineHighlight: 'Turin',
       subtitle:
@@ -671,7 +671,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Inquiry or date availability question',
       formBadge: 'Personal reply within a few hours',
       hostTitle: 'Alessandra Mela',
-      hostRole: 'Host & Property Manager · Melina',
+      hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Languages spoken:',
       whatsappCta: 'Chat on WhatsApp',
       whatsappSub: 'Instant reply',
@@ -702,7 +702,7 @@ export const translations: Record<Language, SiteTranslations> = {
       badge: 'Stay Guide',
       title: 'Helpful details for a smooth, relaxing stay',
       subtitle:
-        'Practical timings and thoughtful touches to make the most of your time at Melina in complete ease.',
+        'Practical timings and thoughtful touches to make the most of your time at La Melina in complete ease.',
       intro:
         'We want you to feel warmly at home in Turin from the very first minute. Here are a few clear details regarding arrival, caring for the space, and peaceful living.',
       checkInOutTitle: 'Timing & Arrival',
@@ -726,7 +726,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'La Melina sulla Mole',
+        name: 'La Melina sotto la Mole',
         subtitle:
           'Top-floor bright apartment with private panoramic terrace and Mole Antonelliana view',
         badgeText: 'Booking.com 10/10 Exceptional',
@@ -800,7 +800,7 @@ export const translations: Record<Language, SiteTranslations> = {
   fr: {
     nav: {
       apartments: 'Les Appartements',
-      terrace: 'La Melina sulla Mole',
+      terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Services',
       stayGuide: 'Guide du Séjour',
@@ -809,7 +809,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Contact',
     },
     hero: {
-      welcomeBadge: 'Bienvenue à Melina · Turin Centre',
+      welcomeBadge: 'Bienvenue à La Melina · Turin Centre',
       headlineStart: 'Deux Havres de Paix au Cœur de',
       headlineHighlight: 'Turin',
       subtitle:
@@ -967,7 +967,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Demande d’information ou de dates disponibles',
       formBadge: 'Réponse personnelle en quelques heures',
       hostTitle: 'Alessandra Mela',
-      hostRole: 'Host & Property Manager · Melina',
+      hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Langues parlées :',
       whatsappCta: 'Discuter sur WhatsApp',
       whatsappSub: 'Réponse rapide',
@@ -998,7 +998,7 @@ export const translations: Record<Language, SiteTranslations> = {
       badge: 'Guide du Séjour',
       title: 'Tout ce qu’il faut savoir pour un séjour serein',
       subtitle:
-        'Horaires pratiques et attentions bienveillantes pour profiter pleinement de votre séjour chez Melina.',
+        'Horaires pratiques et attentions bienveillantes pour profiter pleinement de votre séjour chez La Melina.',
       intro:
         'Nous souhaitons que vous vous sentiez comme chez vous à Turin dès la première seconde. Voici quelques repères clairs sur les horaires, le confort et le respect des lieux.',
       checkInOutTitle: 'Horaires & Accès',
@@ -1022,7 +1022,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'La Melina sulla Mole',
+        name: 'La Melina sotto la Mole',
         subtitle:
           'Appartement lumineux au dernier étage avec terrasse panoramique privée et vue sur la Mole',
         badgeText: 'Booking.com 10/10 Exceptionnel',
@@ -1096,7 +1096,7 @@ export const translations: Record<Language, SiteTranslations> = {
   de: {
     nav: {
       apartments: 'Die Apartments',
-      terrace: 'La Melina sulla Mole',
+      terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Ausstattung',
       stayGuide: 'Aufenthalts-Guide',
@@ -1105,7 +1105,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Kontakt',
     },
     hero: {
-      welcomeBadge: 'Willkommen bei Melina · Turin Zentrum',
+      welcomeBadge: 'Willkommen bei La Melina · Turin Zentrum',
       headlineStart: 'Zwei Exklusive Rückzugsorte im Herzen von',
       headlineHighlight: 'Turin',
       subtitle:
@@ -1263,7 +1263,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Anfrage zu Informationen oder Reisedaten',
       formBadge: 'Persönliche Antwort in wenigen Stunden',
       hostTitle: 'Alessandra Mela',
-      hostRole: 'Host & Property Manager · Melina',
+      hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Gesprochene Sprachen:',
       whatsappCta: 'Per WhatsApp schreiben',
       whatsappSub: 'Schnelle Rückmeldung',
@@ -1294,7 +1294,7 @@ export const translations: Record<Language, SiteTranslations> = {
       badge: 'Aufenthalts-Guide',
       title: 'Wissenswertes für einen entspannten Aufenthalt',
       subtitle:
-        'Praktische Zeiten und einfache Hinweise, um Ihre Zeit bei Melina in vollen Zügen zu genießen.',
+        'Praktische Zeiten und einfache Hinweise, um Ihre Zeit bei La Melina in vollen Zügen zu genießen.',
       intro:
         'Wir möchten, dass Sie sich in Turin vom ersten Moment an wie zu Hause fühlen. Hier finden Sie alle nützlichen Informationen zu Ankunft, Wohnkomfort und ruhigem Beisammensein.',
       checkInOutTitle: 'Zeiten & Ankunft',
@@ -1318,7 +1318,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'La Melina sulla Mole',
+        name: 'La Melina sotto la Mole',
         subtitle:
           'Helles Dachgeschoss-Apartment mit privater Panorama-Terrasse und Blick auf die Mole',
         badgeText: 'Booking.com 10/10 Außergewöhnlich',
@@ -1392,7 +1392,7 @@ export const translations: Record<Language, SiteTranslations> = {
   es: {
     nav: {
       apartments: 'Los Apartamentos',
-      terrace: 'La Melina sulla Mole',
+      terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
       amenities: 'Servicios',
       stayGuide: 'Guía de Estancia',
@@ -1401,7 +1401,7 @@ export const translations: Record<Language, SiteTranslations> = {
       contact: 'Contacto',
     },
     hero: {
-      welcomeBadge: 'Bienvenidos a Melina · Centro de Turín',
+      welcomeBadge: 'Bienvenidos a La Melina · Centro de Turín',
       headlineStart: 'Dos Refugios Exclusivos en el Corazón de',
       headlineHighlight: 'Turín',
       subtitle:
@@ -1559,7 +1559,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Consulta de información o fechas disponibles',
       formBadge: 'Respuesta personal en pocas horas',
       hostTitle: 'Alessandra Mela',
-      hostRole: 'Host & Property Manager · Melina',
+      hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Idiomas:',
       whatsappCta: 'Escribir por WhatsApp',
       whatsappSub: 'Respuesta inmediata',
@@ -1590,7 +1590,7 @@ export const translations: Record<Language, SiteTranslations> = {
       badge: 'Guía de Estancia',
       title: 'Todo lo que necesitas saber para una estancia serena',
       subtitle:
-        'Horarios prácticos y sencillas pautas para disfrutar de tu estancia en Melina con total comodidad.',
+        'Horarios prácticos y sencillas pautas para disfrutar de tu estancia en La Melina con total comodidad.',
       intro:
         'Queremos que te sientas como en tu propia casa desde el primer momento. Aquí tienes algunas indicaciones claras sobre horarios, cuidado del espacio y tranquilidad.',
       checkInOutTitle: 'Horarios & Acceso',
@@ -1614,7 +1614,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     apartments: {
       terrace: {
-        name: 'La Melina sulla Mole',
+        name: 'La Melina sotto la Mole',
         subtitle:
           'Luminoso apartamento en última planta con terraza panorámica privada y vistas a la Mole',
         badgeText: 'Booking.com 10/10 Excepcional',

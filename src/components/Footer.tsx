@@ -27,12 +27,12 @@ export const Footer: React.FC = () => {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600/20 to-rose-500/20 border border-amber-500/30 flex items-center justify-center p-1.5 shadow-md shadow-black/40">
                 <img
                   src="/melina_logo.svg"
-                  alt="Melina"
+                  alt="La Melina"
                   className="w-full h-full object-contain brightness-0 invert"
                 />
               </div>
               <span className="font-serif font-bold text-xl text-white">
-                Melina
+                La Melina
               </span>
             </div>
             <p className="text-stone-400 text-xs sm:text-sm leading-relaxed max-w-sm">
@@ -110,7 +110,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-stone-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <div>
-            © {year} Melina. {t.rights}
+            © {year} La Melina. {t.rights}
           </div>
           <div className="flex items-center gap-4">
             <button

@@ -5,7 +5,7 @@ import type { Language } from '../context/LanguageContext'
 export const baseApartments: Apartment[] = [
   {
     id: 'melina-mole',
-    name: 'La Melina sulla Mole',
+    name: 'La Melina sotto la Mole',
     subtitle: 'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico e vista sulla Mole',
     platform: 'Booking.com',
     platformUrl: 'https://www.booking.com/Share-qytECBi', 
@@ -246,7 +246,7 @@ export const getLocalizedApartments = (lang: Language): Apartment[] => {
 
 export const hostInfo: HostInfo = {
   name: 'Alessandra Mela',
-  title: 'Host & Property Manager · Melina',
+  title: 'Host & Property Manager · La Melina',
   bio: `Benvenuti a Torino! La Melina è la tappa ideale per vivere l’eleganza e il fascino sabaudo: sotto i portici storici di Via Po 51, a due passi dalla Mole Antonelliana e da Piazza Vittorio Veneto. Rimango sempre a vostra disposizione per informazioni, accoglienza e consigli autentici sulla città.`,
   avatarUrl: '/images/host-alessandra.jpg',
   email: 'mela.alessandragf@gmail.com',
@@ -293,7 +293,7 @@ export const guestReviews: GuestReview[] = [
     date: 'Settembre 2026',
     rating: 10,
     platform: 'Booking.com',
-    apartmentName: 'La Melina sulla Mole',
+    apartmentName: 'La Melina sotto la Mole',
     text: 'Soggiorno da sogno in Via Po! Il terrazzo è qualcosa di spettacolare con vista sui tetti. Posizione comodissima per girare tutta Torino a piedi. Alessandra è stata gentilissima e disponibilissima.',
   },
   {
@@ -313,7 +313,7 @@ export const guestReviews: GuestReview[] = [
     date: 'Luglio 2026',
     rating: 9.8,
     platform: 'Booking.com',
-    apartmentName: 'La Melina sulla Mole',
+    apartmentName: 'La Melina sotto la Mole',
     text: 'Appartamento meraviglioso, pulizia impeccabile e posizione comodissima sotto i portici di Via Po. Il self check-in con tastierino è stato comodissimo e il terrazzo è fantastico.',
   },
   {

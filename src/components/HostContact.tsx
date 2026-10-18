@@ -65,7 +65,7 @@ export const HostContact: React.FC = () => {
           email: formData.email,
           apartment: formData.apartment,
           message: formData.message,
-          _subject: `Nuova richiesta da ${formData.name} - Melina`,
+          _subject: `Nuova richiesta da ${formData.name} - La Melina`,
           _template: 'table',
           _captcha: 'false',
         }),

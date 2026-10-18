@@ -70,12 +70,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600/20 to-rose-500/20 border border-amber-500/30 flex items-center justify-center p-1.5 shadow-md shadow-black/40 group-hover:scale-105 group-hover:border-amber-400/60 transition-all">
               <img
                 src="/melina_logo.svg"
-                alt="Melina"
+                alt="La Melina"
                 className="w-full h-full object-contain brightness-0 invert"
               />
             </div>
             <span className="font-serif font-semibold text-lg sm:text-xl tracking-tight text-white group-hover:text-amber-200 transition-colors">
-              Melina
+              La Melina
             </span>
           </a>
 

@@ -1,6 +1,6 @@
-# Melina — Holiday Rentals Showcase
+# La Melina — Holiday Rentals Showcase
 
-A modern, elegant showcase website for **Melina**, presenting two private holiday apartments in Italy rented on **Airbnb** and **Booking.com**.
+A modern, elegant showcase website for **La Melina**, presenting two private holiday apartments in Italy rented on **Airbnb** and **Booking.com**.
 
 The website is designed purely for showcase, presentation, and guest communication — direct reservations are fulfilled via verified **Airbnb** and **Booking.com** listings.
 
@@ -8,7 +8,7 @@ The website is designed purely for showcase, presentation, and guest communicati
 
 ## 🏡 Featured Apartments
 
-1. **La Melina sulla Mole (Rented on Booking.com):**
+1. **La Melina sotto la Mole (Rented on Booking.com):**
    - Top-floor apartment with a private panoramic terrace overlooking Turin and the Mole Antonelliana.
    - Up to 4 guests · 1 King bedroom + sofa bed · 1 bathroom · 68 m².
    - Direct link to book on Booking.com with Traveler Review Award (9.8/10).
@@ -60,7 +60,7 @@ Melina/
 │   ├── _redirects                        # SPA client-side routing fallback rule for static hosts
 │   └── images/                           # High-resolution optimized photography
 │       ├── host-alessandra.jpg           # Portrait photo of host Alessandra
-│       ├── melina-mole/                  # Photo gallery for La Melina sulla Mole
+│       ├── melina-mole/                  # Photo gallery for La Melina sotto la Mole
 │       │   ├── mole-night.jpg            # Panoramic night view of Mole Antonelliana
 │       │   ├── living-couch.jpg          # Living room with seating and terrace view
 │       │   ├── living-stairs.jpg         # Living space & loft architectural stairs
