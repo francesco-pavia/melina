@@ -80,7 +80,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block" />
               {t.controllerTitle}
             </h3>
-            <p className="text-stone-300 pl-3.5">{t.controllerText}</p>
+            <p className="text-stone-300 pl-3.5 whitespace-pre-line">{t.controllerText}</p>
           </div>
 
           {/* Section 2 */}
@@ -89,7 +89,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block" />
               {t.dataTitle}
             </h3>
-            <p className="text-stone-300 pl-3.5">{t.dataText}</p>
+            <p className="text-stone-300 pl-3.5 whitespace-pre-line">{t.dataText}</p>
           </div>
 
           {/* Section 3 */}
@@ -98,7 +98,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block" />
               {t.purposeTitle}
             </h3>
-            <p className="text-stone-300 pl-3.5">{t.purposeText}</p>
+            <p className="text-stone-300 pl-3.5 whitespace-pre-line">{t.purposeText}</p>
           </div>
 
           {/* Section 4 */}
@@ -107,7 +107,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block" />
               {t.cookiesTitle}
             </h3>
-            <p className="text-stone-300 pl-3.5">{t.cookiesText}</p>
+            <p className="text-stone-300 pl-3.5 whitespace-pre-line">{t.cookiesText}</p>
           </div>
 
           {/* Section 5 */}
@@ -116,7 +116,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block" />
               {t.rightsTitle}
             </h3>
-            <p className="text-stone-300 pl-3.5">{t.rightsText}</p>
+            <p className="text-stone-300 pl-3.5 whitespace-pre-line">{t.rightsText}</p>
           </div>
 
           {/* Highlight Contact Box */}
@@ -125,7 +125,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
               <Mail className="w-4 h-4" />
             </div>
             <div>
-              <span className="text-stone-400">Email Titolare: </span>
+              <span className="text-stone-400">{t.controllerEmailLabel}{' '}</span>
               <a
                 href="mailto:info.lamelina@gmail.com"
                 className="text-amber-400 hover:text-amber-300 underline font-medium"
@@ -140,7 +140,7 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
         <div className="p-4 sm:p-5 border-t border-stone-800/80 bg-stone-900/90 flex items-center justify-between gap-4">
           <div className="flex items-center gap-1.5 text-[11px] text-stone-400">
             <Lock className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Sicurezza SSL / Connessione Protetta</span>
+            <span>{t.sslSecurity}</span>
           </div>
           <button
             type="button"

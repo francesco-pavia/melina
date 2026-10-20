@@ -217,6 +217,8 @@ export interface SiteTranslations {
     rightsTitle: string
     rightsText: string
     closeButton: string
+    controllerEmailLabel: string
+    sslSecurity: string
   }
   stayGuide: StayGuideTranslations
   apartments: {
@@ -434,20 +436,22 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Ultimo aggiornamento: Ottobre 2026',
       controllerTitle: '1. Titolare del Trattamento',
       controllerText:
-        'Il Titolare del trattamento dei dati personali è Alessandra Mela, referente per gli appartamenti "La Melina" situati in Via Po 51, 10124 Torino (TO), Italia. Per qualsiasi richiesta o per l’esercizio dei tuoi diritti puoi scriverci direttamente all’indirizzo email: info.lamelina@gmail.com.',
-      dataTitle: '2. Dati Raccolti e Modalità di Trasmissione',
+        'Il Titolare del trattamento dei dati personali è Alessandra Mela, referente per gli appartamenti vacanze "La Melina" situati in Via Po 51, 10124 Torino (TO), Italia.\n\nPer qualsiasi informazione, richiesta o per l’esercizio dei tuoi diritti in materia di protezione dei dati, puoi contattarci direttamente all’indirizzo email: info.lamelina@gmail.com.',
+      dataTitle: '2. Dati Raccolti, Canali di Contatto e Log Server',
       dataText:
-        'Raccogliamo unicamente i dati personali inviati spontaneamente attraverso il modulo di contatto (nome, indirizzo email, appartamento d’interesse e messaggio). La trasmissione avviene tramite connessione cifrata HTTPS attraverso il servizio tecnico FormSubmit, utilizzato al solo scopo di recapitare il messaggio alla nostra casella email.',
-      purposeTitle: '3. Finalità e Base Giuridica',
+        'Raccogliamo i dati personali forniti volontariamente tramite il nostro modulo di contatto (nome, indirizzo email, appartamento d’interesse e messaggio) o mediante i recapiti diretti presenti sul sito (WhatsApp al +39 328 329 9346 ed email).\n\nNatura del conferimento: Il conferimento dei dati è facoltativo, ma l’eventuale mancato inserimento rende impossibile rispondere alle tue richieste di preventivo, disponibilità o assistenza sul soggiorno.\n\nDati tecnici e log di navigazione: Durante la consultazione del sito, l’infrastruttura di hosting (Vercel Inc.) registra automaticamente nei log di sistema alcune informazioni tecniche (indirizzo IP, identificativo del browser User-Agent, data e ora della richiesta). Tale raccolta avviene sulla base del legittimo interesse (Art. 6, par. 1, lett. f GDPR) per garantire la sicurezza della rete, prevenire attacchi informatici e assicurare il corretto funzionamento tecnico della piattaforma.',
+      purposeTitle: '3. Finalità, Base Giuridica e Responsabili del Trattamento',
       purposeText:
-        'I dati sono trattati esclusivamente per rispondere alle tue domande, fornirti informazioni sulla disponibilità degli alloggi o assisterti nella pianificazione del soggiorno (misure precontrattuali ai sensi dell’Art. 6, par. 1, lett. b GDPR). I dati non vengono ceduti a terzi né utilizzati per scopi di marketing o newsletter. Le prenotazioni e le relative transazioni economiche avvengono in modo autonomo e sicuro tramite i portali Airbnb e Booking.com.',
-      cookiesTitle: '4. Cookie e Strumenti di Tracciamento',
+        'I dati sono trattati esclusivamente per rispondere alle tue domande, fornirti informazioni e pianificare il tuo soggiorno (misure precontrattuali ai sensi dell’Art. 6, par. 1, lett. b GDPR), nonché per presidiare la sicurezza dell’infrastruttura informatica (Art. 6, par. 1, lett. f GDPR).\n\nNon vendiamo né cediamo mai i tuoi dati personali a terzi per scopi promozionali o di marketing.\n\nFornitori tecnici e trasferimenti internazionali: I dati sono trattati unicamente tramite fornitori di servizi affidabili che operano quali Responsabili del Trattamento ai sensi dell’Art. 28 GDPR: Vercel Inc. per l’hosting web, FormSubmit per l’inoltro cifrato delle richieste e Google Workspace / Gmail per la ricezione della corrispondenza. Poiché tali provider hanno sede o server negli Stati Uniti, i flussi di dati extra-UE sono protetti dalle garanzie dell’EU-US Data Privacy Framework (DPF) e dalle Clausole Contrattuali Standard (SCC) della Commissione Europea.\n\nLe prenotazioni e i relativi pagamenti avvengono in modo autonomo e sicuro direttamente sui portali ufficiali Airbnb e Booking.com.',
+      cookiesTitle: '4. Cookie e Archiviazione Locale (Nessun Banner)',
       cookiesText:
-        'Questo sito web rispetta la tua riservatezza: NON utilizziamo cookie di profilazione, cookie pubblicitari o strumenti di tracciamento di terze parti (come Google Analytics o Meta Pixel). Utilizziamo esclusivamente lo storage tecnico del browser (localStorage) per memorizzare la tua scelta della lingua di navigazione (melina_language).',
-      rightsTitle: '5. Diritti dell’Interessato e Conservazione',
+        'Questo sito web è progettato nel rispetto totale della tua privacy: NON utilizziamo cookie di profilazione, cookie pubblicitari né strumenti di tracciamento o profilazione di terze parti (come Google Analytics o Meta Pixel).\n\nUtilizziamo esclusivamente lo storage tecnico del browser (localStorage con chiave "melina_lang") per memorizzare la preferenza linguistica da te selezionata (italiano, inglese, francese, tedesco o spagnolo). Poiché si tratta di una funzionalità tecnica essenziale ed esente da consenso preventivo ai sensi delle linee guida del Garante Privacy e della Direttiva ePrivacy europea, la navigazione è priva di fastidiosi banner per i cookie.',
+      rightsTitle: '5. Diritti dell’Interessato, Tempi di Conservazione e Reclamo',
       rightsText:
-        'I tuoi dati vengono conservati per il tempo strettamente necessario a gestire la tua richiesta. Ai sensi degli artt. 15-22 del GDPR, hai il diritto in ogni momento di richiedere l’accesso ai tuoi dati, la rettifica, la cancellazione (diritto all’oblio) o la limitazione del trattamento, scrivendo a info.lamelina@gmail.com. Hai inoltre il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (www.garanteprivacy.it).',
+        'Tempi di conservazione: I dati personali inviati tramite modulo di contatto, email o WhatsApp vengono conservati per il tempo strettamente necessario a gestire la richiesta e in ogni caso per non oltre 12 mesi dall’ultima comunicazione, a meno che non segua una prenotazione confermata o sussistano specifici obblighi di legge contabili e fiscali. I log tecnici di sistema vengono cancellati secondo le normali finestre di sicurezza dell’hosting provider.\n\nI tuoi diritti: Ai sensi degli artt. 15-22 del GDPR, puoi esercitare in ogni momento il diritto di accesso, rettifica, cancellazione (diritto all’oblio), limitazione del trattamento o opposizione, scrivendo a info.lamelina@gmail.com.\n\nDiritto di reclamo: Hai inoltre il diritto di proporre reclamo all’Autorità Garante per la Protezione dei Dati Personali italiana (Piazza Venezia 11, 00187 Roma - www.garanteprivacy.it) o all’autorità di controllo del tuo Paese di residenza.',
       closeButton: 'Chiudi',
+      controllerEmailLabel: 'Email del Titolare:',
+      sslSecurity: 'Sicurezza SSL / Connessione Protetta',
     },
     stayGuide: {
       badge: 'Guida al Soggiorno',
@@ -756,20 +760,22 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Last updated: October 2026',
       controllerTitle: '1. Data Controller',
       controllerText:
-        'The Data Controller is Alessandra Mela, property manager for "La Melina" holiday apartments situated at Via Po 51, 10124 Turin (TO), Italy. For any inquiries or to exercise your rights, please contact us directly at: info.lamelina@gmail.com.',
-      dataTitle: '2. Personal Data Collected and Transmission',
+        'The Data Controller is Alessandra Mela, property manager for "La Melina" holiday apartments situated at Via Po 51, 10124 Turin (TO), Italy.\n\nFor any questions, information requests, or to exercise your statutory data protection rights, please contact us directly at: info.lamelina@gmail.com.',
+      dataTitle: '2. Data Collected, Contact Channels & Server Logs',
       dataText:
-        'We only collect personal information that you voluntarily submit through our inquiry form (your name, email address, apartment selection, and message text). Data is transmitted over encrypted HTTPS via FormSubmit solely to deliver your message to our email inbox.',
-      purposeTitle: '3. Purpose and Legal Basis',
+        'We collect personal information that you voluntarily submit through our inquiry form (name, email address, chosen apartment, and message) or through our direct contact channels (WhatsApp at +39 328 329 9346 and direct email).\n\nNature of provision: Providing your personal data is voluntary; however, without it we cannot reply to your requests or assist with your stay planning.\n\nTechnical connection data & server logs: When you visit our website, our cloud hosting infrastructure (Vercel Inc.) automatically records technical connection logs (including IP addresses, browser User-Agent strings, and access timestamps). This technical logging is conducted on the basis of legitimate interest (Art. 6(1)(f) GDPR) to ensure server stability, cyber threat prevention, and proper platform functioning.',
+      purposeTitle: '3. Purpose, Legal Basis & Data Processors',
       purposeText:
-        'Your data is processed solely to respond to your questions, provide availability details, or assist with your stay planning (pre-contractual measures under Art. 6(1)(b) GDPR). We do not share data with third parties or engage in promotional email marketing. Bookings and financial transactions are handled securely and independently on Airbnb and Booking.com.',
-      cookiesTitle: '4. Cookies & Tracking Technologies',
+        'Your data is processed exclusively to address your inquiries, verify rates and availability, and assist with stay arrangements (pre-contractual measures under Art. 6(1)(b) GDPR), as well as to safeguard network security (Art. 6(1)(f) GDPR).\n\nWe never sell or share your personal data with third parties for commercial or marketing purposes.\n\nTechnical service providers & international transfers: Data processing relies strictly on trusted technical service providers acting as Data Processors under Art. 28 GDPR: Vercel Inc. (web infrastructure and hosting), FormSubmit (encrypted inquiry transmission), and Google Workspace / Gmail (email reception). Where these providers operate in the United States, cross-border data transfers are safeguarded under the EU-US Data Privacy Framework (DPF) and the European Commission’s Standard Contractual Clauses (SCC).\n\nFinal reservations and financial transactions take place independently and securely directly through official Airbnb and Booking.com platforms.',
+      cookiesTitle: '4. Cookies & Local Storage (No Cookie Banner)',
       cookiesText:
-        'This website respects your privacy: we DO NOT use profiling cookies, advertising cookies, or third-party behavioral trackers (such as Google Analytics or Meta Pixel). We only use technical browser local storage to preserve your chosen navigation language (melina_language).',
-      rightsTitle: '5. Your Rights and Data Retention',
+        'This website is engineered with strict privacy standards: we DO NOT use profiling cookies, advertising cookies, or third-party behavioral trackers (such as Google Analytics or Meta Pixel).\n\nWe only use browser local technical storage (localStorage key "melina_lang") to preserve your preferred browsing language (Italian, English, French, German, or Spanish). Because this is an essential technical setting exempt from prior consent under Italian Garante and EU ePrivacy guidelines, this site is free of annoying cookie banners.',
+      rightsTitle: '5. Data Retention, Your Rights & Complaints',
       rightsText:
-        'Your data is retained only for the duration necessary to handle your inquiry. Under Articles 15-22 of the GDPR, you have the right to access, rectify, delete, or restrict the processing of your data at any time by contacting info.lamelina@gmail.com. You also have the right to lodge a complaint with the competent data protection authority.',
+        'Data retention: Inquiries submitted via the form, email, or WhatsApp are retained only as long as necessary to handle the communication, and in any case for no longer than 12 months from the last contact, unless followed by a confirmed reservation or required by statutory accounting/legal retention obligations. Technical server logs are purged according to hosting provider security cycles.\n\nYour rights: Under Articles 15-22 of the GDPR, you have the right to access, rectify, delete (right to be forgotten), restrict processing, or object to the processing of your data by contacting info.lamelina@gmail.com.\n\nRight to lodge a complaint: You also have the right to lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rome - www.garanteprivacy.it) or with your local supervisory authority within the EU.',
       closeButton: 'Close',
+      controllerEmailLabel: 'Data Controller Email:',
+      sslSecurity: 'SSL Security / Encrypted Connection',
     },
     stayGuide: {
       badge: 'Stay Guide',
@@ -1078,20 +1084,22 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Dernière mise à jour : Octobre 2026',
       controllerTitle: '1. Responsable du Traitement',
       controllerText:
-        'Le responsable du traitement des données est Alessandra Mela pour les hébergements "La Melina", Via Po 51, 10124 Turin (TO), Italie. Pour toute question ou exercice de vos droits, contactez-nous à : info.lamelina@gmail.com.',
-      dataTitle: '2. Données Collectées et Transmission',
+        'Le responsable du traitement des données personnelles est Alessandra Mela pour les hébergements touristiques "La Melina", Via Po 51, 10124 Turin (TO), Italie.\n\nPour toute demande d’information ou pour exercer vos droits relatifs à vos données personnelles, vous pouvez nous écrire directement à : info.lamelina@gmail.com.',
+      dataTitle: '2. Données Collectées, Canaux de Contact et Journaux Serveur',
       dataText:
-        'Nous recueillons uniquement les données transmises volontairement via le formulaire de contact (nom, adresse email, hébergement souhaité et message). Les données sont transmises de manière sécurisée via HTTPS par le service FormSubmit dans le seul but d’acheminer votre demande à notre boîte email.',
-      purposeTitle: '3. Finalités et Base Juridique',
+        'Nous recueillons les données personnelles transmises volontairement via le formulaire de contact (nom, adresse email, hébergement souhaité et message) ou par nos canaux directs (WhatsApp au +39 328 329 9346 et email direct).\n\nCaractère facultatif : La transmission de vos données est facultative, mais son omission empêche de répondre à vos demandes de renseignement ou de disponibilité.\n\nDonnées techniques et journaux de connexion : Lors de votre consultation du site, l’hébergeur d’infrastructure (Vercel Inc.) enregistre automatiquement des informations techniques dans les journaux système (adresse IP, User-Agent du navigateur, date et heure d’accès). Ce traitement repose sur notre intérêt légitime (Art. 6.1.f RGPD) afin de garantir la sécurité du réseau, prévenir les attaques et assurer le bon fonctionnement du site.',
+      purposeTitle: '3. Finalités, Base Juridique et Sous-traitants',
       purposeText:
-        'Ces données sont traitées exclusivement pour répondre à vos demandes d’information et préparer votre séjour (mesures précontractuelles, Art. 6.1.b RGPD). Vos données ne sont jamais transmises à des tiers ni utilisées à des fins commerciales. Les réservations et transactions financières s’effectuent en toute sécurité sur Airbnb et Booking.com.',
-      cookiesTitle: '4. Cookies et Traceurs',
+        'Vos données sont traitées exclusivement pour répondre à vos demandes, établir des devis et vous assister dans l’organisation de votre séjour (mesures précontractuelles, Art. 6.1.b RGPD), ainsi que pour sécuriser l’infrastructure (Art. 6.1.f RGPD).\n\nNous ne vendons ni ne cédons jamais vos données personnelles à des tiers à des fins promotionnelles ou de marketing.\n\nSous-traitants techniques et transferts hors UE : Les données sont traitées uniquement par des prestataires techniques de confiance agissant en qualité de sous-traitants (Art. 28 RGPD) : Vercel Inc. pour l’hébergement web, FormSubmit pour l’acheminement sécurisé des messages et Google Workspace / Gmail pour la messagerie. Les transferts vers leurs infrastructures situées aux États-Unis sont encadrés par le cadre UE-États-Unis de protection des données (DPF) et les Clauses Contractuelles Types (CCT) de la Commission européenne.\n\nLes réservations et paiements s’effectuent de manière indépendante et sécurisée directement sur les plateformes officielles Airbnb et Booking.com.',
+      cookiesTitle: '4. Cookies et Stockage Local (Sans Bannière)',
       cookiesText:
-        'Ce site respecte votre vie privée : AUCUN cookie de ciblage publicitaire ou outil de suivi comportemental tiers (Google Analytics, Pixel Facebook) n’est utilisé. Seul un stockage technique local du navigateur (localStorage) est utilisé pour conserver votre préférence linguistique (melina_language).',
-      rightsTitle: '5. Vos Droits et Durée de Conservation',
+        'Ce site est conçu dans le plus strict respect de votre vie privée : AUCUN cookie de profilage, cookie publicitaire ou traceur de comportement tiers (tel que Google Analytics ou le Pixel Meta) n’est utilisé.\n\nNous employons exclusivement le stockage technique local du navigateur (localStorage avec la clé "melina_lang") pour mémoriser votre choix de langue (italien, anglais, français, allemand ou espagnol). S’agissant d’une technologie strictement technique dispensée de consentement selon les directives des autorités de protection des données et la directive ePrivacy, aucune bannière de cookies n’est imposée.',
+      rightsTitle: '5. Conservation des Données, Vos Droits et Réclamations',
       rightsText:
-        'Vos données sont conservées uniquement pendant la durée nécessaire au traitement de votre demande. Conformément aux articles 15 à 22 du RGPD, vous disposez d’un droit d’accès, de rectification et d’effacement en écrivant à info.lamelina@gmail.com.',
+        'Durée de conservation : Les données transmises par formulaire, email ou WhatsApp sont conservées pendant la durée nécessaire au traitement de votre demande et pour un maximum de 12 mois après le dernier contact, sauf réservation effective ou obligations légales et comptables de conservation. Les journaux serveur sont purgés selon les cycles de sécurité de l’hébergeur.\n\nVos droits : Conformément aux articles 15 à 22 du RGPD, vous disposez à tout moment d’un droit d’accès, de rectification, d’effacement (droit à l’oubli), de limitation et d’opposition en écrivant à info.lamelina@gmail.com.\n\nDroit de réclamation : Vous avez également le droit d’introduire une réclamation auprès de l’autorité de protection des données italienne (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rome - www.garanteprivacy.it) ou de l’autorité de contrôle de votre pays de résidence dans l’UE (ex. la CNIL en France).',
       closeButton: 'Fermer',
+      controllerEmailLabel: 'Email du Responsable :',
+      sslSecurity: 'Sécurité SSL / Connexion Protégée',
     },
     stayGuide: {
       badge: 'Guide du Séjour',
@@ -1400,20 +1408,22 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Zuletzt aktualisiert: Oktober 2026',
       controllerTitle: '1. Verantwortliche Stelle',
       controllerText:
-        'Verantwortliche Stelle für die Datenverarbeitung ist Alessandra Mela, "La Melina" Ferienunterkünfte, Via Po 51, 10124 Turin (TO), Italien. Für Anfragen oder zur Ausübung Ihrer Rechte schreiben Sie bitte an: info.lamelina@gmail.com.',
-      dataTitle: '2. Erhobene Daten und Übertragung',
+        'Verantwortliche Stelle für die Datenverarbeitung ist Alessandra Mela für die Ferienunterkünfte "La Melina", Via Po 51, 10124 Turin (TO), Italien.\n\nFür Auskünfte, Anfragen oder zur Wahrnehmung Ihrer Datenschutzrechte wenden Sie sich bitte direkt per E-Mail an: info.lamelina@gmail.com.',
+      dataTitle: '2. Erhobene Daten, Kontaktkanäle & Server-Protokolle',
       dataText:
-        'Wir erheben ausschließlich Daten, die Sie uns freiwillig über das Kontaktformular mitteilen (Name, E-Mail-Adresse, Wunschapartment und Nachricht). Die Übertragung erfolgt verschlüsselt über HTTPS mittels FormSubmit zum Zweck der Weiterleitung an unser E-Mail-Postfach.',
-      purposeTitle: '3. Zweck und Rechtsgrundlage',
+        'Wir erheben personenbezogene Daten, die Sie uns freiwillig über das Anfrageformular (Name, E-Mail-Adresse, gewähltes Apartment und Nachricht) oder über unsere Direktkanäle (WhatsApp unter +39 328 329 9346 sowie direkte E-Mail) mitteilen.\n\nFreiwilligkeit der Bereitstellung: Die Bereitstellung Ihrer Daten ist freiwillig; ohne diese Angaben ist eine Beantwortung Ihrer Anfrage oder Auskunft zu Verfügbarkeiten jedoch nicht möglich.\n\nTechnische Verbindungsdaten & Server-Logs: Beim Aufruf der Website registriert die Hosting-Infrastruktur (Vercel Inc.) aus technischen Gründen Logfiles (u.a. IP-Adresse, Browser-Kennung User-Agent sowie Zugriffszeitpunkt). Diese Speicherung erfolgt auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO), um Systemsicherheit, Abwehr von Cyberangriffen und zuverlässigen Betrieb zu gewährleisten.',
+      purposeTitle: '3. Zweck, Rechtsgrundlagen & Auftragsverarbeiter',
       purposeText:
-        'Die Verarbeitung erfolgt ausschließlich zur Beantwortung Ihrer Fragen und zur Vorbereitung Ihres Aufenthalts (vorvertragliche Maßnahmen gem. Art. 6 Abs. 1 lit. b DSGVO). Es findet keine Weitergabe an Dritte oder Nutzung für Werbezwecke statt. Buchungen und Zahlungen erfolgen sicher über Airbnb und Booking.com.',
-      cookiesTitle: '4. Cookies & Tracking-Technologien',
+        'Ihre Daten werden ausschließlich zur Beantwortung von Fragen, Angebotserstellung und Reisevorbereitung (vorvertragliche Maßnahmen gem. Art. 6 Abs. 1 lit. b DSGVO) sowie zur Systemsicherheit (Art. 6 Abs. 1 lit. f DSGVO) verarbeitet.\n\nWir verkaufen oder übermitteln Ihre Daten zu keinem Zeitpunkt an Dritte zu Marketing- oder Werbezwecken.\n\nTechnische Dienstleister & Drittlandübermittlung: Die Verarbeitung erfolgt über sorgfältig eingebundene technische Dienstleister als Auftragsverarbeiter (Art. 28 DSGVO): Vercel Inc. für das Webhosting, FormSubmit für die verschlüsselte Formularweiterleitung und Google Workspace / Gmail für den Mail-Empfang. Da diese Dienstleister Standorte in den USA unterhalten, sind Übermittlungen durch das EU-US Data Privacy Framework (DPF) und Standardvertragsklauseln (SCC) der Europäischen Kommission abgesichert.\n\nBuchungen und Zahlungen erfolgen eigenständig und sicher über die offiziellen Portale Airbnb und Booking.com.',
+      cookiesTitle: '4. Cookies & Lokale Speicherung (Kein Cookie-Banner)',
       cookiesText:
-        'Diese Website respektiert Ihre Privatsphäre: Wir setzen KEINE Profiling-Cookies, Werbe-Tracker oder Drittanbieter-Analysen ein. Es wird lediglich die von Ihnen gewählte Sprachpräferenz lokal im Browser (localStorage: melina_language) gespeichert.',
-      rightsTitle: '5. Betroffenenrechte und Speicherdauer',
+        'Diese Website respektiert Ihre Privatsphäre: Wir setzen KEINE Profiling-Cookies, Marketing-Tracker oder verhaltensbezogene Drittanbieter-Analysen (wie Google Analytics oder Meta-Pixel) ein.\n\nEs kommt ausschließlich der lokale technische Speicher des Browsers (localStorage mit dem Schlüssel "melina_lang") zum Einsatz, um Ihre gewünschte Spracheinstellung (Italienisch, Englisch, Französisch, Deutsch oder Spanisch) festzuhalten. Da dies eine essenzielle technische Funktion darstellt, die nach ePrivacy-Vorgaben und Behördenleitlinien einwilligungsfrei ist, benötigen wir kein störendes Cookie-Banner.',
+      rightsTitle: '5. Speicherdauer, Ihre Rechte & Beschwerdebefugnis',
       rightsText:
-        'Ihre Daten werden nur so lange gespeichert, wie dies für die Bearbeitung Ihrer Anfrage erforderlich ist. Gemäß Art. 15-22 DSGVO haben Sie jederzeit das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung per E-Mail an info.lamelina@gmail.com.',
+        'Speicherdauer: Übermittelte Anfragedaten werden für die Dauer der Bearbeitung und maximal für einen Zeitraum von 12 Monaten nach dem letzten Kontakt aufbewahrt, es sei denn, es folgt eine Buchung oder es greifen gesetzliche steuer- und handelsrechtliche Aufbewahrungspflichten. Technische Server-Logs werden nach standardisierten Sicherheitszyklen des Hosters gelöscht.\n\nIhre Rechte: Gemäß Art. 15-22 DSGVO haben Sie jederzeit das Recht auf Auskunft, Berichtigung, Löschung (Recht auf Vergessenwerden), Einschränkung der Verarbeitung oder Widerspruch per E-Mail an info.lamelina@gmail.com.\n\nBeschwerderecht: Sie haben zudem das Recht, eine Beschwerde bei der zuständigen italienischen Aufsichtsbehörde (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rom - www.garanteprivacy.it) oder bei der Datenschutzbehörde Ihres Wohnsitzlandes einzureichen.',
       closeButton: 'Schließen',
+      controllerEmailLabel: 'E-Mail der Verantwortlichen:',
+      sslSecurity: 'SSL-Sicherheit / Verschlüsselte Verbindung',
     },
     stayGuide: {
       badge: 'Aufenthalts-Guide',
@@ -1722,20 +1732,22 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Última actualización: Octubre 2026',
       controllerTitle: '1. Responsable del Tratamiento',
       controllerText:
-        'La responsable del tratamiento es Alessandra Mela para los alojamientos "La Melina", Via Po 51, 10124 Turín (TO), Italia. Para consultas o ejercer tus derechos, escríbenos a: info.lamelina@gmail.com.',
-      dataTitle: '2. Datos Recopilados y Transmisión',
+        'La responsable del tratamiento de los datos personales es Alessandra Mela para los alojamientos "La Melina", sitos en Via Po 51, 10124 Turín (TO), Italia.\n\nPara cualquier consulta, aclaración o para el ejercicio de tus derechos de protección de datos, puedes contactarnos directamente en: info.lamelina@gmail.com.',
+      dataTitle: '2. Datos Recopilados, Canales de Contacto y Registros del Servidor',
       dataText:
-        'Únicamente recopilamos los datos que envías de forma voluntaria en el formulario de contacto (nombre, correo electrónico, apartamento de interés y mensaje). Se transmiten de forma cifrada mediante FormSubmit al solo efecto de hacer llegar tu consulta a nuestra bandeja de entrada.',
-      purposeTitle: '3. Finalidad y Base Jurídica',
+        'Recopilamos los datos personales proporcionados voluntariamente mediante el formulario de consulta (nombre, correo electrónico, apartamento de interés y mensaje) o a través de los canales directos del sitio (WhatsApp en el +39 328 329 9346 y correo directo).\n\nCarácter potestativo del suministro: La aportación de datos es voluntaria; no obstante, su omisión impide atender a tus dudas o comprobar la disponibilidad del alojamiento.\n\nDatos técnicos y registros de navegación: Durante la navegación, el proveedor de alojamiento en la nube (Vercel Inc.) registra de forma automática información técnica en los registros del servidor (dirección IP, identificador User-Agent del navegador y marcas de tiempo). Esta recogida responde a nuestro interés legítimo (Art. 6.1.f RGPD) para preservar la ciberseguridad, prevenir incidentes técnicos y garantizar el correcto funcionamiento del servicio.',
+      purposeTitle: '3. Finalidad, Base Jurídica y Encargados del Tratamiento',
       purposeText:
-        'Tus datos se tratan exclusivamente para responder a tus dudas y gestionar tu estancia (medidas precontractuales, Art. 6.1.b RGPD). No compartimos tus datos con terceros ni enviamos publicidad. Las reservas y pagos se efectúan con total seguridad en Airbnb y Booking.com.',
-      cookiesTitle: '4. Cookies y Rastreo',
+        'Tus datos se tratan exclusivamente para responder a tus consultas, facilitar presupuestos y coordinar tu estancia (medidas precontractuales según el Art. 6.1.b del RGPD), así como para garantizar la seguridad de la infraestructura (Art. 6.1.f del RGPD).\n\nNunca vendemos ni cedemos tus datos personales a terceros con fines publicitarios o de mercadotecnia.\n\nProveedores técnicos y transferencias internacionales: El tratamiento se efectúa mediante proveedores técnicos contrastados que operan como Encargados del Tratamiento (Art. 28 RGPD): Vercel Inc. para el alojamiento web, FormSubmit para la transmisión cifrada del formulario y Google Workspace / Gmail para la gestión del correo. Dado que sus servidores o sedes se encuentran en Estados Unidos, las transferencias internacionales están reguladas por el Marco de Privacidad de Datos UE-EE. UU. (DPF) y las Cláusulas Contractuales Tipo (CCT) de la Comisión Europea.\n\nLas reservas finales y los pagos se formalizan de manera independiente y protegida a través de las plataformas oficiales de Airbnb y Booking.com.',
+      cookiesTitle: '4. Cookies y Almacenamiento Local (Sin Banner de Cookies)',
       cookiesText:
-        'Este sitio web respeta tu privacidad: NO utilizamos cookies publicitarias, cookies de perfilado ni rastreadores de terceros (Google Analytics, Pixel de Meta). Únicamente se emplea el almacenamiento local técnico del navegador (localStorage) para guardar tu preferencia de idioma (melina_language).',
-      rightsTitle: '5. Derechos del Usuario y Conservación',
+        'Este sitio web está concebido para respetar plenamente tu privacidad: NO utilizamos cookies de perfilado, cookies publicitarias ni rastreadores de comportamiento de terceros (como Google Analytics o el Píxel de Meta).\n\nÚnicamente empleamos el almacenamiento técnico local del navegador (localStorage con la clave "melina_lang") para guardar tu preferencia de idioma seleccionada (italiano, inglés, francés, alemán o español). Al ser un mecanismo estrictamente técnico y exento de consentimiento según las directrices de las autoridades de protección de datos y la directiva ePrivacy, el sitio no requiere avisos ni banners de cookies molestos.',
+      rightsTitle: '5. Conservación de Datos, Derechos del Usuario y Reclamaciones',
       rightsText:
-        'Tus datos se conservan solo el tiempo necesario para atender tu consulta. Conforme al RGPD, puedes solicitar acceso, rectificación o eliminación escribiendo a info.lamelina@gmail.com.',
+        'Plazos de conservación: Los datos facilitados por formulario, correo o WhatsApp se conservan durante el tiempo estrictamente necesario para gestionar la solicitud y, a lo sumo, por un plazo máximo de 12 meses desde la última interacción, salvo formalización de una reserva o cumplimiento de obligaciones fiscales y legales. Los registros técnicos de navegación se cancelan conforme a los estándares de seguridad del hosting.\n\nTus derechos: Conforme a los artículos 15 a 22 del RGPD, puedes solicitar en todo momento el acceso, rectificación, supresión (derecho al olvido), limitación u oposición enviando un correo a info.lamelina@gmail.com.\n\nDerecho de reclamación: Asimismo, te asiste el derecho a formular una reclamación ante la autoridad italiana de control (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Roma - www.garanteprivacy.it) o ante la agencia de protección de datos de tu lugar de residencia habitual en la UE.',
       closeButton: 'Cerrar',
+      controllerEmailLabel: 'Correo de la Responsable:',
+      sslSecurity: 'Seguridad SSL / Conexión Segura',
     },
     stayGuide: {
       badge: 'Guía de Estancia',
