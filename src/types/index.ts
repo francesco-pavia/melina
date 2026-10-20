@@ -61,6 +61,11 @@ export interface GuestReview {
   avatarUrl?: string
 }
 
+export interface SocialLinks {
+  instagram: string
+  facebook: string
+}
+
 export interface HostInfo {
   name: string
   title: string
@@ -73,4 +78,5 @@ export interface HostInfo {
   languages: string[]
   superhost: boolean
   bookingAward: boolean
+  social?: SocialLinks
 }

@@ -189,6 +189,9 @@ export interface SiteTranslations {
     messagePlaceholder: string
     sendButton: string
     sendingButton: string
+    followUs: string
+    privacyNotice: string
+    privacyLinkText: string
   }
   footer: {
     tagline: string
@@ -196,6 +199,24 @@ export interface SiteTranslations {
     explore: string
     rights: string
     backToTop: string
+    followUs: string
+    privacyPolicy: string
+  }
+  privacyModal: {
+    title: string
+    badge: string
+    lastUpdated: string
+    controllerTitle: string
+    controllerText: string
+    dataTitle: string
+    dataText: string
+    purposeTitle: string
+    purposeText: string
+    cookiesTitle: string
+    cookiesText: string
+    rightsTitle: string
+    rightsText: string
+    closeButton: string
   }
   stayGuide: StayGuideTranslations
   apartments: {
@@ -392,6 +413,9 @@ export const translations: Record<Language, SiteTranslations> = {
         'Ciao Alessandra, stiamo pianificando una visita a Torino. Volevo chiederti se...',
       sendButton: 'Invia Messaggio ad Alessandra',
       sendingButton: 'Invio in corso...',
+      followUs: 'Seguici sui social',
+      privacyNotice: 'Inviando il modulo confermi di aver preso visione dell’',
+      privacyLinkText: 'Informativa sulla Privacy',
     },
     footer: {
       tagline:
@@ -401,6 +425,29 @@ export const translations: Record<Language, SiteTranslations> = {
       rights:
         'Tutti i diritti riservati. Prenotazioni intermediate in sicurezza su Airbnb e Booking.com.',
       backToTop: 'Torna su',
+      followUs: 'Seguici sui social',
+      privacyPolicy: 'Informativa Privacy & Cookie',
+    },
+    privacyModal: {
+      title: 'Informativa sulla Privacy & Cookie Policy',
+      badge: 'Conformità GDPR (Reg. UE 2016/679)',
+      lastUpdated: 'Ultimo aggiornamento: Ottobre 2026',
+      controllerTitle: '1. Titolare del Trattamento',
+      controllerText:
+        'Il Titolare del trattamento dei dati personali è Alessandra Mela, referente per gli appartamenti "La Melina" situati in Via Po 51, 10124 Torino (TO), Italia. Per qualsiasi richiesta o per l’esercizio dei tuoi diritti puoi scriverci direttamente all’indirizzo email: info.lamelina@gmail.com.',
+      dataTitle: '2. Dati Raccolti e Modalità di Trasmissione',
+      dataText:
+        'Raccogliamo unicamente i dati personali inviati spontaneamente attraverso il modulo di contatto (nome, indirizzo email, appartamento d’interesse e messaggio). La trasmissione avviene tramite connessione cifrata HTTPS attraverso il servizio tecnico FormSubmit, utilizzato al solo scopo di recapitare il messaggio alla nostra casella email.',
+      purposeTitle: '3. Finalità e Base Giuridica',
+      purposeText:
+        'I dati sono trattati esclusivamente per rispondere alle tue domande, fornirti informazioni sulla disponibilità degli alloggi o assisterti nella pianificazione del soggiorno (misure precontrattuali ai sensi dell’Art. 6, par. 1, lett. b GDPR). I dati non vengono ceduti a terzi né utilizzati per scopi di marketing o newsletter. Le prenotazioni e le relative transazioni economiche avvengono in modo autonomo e sicuro tramite i portali Airbnb e Booking.com.',
+      cookiesTitle: '4. Cookie e Strumenti di Tracciamento',
+      cookiesText:
+        'Questo sito web rispetta la tua riservatezza: NON utilizziamo cookie di profilazione, cookie pubblicitari o strumenti di tracciamento di terze parti (come Google Analytics o Meta Pixel). Utilizziamo esclusivamente lo storage tecnico del browser (localStorage) per memorizzare la tua scelta della lingua di navigazione (melina_language).',
+      rightsTitle: '5. Diritti dell’Interessato e Conservazione',
+      rightsText:
+        'I tuoi dati vengono conservati per il tempo strettamente necessario a gestire la tua richiesta. Ai sensi degli artt. 15-22 del GDPR, hai il diritto in ogni momento di richiedere l’accesso ai tuoi dati, la rettifica, la cancellazione (diritto all’oblio) o la limitazione del trattamento, scrivendo a info.lamelina@gmail.com. Hai inoltre il diritto di proporre reclamo al Garante per la Protezione dei Dati Personali (www.garanteprivacy.it).',
+      closeButton: 'Chiudi',
     },
     stayGuide: {
       badge: 'Guida al Soggiorno',
@@ -688,6 +735,9 @@ export const translations: Record<Language, SiteTranslations> = {
         'Hi Alessandra, we are planning a trip to Turin. Could you let us know if...',
       sendButton: 'Send Message to Alessandra',
       sendingButton: 'Sending message...',
+      followUs: 'Follow our journey',
+      privacyNotice: 'By sending this message, you confirm that you have read our',
+      privacyLinkText: 'Privacy Policy',
     },
     footer: {
       tagline:
@@ -697,6 +747,29 @@ export const translations: Record<Language, SiteTranslations> = {
       rights:
         'All rights reserved. Bookings fulfilled securely on Airbnb and Booking.com.',
       backToTop: 'Back to Top',
+      followUs: 'Follow us',
+      privacyPolicy: 'Privacy & Cookie Policy',
+    },
+    privacyModal: {
+      title: 'Privacy & Cookie Policy',
+      badge: 'GDPR Compliance (EU Reg. 2016/679)',
+      lastUpdated: 'Last updated: October 2026',
+      controllerTitle: '1. Data Controller',
+      controllerText:
+        'The Data Controller is Alessandra Mela, property manager for "La Melina" holiday apartments situated at Via Po 51, 10124 Turin (TO), Italy. For any inquiries or to exercise your rights, please contact us directly at: info.lamelina@gmail.com.',
+      dataTitle: '2. Personal Data Collected and Transmission',
+      dataText:
+        'We only collect personal information that you voluntarily submit through our inquiry form (your name, email address, apartment selection, and message text). Data is transmitted over encrypted HTTPS via FormSubmit solely to deliver your message to our email inbox.',
+      purposeTitle: '3. Purpose and Legal Basis',
+      purposeText:
+        'Your data is processed solely to respond to your questions, provide availability details, or assist with your stay planning (pre-contractual measures under Art. 6(1)(b) GDPR). We do not share data with third parties or engage in promotional email marketing. Bookings and financial transactions are handled securely and independently on Airbnb and Booking.com.',
+      cookiesTitle: '4. Cookies & Tracking Technologies',
+      cookiesText:
+        'This website respects your privacy: we DO NOT use profiling cookies, advertising cookies, or third-party behavioral trackers (such as Google Analytics or Meta Pixel). We only use technical browser local storage to preserve your chosen navigation language (melina_language).',
+      rightsTitle: '5. Your Rights and Data Retention',
+      rightsText:
+        'Your data is retained only for the duration necessary to handle your inquiry. Under Articles 15-22 of the GDPR, you have the right to access, rectify, delete, or restrict the processing of your data at any time by contacting info.lamelina@gmail.com. You also have the right to lodge a complaint with the competent data protection authority.',
+      closeButton: 'Close',
     },
     stayGuide: {
       badge: 'Stay Guide',
@@ -984,6 +1057,9 @@ export const translations: Record<Language, SiteTranslations> = {
         'Bonjour Alessandra, nous prévoyons un séjour à Turin et nous voulions savoir si...',
       sendButton: 'Envoyer le Message à Alessandra',
       sendingButton: 'Envoi en cours...',
+      followUs: 'Suivez-nous sur les réseaux',
+      privacyNotice: 'En envoyant ce formulaire, vous confirmez avoir pris connaissance de notre',
+      privacyLinkText: 'Politique de Confidentialité',
     },
     footer: {
       tagline:
@@ -993,6 +1069,29 @@ export const translations: Record<Language, SiteTranslations> = {
       rights:
         'Tous droits réservés. Réservations traitées en toute sécurité sur Airbnb et Booking.com.',
       backToTop: 'Retour en haut',
+      followUs: 'Suivez-nous',
+      privacyPolicy: 'Politique de Confidentialité',
+    },
+    privacyModal: {
+      title: 'Politique de Confidentialité & Cookies',
+      badge: 'Conformité RGPD (Règlement UE 2016/679)',
+      lastUpdated: 'Dernière mise à jour : Octobre 2026',
+      controllerTitle: '1. Responsable du Traitement',
+      controllerText:
+        'Le responsable du traitement des données est Alessandra Mela pour les hébergements "La Melina", Via Po 51, 10124 Turin (TO), Italie. Pour toute question ou exercice de vos droits, contactez-nous à : info.lamelina@gmail.com.',
+      dataTitle: '2. Données Collectées et Transmission',
+      dataText:
+        'Nous recueillons uniquement les données transmises volontairement via le formulaire de contact (nom, adresse email, hébergement souhaité et message). Les données sont transmises de manière sécurisée via HTTPS par le service FormSubmit dans le seul but d’acheminer votre demande à notre boîte email.',
+      purposeTitle: '3. Finalités et Base Juridique',
+      purposeText:
+        'Ces données sont traitées exclusivement pour répondre à vos demandes d’information et préparer votre séjour (mesures précontractuelles, Art. 6.1.b RGPD). Vos données ne sont jamais transmises à des tiers ni utilisées à des fins commerciales. Les réservations et transactions financières s’effectuent en toute sécurité sur Airbnb et Booking.com.',
+      cookiesTitle: '4. Cookies et Traceurs',
+      cookiesText:
+        'Ce site respecte votre vie privée : AUCUN cookie de ciblage publicitaire ou outil de suivi comportemental tiers (Google Analytics, Pixel Facebook) n’est utilisé. Seul un stockage technique local du navigateur (localStorage) est utilisé pour conserver votre préférence linguistique (melina_language).',
+      rightsTitle: '5. Vos Droits et Durée de Conservation',
+      rightsText:
+        'Vos données sont conservées uniquement pendant la durée nécessaire au traitement de votre demande. Conformément aux articles 15 à 22 du RGPD, vous disposez d’un droit d’accès, de rectification et d’effacement en écrivant à info.lamelina@gmail.com.',
+      closeButton: 'Fermer',
     },
     stayGuide: {
       badge: 'Guide du Séjour',
@@ -1280,6 +1379,9 @@ export const translations: Record<Language, SiteTranslations> = {
         'Hallo Alessandra, wir planen eine Reise nach Turin und möchten gerne wissen, ob...',
       sendButton: 'Nachricht an Alessandra senden',
       sendingButton: 'Wird gesendet...',
+      followUs: 'Folgen Sie uns in den sozialen Medien',
+      privacyNotice: 'Mit dem Absenden bestätigen Sie, dass Sie unsere',
+      privacyLinkText: 'Datenschutzerklärung',
     },
     footer: {
       tagline:
@@ -1289,6 +1391,29 @@ export const translations: Record<Language, SiteTranslations> = {
       rights:
         'Alle Rechte vorbehalten. Buchungen sicher abgewickelt über Airbnb und Booking.com.',
       backToTop: 'Nach oben',
+      followUs: 'Folgen Sie uns',
+      privacyPolicy: 'Datenschutz & Cookies',
+    },
+    privacyModal: {
+      title: 'Datenschutzerklärung & Cookie-Richtlinie',
+      badge: 'DSGVO-Konformität (EU-VO 2016/679)',
+      lastUpdated: 'Zuletzt aktualisiert: Oktober 2026',
+      controllerTitle: '1. Verantwortliche Stelle',
+      controllerText:
+        'Verantwortliche Stelle für die Datenverarbeitung ist Alessandra Mela, "La Melina" Ferienunterkünfte, Via Po 51, 10124 Turin (TO), Italien. Für Anfragen oder zur Ausübung Ihrer Rechte schreiben Sie bitte an: info.lamelina@gmail.com.',
+      dataTitle: '2. Erhobene Daten und Übertragung',
+      dataText:
+        'Wir erheben ausschließlich Daten, die Sie uns freiwillig über das Kontaktformular mitteilen (Name, E-Mail-Adresse, Wunschapartment und Nachricht). Die Übertragung erfolgt verschlüsselt über HTTPS mittels FormSubmit zum Zweck der Weiterleitung an unser E-Mail-Postfach.',
+      purposeTitle: '3. Zweck und Rechtsgrundlage',
+      purposeText:
+        'Die Verarbeitung erfolgt ausschließlich zur Beantwortung Ihrer Fragen und zur Vorbereitung Ihres Aufenthalts (vorvertragliche Maßnahmen gem. Art. 6 Abs. 1 lit. b DSGVO). Es findet keine Weitergabe an Dritte oder Nutzung für Werbezwecke statt. Buchungen und Zahlungen erfolgen sicher über Airbnb und Booking.com.',
+      cookiesTitle: '4. Cookies & Tracking-Technologien',
+      cookiesText:
+        'Diese Website respektiert Ihre Privatsphäre: Wir setzen KEINE Profiling-Cookies, Werbe-Tracker oder Drittanbieter-Analysen ein. Es wird lediglich die von Ihnen gewählte Sprachpräferenz lokal im Browser (localStorage: melina_language) gespeichert.',
+      rightsTitle: '5. Betroffenenrechte und Speicherdauer',
+      rightsText:
+        'Ihre Daten werden nur so lange gespeichert, wie dies für die Bearbeitung Ihrer Anfrage erforderlich ist. Gemäß Art. 15-22 DSGVO haben Sie jederzeit das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung per E-Mail an info.lamelina@gmail.com.',
+      closeButton: 'Schließen',
     },
     stayGuide: {
       badge: 'Aufenthalts-Guide',
@@ -1576,6 +1701,9 @@ export const translations: Record<Language, SiteTranslations> = {
         'Hola Alessandra, estamos organizando un viaje a Turín y queríamos saber si...',
       sendButton: 'Enviar Mensaje a Alessandra',
       sendingButton: 'Enviando mensaje...',
+      followUs: 'Síguenos en las redes sociales',
+      privacyNotice: 'Al enviar este formulario confirmas que has leído nuestra',
+      privacyLinkText: 'Política de Privacidad',
     },
     footer: {
       tagline:
@@ -1585,6 +1713,29 @@ export const translations: Record<Language, SiteTranslations> = {
       rights:
         'Todos los derechos reservados. Reservas gestionadas de forma segura en Airbnb y Booking.com.',
       backToTop: 'Volver arriba',
+      followUs: 'Síguenos',
+      privacyPolicy: 'Política de Privacidad & Cookies',
+    },
+    privacyModal: {
+      title: 'Política de Privacidad y Cookies',
+      badge: 'Conformidad RGPD (Reglamento UE 2016/679)',
+      lastUpdated: 'Última actualización: Octubre 2026',
+      controllerTitle: '1. Responsable del Tratamiento',
+      controllerText:
+        'La responsable del tratamiento es Alessandra Mela para los alojamientos "La Melina", Via Po 51, 10124 Turín (TO), Italia. Para consultas o ejercer tus derechos, escríbenos a: info.lamelina@gmail.com.',
+      dataTitle: '2. Datos Recopilados y Transmisión',
+      dataText:
+        'Únicamente recopilamos los datos que envías de forma voluntaria en el formulario de contacto (nombre, correo electrónico, apartamento de interés y mensaje). Se transmiten de forma cifrada mediante FormSubmit al solo efecto de hacer llegar tu consulta a nuestra bandeja de entrada.',
+      purposeTitle: '3. Finalidad y Base Jurídica',
+      purposeText:
+        'Tus datos se tratan exclusivamente para responder a tus dudas y gestionar tu estancia (medidas precontractuales, Art. 6.1.b RGPD). No compartimos tus datos con terceros ni enviamos publicidad. Las reservas y pagos se efectúan con total seguridad en Airbnb y Booking.com.',
+      cookiesTitle: '4. Cookies y Rastreo',
+      cookiesText:
+        'Este sitio web respeta tu privacidad: NO utilizamos cookies publicitarias, cookies de perfilado ni rastreadores de terceros (Google Analytics, Pixel de Meta). Únicamente se emplea el almacenamiento local técnico del navegador (localStorage) para guardar tu preferencia de idioma (melina_language).',
+      rightsTitle: '5. Derechos del Usuario y Conservación',
+      rightsText:
+        'Tus datos se conservan solo el tiempo necesario para atender tu consulta. Conforme al RGPD, puedes solicitar acceso, rectificación o eliminación escribiendo a info.lamelina@gmail.com.',
+      closeButton: 'Cerrar',
     },
     stayGuide: {
       badge: 'Guía de Estancia',

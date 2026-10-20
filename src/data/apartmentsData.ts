@@ -1,4 +1,4 @@
-import type { Apartment, LocationHighlight, GuestReview, HostInfo } from '../types'
+import type { Apartment, LocationHighlight, GuestReview, HostInfo, SocialLinks } from '../types'
 import { translations } from './translations'
 import type { Language } from '../context/LanguageContext'
 
@@ -244,18 +244,39 @@ export const getLocalizedApartments = (lang: Language): Apartment[] => {
   ]
 }
 
+export const socialLinks: SocialLinks = {
+  instagram: 'https://www.instagram.com/info.lamelina/',
+  facebook: 'https://www.facebook.com/profile.php?id=61595379699432',
+}
+
+// CIN (Codice Identificativo Nazionale) & CIR (Codice Identificativo Regionale - Piemonte)
+// Inserire qui i codici non appena disponibili per aggiornare automaticamente la trasparenza legale
+export const propertyCodes = {
+  mole: {
+    name: 'La Melina sotto la Mole',
+    cin: '', // Es. IT001272...
+    cir: '', // Es. 001272-...
+  },
+  po: {
+    name: 'La Melina su Via Po',
+    cin: '',
+    cir: '',
+  },
+}
+
 export const hostInfo: HostInfo = {
   name: 'Alessandra Mela',
   title: 'Host & Property Manager · La Melina',
   bio: `Benvenuti a Torino! La Melina è la tappa ideale per vivere l’eleganza e il fascino sabaudo: sotto i portici storici di Via Po 51, a due passi dalla Mole Antonelliana e da Piazza Vittorio Veneto. Rimango sempre a vostra disposizione per informazioni, accoglienza e consigli autentici sulla città.`,
   avatarUrl: '/images/host-alessandra.jpg',
-  email: 'mela.alessandragf@gmail.com',
+  email: 'info.lamelina@gmail.com',
   phone: '+39 328 329 9346',
   whatsapp: 'https://wa.me/393283299346',
   address: 'Via Po, 51 - 10124 Torino (TO), Italia',
   languages: ['Italiano', 'English'],
   superhost: true,
   bookingAward: true,
+  social: socialLinks,
 }
 
 export const locationHighlights: LocationHighlight[] = [

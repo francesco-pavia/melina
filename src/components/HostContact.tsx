@@ -8,12 +8,16 @@ import {
   ShieldCheck,
   Send,
 } from 'lucide-react'
-import { hostInfo, getLocalizedApartments } from '../data/apartmentsData'
-import { WhatsappIcon } from './Icons'
+import { hostInfo, getLocalizedApartments, socialLinks } from '../data/apartmentsData'
+import { WhatsappIcon, InstagramIcon, FacebookIcon } from './Icons'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 
-export const HostContact: React.FC = () => {
+interface HostContactProps {
+  onOpenPrivacy?: () => void
+}
+
+export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
   const { language } = useLanguage()
   const t = translations[language].contact
   const [apt1, apt2] = getLocalizedApartments(language)
@@ -193,6 +197,35 @@ export const HostContact: React.FC = () => {
                   <Phone className="w-4 h-4 text-amber-400" />
                   <span>{hostInfo.phone}</span>
                 </div>
+
+                {/* Social follow channels */}
+                <div className="pt-2">
+                  <div className="text-[11px] font-mono uppercase tracking-wider text-stone-400 mb-2">
+                    {t.followUs}
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <a
+                      href={socialLinks.instagram}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Instagram - La Melina"
+                      className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-stone-850/60 hover:bg-stone-800 border border-stone-750 hover:border-pink-500/40 text-stone-300 hover:text-pink-400 text-xs font-medium transition-all group"
+                    >
+                      <InstagramIcon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                      <span>Instagram</span>
+                    </a>
+                    <a
+                      href={socialLinks.facebook}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Facebook - La Melina"
+                      className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-stone-850/60 hover:bg-stone-800 border border-stone-750 hover:border-blue-500/40 text-stone-300 hover:text-blue-400 text-xs font-medium transition-all group"
+                    >
+                      <FacebookIcon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                      <span>Facebook</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -240,8 +273,8 @@ export const HostContact: React.FC = () => {
                     </div>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="flex-1 flex flex-col justify-between space-y-4">
-                    <div className="space-y-4">
+                  <form onSubmit={handleSubmit} className="flex-1 flex flex-col justify-between">
+                    <div className="flex-1 flex flex-col space-y-4 min-h-0">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {/* Name */}
                         <div>
@@ -327,7 +360,7 @@ export const HostContact: React.FC = () => {
                       </div>
 
                       {/* Message */}
-                      <div>
+                      <div className="flex-1 flex flex-col min-h-0">
                         <label
                           htmlFor="host-msg"
                           className="block text-xs font-medium text-stone-300 mb-1.5"
@@ -336,13 +369,12 @@ export const HostContact: React.FC = () => {
                         </label>
                         <textarea
                           id="host-msg"
-                          rows={4}
                           value={formData.message}
                           onChange={(e) =>
                             setFormData({ ...formData, message: e.target.value })
                           }
                           placeholder={t.messagePlaceholder}
-                          className={`w-full px-4 py-2.5 rounded-xl bg-stone-800/80 border ${
+                          className={`w-full flex-1 min-h-[140px] px-4 py-3 rounded-xl bg-stone-800/80 border ${
                             errors.message ? 'border-rose-500' : 'border-stone-700'
                           } text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none`}
                         />
@@ -362,8 +394,21 @@ export const HostContact: React.FC = () => {
                       </div>
                     )}
 
+                    {/* Privacy notice for GDPR compliance */}
+                    <div className="text-[11px] text-stone-400 leading-normal pt-1">
+                      <span>{t.privacyNotice} </span>
+                      <button
+                        type="button"
+                        onClick={onOpenPrivacy}
+                        className="text-amber-400 hover:text-amber-300 underline underline-offset-2 cursor-pointer focus:outline-none"
+                      >
+                        {t.privacyLinkText}
+                      </button>
+                      .
+                    </div>
+
                     {/* Submit Button aligned with bottom channels */}
-                    <div className="pt-6 mt-6 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="pt-5 mt-5 border-t border-stone-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <button
                         type="submit"
                         disabled={isSubmitting}

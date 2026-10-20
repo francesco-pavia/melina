@@ -7,12 +7,14 @@ import { StayGuidelinesSection } from './components/StayGuidelinesSection'
 import { LocationSection } from './components/LocationSection'
 import { HostContact } from './components/HostContact'
 import { Footer } from './components/Footer'
+import { PrivacyPolicyModal } from './components/PrivacyPolicyModal'
 import { getLocalizedApartments } from './data/apartmentsData'
 
 function AppContent() {
   const { language } = useLanguage()
   const localizedApartments = getLocalizedApartments(language)
   const [activeSection, setActiveSection] = useState<string>('hero')
+  const [privacyModalOpen, setPrivacyModalOpen] = useState(false)
 
   useEffect(() => {
     const sections = [
@@ -75,11 +77,17 @@ function AppContent() {
         <LocationSection />
 
         {/* Host Info & Inquiries */}
-        <HostContact />
+        <HostContact onOpenPrivacy={() => setPrivacyModalOpen(true)} />
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer onOpenPrivacy={() => setPrivacyModalOpen(true)} />
+
+      {/* GDPR Privacy & Cookie Policy Modal */}
+      <PrivacyPolicyModal
+        isOpen={privacyModalOpen}
+        onClose={() => setPrivacyModalOpen(false)}
+      />
     </div>
   )
 }

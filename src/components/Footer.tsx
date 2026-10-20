@@ -1,11 +1,15 @@
 import React from 'react'
 import { ArrowUp, MapPin, ExternalLink } from 'lucide-react'
-import { AirbnbIcon, BookingIcon, WhatsappIcon } from './Icons'
-import { getLocalizedApartments, hostInfo } from '../data/apartmentsData'
+import { AirbnbIcon, BookingIcon, WhatsappIcon, InstagramIcon, FacebookIcon } from './Icons'
+import { getLocalizedApartments, hostInfo, socialLinks } from '../data/apartmentsData'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenPrivacy?: () => void
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
   const { language } = useLanguage()
   const t = translations[language].footer
   const navT = translations[language].nav
@@ -41,6 +45,35 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-1.5 text-xs text-stone-400">
               <MapPin className="w-3.5 h-3.5 text-amber-500" />
               <span>Via Po, 51 - 10124 Torino (TO), Italia</span>
+            </div>
+
+            {/* Social profiles */}
+            <div className="pt-2">
+              <div className="text-[11px] font-semibold uppercase tracking-wider text-stone-500 mb-2 font-mono">
+                {t.followUs}
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={socialLinks.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram - La Melina"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-850 border border-stone-800 hover:border-pink-500/40 text-stone-300 hover:text-pink-400 text-xs font-medium transition-all group"
+                >
+                  <InstagramIcon className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+                  <span>Instagram</span>
+                </a>
+                <a
+                  href={socialLinks.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Facebook - La Melina"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-850 border border-stone-800 hover:border-blue-500/40 text-stone-300 hover:text-blue-400 text-xs font-medium transition-all group"
+                >
+                  <FacebookIcon className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+                  <span>Facebook</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -109,8 +142,16 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-stone-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-          <div>
-            © {year} La Melina. {t.rights}
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 text-center sm:text-left">
+            <span>© {year} La Melina. {t.rights}</span>
+            <span className="hidden sm:inline text-stone-700">·</span>
+            <button
+              type="button"
+              onClick={onOpenPrivacy}
+              className="text-stone-400 hover:text-amber-400 transition-colors underline underline-offset-4 cursor-pointer"
+            >
+              {t.privacyPolicy}
+            </button>
           </div>
           <div className="flex items-center gap-4">
             <button
