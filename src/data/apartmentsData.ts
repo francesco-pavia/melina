@@ -4,6 +4,99 @@ import type { Language } from '../context/LanguageContext'
 
 export const baseApartments: Apartment[] = [
   {
+    id: 'melina-po',
+    name: 'La Melina su Via Po',
+    subtitle: 'Elegante salotto sabaudo con soffitti alti e balcone panoramico sui portici di Via Po',
+    platform: 'Airbnb',
+    platformUrl: 'https://www.airbnb.it/rooms/1540725503663066319', 
+    rating: 4.5,
+    reviewCount: 2,
+    badgeText: 'Airbnb Amato dagli ospiti',
+    capacity: {
+      guests: 2,
+      bedrooms: 1,
+      beds: 1,
+      bathrooms: 1,
+      areaSqm: 70,
+    },
+    description:
+      'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, camera matrimoniale soppalcata, angolo cottura accessoriato con Nespresso e bagno con bidet e doccia.',
+    story:
+      'Vivi Torino dalla prospettiva più autentica: affacciati dal balcone privato sui famosi portici di Via Po per gustare un caffè o ammirare la vita cittadina. Situato in un palazzo storico nobiliare provvisto di ascensore, l’appartamento offre un’atmosfera d’altri tempi unita ai più moderni comfort: aria condizionata centralizzata, riscaldamento, Wi-Fi veloce, Smart TV e self check-in con tastierino numerico.',
+    heroImage: '/images/melina-po/living-room.jpg',
+    galleryImages: [
+      {
+        url: '/images/melina-po/living-room.jpg',
+        caption: 'Spazioso salotto con alti soffitti storici e divani',
+      },
+      {
+        url: '/images/melina-po/living-tv.jpg',
+        caption: 'Salotto con Smart TV',
+      },
+      {
+        url: '/images/melina-po/dining-living.jpg',
+        caption: 'Zona giorno con tavolo da pranzo e bar a vista',
+      },
+      {
+        url: '/images/melina-po/bedroom-view.jpg',
+        caption: 'Camera da letto sul soppalco',
+      },
+      {
+        url: '/images/melina-po/bathroom.jpg',
+        caption: 'Bagno privato rifinito con doccia, bidet e set biancheria',
+      },
+      {
+        url: '/images/melina-po/balcony-arcades-view.jpg',
+        caption: 'Scorcio panoramico sui portici storici di Via Po dal balcone',
+      },
+      {
+        url: '/images/melina-po/entrance.jpg',
+        caption: 'Entrata nell’alloggio con panca',
+      },
+      {
+        url: '/images/melina-po/living-perspective.jpg',
+        caption: 'Vista sul salotto dal soppalco',
+      },
+      {
+        url: '/images/melina-po/architectural-details.jpg',
+        caption: 'Dettagli del tavolo',
+      },
+      {
+        url: '/images/melina-po/building-exterior.jpg',
+        caption: 'Via Po illuminata d’inverno',
+      },
+    ],
+    amenities: [
+      { name: 'Wi-Fi Gratuito ad Alta Velocità', iconName: 'Wifi', category: 'Essentials' },
+      { name: 'Balcone Privato su Via Po', iconName: 'Sun', category: 'Outdoor & Parking' },
+      { name: 'Aria Condizionata Centralizzata', iconName: 'Wind', category: 'Comfort' },
+      { name: 'Ascensore nel palazzo', iconName: 'Home', category: 'Comfort' },
+      { name: 'Angolo Cottura con Frigorifero & Freezer', iconName: 'Utensils', category: 'Kitchen' },
+      { name: 'Macchina Nespresso & Bollitore', iconName: 'Coffee', category: 'Kitchen' },
+      { name: 'Smart TV Schermo Piatto', iconName: 'Tv', category: 'Comfort' },
+      { name: 'Bagno Privato con Bidet e Doccia', iconName: 'Droplets', category: 'Bathroom' },
+      { name: 'Biblioteca di Libri & Giochi da Tavolo', iconName: 'Sparkles', category: 'Comfort' },
+      { name: 'Self Check-in con cassetta chiavi', iconName: 'Key', category: 'Essentials' },
+      { name: 'Lenzuola & Set Asciugamani inclusi', iconName: 'Bed', category: 'Essentials' },
+      { name: 'Parcheggio Convenzionato nelle Vicinanze', iconName: 'Car', category: 'Outdoor & Parking' },
+    ],
+    highlights: [
+      'Balcone privato con vista suggestiva sui portici storici di Via Po',
+      'Elegante piano nobile con ascensore, soffitti d’epoca e soppalco di design',
+      'Posizione strategica a pochi passi da Piazza Vittorio Veneto e dalla Mole',
+      'Comfort completo: aria condizionata centralizzata, Wi-Fi veloce e self check-in',
+    ],
+    rules: {
+      checkIn: 'Check-in flessibile (Self check-in con cassetta chiavi)',
+      checkOut: 'Entro le ore 12:00',
+      selfCheckIn: true,
+      smokingAllowed: false,
+      petsAllowed: false,
+      partiesAllowed: false,
+      quietHours: '22:00 – 08:00',
+    },
+  },
+  {
     id: 'melina-mole',
     name: 'La Melina sotto la Mole',
     subtitle: 'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico e vista sulla Mole',
@@ -15,7 +108,7 @@ export const baseApartments: Apartment[] = [
     capacity: {
       guests: 2,
       bedrooms: 1,
-      beds: 2,
+      beds: 1,
       bathrooms: 1,
       areaSqm: 70,
     },
@@ -104,99 +197,6 @@ export const baseApartments: Apartment[] = [
       quietHours: '22:00 – 08:00',
     },
   },
-  {
-    id: 'melina-po',
-    name: 'La Melina su Via Po',
-    subtitle: 'Elegante salotto sabaudo con soffitti alti e balcone panoramico sui portici di Via Po',
-    platform: 'Airbnb',
-    platformUrl: 'https://www.airbnb.it/rooms/1540725503663066319', 
-    rating: 4.5,
-    reviewCount: 2,
-    badgeText: 'Airbnb Amato dagli ospiti',
-    capacity: {
-      guests: 2,
-      bedrooms: 1,
-      beds: 2,
-      bathrooms: 1,
-      areaSqm: 56,
-    },
-    description:
-      'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, camera matrimoniale soppalcata, angolo cottura accessoriato con Nespresso e bagno con bidet e doccia.',
-    story:
-      'Vivi Torino dalla prospettiva più autentica: affacciati dal balcone privato sui famosi portici di Via Po per gustare un caffè o ammirare la vita cittadina. Situato in un palazzo storico nobiliare provvisto di ascensore, l’appartamento offre un’atmosfera d’altri tempi unita ai più moderni comfort: aria condizionata centralizzata, riscaldamento, Wi-Fi veloce, Smart TV e self check-in con tastierino numerico.',
-    heroImage: '/images/melina-po/living-room.jpg',
-    galleryImages: [
-      {
-        url: '/images/melina-po/living-room.jpg',
-        caption: 'Spazioso salotto con alti soffitti storici e divani',
-      },
-      {
-        url: '/images/melina-po/living-tv.jpg',
-        caption: 'Salotto con Smart TV',
-      },
-      {
-        url: '/images/melina-po/dining-living.jpg',
-        caption: 'Zona giorno con tavolo da pranzo e bar a vista',
-      },
-      {
-        url: '/images/melina-po/bedroom-view.jpg',
-        caption: 'Camera da letto sul soppalco',
-      },
-      {
-        url: '/images/melina-po/bathroom.jpg',
-        caption: 'Bagno privato rifinito con doccia, bidet e set biancheria',
-      },
-      {
-        url: '/images/melina-po/balcony-arcades-view.jpg',
-        caption: 'Scorcio panoramico sui portici storici di Via Po dal balcone',
-      },
-      {
-        url: '/images/melina-po/entrance.jpg',
-        caption: 'Entrata nell’alloggio con panca',
-      },
-      {
-        url: '/images/melina-po/living-perspective.jpg',
-        caption: 'Vista sul salotto dal soppalco',
-      },
-      {
-        url: '/images/melina-po/architectural-details.jpg',
-        caption: 'Dettagli del tavolo',
-      },
-      {
-        url: '/images/melina-po/building-exterior.jpg',
-        caption: 'Via Po illuminata d’inverno',
-      },
-    ],
-    amenities: [
-      { name: 'Wi-Fi Gratuito ad Alta Velocità', iconName: 'Wifi', category: 'Essentials' },
-      { name: 'Balcone Privato su Via Po', iconName: 'Sun', category: 'Outdoor & Parking' },
-      { name: 'Aria Condizionata Centralizzata', iconName: 'Wind', category: 'Comfort' },
-      { name: 'Ascensore nel palazzo', iconName: 'Home', category: 'Comfort' },
-      { name: 'Angolo Cottura con Frigorifero & Freezer', iconName: 'Utensils', category: 'Kitchen' },
-      { name: 'Macchina Nespresso & Bollitore', iconName: 'Coffee', category: 'Kitchen' },
-      { name: 'Smart TV Schermo Piatto', iconName: 'Tv', category: 'Comfort' },
-      { name: 'Bagno Privato con Bidet e Doccia', iconName: 'Droplets', category: 'Bathroom' },
-      { name: 'Biblioteca di Libri & Giochi da Tavolo', iconName: 'Sparkles', category: 'Comfort' },
-      { name: 'Self Check-in con cassetta chiavi', iconName: 'Key', category: 'Essentials' },
-      { name: 'Lenzuola & Set Asciugamani inclusi', iconName: 'Bed', category: 'Essentials' },
-      { name: 'Parcheggio Convenzionato nelle Vicinanze', iconName: 'Car', category: 'Outdoor & Parking' },
-    ],
-    highlights: [
-      'Balcone privato con vista suggestiva sui portici storici di Via Po',
-      'Elegante piano nobile con ascensore, soffitti d’epoca e soppalco di design',
-      'Posizione strategica a pochi passi da Piazza Vittorio Veneto e dalla Mole',
-      'Comfort completo: aria condizionata centralizzata, Wi-Fi veloce e self check-in',
-    ],
-    rules: {
-      checkIn: 'Check-in flessibile (Self check-in con cassetta chiavi)',
-      checkOut: 'Entro le ore 12:00',
-      selfCheckIn: true,
-      smokingAllowed: false,
-      petsAllowed: false,
-      partiesAllowed: false,
-      quietHours: '22:00 – 08:00',
-    },
-  },
 ]
 
 export const getLocalizedApartments = (lang: Language): Apartment[] => {
@@ -205,40 +205,40 @@ export const getLocalizedApartments = (lang: Language): Apartment[] => {
   return [
     {
       ...baseApartments[0],
-      name: t.terrace.name,
-      subtitle: t.terrace.subtitle,
-      badgeText: t.terrace.badgeText,
-      description: t.terrace.description,
-      story: t.terrace.story,
-      highlights: t.terrace.highlights,
-      galleryImages: baseApartments[0].galleryImages.map((img, i) => ({
-        ...img,
-        caption: t.terrace.galleryCaptions[i] || img.caption,
-      })),
-      rules: {
-        ...baseApartments[0].rules,
-        checkIn: t.terrace.rules.checkIn,
-        checkOut: t.terrace.rules.checkOut,
-        quietHours: t.terrace.rules.quietHours,
-      },
-    },
-    {
-      ...baseApartments[1],
       name: t.garden.name,
       subtitle: t.garden.subtitle,
       badgeText: t.garden.badgeText,
       description: t.garden.description,
       story: t.garden.story,
       highlights: t.garden.highlights,
-      galleryImages: baseApartments[1].galleryImages.map((img, i) => ({
+      galleryImages: baseApartments[0].galleryImages.map((img, i) => ({
         ...img,
         caption: t.garden.galleryCaptions[i] || img.caption,
       })),
       rules: {
-        ...baseApartments[1].rules,
+        ...baseApartments[0].rules,
         checkIn: t.garden.rules.checkIn,
         checkOut: t.garden.rules.checkOut,
         quietHours: t.garden.rules.quietHours,
+      },
+    },
+    {
+      ...baseApartments[1],
+      name: t.terrace.name,
+      subtitle: t.terrace.subtitle,
+      badgeText: t.terrace.badgeText,
+      description: t.terrace.description,
+      story: t.terrace.story,
+      highlights: t.terrace.highlights,
+      galleryImages: baseApartments[1].galleryImages.map((img, i) => ({
+        ...img,
+        caption: t.terrace.galleryCaptions[i] || img.caption,
+      })),
+      rules: {
+        ...baseApartments[1].rules,
+        checkIn: t.terrace.rules.checkIn,
+        checkOut: t.terrace.rules.checkOut,
+        quietHours: t.terrace.rules.quietHours,
       },
     },
   ]

@@ -64,6 +64,8 @@ export interface SiteTranslations {
     bedroom: string
     beds: string
     bath: string
+    doubleBed: string
+    mezzanine: string
     superhostVerified: string
     superhostSub: string
     selfCheckIn: string
@@ -79,6 +81,10 @@ export interface SiteTranslations {
     bathrooms: string
     surface: string
     rating: string
+    doubleBed: string
+    mezzanine: string
+    mezzanineTitle: string
+    bedType: string
     aboutSpace: string
     highlightsTitle: string
     offersTitle: string
@@ -241,10 +247,10 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     hero: {
       welcomeBadge: 'Benvenuti a La Melina · Torino Centro',
-      headlineStart: 'Due Oasi Esclusive nel Cuore di',
+      headlineStart: 'Due Accoglienti Dimore nel cuore di',
       headlineHighlight: 'Torino',
       subtitle:
-        'Vivi il fascino sabaudo con il massimo comfort. Due appartamenti indipendenti situati in Via Po 51, ciascuno con il proprio spazio privato all’aperto.',
+        'Vivi il fascino sabaudo con tutti i comfort. Due spazi indipendenti situati nella centrale Via Po, ciascuno con un piacevole affaccio esterno.',
       viewDetails: 'Dettagli e Foto',
       bookOn: 'Prenota su',
       listedOn: 'Disponibile su',
@@ -252,6 +258,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bedroom: 'Camera',
       beds: 'Letti',
       bath: 'Bagno',
+      doubleBed: 'Letto matrimoniale',
+      mezzanine: 'Soppalco',
       superhostVerified: 'Ospitalità Verificata',
       superhostSub: 'Valutazioni al vertice',
       selfCheckIn: 'Self Check-In Smart',
@@ -267,6 +275,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bathrooms: 'Bagni',
       surface: 'Superficie',
       rating: 'Punteggio',
+      doubleBed: 'Letto matrimoniale',
+      mezzanine: 'Soppalco',
+      mezzanineTitle: 'Struttura',
+      bedType: 'Letto',
       aboutSpace: 'Lo Spazio',
       highlightsTitle: 'Punti di Forza',
       offersTitle: 'Servizi inclusi',
@@ -565,10 +577,10 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     hero: {
       welcomeBadge: 'Welcome to La Melina · Turin Center',
-      headlineStart: 'Two Handcrafted Retreats in the Heart of',
+      headlineStart: 'Two Welcoming Residences in the Heart of',
       headlineHighlight: 'Turin',
       subtitle:
-        'Experience Italian elegance with modern comfort. Two private holiday apartments at Via Po 51, each featuring its own peaceful outdoor sanctuary.',
+        'Experience Savoy charm with all modern comforts. Two independent spaces located in central Via Po, each with a pleasant outdoor setting.',
       viewDetails: 'Details & Photos',
       bookOn: 'Book on',
       listedOn: 'Listed on',
@@ -576,6 +588,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bedroom: 'Bedroom',
       beds: 'Beds',
       bath: 'Bath',
+      doubleBed: 'Double bed',
+      mezzanine: 'Mezzanine',
       superhostVerified: 'Superhost Hospitality',
       superhostSub: 'Top-rated guest reviews',
       selfCheckIn: 'Smart Keyless Check-in',
@@ -591,6 +605,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bathrooms: 'Bathrooms',
       surface: 'Surface',
       rating: 'Rating',
+      doubleBed: 'Double bed',
+      mezzanine: 'Mezzanine',
+      mezzanineTitle: 'Structure',
+      bedType: 'Bed',
       aboutSpace: 'About the Space',
       highlightsTitle: 'Apartment Highlights',
       offersTitle: 'What this place offers',
@@ -889,10 +907,10 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     hero: {
       welcomeBadge: 'Bienvenue à La Melina · Turin Centre',
-      headlineStart: 'Deux Havres de Paix au Cœur de',
+      headlineStart: 'Deux Demeures Accueillantes au Cœur de',
       headlineHighlight: 'Turin',
       subtitle:
-        'Découvrez le charme piémontais et le confort contemporain. Deux appartements privés situés Via Po 51, chacun avec son propre espace extérieur exclusif.',
+        'Vivez le charme savoyard avec tout le confort. Deux espaces indépendants situés dans la centrale Via Po, chacun avec un agréable extérieur.',
       viewDetails: 'Détails & Photos',
       bookOn: 'Réserver sur',
       listedOn: 'Disponible sur',
@@ -900,6 +918,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bedroom: 'Chambre',
       beds: 'Lits',
       bath: 'Salle de bain',
+      doubleBed: 'Lit double',
+      mezzanine: 'Mezzanine',
       superhostVerified: 'Hospitalité Superhost',
       superhostSub: 'Excellentes évaluations',
       selfCheckIn: 'Arrivée Autonome',
@@ -915,6 +935,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bathrooms: 'Salles de bain',
       surface: 'Superficie',
       rating: 'Note',
+      doubleBed: 'Lit double',
+      mezzanine: 'Mezzanine',
+      mezzanineTitle: 'Structure',
+      bedType: 'Lit',
       aboutSpace: 'À propos du logement',
       highlightsTitle: 'Points Forts',
       offersTitle: 'Ce que propose ce logement',
@@ -1213,10 +1237,10 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     hero: {
       welcomeBadge: 'Willkommen bei La Melina · Turin Zentrum',
-      headlineStart: 'Zwei Exklusive Rückzugsorte im Herzen von',
+      headlineStart: 'Zwei Gemütliche Domizile im Herzen von',
       headlineHighlight: 'Turin',
       subtitle:
-        'Erleben Sie piemontesischen Charme und modernen Luxus. Zwei private Ferienapartments in der Via Po 51, jeweils mit eigenem Außenbereich.',
+        'Erleben Sie savoyischen Charme mit allem Komfort. Zwei unabhängige Räumlichkeiten in der zentralen Via Po, jeweils mit einem angenehmen Außenbereich.',
       viewDetails: 'Details & Fotos',
       bookOn: 'Buchen auf',
       listedOn: 'Verfügbar auf',
@@ -1224,6 +1248,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bedroom: 'Schlafzimmer',
       beds: 'Betten',
       bath: 'Bad',
+      doubleBed: 'Doppelbett',
+      mezzanine: 'Mezzanin',
       superhostVerified: 'Superhost Gastfreundschaft',
       superhostSub: 'Hervorragende Bewertungen',
       selfCheckIn: 'Smart Self Check-In',
@@ -1239,6 +1265,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bathrooms: 'Badezimmer',
       surface: 'Fläche',
       rating: 'Bewertung',
+      doubleBed: 'Doppelbett',
+      mezzanine: 'Mezzanin',
+      mezzanineTitle: 'Aufteilung',
+      bedType: 'Bett',
       aboutSpace: 'Über die Unterkunft',
       highlightsTitle: 'Highlights des Apartments',
       offersTitle: 'Was diese Unterkunft bietet',
@@ -1537,10 +1567,10 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     hero: {
       welcomeBadge: 'Bienvenidos a La Melina · Centro de Turín',
-      headlineStart: 'Dos Refugios Exclusivos en el Corazón de',
+      headlineStart: 'Dos Acogedoras Residencias en el Corazón de',
       headlineHighlight: 'Turín',
       subtitle:
-        'Disfruta del encanto italiano con el máximo confort. Dos apartamentos vacacionales privados en Via Po 51, cada uno con su propio espacio exterior exclusivo.',
+        'Vive el encanto saboyano con todas las comodidades. Dos espacios independientes ubicados en la céntrica Via Po, cada uno con un agradable espacio exterior.',
       viewDetails: 'Detalles & Fotos',
       bookOn: 'Reservar en',
       listedOn: 'Disponible en',
@@ -1548,6 +1578,8 @@ export const translations: Record<Language, SiteTranslations> = {
       bedroom: 'Dormitorio',
       beds: 'Camas',
       bath: 'Baño',
+      doubleBed: 'Cama de matrimonio',
+      mezzanine: 'Altillo',
       superhostVerified: 'Hospitalidad Superhost',
       superhostSub: 'Calificaciones excelentes',
       selfCheckIn: 'Llegada Autónoma',
@@ -1563,6 +1595,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bathrooms: 'Baños',
       surface: 'Superficie',
       rating: 'Puntuación',
+      doubleBed: 'Cama de matrimonio',
+      mezzanine: 'Altillo',
+      mezzanineTitle: 'Estructura',
+      bedType: 'Cama',
       aboutSpace: 'Sobre el Alojamiento',
       highlightsTitle: 'Puntos Destacados',
       offersTitle: 'Servicios incluidos',

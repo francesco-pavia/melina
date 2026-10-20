@@ -21,6 +21,7 @@ import {
   Sparkles,
   CheckCircle2,
   Images,
+  Layers,
 } from 'lucide-react'
 import type { Apartment } from '../types'
 import { AirbnbIcon, BookingIcon } from './Icons'
@@ -171,7 +172,7 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
           {/* Left: Specs, Story, Amenities, and Rules */}
           <div className="lg:col-span-8 space-y-10">
             {/* Specs Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-stone-900/50 border border-stone-800 text-stone-200 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 p-4 rounded-2xl bg-stone-900/50 border border-stone-800 text-stone-200 text-center">
               <div className="flex flex-col items-center justify-center p-2">
                 <Users className="w-4 h-4 text-amber-400 mb-1" />
                 <span className="text-xs text-stone-400">{t.guests}</span>
@@ -181,19 +182,26 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
               </div>
               <div className="flex flex-col items-center justify-center p-2 border-l border-stone-800/80">
                 <Bed className="w-4 h-4 text-amber-400 mb-1" />
-                <span className="text-xs text-stone-400">{t.bedrooms}</span>
+                <span className="text-xs text-stone-400">{t.bedType}</span>
                 <span className="font-semibold text-sm text-white">
-                  {apartment.capacity.bedrooms} ({apartment.capacity.beds})
+                  {t.doubleBed}
                 </span>
               </div>
-              <div className="flex flex-col items-center justify-center p-2 border-l border-stone-800/80">
+              <div className="flex flex-col items-center justify-center p-2 border-t sm:border-t-0 sm:border-l border-stone-800/80">
+                <Layers className="w-4 h-4 text-amber-400 mb-1" />
+                <span className="text-xs text-stone-400">{t.mezzanineTitle}</span>
+                <span className="font-semibold text-sm text-white">
+                  {t.mezzanine}
+                </span>
+              </div>
+              <div className="flex flex-col items-center justify-center p-2 border-t sm:border-t-0 border-l border-stone-800/80">
                 <Bath className="w-4 h-4 text-amber-400 mb-1" />
                 <span className="text-xs text-stone-400">{t.bathrooms}</span>
                 <span className="font-semibold text-sm text-white">
                   {apartment.capacity.bathrooms}
                 </span>
               </div>
-              <div className="flex flex-col items-center justify-center p-2 border-l border-stone-800/80">
+              <div className="flex flex-col items-center justify-center p-2 col-span-2 sm:col-span-1 border-t sm:border-t-0 sm:border-l border-stone-800/80">
                 <Maximize className="w-4 h-4 text-amber-400 mb-1" />
                 <span className="text-xs text-stone-400">{t.surface}</span>
                 <span className="font-semibold text-sm text-white">

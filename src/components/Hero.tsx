@@ -7,6 +7,8 @@ import {
   KeyRound,
   Wifi,
   Sparkles,
+  Bed,
+  Layers,
 } from 'lucide-react'
 import { AirbnbIcon, BookingIcon } from './Icons'
 import { getLocalizedApartments } from '../data/apartmentsData'
@@ -113,20 +115,23 @@ export const Hero: React.FC = () => {
                 {/* Card Body & Specs */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
                   {/* Specs Pill Strip */}
-                  <div className="grid grid-cols-3 gap-2 py-3 px-4 rounded-xl bg-stone-950/50 border border-stone-850 text-xs text-stone-300 text-center">
+                  <div className="grid grid-cols-3 gap-2 py-3 px-3 rounded-xl bg-stone-950/50 border border-stone-850 text-xs text-stone-300 text-center">
                     <div className="flex flex-col items-center justify-center">
                       <Users className="w-4 h-4 text-amber-400 mb-1" />
-                      <span>{apt.capacity.guests} {t.guests}</span>
+                      <span className="font-medium text-white">{apt.capacity.guests} {t.guests}</span>
                     </div>
-                    <div className="flex flex-col items-center justify-center border-x border-stone-800">
-                      <span className="font-bold text-amber-300 mb-1">
-                        {apt.capacity.bedrooms} {t.bedroom} · {apt.capacity.bathrooms} {t.bath}
+                    <div className="flex flex-col items-center justify-center border-x border-stone-800 px-1">
+                      <Bed className="w-4 h-4 text-amber-400 mb-1" />
+                      <span className="font-bold text-amber-300 text-[11px] sm:text-xs mb-0.5">
+                        {t.doubleBed}
                       </span>
-                      <span>{apt.capacity.beds} {t.beds}</span>
+                      <span className="text-stone-300 text-[10px] sm:text-[11px]">
+                        {t.mezzanine} · {apt.capacity.bathrooms} {t.bath}
+                      </span>
                     </div>
                     <div className="flex flex-col items-center justify-center">
                       <Maximize className="w-4 h-4 text-amber-400 mb-1" />
-                      <span>{apt.capacity.areaSqm} m²</span>
+                      <span className="font-medium text-white">{apt.capacity.areaSqm} m²</span>
                     </div>
                   </div>
 

@@ -20,8 +20,8 @@ function AppContent() {
     const sections = [
       'hero',
       'apartments',
-      'melina-mole',
       'melina-po',
+      'melina-mole',
       'stay-guide',
       'location',
       'contact',
