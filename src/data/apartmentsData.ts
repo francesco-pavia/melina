@@ -20,7 +20,7 @@ export const baseApartments: Apartment[] = [
       areaSqm: 70,
     },
     description:
-      'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, camera matrimoniale soppalcata, angolo cottura accessoriato con Nespresso e bagno con bidet e doccia.',
+      'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, letto matrimoniale soppalcato e zona bar con frigorifero, Nespresso e bollitore elettrico.',
     story:
       'Vivi Torino dalla prospettiva più autentica: affacciati dal balcone privato sui famosi portici di Via Po per gustare un caffè o ammirare la vita cittadina. Situato in un palazzo storico nobiliare provvisto di ascensore, l’appartamento offre un’atmosfera d’altri tempi unita ai più moderni comfort: aria condizionata centralizzata, riscaldamento, Wi-Fi veloce, Smart TV e self check-in con tastierino numerico.',
     heroImage: '/images/melina-po/living-room.jpg',

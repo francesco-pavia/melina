@@ -534,7 +534,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Elegante salotto sabaudo con soffitti alti e balcone panoramico sui portici di Via Po',
         badgeText: 'Airbnb Amato dagli ospiti',
         description:
-          'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, camera matrimoniale soppalcata, angolo cottura accessoriato con Nespresso e bagno con bidet e doccia.',
+          'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, letto matrimoniale soppalcato e zona bar con frigorifero, Nespresso e bollitore elettrico.',
         story:
           'Vivi Torino dalla prospettiva più autentica: affacciati dal balcone privato sui famosi portici di Via Po per gustare un caffè o ammirare la vita cittadina. Situato in un palazzo storico nobiliare provvisto di ascensore, l’appartamento offre un’atmosfera d’altri tempi unita ai più moderni comfort: aria condizionata centralizzata, riscaldamento, Wi-Fi veloce, Smart TV e self check-in con tastierino numerico.',
         highlights: [
@@ -864,7 +864,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Elegant Savoyard salon with high historic ceilings and balcony overlooking Via Po arcades',
         badgeText: 'Airbnb Guest Favorite',
         description:
-          'In the beating heart of Turin on the piano nobile with elevator access, La Melina su Via Po is an atmospheric Savoyard residence featuring soaring ceilings, refined furnishings, and a romantic private balcony directly overlooking historic Via Po. The home features a welcoming lounge with reading library and board games, mezzanine double bedroom, equipped kitchenette with Nespresso, and private bathroom with shower and bidet.',
+          'In the beating heart of Turin on the piano nobile with elevator access, La Melina su Via Po is an atmospheric Savoyard residence featuring soaring ceilings, refined furnishings, and a romantic private balcony directly overlooking historic Via Po. The home features a welcoming lounge with reading library and board games, mezzanine double bed, and bar area with refrigerator, Nespresso, and electric kettle.',
         story:
           'Experience Turin from its most authentic vantage point: step out onto your private balcony overlooking the arcades of Via Po to sip espresso or watch city life unfold. Located in a historic noble building with elevator, this retreat blends old-world elegance with modern comforts: central air conditioning, heating, high-speed Wi-Fi, Smart TV, and smart keyless self check-in.',
         highlights: [
@@ -1194,7 +1194,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Élégant salon savoyard avec hauts plafonds d’époque et balcon sur les arcades de la Via Po',
         badgeText: 'Airbnb Coup de cœur voyageurs',
         description:
-          'Au cœur battant de Turin, au piano nobile avec ascenseur, La Melina su Via Po est un appartement savoyard de caractère mêlant hauts plafonds d’époque, décoration raffinée et balcon privé romantique donnant directement sur la prestigieuse Via Po. L’espace propose un salon chaleureux avec bibliothèque et jeux de société, une chambre double en mezzanine, une kitchenette équipée avec Nespresso et une salle de bain avec bidet et douche.',
+          'Au cœur battant de Turin, au piano nobile avec ascenseur, La Melina su Via Po est un appartement savoyard de caractère mêlant hauts plafonds d’époque, décoration raffinée et balcon privé romantique donnant directement sur la prestigieuse Via Po. L’espace propose un salon chaleureux avec bibliothèque et jeux de société, un lit double en mezzanine et un coin bar avec réfrigérateur, Nespresso et bouilloire électrique.',
         story:
           'Découvrez Turin sous son angle le plus authentique : installez-vous sur le balcon privé au-dessus des arcades historiques pour prendre votre café ou observer la vie piémontaise. Situé dans un somptueux palais noble avec ascenseur, ce havre de paix combine charme d’antan et commodités modernes : climatisation centrale, chauffage, Wi-Fi ultra-rapide, Smart TV et arrivée autonome par serrure à code.',
         highlights: [
@@ -1524,7 +1524,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Elegantes piemontesisches Refugium mit hohen Decken und Balkon über den Arkaden der Via Po',
         badgeText: 'Airbnb Beliebt bei Gästen',
         description:
-          'Im lebendigen Herzen von Turin in der Beletage mit Aufzug: La Melina su Via Po ist ein stilvoller Salon mit herrschaftlich hohen Decken, auserlesener Einrichtung und einem romantischen privaten Balkon mit direktem Blick auf die historische Via Po. Die Wohnung bietet einen behaglichen Wohnbereich mit Bibliothek und Gesellschaftsspielen, ein Mezzanin-Doppelzimmer, eine ausgestattete Küchenzeile mit Nespresso sowie ein Badezimmer mit Bidet und Dusche.',
+          'Im lebendigen Herzen von Turin in der Beletage mit Aufzug: La Melina su Via Po ist ein stilvoller Salon mit herrschaftlich hohen Decken, auserlesener Einrichtung und einem romantischen privaten Balkon mit direktem Blick auf die historische Via Po. Die Wohnung bietet einen behaglichen Wohnbereich mit Bibliothek und Gesellschaftsspielen, ein Mezzanin-Doppelbett sowie einen Barbereich mit Kühlschrank, Nespresso und Wasserkocher.',
         story:
           'Erleben Sie Turin aus seiner authentischsten Perspektive: Genießen Sie Ihren morgendlichen Espresso auf dem privaten Balkon hoch über den Arkaden der Via Po. In einem historischen Adelspalais mit Aufzug gelegen, verbindet dieses Domizil altehrwürdigen Charme mit zeitgemäßem Luxus: zentrale Klimaanlage, Heizung, Highspeed-WLAN, Smart-TV und schlüsselloser Self Check-in per Zahlencode.',
         highlights: [
@@ -1854,7 +1854,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Elegante salón saboyano con techos altos señoriales y balcón sobre los soportales de Via Po',
         badgeText: 'Airbnb Favorito entre huéspedes',
         description:
-          'En pleno corazón de Turín en la planta noble con ascensor, La Melina su Via Po es una residencia saboyana con techos altos históricos, mobiliario cuidado y un romántico balcón privado con vistas directas a la emblemática Via Po. El alojamiento dispone de un acogedor salón con rincón de lectura y juegos de mesa, dormitorio doble en altillo, cocina americana equipada con Nespresso y baño con bidet y ducha.',
+          'En pleno corazón de Turín en la planta noble con ascensor, La Melina su Via Po es una residencia saboyana con techos altos históricos, mobiliario cuidado y un romántico balcón privado con vistas directas a la emblemática Via Po. El alojamiento dispone de un acogedor salón con rincón de lectura y juegos de mesa, cama de matrimonio en altillo y zona bar con frigorífico, Nespresso y hervidor eléctrico.',
         story:
           'Vive Turín desde su perspectiva más auténtica: asómate a tu balcón privado sobre los soportales históricos de Via Po para degustar un café o contemplar la vida turinesa. Ubicado en un palacio señorial histórico provisto de ascensor, este refugio combina encanto de época y comodidades de hoy: aire acondicionado centralizado, calefacción, Wi-Fi rápido, Smart TV y llegada autónoma con teclado digital.',
         highlights: [
