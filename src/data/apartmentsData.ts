@@ -250,17 +250,18 @@ export const socialLinks: SocialLinks = {
 }
 
 // CIN (Codice Identificativo Nazionale) & CIR (Codice Identificativo Regionale - Piemonte)
-// Inserire qui i codici non appena disponibili per aggiornare automaticamente la trasparenza legale
 export const propertyCodes = {
+  cin: 'IT001272C25YFI3CQZ',
+  cir: '00127209071',
   mole: {
     name: 'La Melina sotto la Mole',
-    cin: '', // Es. IT001272...
-    cir: '', // Es. 001272-...
+    cin: 'IT001272C25YFI3CQZ',
+    cir: '00127209071',
   },
   po: {
     name: 'La Melina su Via Po',
-    cin: '',
-    cir: '',
+    cin: 'IT001272C25YFI3CQZ',
+    cir: '00127209071',
   },
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ArrowUp, MapPin, ExternalLink } from 'lucide-react'
 import { AirbnbIcon, BookingIcon, WhatsappIcon, InstagramIcon, FacebookIcon } from './Icons'
-import { getLocalizedApartments, hostInfo, socialLinks } from '../data/apartmentsData'
+import { getLocalizedApartments, hostInfo, socialLinks, propertyCodes } from '../data/apartmentsData'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 
@@ -45,6 +45,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
             <div className="flex items-center gap-1.5 text-xs text-stone-400">
               <MapPin className="w-3.5 h-3.5 text-amber-500" />
               <span>Via Po, 51 - 10124 Torino (TO), Italia</span>
+            </div>
+
+            {/* Official Registration Codes (CIN & CIR) */}
+            <div className="inline-flex flex-wrap items-center gap-2 pt-1 font-mono text-[11px]">
+              <span className="px-2.5 py-1 rounded-lg bg-stone-900 border border-stone-800 text-stone-300">
+                <span className="text-amber-400 font-semibold">CIN:</span> {propertyCodes.cin}
+              </span>
+              <span className="px-2.5 py-1 rounded-lg bg-stone-900 border border-stone-800 text-stone-300">
+                <span className="text-amber-400 font-semibold">CIR:</span> {propertyCodes.cir}
+              </span>
             </div>
 
             {/* Social profiles */}

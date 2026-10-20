@@ -27,6 +27,7 @@ import { AirbnbIcon, BookingIcon } from './Icons'
 import { ImageLightbox } from './ImageLightbox'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
+import { propertyCodes } from '../data/apartmentsData'
 
 interface ApartmentSectionProps {
   apartment: Apartment
@@ -336,6 +337,13 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
 
               <div className="text-center text-[11px] text-stone-400">
                 {t.redirectNotice}
+              </div>
+
+              {/* Legal Hospitality Registration Codes */}
+              <div className="pt-3 border-t border-stone-800/80 flex flex-wrap items-center justify-center gap-2 text-[10px] font-mono text-stone-400">
+                <span>CIN: <span className="text-stone-300 font-medium">{propertyCodes.cin}</span></span>
+                <span>·</span>
+                <span>CIR: <span className="text-stone-300 font-medium">{propertyCodes.cir}</span></span>
               </div>
             </div>
           </div>
