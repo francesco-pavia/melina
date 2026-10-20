@@ -8,7 +8,6 @@ import {
   Wifi,
   Sparkles,
   Bed,
-  Layers,
 } from 'lucide-react'
 import { AirbnbIcon, BookingIcon } from './Icons'
 import { getLocalizedApartments } from '../data/apartmentsData'
