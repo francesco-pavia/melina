@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
             </p>
             <div className="flex items-center gap-1.5 text-xs text-stone-400">
               <MapPin className="w-3.5 h-3.5 text-amber-500" />
-              <span>Via Po, 51 - 10124 Torino (TO), Italia</span>
+              <span>Via Po - 10124 Torino (TO), Italia</span>
             </div>
 
             {/* Official Registration Codes (CIN & CIR) */}

@@ -20,7 +20,7 @@ export const baseApartments: Apartment[] = [
       areaSqm: 70,
     },
     description:
-      'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, letto matrimoniale soppalcato e zona bar con frigorifero, Nespresso e bollitore elettrico.',
+      'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, letto matrimoniale soppalcato, zona bar con frigorifero, Nespresso, bollitore elettrico e bagno privato.',
     story:
       'Vivi Torino dalla prospettiva più autentica: affacciati dal balcone privato sui famosi portici di Via Po per gustare un caffè o ammirare la vita cittadina. Situato in un palazzo storico nobiliare provvisto di ascensore, l’appartamento offre un’atmosfera d’altri tempi unita ai più moderni comfort: aria condizionata centralizzata, riscaldamento, Wi-Fi veloce, Smart TV e self check-in con tastierino numerico.',
     heroImage: '/images/melina-po/living-room.jpg',
@@ -69,16 +69,17 @@ export const baseApartments: Apartment[] = [
     amenities: [
       { name: 'Wi-Fi Gratuito ad Alta Velocità', iconName: 'Wifi', category: 'Essentials' },
       { name: 'Balcone Privato su Via Po', iconName: 'Sun', category: 'Outdoor & Parking' },
-      { name: 'Aria Condizionata Centralizzata', iconName: 'Wind', category: 'Comfort' },
+      { name: 'Aria Condizionata & Riscaldamento', iconName: 'Wind', category: 'Comfort' },
       { name: 'Ascensore nel palazzo', iconName: 'Home', category: 'Comfort' },
-      { name: 'Angolo Cottura con Frigorifero & Freezer', iconName: 'Utensils', category: 'Kitchen' },
+      { name: 'Frigorifero & Freezer', iconName: 'Utensils', category: 'Kitchen' },
       { name: 'Macchina Nespresso & Bollitore', iconName: 'Coffee', category: 'Kitchen' },
       { name: 'Smart TV Schermo Piatto', iconName: 'Tv', category: 'Comfort' },
       { name: 'Bagno Privato con Bidet e Doccia', iconName: 'Droplets', category: 'Bathroom' },
       { name: 'Biblioteca di Libri & Giochi da Tavolo', iconName: 'Sparkles', category: 'Comfort' },
       { name: 'Self Check-in con cassetta chiavi', iconName: 'Key', category: 'Essentials' },
+      { name: 'Camere non Fumatori', iconName: 'Sparkles', category: 'Essentials' },
       { name: 'Lenzuola & Set Asciugamani inclusi', iconName: 'Bed', category: 'Essentials' },
-      { name: 'Parcheggio Convenzionato nelle Vicinanze', iconName: 'Car', category: 'Outdoor & Parking' },
+      { name: 'Parcheggio a Pagamento nelle Vicinanze', iconName: 'Car', category: 'Outdoor & Parking' },
     ],
     highlights: [
       'Balcone privato con vista suggestiva sui portici storici di Via Po',
@@ -99,7 +100,7 @@ export const baseApartments: Apartment[] = [
   {
     id: 'melina-mole',
     name: 'La Melina sotto la Mole',
-    subtitle: 'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico e vista sulla Mole',
+    subtitle: 'Romantico appartamento immerso in un’atmosfera calda e rilassante',
     platform: 'Booking.com',
     platformUrl: 'https://www.booking.com/Share-qytECBi', 
     rating: 10.0,
@@ -115,7 +116,7 @@ export const baseApartments: Apartment[] = [
     description:
       'In una posizione privilegiata nel pieno centro di Torino, La Melina offre un ambiente caldo e romantico, particolarmente silenzioso con vista sulla Mole. L’appartamento climatizzato comprende: un accogliente soggiorno con angolo cottura accessoriato, dotato di frigorifero, Nespresso e bollitore elettrico; un soppalco di charme con letto matrimoniale e bagno privato dotato di tutti i comfort.',
     story:
-      'Situato in posizione d’eccellenza in Via Po 51, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
+      'Situato in posizione d’eccellenza in Via Po, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
     heroImage: '/images/melina-mole/living-stairs.jpg',
     galleryImages: [
       {
@@ -169,10 +170,10 @@ export const baseApartments: Apartment[] = [
     ],
     amenities: [
       { name: 'Wi-Fi Gratuito ad Alta Velocità', iconName: 'Wifi', category: 'Essentials' },
-      { name: 'Terrazzo Panoramico & Balcone', iconName: 'Sun', category: 'Outdoor & Parking' },
+      { name: 'Terrazza Esterna', iconName: 'Sun', category: 'Outdoor & Parking' },
       { name: 'Aria Condizionata & Riscaldamento', iconName: 'Wind', category: 'Comfort' },
       { name: 'Ascensore nel palazzo', iconName: 'Home', category: 'Comfort' },
-      { name: 'Cucina con Frigorifero & Piano Cottura', iconName: 'Utensils', category: 'Kitchen' },
+      { name: 'Angolo Cottura con Frigorifero', iconName: 'Utensils', category: 'Kitchen' },
       { name: 'Macchina del Caffè & Bollitore', iconName: 'Coffee', category: 'Kitchen' },
       { name: 'Smart TV Schermo Piatto', iconName: 'Tv', category: 'Comfort' },
       { name: 'Lavatrice in appartamento', iconName: 'Shirt', category: 'Essentials' },
@@ -180,11 +181,11 @@ export const baseApartments: Apartment[] = [
       { name: 'Self Check-in con cassetta chiavi', iconName: 'Key', category: 'Essentials' },
       { name: 'Camere Non Fumatori', iconName: 'Sparkles', category: 'Essentials' },
       { name: 'Lenzuola & Set Asciugamani inclusi', iconName: 'Bed', category: 'Essentials' },
+      { name: 'Parcheggio a Pagamento nelle Vicinanze', iconName: 'Car', category: 'Outdoor & Parking' },
     ],
     highlights: [
       'Posizione privilegiata con ascensore nel cuore di Torino',
       'Atmosfera romantica e silenziosa',
-      'Terrazzo e balcone privato con vista panoramica sulla Mole Antonelliana e sui tetti di Torino',
       'Comfort completo: ascensore, aria condizionata, riscaldamento e lavatrice',
     ],
     rules: {
@@ -268,12 +269,12 @@ export const propertyCodes = {
 export const hostInfo: HostInfo = {
   name: 'Alessandra Mela',
   title: 'Host & Property Manager · La Melina',
-  bio: `Benvenuti a Torino! La Melina è la tappa ideale per vivere l’eleganza e il fascino sabaudo: sotto i portici storici di Via Po 51, a due passi dalla Mole Antonelliana e da Piazza Vittorio Veneto. Rimango sempre a vostra disposizione per informazioni, accoglienza e consigli autentici sulla città.`,
+  bio: `Benvenuti a Torino! La Melina è la tappa ideale per vivere l’eleganza e il fascino sabaudo: sotto i portici storici di Via Po, a due passi dalla Mole Antonelliana e da Piazza Vittorio Veneto. Rimango sempre a vostra disposizione per informazioni, accoglienza e consigli autentici sulla città.`,
   avatarUrl: '/images/host-alessandra.jpg',
   email: 'info.lamelina@gmail.com',
   phone: '+39 328 329 9346',
   whatsapp: 'https://wa.me/393283299346',
-  address: 'Via Po, 51 - 10124 Torino (TO), Italia',
+  address: 'Via Po - 10124 Torino (TO), Italia',
   languages: ['Italiano', 'English'],
   superhost: true,
   bookingAward: true,

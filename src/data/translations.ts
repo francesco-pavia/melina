@@ -354,11 +354,11 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     location: {
       badge: 'La Posizione',
-      title: 'Via Po 51, Nel Cuore di Torino',
+      title: 'Via Po, Nel Cuore di Torino',
       subtitle:
         'Una posizione impareggiabile: sotto i maestosi portici storici di Via Po, a pochi passi dalla Mole Antonelliana e da Piazza Vittorio Veneto.',
       addressLabel: 'Indirizzo degli appartamenti:',
-      fullAddress: 'Via Po, 51 - 10124 Torino (TO), Italia',
+      fullAddress: 'Via Po - 10124 Torino (TO), Italia',
       openGoogleMaps: 'Apri su Google Maps',
       gettingHereTitle: 'Come Raggiungerci',
       gettingHereDesc:
@@ -433,7 +433,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     footer: {
       tagline:
-        'Due eleganti appartamenti vacanza nel centro storico di Torino, in Via Po 51.',
+        'Due eleganti appartamenti vacanza nel centro storico di Torino, in Via Po.',
       bookOnline: 'Prenota Online',
       explore: 'Navigazione',
       rights:
@@ -448,7 +448,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Ultimo aggiornamento: Ottobre 2026',
       controllerTitle: '1. Titolare del Trattamento',
       controllerText:
-        'Il Titolare del trattamento dei dati personali è Alessandra Mela, referente per gli appartamenti vacanze "La Melina" situati in Via Po 51, 10124 Torino (TO), Italia.\n\nPer qualsiasi informazione, richiesta o per l’esercizio dei tuoi diritti in materia di protezione dei dati, puoi contattarci direttamente all’indirizzo email: info.lamelina@gmail.com.',
+        'Il Titolare del trattamento dei dati personali è Alessandra Mela, referente per gli appartamenti vacanze "La Melina" situati in Via Po, 10124 Torino (TO), Italia.\n\nPer qualsiasi informazione, richiesta o per l’esercizio dei tuoi diritti in materia di protezione dei dati, puoi contattarci direttamente all’indirizzo email: info.lamelina@gmail.com.',
       dataTitle: '2. Dati Raccolti, Canali di Contatto e Log Server',
       dataText:
         'Raccogliamo i dati personali forniti volontariamente tramite il nostro modulo di contatto (nome, indirizzo email, appartamento d’interesse e messaggio) o mediante i recapiti diretti presenti sul sito (WhatsApp al +39 328 329 9346 ed email).\n\nNatura del conferimento: Il conferimento dei dati è facoltativo, ma l’eventuale mancato inserimento rende impossibile rispondere alle tue richieste di preventivo, disponibilità o assistenza sul soggiorno.\n\nDati tecnici e log di navigazione: Durante la consultazione del sito, l’infrastruttura di hosting (Vercel Inc.) registra automaticamente nei log di sistema alcune informazioni tecniche (indirizzo IP, identificativo del browser User-Agent, data e ora della richiesta). Tale raccolta avviene sulla base del legittimo interesse (Art. 6, par. 1, lett. f GDPR) per garantire la sicurezza della rete, prevenire attacchi informatici e assicurare il corretto funzionamento tecnico della piattaforma.',
@@ -495,16 +495,15 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: {
         name: 'La Melina sotto la Mole',
         subtitle:
-          'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico e vista sulla Mole',
+          'Romantico appartamento immerso in un’atmosfera calda e rilassante',
         badgeText: 'Booking.com 10/10 Eccezionale',
         description:
           'In una posizione privilegiata nel pieno centro di Torino, La Melina offre un ambiente caldo e romantico, particolarmente silenzioso con vista sulla Mole. L’appartamento climatizzato comprende: un accogliente soggiorno con angolo cottura accessoriato, dotato di frigorifero, Nespresso e bollitore elettrico; un soppalco di charme con letto matrimoniale e bagno privato dotato di tutti i comfort.',
         story:
-          'Situato in posizione d’eccellenza in Via Po 51, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
+          'Situato in posizione d’eccellenza in Via Po, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
         highlights: [
           'Posizione privilegiata con ascensore nel cuore di Torino',
           'Atmosfera romantica e silenziosa',
-          'Terrazzo e balcone privato con vista panoramica sulla Mole Antonelliana e sui tetti di Torino',
           'Comfort completo: aria condizionata, riscaldamento e lavatrice',
         ],
         galleryCaptions: [
@@ -534,7 +533,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Elegante salotto sabaudo con soffitti alti e balcone panoramico sui portici di Via Po',
         badgeText: 'Airbnb Amato dagli ospiti',
         description:
-          'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, letto matrimoniale soppalcato e zona bar con frigorifero, Nespresso e bollitore elettrico.',
+          'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, letto matrimoniale soppalcato, zona bar con frigorifero, Nespresso, bollitore elettrico e bagno privato.',
         story:
           'Vivi Torino dalla prospettiva più autentica: affacciati dal balcone privato sui famosi portici di Via Po per gustare un caffè o ammirare la vita cittadina. Situato in un palazzo storico nobiliare provvisto di ascensore, l’appartamento offre un’atmosfera d’altri tempi unita ai più moderni comfort: aria condizionata centralizzata, riscaldamento, Wi-Fi veloce, Smart TV e self check-in con tastierino numerico.',
         highlights: [
@@ -684,13 +683,13 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     location: {
       badge: 'The Neighborhood',
-      title: 'Via Po 51, The Historic Heart of Turin',
+      title: 'Via Po, The Historic Heart of Turin',
       subtitle:
         'A prestigious central address: located under the grand 17th-century arcades of Via Po, moments from the Mole Antonelliana and Piazza Vittorio Veneto.',
       addressLabel: 'Apartments address:',
-      fullAddress: 'Via Po, 51 - 10124 Turin (TO), Italy',
+      fullAddress: 'Via Po - 10124 Turin (TO), Italy',
       openGoogleMaps: 'Open in Google Maps',
-      gettingHereTitle: 'Getting to Via Po 51',
+      gettingHereTitle: 'Getting to Via Po',
       gettingHereDesc:
         'Easily reached on foot or via short tram/bus ride from both Porta Nuova and Porta Susa central stations. Public transit stops right outside on Via Po.',
       contactForDirections: 'Ask Host For Travel Advice',
@@ -763,7 +762,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     footer: {
       tagline:
-        'Two private holiday retreats in central Turin at Via Po 51.',
+        'Two private holiday retreats in central Turin at Via Po.',
       bookOnline: 'Book Online',
       explore: 'Navigation',
       rights:
@@ -778,7 +777,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Last updated: October 2026',
       controllerTitle: '1. Data Controller',
       controllerText:
-        'The Data Controller is Alessandra Mela, property manager for "La Melina" holiday apartments situated at Via Po 51, 10124 Turin (TO), Italy.\n\nFor any questions, information requests, or to exercise your statutory data protection rights, please contact us directly at: info.lamelina@gmail.com.',
+        'The Data Controller is Alessandra Mela, property manager for "La Melina" holiday apartments situated at Via Po, 10124 Turin (TO), Italy.\n\nFor any questions, information requests, or to exercise your statutory data protection rights, please contact us directly at: info.lamelina@gmail.com.',
       dataTitle: '2. Data Collected, Contact Channels & Server Logs',
       dataText:
         'We collect personal information that you voluntarily submit through our inquiry form (name, email address, chosen apartment, and message) or through our direct contact channels (WhatsApp at +39 328 329 9346 and direct email).\n\nNature of provision: Providing your personal data is voluntary; however, without it we cannot reply to your requests or assist with your stay planning.\n\nTechnical connection data & server logs: When you visit our website, our cloud hosting infrastructure (Vercel Inc.) automatically records technical connection logs (including IP addresses, browser User-Agent strings, and access timestamps). This technical logging is conducted on the basis of legitimate interest (Art. 6(1)(f) GDPR) to ensure server stability, cyber threat prevention, and proper platform functioning.',
@@ -825,16 +824,15 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: {
         name: 'La Melina sotto la Mole',
         subtitle:
-          'Top-floor bright apartment with private panoramic terrace and Mole Antonelliana view',
+          'Romantic apartment immersed in a warm and relaxing atmosphere',
         badgeText: 'Booking.com 10/10 Exceptional',
         description:
           'In a privileged location right in the heart of Turin, La Melina offers a warm, romantic, and exceptionally peaceful atmosphere with views of the Mole. This air-conditioned apartment includes: a cozy living room with an equipped kitchenette (refrigerator, Nespresso machine, and electric kettle); a charming mezzanine with double bed, and a private bathroom equipped with all comforts.',
         story:
-          'Situated in an exceptional location on historic Via Po 51, La Melina delivers an authentic Savoyard stay backed by a flawless 10.0 location score. Enjoy breakfast on your private terrace gazing at the Mole Antonelliana or unwind at sunset over Turin’s rooftops. Complete with elevator access, air conditioning, heating, free high-speed Wi-Fi, and plush amenities.',
+          'Situated in an exceptional location on historic Via Po, La Melina delivers an authentic Savoyard stay backed by a flawless 10.0 location score. Enjoy breakfast on your private terrace gazing at the Mole Antonelliana or unwind at sunset over Turin’s rooftops. Complete with elevator access, air conditioning, heating, free high-speed Wi-Fi, and plush amenities.',
         highlights: [
           'Prime location with elevator access in the heart of Turin',
           'Romantic and quiet atmosphere',
-          'Private rooftop terrace & balcony with panoramic views of the Mole Antonelliana and rooftops',
           'Complete comfort: elevator, air conditioning, heating & in-unit washer',
         ],
         galleryCaptions: [
@@ -864,7 +862,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Elegant Savoyard salon with high historic ceilings and balcony overlooking Via Po arcades',
         badgeText: 'Airbnb Guest Favorite',
         description:
-          'In the beating heart of Turin on the piano nobile with elevator access, La Melina su Via Po is an atmospheric Savoyard residence featuring soaring ceilings, refined furnishings, and a romantic private balcony directly overlooking historic Via Po. The home features a welcoming lounge with reading library and board games, mezzanine double bed, and bar area with refrigerator, Nespresso, and electric kettle.',
+          'In the beating heart of Turin on the piano nobile with elevator access, La Melina su Via Po is an atmospheric Savoyard residence featuring soaring ceilings, refined furnishings, and a romantic private balcony directly overlooking historic Via Po. The home features a welcoming lounge with reading library and board games, mezzanine double bed, bar area with refrigerator, Nespresso, electric kettle, and private bathroom.',
         story:
           'Experience Turin from its most authentic vantage point: step out onto your private balcony overlooking the arcades of Via Po to sip espresso or watch city life unfold. Located in a historic noble building with elevator, this retreat blends old-world elegance with modern comforts: central air conditioning, heating, high-speed Wi-Fi, Smart TV, and smart keyless self check-in.',
         highlights: [
@@ -1014,13 +1012,13 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     location: {
       badge: 'Le Quartier',
-      title: 'Via Po 51, Le Cœur Historique de Turin',
+      title: 'Via Po, Le Cœur Historique de Turin',
       subtitle:
         'Une adresse centrale d’exception : sous les magnifiques arcades de la Via Po, à quelques pas de la Mole Antonelliana et de la Piazza Vittorio Veneto.',
       addressLabel: 'Adresse des appartements :',
-      fullAddress: 'Via Po, 51 - 10124 Turin (TO), Italie',
+      fullAddress: 'Via Po - 10124 Turin (TO), Italie',
       openGoogleMaps: 'Ouvrir sur Google Maps',
-      gettingHereTitle: 'Comment Arriver à Via Po 51',
+      gettingHereTitle: 'Comment Arriver à Via Po',
       gettingHereDesc:
         'Facilement accessible à pied ou par tram/bus direct depuis les gares centrales de Porta Nuova et Porta Susa. Arrêts de transport public juste devant la Via Po.',
       contactForDirections: 'Demander Conseil pour le Trajet',
@@ -1093,7 +1091,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     footer: {
       tagline:
-        'Deux appartements d’hôtes de charme au cœur de Turin, Via Po 51.',
+        'Deux appartements d’hôtes de charme au cœur de Turin, Via Po.',
       bookOnline: 'Réserver en Ligne',
       explore: 'Navigation',
       rights:
@@ -1108,7 +1106,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Dernière mise à jour : Octobre 2026',
       controllerTitle: '1. Responsable du Traitement',
       controllerText:
-        'Le responsable du traitement des données personnelles est Alessandra Mela pour les hébergements touristiques "La Melina", Via Po 51, 10124 Turin (TO), Italie.\n\nPour toute demande d’information ou pour exercer vos droits relatifs à vos données personnelles, vous pouvez nous écrire directement à : info.lamelina@gmail.com.',
+        'Le responsable du traitement des données personnelles est Alessandra Mela pour les hébergements touristiques "La Melina", Via Po, 10124 Turin (TO), Italie.\n\nPour toute demande d’information ou pour exercer vos droits relatifs à vos données personnelles, vous pouvez nous écrire directement à : info.lamelina@gmail.com.',
       dataTitle: '2. Données Collectées, Canaux de Contact et Journaux Serveur',
       dataText:
         'Nous recueillons les données personnelles transmises volontairement via le formulaire de contact (nom, adresse email, hébergement souhaité et message) ou par nos canaux directs (WhatsApp au +39 328 329 9346 et email direct).\n\nCaractère facultatif : La transmission de vos données est facultative, mais son omission empêche de répondre à vos demandes de renseignement ou de disponibilité.\n\nDonnées techniques et journaux de connexion : Lors de votre consultation du site, l’hébergeur d’infrastructure (Vercel Inc.) enregistre automatiquement des informations techniques dans les journaux système (adresse IP, User-Agent du navigateur, date et heure d’accès). Ce traitement repose sur notre intérêt légitime (Art. 6.1.f RGPD) afin de garantir la sécurité du réseau, prévenir les attaques et assurer le bon fonctionnement du site.',
@@ -1155,16 +1153,15 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: {
         name: 'La Melina sotto la Mole',
         subtitle:
-          'Appartement lumineux au dernier étage avec terrasse panoramique privée et vue sur la Mole',
+          'Appartement romantique baigné dans une atmosphère chaleureuse et relaxante',
         badgeText: 'Booking.com 10/10 Exceptionnel',
         description:
           'Bénéficiant d’un emplacement privilégié en plein cœur de Turin, La Melina offre un cadre chaleureux et romantique, particulièrement silencieux avec vue sur la Mole. Cet appartement climatisé comprend : un salon chaleureux avec kitchenette équipée (réfrigérateur, Nespresso et bouilloire électrique) ; une charmante mezzanine avec lit double et une salle de bain privée pourvue de tout le confort.',
         story:
-          'Situé à une adresse d’exception au 51 Via Po, La Melina offre une expérience piémontaise mémorable avec une note de situation parfaite de 10/10. Savourez votre petit-déjeuner en terrasse face à la Mole Antonelliana ou admirez le coucher de soleil sur les toits de Turin. L’immeuble dispose d’un ascenseur, de la climatisation, du chauffage et du Wi-Fi haut débit.',
+          'Situé à une adresse d’exception sur la Via Po, La Melina offre une expérience piémontaise mémorable avec une note de situation parfaite de 10/10. Savourez votre petit-déjeuner en terrasse face à la Mole Antonelliana ou admirez le coucher de soleil sur les toits de Turin. L’immeuble dispose d’un ascenseur, de la climatisation, du chauffage et du Wi-Fi haut débit.',
         highlights: [
           'Emplacement privilégié avec ascenseur au cœur de Turin',
           'Atmosphère romantique et silencieuse',
-          'Terrasse et balcon panoramiques avec vue imprenable sur la Mole Antonelliana et les toits',
           'Confort moderne : ascenseur dans l’immeuble, climatisation, chauffage et lave-linge',
         ],
         galleryCaptions: [
@@ -1194,7 +1191,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Élégant salon savoyard avec hauts plafonds d’époque et balcon sur les arcades de la Via Po',
         badgeText: 'Airbnb Coup de cœur voyageurs',
         description:
-          'Au cœur battant de Turin, au piano nobile avec ascenseur, La Melina su Via Po est un appartement savoyard de caractère mêlant hauts plafonds d’époque, décoration raffinée et balcon privé romantique donnant directement sur la prestigieuse Via Po. L’espace propose un salon chaleureux avec bibliothèque et jeux de société, un lit double en mezzanine et un coin bar avec réfrigérateur, Nespresso et bouilloire électrique.',
+          'Au cœur battant de Turin, au piano nobile avec ascenseur, La Melina su Via Po est un appartement savoyard de caractère mêlant hauts plafonds d’époque, décoration raffinée et balcon privé romantique donnant directement sur la prestigieuse Via Po. L’espace propose un salon chaleureux avec bibliothèque et jeux de société, un lit double en mezzanine, un coin bar avec réfrigérateur, Nespresso, bouilloire électrique et une salle de bain privative.',
         story:
           'Découvrez Turin sous son angle le plus authentique : installez-vous sur le balcon privé au-dessus des arcades historiques pour prendre votre café ou observer la vie piémontaise. Situé dans un somptueux palais noble avec ascenseur, ce havre de paix combine charme d’antan et commodités modernes : climatisation centrale, chauffage, Wi-Fi ultra-rapide, Smart TV et arrivée autonome par serrure à code.',
         highlights: [
@@ -1344,13 +1341,13 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     location: {
       badge: 'Die Umgebung',
-      title: 'Via Po 51, Das Historische Zentrum von Turin',
+      title: 'Via Po, Das Historische Zentrum von Turin',
       subtitle:
         'Beste Innenstadtlage: unter den eleganten Arkaden der Via Po, nur wenige Schritte von der Mole Antonelliana und der Piazza Vittorio Veneto entfernt.',
       addressLabel: 'Adresse der Apartments:',
-      fullAddress: 'Via Po, 51 - 10124 Turin (TO), Italien',
+      fullAddress: 'Via Po - 10124 Turin (TO), Italien',
       openGoogleMaps: 'In Google Maps öffnen',
-      gettingHereTitle: 'Anreise zur Via Po 51',
+      gettingHereTitle: 'Anreise zur Via Po',
       gettingHereDesc:
         'Bequem zu Fuß oder mit direkter Straßenbahn/Bus von den Hauptbahnhöfen Porta Nuova und Porta Susa erreichbar. Haltestellen direkt vor der Tür in Via Po.',
       contactForDirections: 'Gastgeber nach Anreiseroute fragen',
@@ -1423,7 +1420,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     footer: {
       tagline:
-        'Zwei private Ferienunterkünfte im Herzen von Turin in der Via Po 51.',
+        'Zwei private Ferienunterkünfte im Herzen von Turin in der Via Po.',
       bookOnline: 'Online Buchen',
       explore: 'Navigation',
       rights:
@@ -1438,7 +1435,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Zuletzt aktualisiert: Oktober 2026',
       controllerTitle: '1. Verantwortliche Stelle',
       controllerText:
-        'Verantwortliche Stelle für die Datenverarbeitung ist Alessandra Mela für die Ferienunterkünfte "La Melina", Via Po 51, 10124 Turin (TO), Italien.\n\nFür Auskünfte, Anfragen oder zur Wahrnehmung Ihrer Datenschutzrechte wenden Sie sich bitte direkt per E-Mail an: info.lamelina@gmail.com.',
+        'Verantwortliche Stelle für die Datenverarbeitung ist Alessandra Mela für die Ferienunterkünfte "La Melina", Via Po, 10124 Turin (TO), Italien.\n\nFür Auskünfte, Anfragen oder zur Wahrnehmung Ihrer Datenschutzrechte wenden Sie sich bitte direkt per E-Mail an: info.lamelina@gmail.com.',
       dataTitle: '2. Erhobene Daten, Kontaktkanäle & Server-Protokolle',
       dataText:
         'Wir erheben personenbezogene Daten, die Sie uns freiwillig über das Anfrageformular (Name, E-Mail-Adresse, gewähltes Apartment und Nachricht) oder über unsere Direktkanäle (WhatsApp unter +39 328 329 9346 sowie direkte E-Mail) mitteilen.\n\nFreiwilligkeit der Bereitstellung: Die Bereitstellung Ihrer Daten ist freiwillig; ohne diese Angaben ist eine Beantwortung Ihrer Anfrage oder Auskunft zu Verfügbarkeiten jedoch nicht möglich.\n\nTechnische Verbindungsdaten & Server-Logs: Beim Aufruf der Website registriert die Hosting-Infrastruktur (Vercel Inc.) aus technischen Gründen Logfiles (u.a. IP-Adresse, Browser-Kennung User-Agent sowie Zugriffszeitpunkt). Diese Speicherung erfolgt auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO), um Systemsicherheit, Abwehr von Cyberangriffen und zuverlässigen Betrieb zu gewährleisten.',
@@ -1485,16 +1482,15 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: {
         name: 'La Melina sotto la Mole',
         subtitle:
-          'Helles Dachgeschoss-Apartment mit privater Panorama-Terrasse und Blick auf die Mole',
+          'Romantisches Apartment in einer warmen und entspannenden Atmosphäre',
         badgeText: 'Booking.com 10/10 Außergewöhnlich',
         description:
           'In privilegierter Lage im Herzen von Turin bietet La Melina ein warmes, romantisches und besonders ruhiges Ambiente mit Blick auf die Mole Antonelliana. Das klimatisierte Apartment umfasst: ein gemütliches Wohnzimmer mit ausgestatteter Küchenzeile (Kühlschrank, Nespresso und Wasserkocher); eine charmante Galerie mit Doppelbett und ein privates Badezimmer mit allem Komfort.',
         story:
-          'In privilegierter Lage in der Via Po 51 bietet La Melina ein unvergleichliches Piemont-Erlebnis mit einer perfekten Lagebewertung von 10/10. Frühstücken Sie auf der privaten Terrasse mit Blick auf die Mole Antonelliana oder genießen Sie den Sonnenuntergang über den Turiner Dächern. Das Gebäude verfügt über einen Aufzug, Klimaanlage, Heizung und Highspeed-WLAN.',
+          'In privilegierter Lage in der Via Po bietet La Melina ein unvergleichliches Piemont-Erlebnis mit einer perfekten Lagebewertung von 10/10. Frühstücken Sie auf der privaten Terrasse mit Blick auf die Mole Antonelliana oder genießen Sie den Sonnenuntergang über den Turiner Dächern. Das Gebäude verfügt über einen Aufzug, Klimaanlage, Heizung und Highspeed-WLAN.',
         highlights: [
           'Privilegierte Lage mit Aufzug im Herzen von Turin',
           'Romantische und ruhige Atmosphäre',
-          'Private Panorama-Dachterrasse & Balkon mit atemberaubendem Blick auf die Mole Antonelliana',
           'Modernster Komfort: Aufzug im Haus, Klimaanlage, Heizung und Waschmaschine',
         ],
         galleryCaptions: [
@@ -1524,7 +1520,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Elegantes piemontesisches Refugium mit hohen Decken und Balkon über den Arkaden der Via Po',
         badgeText: 'Airbnb Beliebt bei Gästen',
         description:
-          'Im lebendigen Herzen von Turin in der Beletage mit Aufzug: La Melina su Via Po ist ein stilvoller Salon mit herrschaftlich hohen Decken, auserlesener Einrichtung und einem romantischen privaten Balkon mit direktem Blick auf die historische Via Po. Die Wohnung bietet einen behaglichen Wohnbereich mit Bibliothek und Gesellschaftsspielen, ein Mezzanin-Doppelbett sowie einen Barbereich mit Kühlschrank, Nespresso und Wasserkocher.',
+          'Im lebendigen Herzen von Turin in der Beletage mit Aufzug: La Melina su Via Po ist ein stilvoller Salon mit herrschaftlich hohen Decken, auserlesener Einrichtung und einem romantischen privaten Balkon mit direktem Blick auf die historische Via Po. Die Wohnung bietet einen behaglichen Wohnbereich mit Bibliothek und Gesellschaftsspielen, ein Mezzanin-Doppelbett, einen Barbereich mit Kühlschrank, Nespresso, Wasserkocher sowie ein privates Badezimmer.',
         story:
           'Erleben Sie Turin aus seiner authentischsten Perspektive: Genießen Sie Ihren morgendlichen Espresso auf dem privaten Balkon hoch über den Arkaden der Via Po. In einem historischen Adelspalais mit Aufzug gelegen, verbindet dieses Domizil altehrwürdigen Charme mit zeitgemäßem Luxus: zentrale Klimaanlage, Heizung, Highspeed-WLAN, Smart-TV und schlüsselloser Self Check-in per Zahlencode.',
         highlights: [
@@ -1674,13 +1670,13 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     location: {
       badge: 'El Barrio',
-      title: 'Via Po 51, El Corazón Histórico de Turín',
+      title: 'Via Po, El Corazón Histórico de Turín',
       subtitle:
         'Ubicación privilegiada: bajo los majestuosos soportales de Via Po, a pocos pasos de la Mole Antonelliana y de Piazza Vittorio Veneto.',
       addressLabel: 'Dirección de los apartamentos:',
-      fullAddress: 'Via Po, 51 - 10124 Turín (TO), Italia',
+      fullAddress: 'Via Po - 10124 Turín (TO), Italia',
       openGoogleMaps: 'Abrir en Google Maps',
-      gettingHereTitle: 'Cómo Llegar a Via Po 51',
+      gettingHereTitle: 'Cómo Llegar a Via Po',
       gettingHereDesc:
         'Fácil acceso a pie o en tranvía/autobús directo desde las estaciones centrales de Porta Nuova y Porta Susa. Paradas de transporte público justo enfrente en Via Po.',
       contactForDirections: 'Consultar Ruta al Anfitrión',
@@ -1753,7 +1749,7 @@ export const translations: Record<Language, SiteTranslations> = {
     },
     footer: {
       tagline:
-        'Dos alojamientos vacacionales privados en el centro histórico de Turín, en Via Po 51.',
+        'Dos alojamientos vacacionales privados en el centro histórico de Turín, en Via Po.',
       bookOnline: 'Reservar Online',
       explore: 'Navegación',
       rights:
@@ -1768,7 +1764,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Última actualización: Octubre 2026',
       controllerTitle: '1. Responsable del Tratamiento',
       controllerText:
-        'La responsable del tratamiento de los datos personales es Alessandra Mela para los alojamientos "La Melina", sitos en Via Po 51, 10124 Turín (TO), Italia.\n\nPara cualquier consulta, aclaración o para el ejercicio de tus derechos de protección de datos, puedes contactarnos directamente en: info.lamelina@gmail.com.',
+        'La responsable del tratamiento de los datos personales es Alessandra Mela para los alojamientos "La Melina", sitos en Via Po, 10124 Turín (TO), Italia.\n\nPara cualquier consulta, aclaración o para el ejercicio de tus derechos de protección de datos, puedes contactarnos directamente en: info.lamelina@gmail.com.',
       dataTitle: '2. Datos Recopilados, Canales de Contacto y Registros del Servidor',
       dataText:
         'Recopilamos los datos personales proporcionados voluntariamente mediante el formulario de consulta (nombre, correo electrónico, apartamento de interés y mensaje) o a través de los canales directos del sitio (WhatsApp en el +39 328 329 9346 y correo directo).\n\nCarácter potestativo del suministro: La aportación de datos es voluntaria; no obstante, su omisión impide atender a tus dudas o comprobar la disponibilidad del alojamiento.\n\nDatos técnicos y registros de navegación: Durante la navegación, el proveedor de alojamiento en la nube (Vercel Inc.) registra de forma automática información técnica en los registros del servidor (dirección IP, identificador User-Agent del navegador y marcas de tiempo). Esta recogida responde a nuestro interés legítimo (Art. 6.1.f RGPD) para preservar la ciberseguridad, prevenir incidentes técnicos y garantizar el correcto funcionamiento del servicio.',
@@ -1815,16 +1811,15 @@ export const translations: Record<Language, SiteTranslations> = {
       terrace: {
         name: 'La Melina sotto la Mole',
         subtitle:
-          'Luminoso apartamento en última planta con terraza panorámica privada y vistas a la Mole',
+          'Romántico apartamento inmerso en un ambiente cálido y relajante',
         badgeText: 'Booking.com 10/10 Excepcional',
         description:
           'En una ubicación privilegiada en pleno centro de Turín, La Melina ofrece un ambiente cálido y romántico, especialmente silencioso con vistas a la Mole. El apartamento climatizado comprende: una acogedora sala de estar con cocina americana equipada (frigorífico, Nespresso y hervidor eléctrico); un coqueto altillo con cama de matrimonio y baño privado dotado de todas las comodidades.',
         story:
-          'Situado en una ubicación excepcional en Via Po 51, La Melina brinda una experiencia turinesa inmejorable respaldada por una puntuación de ubicación perfecta de 10/10. Desayuna en la terraza privada contemplando la Mole Antonelliana o admira el atardecer sobre los tejados de Turín. El edificio cuenta con ascensor, climatización, calefacción y Wi-Fi de alta velocidad.',
+          'Situado en una ubicación excepcional en Via Po, La Melina brinda una experiencia turinesa inmejorable respaldada por una puntuación de ubicación perfecta de 10/10. Desayuna en la terraza privada contemplando la Mole Antonelliana o admira el atardecer sobre los tejados de Turín. El edificio cuenta con ascensor, climatización, calefacción y Wi-Fi de alta velocidad.',
         highlights: [
           'Ubicación privilegiada con ascensor en el corazón de Turín',
           'Atmósfera romántica y silenciosa',
-          'Terraza y balcón panorámicos con vistas exclusivas a la Mole Antonelliana y los tejados',
           'Máximo confort: ascensor en el edificio, aire acondicionado, calefacción y lavadora',
         ],
         galleryCaptions: [
@@ -1854,7 +1849,7 @@ export const translations: Record<Language, SiteTranslations> = {
           'Elegante salón saboyano con techos altos señoriales y balcón sobre los soportales de Via Po',
         badgeText: 'Airbnb Favorito entre huéspedes',
         description:
-          'En pleno corazón de Turín en la planta noble con ascensor, La Melina su Via Po es una residencia saboyana con techos altos históricos, mobiliario cuidado y un romántico balcón privado con vistas directas a la emblemática Via Po. El alojamiento dispone de un acogedor salón con rincón de lectura y juegos de mesa, cama de matrimonio en altillo y zona bar con frigorífico, Nespresso y hervidor eléctrico.',
+          'En pleno corazón de Turín en la planta noble con ascensor, La Melina su Via Po es una residencia saboyana con techos altos históricos, mobiliario cuidado y un romántico balcón privado con vistas directas a la emblemática Via Po. El alojamiento dispone de un acogedor salón con rincón de lectura y juegos de mesa, cama de matrimonio en altillo, zona bar con frigorífico, Nespresso, hervidor eléctrico y baño privado.',
         story:
           'Vive Turín desde su perspectiva más auténtica: asómate a tu balcón privado sobre los soportales históricos de Via Po para degustar un café o contemplar la vida turinesa. Ubicado en un palacio señorial histórico provisto de ascensor, este refugio combina encanto de época y comodidades de hoy: aire acondicionado centralizado, calefacción, Wi-Fi rápido, Smart TV y llegada autónoma con teclado digital.',
         highlights: [
