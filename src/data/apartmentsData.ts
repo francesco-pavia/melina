@@ -113,7 +113,7 @@ export const baseApartments: Apartment[] = [
       areaSqm: 70,
     },
     description:
-      'In una posizione privilegiata nel centro di Torino, La Melina offre una terrazza e un balcone con vista panoramica sulla città. Questo appartamento climatizzato comprende 1 camera da letto, un accogliente soggiorno, una cucina accessoriata con frigorifero e macchina da caffè, e 1 bagno con bidet e doccia.',
+      'In una posizione privilegiata nel pieno centro di Torino, La Melina offre un ambiente caldo e romantico, particolarmente silenzioso con vista sulla Mole. L’appartamento climatizzato comprende: un accogliente soggiorno con angolo cottura accessoriato, dotato di frigorifero, Nespresso e bollitore elettrico; un soppalco di charme con letto matrimoniale e bagno privato dotato di tutti i comfort.',
     story:
       'Situato in posizione d’eccellenza in Via Po 51, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
     heroImage: '/images/melina-mole/living-stairs.jpg',
@@ -182,10 +182,10 @@ export const baseApartments: Apartment[] = [
       { name: 'Lenzuola & Set Asciugamani inclusi', iconName: 'Bed', category: 'Essentials' },
     ],
     highlights: [
+      'Posizione privilegiata con ascensore nel cuore di Torino',
+      'Atmosfera romantica e silenziosa',
       'Terrazzo e balcone privato con vista panoramica sulla Mole Antonelliana e sui tetti di Torino',
-      'Posizione privilegiata nel cuore di Torino con punteggio posizione massimo di 10,0',
       'Comfort completo: ascensore, aria condizionata, riscaldamento e lavatrice',
-      'Punteggio 10/10 per pulizia, servizi, comfort e accoglienza su Booking.com',
     ],
     rules: {
       checkIn: 'Check-in flessibile (Self check-in con cassetta chiavi)',

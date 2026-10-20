@@ -498,14 +498,14 @@ export const translations: Record<Language, SiteTranslations> = {
           'Luminoso appartamento all’ultimo piano con suggestivo terrazzo panoramico e vista sulla Mole',
         badgeText: 'Booking.com 10/10 Eccezionale',
         description:
-          'In una posizione privilegiata nel centro di Torino, La Melina offre una terrazza e un balcone con vista panoramica sulla città. Questo appartamento climatizzato comprende 1 camera da letto, un accogliente soggiorno, una cucina accessoriata con frigorifero e macchina da caffè, e 1 bagno con bidet e doccia.',
+          'In una posizione privilegiata nel pieno centro di Torino, La Melina offre un ambiente caldo e romantico, particolarmente silenzioso con vista sulla Mole. L’appartamento climatizzato comprende: un accogliente soggiorno con angolo cottura accessoriato, dotato di frigorifero, Nespresso e bollitore elettrico; un soppalco di charme con letto matrimoniale e bagno privato dotato di tutti i comfort.',
         story:
           'Situato in posizione d’eccellenza in Via Po 51, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
         highlights: [
+          'Posizione privilegiata con ascensore nel cuore di Torino',
+          'Atmosfera romantica e silenziosa',
           'Terrazzo e balcone privato con vista panoramica sulla Mole Antonelliana e sui tetti di Torino',
-          'Posizione privilegiata nel cuore di Torino con punteggio posizione massimo di 10,0',
-          'Comfort completo: ascensore, aria condizionata, riscaldamento e lavatrice',
-          'Punteggio 10/10 per pulizia, servizi, comfort e accoglienza su Booking.com',
+          'Comfort completo: aria condizionata, riscaldamento e lavatrice',
         ],
         galleryCaptions: [
           'Ambiente living accogliente con scala verso il soppalco',
@@ -828,14 +828,14 @@ export const translations: Record<Language, SiteTranslations> = {
           'Top-floor bright apartment with private panoramic terrace and Mole Antonelliana view',
         badgeText: 'Booking.com 10/10 Exceptional',
         description:
-          'In a prime location in the heart of Turin, La Melina offers a terrace and a balcony with panoramic city views. This air-conditioned apartment features 1 bedroom, a cozy living room, an equipped kitchenette with fridge and coffee machine, and 1 bathroom with bidet and shower.',
+          'In a privileged location right in the heart of Turin, La Melina offers a warm, romantic, and exceptionally peaceful atmosphere with views of the Mole. This air-conditioned apartment includes: a cozy living room with an equipped kitchenette (refrigerator, Nespresso machine, and electric kettle); a charming mezzanine with double bed, and a private bathroom equipped with all comforts.',
         story:
           'Situated in an exceptional location on historic Via Po 51, La Melina delivers an authentic Savoyard stay backed by a flawless 10.0 location score. Enjoy breakfast on your private terrace gazing at the Mole Antonelliana or unwind at sunset over Turin’s rooftops. Complete with elevator access, air conditioning, heating, free high-speed Wi-Fi, and plush amenities.',
         highlights: [
+          'Prime location with elevator access in the heart of Turin',
+          'Romantic and quiet atmosphere',
           'Private rooftop terrace & balcony with panoramic views of the Mole Antonelliana and rooftops',
-          'Unbeatable central location in Via Po with a perfect 10.0 location score',
-          'Modern convenience: building elevator, air conditioning, heating & in-unit washer',
-          'Flawless 10/10 rating for cleanliness, amenities, comfort & service on Booking.com',
+          'Complete comfort: elevator, air conditioning, heating & in-unit washer',
         ],
         galleryCaptions: [
           'Cozy living area with staircase leading to the mezzanine',
@@ -1158,14 +1158,14 @@ export const translations: Record<Language, SiteTranslations> = {
           'Appartement lumineux au dernier étage avec terrasse panoramique privée et vue sur la Mole',
         badgeText: 'Booking.com 10/10 Exceptionnel',
         description:
-          'Bénéficiant d’un emplacement privilégié au cœur de Turin, La Melina dispose d’une terrasse et d’un balcon avec vue panoramique sur la ville. Cet appartement climatisé comprend 1 chambre, un salon chaleureux, une kitchenette équipée avec réfrigérateur et machine à café, et 1 salle de bain avec bidet et douche.',
+          'Bénéficiant d’un emplacement privilégié en plein cœur de Turin, La Melina offre un cadre chaleureux et romantique, particulièrement silencieux avec vue sur la Mole. Cet appartement climatisé comprend : un salon chaleureux avec kitchenette équipée (réfrigérateur, Nespresso et bouilloire électrique) ; une charmante mezzanine avec lit double et une salle de bain privée pourvue de tout le confort.',
         story:
           'Situé à une adresse d’exception au 51 Via Po, La Melina offre une expérience piémontaise mémorable avec une note de situation parfaite de 10/10. Savourez votre petit-déjeuner en terrasse face à la Mole Antonelliana ou admirez le coucher de soleil sur les toits de Turin. L’immeuble dispose d’un ascenseur, de la climatisation, du chauffage et du Wi-Fi haut débit.',
         highlights: [
+          'Emplacement privilégié avec ascenseur au cœur de Turin',
+          'Atmosphère romantique et silencieuse',
           'Terrasse et balcon panoramiques avec vue imprenable sur la Mole Antonelliana et les toits',
-          'Emplacement exceptionnel Via Po avec une note de situation parfaite de 10,0',
           'Confort moderne : ascenseur dans l’immeuble, climatisation, chauffage et lave-linge',
-          'Note parfaite de 10/10 pour la propreté, les équipements et l’accueil sur Booking.com',
         ],
         galleryCaptions: [
           'Espace salon chaleureux avec escalier menant à la mezzanine',
@@ -1488,14 +1488,14 @@ export const translations: Record<Language, SiteTranslations> = {
           'Helles Dachgeschoss-Apartment mit privater Panorama-Terrasse und Blick auf die Mole',
         badgeText: 'Booking.com 10/10 Außergewöhnlich',
         description:
-          'In bester Lage im Herzen von Turin bietet La Melina eine Terrasse und einen Balkon mit Panoramablick auf die Stadt. Dieses klimatisierte Apartment verfügt über 1 Schlafzimmer, ein gemütliches Wohnzimmer, eine Küchenzeile mit Kühlschrank und Kaffeemaschine sowie 1 Badezimmer mit Bidet und Dusche.',
+          'In privilegierter Lage im Herzen von Turin bietet La Melina ein warmes, romantisches und besonders ruhiges Ambiente mit Blick auf die Mole Antonelliana. Das klimatisierte Apartment umfasst: ein gemütliches Wohnzimmer mit ausgestatteter Küchenzeile (Kühlschrank, Nespresso und Wasserkocher); eine charmante Galerie mit Doppelbett und ein privates Badezimmer mit allem Komfort.',
         story:
           'In privilegierter Lage in der Via Po 51 bietet La Melina ein unvergleichliches Piemont-Erlebnis mit einer perfekten Lagebewertung von 10/10. Frühstücken Sie auf der privaten Terrasse mit Blick auf die Mole Antonelliana oder genießen Sie den Sonnenuntergang über den Turiner Dächern. Das Gebäude verfügt über einen Aufzug, Klimaanlage, Heizung und Highspeed-WLAN.',
         highlights: [
+          'Privilegierte Lage mit Aufzug im Herzen von Turin',
+          'Romantische und ruhige Atmosphäre',
           'Private Panorama-Dachterrasse & Balkon mit atemberaubendem Blick auf die Mole Antonelliana',
-          'Unschlagbare Lage in der Via Po mit perfekter Lagebewertung von 10,0',
           'Modernster Komfort: Aufzug im Haus, Klimaanlage, Heizung und Waschmaschine',
-          'Höchstbewertung von 10/10 für Sauberkeit, Ausstattung und Gastfreundschaft auf Booking.com',
         ],
         galleryCaptions: [
           'Gemütlicher Wohnbereich mit Treppe zur Galerie',
@@ -1818,14 +1818,14 @@ export const translations: Record<Language, SiteTranslations> = {
           'Luminoso apartamento en última planta con terraza panorámica privada y vistas a la Mole',
         badgeText: 'Booking.com 10/10 Excepcional',
         description:
-          'Con una ubicación privilegiada en pleno centro de Turín, La Melina ofrece terraza y balcón con vistas panorámicas a la ciudad. Este apartamento con aire acondicionado dispone de 1 dormitorio, una acogedora sala de estar, zona de cocina equipada con nevera y cafetera, y 1 baño con bidet y ducha.',
+          'En una ubicación privilegiada en pleno centro de Turín, La Melina ofrece un ambiente cálido y romántico, especialmente silencioso con vistas a la Mole. El apartamento climatizado comprende: una acogedora sala de estar con cocina americana equipada (frigorífico, Nespresso y hervidor eléctrico); un coqueto altillo con cama de matrimonio y baño privado dotado de todas las comodidades.',
         story:
           'Situado en una ubicación excepcional en Via Po 51, La Melina brinda una experiencia turinesa inmejorable respaldada por una puntuación de ubicación perfecta de 10/10. Desayuna en la terraza privada contemplando la Mole Antonelliana o admira el atardecer sobre los tejados de Turín. El edificio cuenta con ascensor, climatización, calefacción y Wi-Fi de alta velocidad.',
         highlights: [
+          'Ubicación privilegiada con ascensor en el corazón de Turín',
+          'Atmósfera romántica y silenciosa',
           'Terraza y balcón panorámicos con vistas exclusivas a la Mole Antonelliana y los tejados',
-          'Ubicación privilegiada en Via Po con la máxima puntuación de ubicación de 10,0',
           'Máximo confort: ascensor en el edificio, aire acondicionado, calefacción y lavadora',
-          'Puntuación impecable de 10/10 en limpieza, servicios y atención en Booking.com',
         ],
         galleryCaptions: [
           'Acogedora sala de estar con escalera hacia el altillo',
