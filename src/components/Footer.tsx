@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowUp, MapPin, ExternalLink } from 'lucide-react'
+import { ArrowUp, MapPin, ExternalLink, Sparkles } from 'lucide-react'
 import { AirbnbIcon, BookingIcon, WhatsappIcon, InstagramIcon, FacebookIcon } from './Icons'
 import { getLocalizedApartments, hostInfo, socialLinks, propertyCodes } from '../data/apartmentsData'
 import { useLanguage } from '../context/LanguageContext'
@@ -93,28 +93,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
               {t.bookOnline}
             </h4>
             <ul className="space-y-2 text-xs">
-              {[apt1, apt2].map((apt) => {
-                const isAirbnb = apt.platform === 'Airbnb'
-                return (
-                  <li key={apt.id}>
-                    <a
-                      href={apt.platformUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-stone-300 hover:text-white transition-colors"
-                    >
-                      {isAirbnb ? (
-                        <AirbnbIcon className="w-4 h-4 text-[#FF385C]" />
-                      ) : (
-                        <BookingIcon className="w-4 h-4 text-sky-400" />
-                      )}
-                      <span>{apt.name} ({apt.platform})</span>
-                      <ExternalLink className="w-3 h-3 opacity-60" />
-                    </a>
-                  </li>
-                )
-              })}
-              <li className="pt-2">
+              <li>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold transition-colors"
+                >
+                  <Sparkles className="w-4 h-4 text-amber-400" />
+                  <span>Richiedi Soggiorno Diretto</span>
+                </a>
+              </li>
+              <li>
                 <a
                   href={hostInfo.whatsapp}
                   target="_blank"
@@ -125,6 +113,27 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
                   <span>WhatsApp Host Inquiry</span>
                 </a>
               </li>
+              {[apt1, apt2].map((apt) => {
+                const isAirbnb = apt.platform === 'Airbnb'
+                return (
+                  <li key={apt.id} className="pt-0.5">
+                    <a
+                      href={apt.platformUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-stone-400 hover:text-stone-300 text-[11px] transition-colors"
+                    >
+                      {isAirbnb ? (
+                        <AirbnbIcon className="w-3.5 h-3.5 text-[#FF385C]/80" />
+                      ) : (
+                        <BookingIcon className="w-3.5 h-3.5 text-sky-400/80" />
+                      )}
+                      <span>{apt.platform}</span>
+                      <ExternalLink className="w-3 h-3 opacity-60" />
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           </div>
 

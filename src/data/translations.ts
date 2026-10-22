@@ -51,6 +51,7 @@ export interface SiteTranslations {
     location: string
     reviews: string
     contact: string
+    bookDirect: string
   }
   hero: {
     welcomeBadge: string
@@ -74,6 +75,9 @@ export interface SiteTranslations {
     fastWifiSub: string
     spotless: string
     spotlessSub: string
+    directRateBadge: string
+    requestAvailability: string
+    viewOnPlatform: string
   }
   apartmentSection: {
     guests: string
@@ -119,6 +123,15 @@ export interface SiteTranslations {
     bookButton: string
     redirectNotice: string
     viewAllPhotos: string
+    bestRateGuarantee: string
+    directPerksTitle: string
+    directPerk1: string
+    directPerk2: string
+    directPerk3: string
+    directPerk4: string
+    inquireWhatsapp: string
+    inquireEmail: string
+    orBookOnPlatform: string
   }
   amenities: {
     badge: string
@@ -198,6 +211,15 @@ export interface SiteTranslations {
     followUs: string
     privacyNotice: string
     privacyLinkText: string
+    yourPhone: string
+    checkInDate: string
+    checkOutDate: string
+    guestsLabel: string
+    guestOption1: string
+    guestOption2: string
+    directPerkBadge: string
+    whatsappInstantTitle: string
+    whatsappInstantDesc: string
   }
   footer: {
     tagline: string
@@ -244,6 +266,7 @@ export const translations: Record<Language, SiteTranslations> = {
       location: 'Posizione',
       reviews: 'Recensioni',
       contact: 'Contatti',
+      bookDirect: 'Prenota Subito',
     },
     hero: {
       welcomeBadge: 'Benvenuti a La Melina · Torino Centro',
@@ -260,14 +283,17 @@ export const translations: Record<Language, SiteTranslations> = {
       bath: 'Bagno',
       doubleBed: 'Letto matrimoniale',
       mezzanine: 'Soppalco',
-      superhostVerified: 'Ospitalità Verificata',
-      superhostSub: 'Valutazioni al vertice',
+      superhostVerified: 'Ospitalità Autentica',
+      superhostSub: 'Cura e attenzione per gli ospiti',
       selfCheckIn: 'Self Check-In Smart',
       selfCheckInSub: 'Codice tastierino 24/7',
       fastWifi: 'Wi-Fi Fibra Ultraveloce',
       fastWifiSub: 'Connessione a 300+ Mbps',
       spotless: 'Pulizia Impeccabile',
       spotlessSub: 'Igienizzazione professionale',
+      directRateBadge: 'Prenotazione Diretta con l’Host',
+      requestAvailability: 'Richiedi Disponibilità',
+      viewOnPlatform: 'Recensioni su',
     },
     apartmentSection: {
       guests: 'Ospiti',
@@ -316,6 +342,15 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'Vedi Disponibilità e Prenota su',
       redirectNotice: 'Verrai reindirizzato alla pagina ufficiale dell’annuncio.',
       viewAllPhotos: 'Guarda tutte le foto',
+      bestRateGuarantee: 'Prenotazione Diretta',
+      directPerksTitle: 'Perché Prenotare Direttamente?',
+      directPerk1: 'Prenotazione diretta senza intermediari',
+      directPerk2: 'Trattativa trasparente e preventivo su misura',
+      directPerk3: 'Contatto diretto e consigli personalizzati da Alessandra',
+      directPerk4: 'Massima flessibilità concordata su check-in e check-out',
+      inquireWhatsapp: 'Disponibilità via WhatsApp',
+      inquireEmail: 'Invia Richiesta di Soggiorno',
+      orBookOnPlatform: 'Oppure consulta l’annuncio su',
     },
     amenities: {
       badge: 'Comfort & Standard',
@@ -430,6 +465,15 @@ export const translations: Record<Language, SiteTranslations> = {
       followUs: 'Seguici sui social',
       privacyNotice: 'Inviando il modulo confermi di aver preso visione dell’',
       privacyLinkText: 'Informativa sulla Privacy',
+      yourPhone: 'Telefono / WhatsApp (opzionale)',
+      checkInDate: 'Data Arrivo (Check-in)',
+      checkOutDate: 'Data Partenza (Check-out)',
+      guestsLabel: 'Ospiti',
+      guestOption1: '1 Ospite',
+      guestOption2: '2 Ospiti',
+      directPerkBadge: 'Risposta rapida e contatto diretto con l’host',
+      whatsappInstantTitle: 'Preferisci una risposta immediata?',
+      whatsappInstantDesc: 'Scrivi direttamente ad Alessandra su WhatsApp per verificare date e preventivo in tempo reale.',
     },
     footer: {
       tagline:
@@ -437,7 +481,7 @@ export const translations: Record<Language, SiteTranslations> = {
       bookOnline: 'Prenota Online',
       explore: 'Navigazione',
       rights:
-        'Tutti i diritti riservati. Prenotazioni intermediate in sicurezza su Airbnb e Booking.com.',
+        'Tutti i diritti riservati. Appartamenti ad uso turistico nel centro storico di Torino.',
       backToTop: 'Torna su',
       followUs: 'Seguici sui social',
       privacyPolicy: 'Informativa Privacy & Cookie',
@@ -496,11 +540,11 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sotto la Mole',
         subtitle:
           'Romantico appartamento immerso in un’atmosfera calda e rilassante',
-        badgeText: 'Booking.com 10/10 Eccezionale',
+        badgeText: '',
         description:
           'In una posizione privilegiata nel pieno centro di Torino, La Melina offre un ambiente caldo e romantico, particolarmente silenzioso con vista sulla Mole. L’appartamento climatizzato comprende: un accogliente soggiorno con angolo cottura accessoriato, dotato di frigorifero, Nespresso e bollitore elettrico; un soppalco di charme con letto matrimoniale e bagno privato dotato di tutti i comfort.',
         story:
-          'Situato in posizione d’eccellenza in Via Po, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
+          'Situato in posizione d’eccellenza in Via Po, La Melina offre un’esperienza sabauda indimenticabile nel pieno centro storico. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
         highlights: [
           'Posizione privilegiata con ascensore nel cuore di Torino',
           'Atmosfera romantica e silenziosa',
@@ -531,7 +575,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Elegante salotto sabaudo con soffitti alti e balcone panoramico sui portici di Via Po',
-        badgeText: 'Airbnb Amato dagli ospiti',
+        badgeText: '',
         description:
           'Nel cuore pulsante di Torino al piano nobile con ascensore, La Melina su Via Po è un suggestivo salotto sabaudo caratterizzato da soffitti alti d’epoca, arredi curati e un romantico balcone privato affacciato direttamente sulla storica Via Po. L’alloggio dispone di zona living accogliente con angolo lettura e giochi da tavolo, letto matrimoniale soppalcato, zona bar con frigorifero, Nespresso, bollitore elettrico e bagno privato.',
         story:
@@ -573,6 +617,7 @@ export const translations: Record<Language, SiteTranslations> = {
       location: 'Location',
       reviews: 'Reviews',
       contact: 'Contact',
+          bookDirect: 'Book Now',
     },
     hero: {
       welcomeBadge: 'Welcome to La Melina · Turin Center',
@@ -589,14 +634,17 @@ export const translations: Record<Language, SiteTranslations> = {
       bath: 'Bath',
       doubleBed: 'Double bed',
       mezzanine: 'Mezzanine',
-      superhostVerified: 'Superhost Hospitality',
-      superhostSub: 'Top-rated guest reviews',
+      superhostVerified: 'Authentic Hospitality',
+      superhostSub: 'Care and attention for every guest',
       selfCheckIn: 'Smart Keyless Check-in',
       selfCheckInSub: '24/7 Keypad entry code',
       fastWifi: 'Fast Fiber Wi-Fi',
       fastWifiSub: '300+ Mbps connection',
       spotless: 'Spotless Cleanliness',
       spotlessSub: 'Professionally sanitized',
+          directRateBadge: 'Direct Booking with the Host',
+      requestAvailability: 'Request Availability',
+      viewOnPlatform: 'Reviews on',
     },
     apartmentSection: {
       guests: 'Guests',
@@ -645,6 +693,15 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'View Availability & Book on',
       redirectNotice: 'You will be redirected to the official listing page.',
       viewAllPhotos: 'View all photos',
+      bestRateGuarantee: 'Direct Booking',
+      directPerksTitle: 'Why Book Directly?',
+      directPerk1: 'Direct booking without intermediaries',
+      directPerk2: 'Transparent quote tailored to your stay',
+      directPerk3: 'Direct contact & personalized care from Alessandra',
+      directPerk4: 'Flexible check-in and custom stay arrangements',
+      inquireWhatsapp: 'Check on WhatsApp',
+      inquireEmail: 'Request Direct Stay Quote',
+      orBookOnPlatform: 'Or view the listing on',
     },
     amenities: {
       badge: 'Comfort & Standards',
@@ -759,6 +816,15 @@ export const translations: Record<Language, SiteTranslations> = {
       followUs: 'Follow our journey',
       privacyNotice: 'By sending this message, you confirm that you have read our',
       privacyLinkText: 'Privacy Policy',
+          yourPhone: 'Phone / WhatsApp (optional)',
+      checkInDate: 'Check-in Date',
+      checkOutDate: 'Check-out Date',
+      guestsLabel: 'Guests',
+      guestOption1: '1 Guest',
+      guestOption2: '2 Guests',
+      directPerkBadge: 'Fast response and direct contact with your host',
+      whatsappInstantTitle: 'Prefer an instant reply?',
+      whatsappInstantDesc: 'Message Alessandra directly on WhatsApp for real-time availability and private rates.',
     },
     footer: {
       tagline:
@@ -766,7 +832,7 @@ export const translations: Record<Language, SiteTranslations> = {
       bookOnline: 'Book Online',
       explore: 'Navigation',
       rights:
-        'All rights reserved. Bookings fulfilled securely on Airbnb and Booking.com.',
+        'All rights reserved. Private holiday apartments in historic central Turin.',
       backToTop: 'Back to Top',
       followUs: 'Follow us',
       privacyPolicy: 'Privacy & Cookie Policy',
@@ -825,11 +891,11 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sotto la Mole',
         subtitle:
           'Romantic apartment immersed in a warm and relaxing atmosphere',
-        badgeText: 'Booking.com 10/10 Exceptional',
+        badgeText: '',
         description:
           'In a privileged location right in the heart of Turin, La Melina offers a warm, romantic, and exceptionally peaceful atmosphere with views of the Mole. This air-conditioned apartment includes: a cozy living room with an equipped kitchenette (refrigerator, Nespresso machine, and electric kettle); a charming mezzanine with double bed, and a private bathroom equipped with all comforts.',
         story:
-          'Situated in an exceptional location on historic Via Po, La Melina delivers an authentic Savoyard stay backed by a flawless 10.0 location score. Enjoy breakfast on your private terrace gazing at the Mole Antonelliana or unwind at sunset over Turin’s rooftops. Complete with elevator access, air conditioning, heating, free high-speed Wi-Fi, and plush amenities.',
+          'Situated in an exceptional location on historic Via Po, La Melina delivers an authentic Savoyard stay in the very heart of the historic center. Enjoy breakfast on your private terrace gazing at the Mole Antonelliana or unwind at sunset over Turin’s rooftops. Complete with elevator access, air conditioning, heating, free high-speed Wi-Fi, and plush amenities.',
         highlights: [
           'Prime location with elevator access in the heart of Turin',
           'Romantic and quiet atmosphere',
@@ -860,7 +926,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Elegant Savoyard salon with high historic ceilings and balcony overlooking Via Po arcades',
-        badgeText: 'Airbnb Guest Favorite',
+        badgeText: '',
         description:
           'In the beating heart of Turin on the piano nobile with elevator access, La Melina su Via Po is an atmospheric Savoyard residence featuring soaring ceilings, refined furnishings, and a romantic private balcony directly overlooking historic Via Po. The home features a welcoming lounge with reading library and board games, mezzanine double bed, bar area with refrigerator, Nespresso, electric kettle, and private bathroom.',
         story:
@@ -902,6 +968,7 @@ export const translations: Record<Language, SiteTranslations> = {
       location: 'Emplacement',
       reviews: 'Avis',
       contact: 'Contact',
+          bookDirect: 'Réserver Maintenant',
     },
     hero: {
       welcomeBadge: 'Bienvenue à La Melina · Turin Centre',
@@ -918,14 +985,17 @@ export const translations: Record<Language, SiteTranslations> = {
       bath: 'Salle de bain',
       doubleBed: 'Lit double',
       mezzanine: 'Mezzanine',
-      superhostVerified: 'Hospitalité Superhost',
-      superhostSub: 'Excellentes évaluations',
+      superhostVerified: 'Accueil Authentique',
+      superhostSub: 'Soin et attention pour chaque voyageur',
       selfCheckIn: 'Arrivée Autonome',
       selfCheckInSub: 'Code digicode 24h/24',
       fastWifi: 'Wi-Fi Fibre Très Rapide',
       fastWifiSub: 'Débit 300+ Mbps',
       spotless: 'Propreté Irréprochable',
       spotlessSub: 'Désinfection professionnelle',
+          directRateBadge: 'Réservation Directe avec l’Hôte',
+      requestAvailability: 'Demander la disponibilité',
+      viewOnPlatform: 'Avis sur',
     },
     apartmentSection: {
       guests: 'Voyageurs',
@@ -974,6 +1044,15 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'Voir Disponibilités & Réserver sur',
       redirectNotice: 'Vous serez redirigé vers l’annonce officielle.',
       viewAllPhotos: 'Voir toutes les photos',
+      bestRateGuarantee: 'Réservation Directe',
+      directPerksTitle: 'Pourquoi Réserver en Direct ?',
+      directPerk1: 'Réservation directe sans intermédiaires',
+      directPerk2: 'Devis sur mesure et contact direct personnalisé',
+      directPerk3: 'Contact direct et conseils personnalisés par Alessandra',
+      directPerk4: 'Flexibilité maximale convenue pour l’arrivée et le départ',
+      inquireWhatsapp: 'Disponibilité sur WhatsApp',
+      inquireEmail: 'Demander un Devis en Direct',
+      orBookOnPlatform: 'Ou consulter l’annonce sur',
     },
     amenities: {
       badge: 'Confort & Exigences',
@@ -1088,6 +1167,15 @@ export const translations: Record<Language, SiteTranslations> = {
       followUs: 'Suivez-nous sur les réseaux',
       privacyNotice: 'En envoyant ce formulaire, vous confirmez avoir pris connaissance de notre',
       privacyLinkText: 'Politique de Confidentialité',
+          yourPhone: 'Téléphone / WhatsApp (optionnel)',
+      checkInDate: 'Date d’arrivée (Check-in)',
+      checkOutDate: 'Date de départ (Check-out)',
+      guestsLabel: 'Voyageurs',
+      guestOption1: '1 Voyageur',
+      guestOption2: '2 Voyageurs',
+      directPerkBadge: 'Réponse rapide et contact direct avec l’hôte',
+      whatsappInstantTitle: 'Vous préférez une réponse immédiate ?',
+      whatsappInstantDesc: 'Écrivez directement à Alessandra sur WhatsApp pour vérifier les disponibilités et tarifs en direct.',
     },
     footer: {
       tagline:
@@ -1095,7 +1183,7 @@ export const translations: Record<Language, SiteTranslations> = {
       bookOnline: 'Réserver en Ligne',
       explore: 'Navigation',
       rights:
-        'Tous droits réservés. Réservations traitées en toute sécurité sur Airbnb et Booking.com.',
+        'Tous droits réservés. Appartements de vacances privés au cœur de Turin.',
       backToTop: 'Retour en haut',
       followUs: 'Suivez-nous',
       privacyPolicy: 'Politique de Confidentialité',
@@ -1154,11 +1242,11 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sotto la Mole',
         subtitle:
           'Appartement romantique baigné dans une atmosphère chaleureuse et relaxante',
-        badgeText: 'Booking.com 10/10 Exceptionnel',
+        badgeText: '',
         description:
           'Bénéficiant d’un emplacement privilégié en plein cœur de Turin, La Melina offre un cadre chaleureux et romantique, particulièrement silencieux avec vue sur la Mole. Cet appartement climatisé comprend : un salon chaleureux avec kitchenette équipée (réfrigérateur, Nespresso et bouilloire électrique) ; une charmante mezzanine avec lit double et une salle de bain privée pourvue de tout le confort.',
         story:
-          'Situé à une adresse d’exception sur la Via Po, La Melina offre une expérience piémontaise mémorable avec une note de situation parfaite de 10/10. Savourez votre petit-déjeuner en terrasse face à la Mole Antonelliana ou admirez le coucher de soleil sur les toits de Turin. L’immeuble dispose d’un ascenseur, de la climatisation, du chauffage et du Wi-Fi haut débit.',
+          'Situé à une adresse d’exception sur la Via Po, La Melina offre une expérience piémontaise mémorable au cœur même du centre historique de Turin. Savourez votre petit-déjeuner en terrasse face à la Mole Antonelliana ou admirez le coucher de soleil sur les toits de Turin. L’immeuble dispose d’un ascenseur, de la climatisation, du chauffage et du Wi-Fi haut débit.',
         highlights: [
           'Emplacement privilégié avec ascenseur au cœur de Turin',
           'Atmosphère romantique et silencieuse',
@@ -1189,7 +1277,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Élégant salon savoyard avec hauts plafonds d’époque et balcon sur les arcades de la Via Po',
-        badgeText: 'Airbnb Coup de cœur voyageurs',
+        badgeText: '',
         description:
           'Au cœur battant de Turin, au piano nobile avec ascenseur, La Melina su Via Po est un appartement savoyard de caractère mêlant hauts plafonds d’époque, décoration raffinée et balcon privé romantique donnant directement sur la prestigieuse Via Po. L’espace propose un salon chaleureux avec bibliothèque et jeux de société, un lit double en mezzanine, un coin bar avec réfrigérateur, Nespresso, bouilloire électrique et une salle de bain privative.',
         story:
@@ -1231,6 +1319,7 @@ export const translations: Record<Language, SiteTranslations> = {
       location: 'Lage',
       reviews: 'Bewertungen',
       contact: 'Kontakt',
+          bookDirect: 'Jetzt buchen',
     },
     hero: {
       welcomeBadge: 'Willkommen bei La Melina · Turin Zentrum',
@@ -1247,14 +1336,17 @@ export const translations: Record<Language, SiteTranslations> = {
       bath: 'Bad',
       doubleBed: 'Doppelbett',
       mezzanine: 'Mezzanin',
-      superhostVerified: 'Superhost Gastfreundschaft',
-      superhostSub: 'Hervorragende Bewertungen',
+      superhostVerified: 'Authentische Gastfreundschaft',
+      superhostSub: 'Aufmerksamkeit für jeden Gast',
       selfCheckIn: 'Smart Self Check-In',
       selfCheckInSub: '24/7 Zahlencode-Zugang',
       fastWifi: 'Schnelles Glasfaser-WLAN',
       fastWifiSub: '300+ Mbit/s Geschwindigkeit',
       spotless: 'Makellose Sauberkeit',
       spotlessSub: 'Professionell desinfiziert',
+          directRateBadge: 'Direktbuchung beim Gastgeber',
+      requestAvailability: 'Verfügbarkeit anfragen',
+      viewOnPlatform: 'Bewertungen auf',
     },
     apartmentSection: {
       guests: 'Gäste',
@@ -1303,6 +1395,15 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'Verfügbarkeit prüfen & buchen auf',
       redirectNotice: 'Sie werden zum offiziellen Inserat weitergeleitet.',
       viewAllPhotos: 'Alle Fotos ansehen',
+      bestRateGuarantee: 'Direktbuchung',
+      directPerksTitle: 'Warum direkt buchen?',
+      directPerk1: 'Direktbuchung ohne Zwischenhändler',
+      directPerk2: 'Individuelles Angebot und transparente Absprache',
+      directPerk3: 'Direkter Kontakt und persönliche Betreuung durch Alessandra',
+      directPerk4: 'Maximale Flexibilität bei Ankunft und Abreise',
+      inquireWhatsapp: 'Verfügbarkeit via WhatsApp',
+      inquireEmail: 'Direktes Angebot anfragen',
+      orBookOnPlatform: 'Oder Inserat ansehen auf',
     },
     amenities: {
       badge: 'Komfort & Qualität',
@@ -1417,6 +1518,15 @@ export const translations: Record<Language, SiteTranslations> = {
       followUs: 'Folgen Sie uns in den sozialen Medien',
       privacyNotice: 'Mit dem Absenden bestätigen Sie, dass Sie unsere',
       privacyLinkText: 'Datenschutzerklärung',
+          yourPhone: 'Telefon / WhatsApp (optional)',
+      checkInDate: 'Anreisedatum (Check-in)',
+      checkOutDate: 'Abreisedatum (Check-out)',
+      guestsLabel: 'Gäste',
+      guestOption1: '1 Gast',
+      guestOption2: '2 Gäste',
+      directPerkBadge: 'Schnelle Antwort und direkter Kontakt mit der Gastgeberin',
+      whatsappInstantTitle: 'Bevorzugen Sie eine sofortige Antwort?',
+      whatsappInstantDesc: 'Schreiben Sie Alessandra direkt auf WhatsApp für Verfügbarkeit und Direktpreise in Echtzeit.',
     },
     footer: {
       tagline:
@@ -1424,7 +1534,7 @@ export const translations: Record<Language, SiteTranslations> = {
       bookOnline: 'Online Buchen',
       explore: 'Navigation',
       rights:
-        'Alle Rechte vorbehalten. Buchungen sicher abgewickelt über Airbnb und Booking.com.',
+        'Alle Rechte vorbehalten. Private Ferienapartments im historischen Zentrum von Turin.',
       backToTop: 'Nach oben',
       followUs: 'Folgen Sie uns',
       privacyPolicy: 'Datenschutz & Cookies',
@@ -1483,11 +1593,11 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sotto la Mole',
         subtitle:
           'Romantisches Apartment in einer warmen und entspannenden Atmosphäre',
-        badgeText: 'Booking.com 10/10 Außergewöhnlich',
+        badgeText: '',
         description:
           'In privilegierter Lage im Herzen von Turin bietet La Melina ein warmes, romantisches und besonders ruhiges Ambiente mit Blick auf die Mole Antonelliana. Das klimatisierte Apartment umfasst: ein gemütliches Wohnzimmer mit ausgestatteter Küchenzeile (Kühlschrank, Nespresso und Wasserkocher); eine charmante Galerie mit Doppelbett und ein privates Badezimmer mit allem Komfort.',
         story:
-          'In privilegierter Lage in der Via Po bietet La Melina ein unvergleichliches Piemont-Erlebnis mit einer perfekten Lagebewertung von 10/10. Frühstücken Sie auf der privaten Terrasse mit Blick auf die Mole Antonelliana oder genießen Sie den Sonnenuntergang über den Turiner Dächern. Das Gebäude verfügt über einen Aufzug, Klimaanlage, Heizung und Highspeed-WLAN.',
+          'In privilegierter Lage in der Via Po bietet La Melina ein unvergleichliches Piemont-Erlebnis im Herzen der historischen Altstadt. Frühstücken Sie auf der privaten Terrasse mit Blick auf die Mole Antonelliana oder genießen Sie den Sonnenuntergang über den Turiner Dächern. Das Gebäude verfügt über einen Aufzug, Klimaanlage, Heizung und Highspeed-WLAN.',
         highlights: [
           'Privilegierte Lage mit Aufzug im Herzen von Turin',
           'Romantische und ruhige Atmosphäre',
@@ -1518,7 +1628,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Elegantes piemontesisches Refugium mit hohen Decken und Balkon über den Arkaden der Via Po',
-        badgeText: 'Airbnb Beliebt bei Gästen',
+        badgeText: '',
         description:
           'Im lebendigen Herzen von Turin in der Beletage mit Aufzug: La Melina su Via Po ist ein stilvoller Salon mit herrschaftlich hohen Decken, auserlesener Einrichtung und einem romantischen privaten Balkon mit direktem Blick auf die historische Via Po. Die Wohnung bietet einen behaglichen Wohnbereich mit Bibliothek und Gesellschaftsspielen, ein Mezzanin-Doppelbett, einen Barbereich mit Kühlschrank, Nespresso, Wasserkocher sowie ein privates Badezimmer.',
         story:
@@ -1560,6 +1670,7 @@ export const translations: Record<Language, SiteTranslations> = {
       location: 'Ubicación',
       reviews: 'Opiniones',
       contact: 'Contacto',
+          bookDirect: 'Reservar Ahora',
     },
     hero: {
       welcomeBadge: 'Bienvenidos a La Melina · Centro de Turín',
@@ -1576,14 +1687,17 @@ export const translations: Record<Language, SiteTranslations> = {
       bath: 'Baño',
       doubleBed: 'Cama de matrimonio',
       mezzanine: 'Altillo',
-      superhostVerified: 'Hospitalidad Superhost',
-      superhostSub: 'Calificaciones excelentes',
+      superhostVerified: 'Hospitalidad Auténtica',
+      superhostSub: 'Cuidado y atención a cada huésped',
       selfCheckIn: 'Llegada Autónoma',
       selfCheckInSub: 'Código teclado 24/7',
       fastWifi: 'Wi-Fi Fibra Ultrarrápido',
       fastWifiSub: 'Conexión a más de 300 Mbps',
       spotless: 'Limpieza Impecable',
       spotlessSub: 'Desinfección profesional',
+          directRateBadge: 'Reserva Directa con la Anfitriona',
+      requestAvailability: 'Consultar disponibilidad',
+      viewOnPlatform: 'Opiniones en',
     },
     apartmentSection: {
       guests: 'Huéspedes',
@@ -1632,6 +1746,15 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'Ver Disponibilidad y Reservar en',
       redirectNotice: 'Serás redirigido a la página oficial del anuncio.',
       viewAllPhotos: 'Ver todas las fotos',
+          bestRateGuarantee: 'Reserva Directa',
+      directPerksTitle: '¿Por qué reservar directamente?',
+      directPerk1: 'Reserva directa sin intermediarios',
+      directPerk2: 'Presupuesto a medida y comunicación directa inmediata',
+      directPerk3: 'Trato directo y atención personalizada con Alessandra',
+      directPerk4: 'Máxima flexibilidad acordada en check-in y check-out',
+      inquireWhatsapp: 'Disponibilidad por WhatsApp',
+      inquireEmail: 'Enviar Solicitud de Estancia',
+      orBookOnPlatform: 'O consulta el anuncio en',
     },
     amenities: {
       badge: 'Confort & Estándares',
@@ -1746,6 +1869,15 @@ export const translations: Record<Language, SiteTranslations> = {
       followUs: 'Síguenos en las redes sociales',
       privacyNotice: 'Al enviar este formulario confirmas que has leído nuestra',
       privacyLinkText: 'Política de Privacidad',
+          yourPhone: 'Teléfono / WhatsApp (opcional)',
+      checkInDate: 'Fecha de llegada (Check-in)',
+      checkOutDate: 'Fecha de salida (Check-out)',
+      guestsLabel: 'Huéspedes',
+      guestOption1: '1 Huésped',
+      guestOption2: '2 Huéspedes',
+      directPerkBadge: 'Respuesta rápida y trato directo con la anfitriona',
+      whatsappInstantTitle: '¿Prefieres una respuesta inmediata?',
+      whatsappInstantDesc: 'Escribe directamente a Alessandra por WhatsApp para comprobar fechas y tarifas al instante.',
     },
     footer: {
       tagline:
@@ -1753,7 +1885,7 @@ export const translations: Record<Language, SiteTranslations> = {
       bookOnline: 'Reservar Online',
       explore: 'Navegación',
       rights:
-        'Todos los derechos reservados. Reservas gestionadas de forma segura en Airbnb y Booking.com.',
+        'Todos los derechos reservados. Apartamentos vacacionales privados en el centro de Turín.',
       backToTop: 'Volver arriba',
       followUs: 'Síguenos',
       privacyPolicy: 'Política de Privacidad & Cookies',
@@ -1812,11 +1944,11 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina sotto la Mole',
         subtitle:
           'Romántico apartamento inmerso en un ambiente cálido y relajante',
-        badgeText: 'Booking.com 10/10 Excepcional',
+        badgeText: '',
         description:
           'En una ubicación privilegiada en pleno centro de Turín, La Melina ofrece un ambiente cálido y romántico, especialmente silencioso con vistas a la Mole. El apartamento climatizado comprende: una acogedora sala de estar con cocina americana equipada (frigorífico, Nespresso y hervidor eléctrico); un coqueto altillo con cama de matrimonio y baño privado dotado de todas las comodidades.',
         story:
-          'Situado en una ubicación excepcional en Via Po, La Melina brinda una experiencia turinesa inmejorable respaldada por una puntuación de ubicación perfecta de 10/10. Desayuna en la terraza privada contemplando la Mole Antonelliana o admira el atardecer sobre los tejados de Turín. El edificio cuenta con ascensor, climatización, calefacción y Wi-Fi de alta velocidad.',
+          'Situado en una ubicación excepcional en Via Po, La Melina brinda una experiencia turinesa inmejorable en pleno centro histórico de Turín. Desayuna en la terraza privada contemplando la Mole Antonelliana o admira el atardecer sobre los tejados de Turín. El edificio cuenta con ascensor, climatización, calefacción y Wi-Fi de alta velocidad.',
         highlights: [
           'Ubicación privilegiada con ascensor en el corazón de Turín',
           'Atmósfera romántica y silenciosa',
@@ -1847,7 +1979,7 @@ export const translations: Record<Language, SiteTranslations> = {
         name: 'La Melina su Via Po',
         subtitle:
           'Elegante salón saboyano con techos altos señoriales y balcón sobre los soportales de Via Po',
-        badgeText: 'Airbnb Favorito entre huéspedes',
+        badgeText: '',
         description:
           'En pleno corazón de Turín en la planta noble con ascensor, La Melina su Via Po es una residencia saboyana con techos altos históricos, mobiliario cuidado y un romántico balcón privado con vistas directas a la emblemática Via Po. El alojamiento dispone de un acogedor salón con rincón de lectura y juegos de mesa, cama de matrimonio en altillo, zona bar con frigorífico, Nespresso, hervidor eléctrico y baño privado.',
         story:

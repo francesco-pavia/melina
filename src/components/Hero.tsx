@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
         {/* Main Headline & Intro with larger typography and generous spacing between lines */}
-        <div className="text-center max-w-4xl lg:max-w-5xl mx-auto mb-16 sm:mb-20 space-y-8 sm:space-y-10 pt-8 sm:pt-14 lg:pt-18">
+        <div className="text-center max-w-4xl lg:max-w-5xl mx-auto mb-16 sm:mb-20 space-y-6 sm:space-y-8 pt-8 sm:pt-14 lg:pt-18">
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-white tracking-tight leading-[1.1] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">
             {t.headlineStart}{' '}
             <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-rose-300 bg-clip-text text-transparent">
@@ -82,22 +82,23 @@ export const Hero: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent" />
 
-                  {/* Top Platform Badge */}
-                  <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span
-                      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold shadow-md ${
-                        isAirbnb
-                          ? 'bg-[#FF385C] text-white'
-                          : 'bg-[#003580] text-white border border-sky-400/30'
-                      }`}
+                  {/* Top Right: Official Listing */}
+                  <div className="absolute top-4 right-4">
+                    <a
+                      href={apt.platformUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-black/60 hover:bg-black/80 text-stone-200 border border-white/10 backdrop-blur-md transition-colors"
+                      title={`Vedi su ${apt.platform}`}
                     >
                       {isAirbnb ? (
-                        <AirbnbIcon className="w-3.5 h-3.5" />
+                        <AirbnbIcon className="w-3.5 h-3.5 text-[#FF385C]" />
                       ) : (
                         <BookingIcon className="w-3.5 h-3.5 text-sky-400" />
                       )}
-                      <span>{t.listedOn} {apt.platform}</span>
-                    </span>
+                      <span>{apt.platform}</span>
+                      <ExternalLink className="w-3 h-3 opacity-60" />
+                    </a>
                   </div>
 
                   {/* Name overlay */}
@@ -158,17 +159,11 @@ export const Hero: React.FC = () => {
                     </a>
 
                     <a
-                      href={apt.platformUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={`w-full sm:w-1/2 py-2.5 px-4 rounded-xl text-center text-xs font-semibold flex items-center justify-center gap-2 text-white transition-transform hover:scale-[1.02] shadow-lg ${
-                        isAirbnb
-                          ? 'bg-[#FF385C] hover:bg-[#e03150] shadow-[#FF385C]/20'
-                          : 'bg-[#003580] hover:bg-[#002866] shadow-[#003580]/20'
-                      }`}
+                      href="#contact"
+                      className="w-full sm:w-1/2 py-2.5 px-4 rounded-xl text-center text-xs font-semibold bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white flex items-center justify-center gap-1.5 transition-all shadow-md shadow-amber-900/30 hover:scale-[1.02]"
                     >
-                      <span>{t.bookOn} {apt.platform}</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
+                      <Sparkles className="w-3.5 h-3.5 text-amber-200" />
+                      <span>{t.requestAvailability}</span>
                     </a>
                   </div>
                 </div>

@@ -44,3 +44,6 @@ dist/
 dist-ssr/
 *.local
 
+
+# Graphify knowledge graph artifacts
+graphify-out/

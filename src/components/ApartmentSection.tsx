@@ -22,13 +22,14 @@ import {
   CheckCircle2,
   Images,
   Layers,
+  Mail,
 } from 'lucide-react'
 import type { Apartment } from '../types'
-import { AirbnbIcon, BookingIcon } from './Icons'
+import { AirbnbIcon, BookingIcon, WhatsappIcon } from './Icons'
 import { ImageLightbox } from './ImageLightbox'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
-import { propertyCodes } from '../data/apartmentsData'
+import { propertyCodes, getWhatsAppInquiryUrl } from '../data/apartmentsData'
 
 interface ApartmentSectionProps {
   apartment: Apartment
@@ -96,25 +97,24 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
             </p>
           </div>
 
-          {/* Quick Platform Booking CTA Button */}
-          <div className="flex items-center gap-3">
+          {/* Quick Direct Booking Action Buttons */}
+          <div className="flex flex-wrap items-center gap-3">
             <a
-              href={apartment.platformUrl}
+              href="#contact"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-xl shadow-amber-900/30 transition-all duration-200 hover:scale-[1.02]"
+            >
+              <Sparkles className="w-4 h-4 text-amber-200" />
+              <span>{t.inquireEmail}</span>
+            </a>
+
+            <a
+              href={getWhatsAppInquiryUrl(apartment.name, language)}
               target="_blank"
               rel="noreferrer"
-              className={`inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl font-semibold text-sm text-white shadow-xl transition-all duration-200 hover:scale-[1.03] ${
-                isAirbnb
-                  ? 'bg-[#FF385C] hover:bg-[#e03150] shadow-[#FF385C]/25'
-                  : 'bg-[#003580] hover:bg-[#002660] shadow-[#003580]/25'
-              }`}
+              className="inline-flex items-center gap-2 px-4 py-3 rounded-2xl font-semibold text-xs sm:text-sm text-emerald-300 bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-700/50 shadow-lg shadow-emerald-950/30 transition-all duration-200 hover:scale-[1.02]"
             >
-              {isAirbnb ? (
-                <AirbnbIcon className="w-5 h-5" />
-              ) : (
-                <BookingIcon className="w-5 h-5 text-sky-400" />
-              )}
-              <span>{t.bookButton} {apartment.platform}</span>
-              <ExternalLink className="w-4 h-4 opacity-80" />
+              <WhatsappIcon className="w-4 h-4 text-emerald-400" />
+              <span>{t.inquireWhatsapp}</span>
             </a>
           </div>
         </div>
@@ -258,93 +258,84 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
 
           {/* Right: Booking Box Sticky Card */}
           <div className="lg:col-span-4">
-            <div className="sticky top-28 p-7 rounded-3xl bg-stone-900 border border-stone-800 shadow-2xl space-y-6">
-              <div className="flex items-center justify-between pb-4 border-b border-stone-800">
-                <div>
-                  <div className="text-xs uppercase tracking-wider text-stone-400 font-mono">
-                    {t.directBooking}
-                  </div>
-                  <div className="text-xl font-bold text-white font-serif">
-                    {apartment.name}
-                  </div>
+            <div className="sticky top-28 p-7 rounded-3xl bg-stone-900 border border-stone-800 shadow-2xl space-y-5">
+              <div className="pb-4 border-b border-stone-800">
+                <div className="text-xl font-bold text-white font-serif">
+                  {apartment.name}
                 </div>
-                <div className="text-right">
-                  <span
-                    className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ${
-                      isAirbnb
-                        ? 'bg-[#FF385C]/20 text-[#FF385C] border border-[#FF385C]/30'
-                        : 'bg-[#003580]/30 text-sky-300 border border-sky-400/30'
-                    }`}
-                  >
-                    {isAirbnb ? (
-                      <AirbnbIcon className="w-3.5 h-3.5" />
-                    ) : (
-                      <BookingIcon className="w-3.5 h-3.5" />
-                    )}
-                    <span>{apartment.platform}</span>
-                  </span>
+                <div className="text-xs text-stone-400 mt-1">
+                  {apartment.subtitle}
                 </div>
               </div>
 
-              {/* Platform Info Box */}
-              <div
-                className={`p-4 rounded-2xl border ${
-                  isAirbnb
-                    ? 'bg-[#FF385C]/10 border-[#FF385C]/30'
-                    : 'bg-[#003580]/15 border-sky-500/30'
-                }`}
-              >
-                <div className="flex items-center gap-2 mb-2 font-semibold text-sm text-white">
+              {/* Direct Booking Perks Box */}
+              <div className="p-4 rounded-2xl bg-amber-950/25 border border-amber-500/30 space-y-3">
+                <div className="flex items-center gap-2 font-semibold text-xs sm:text-sm text-amber-300">
+                  <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
+                  <span>{t.directPerksTitle}</span>
+                </div>
+                <ul className="space-y-2 text-xs text-stone-300">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>{t.directPerk1}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>{t.directPerk2}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>{t.directPerk3}</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>{t.directPerk4}</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Primary Direct CTAs */}
+              <div className="space-y-2.5 pt-1">
+                {/* 1-Click WhatsApp Inquiry */}
+                <a
+                  href={getWhatsAppInquiryUrl(apartment.name, language)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full py-3.5 px-5 rounded-2xl font-bold text-xs sm:text-sm text-emerald-200 bg-emerald-950/70 hover:bg-emerald-900 border border-emerald-600/40 flex items-center justify-center gap-2.5 transition-all hover:scale-[1.02] shadow-lg shadow-emerald-950/40"
+                >
+                  <WhatsappIcon className="w-5 h-5 text-emerald-400" />
+                  <span>{t.inquireWhatsapp}</span>
+                </a>
+
+                {/* Email Inquiry / Booking Request */}
+                <a
+                  href="#contact"
+                  className="w-full py-3.5 px-5 rounded-2xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-xl shadow-amber-900/30"
+                >
+                  <Mail className="w-4 h-4 text-amber-200" />
+                  <span>{t.inquireEmail}</span>
+                </a>
+              </div>
+
+              {/* Secondary Reference to Official Platform Reviews */}
+              <div className="pt-3 border-t border-stone-800 text-center">
+                <div className="text-[11px] text-stone-400 mb-1.5">
+                  {t.orBookOnPlatform}
+                </div>
+                <a
+                  href={apartment.platformUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-stone-300 hover:text-white transition-colors"
+                >
                   {isAirbnb ? (
-                    <AirbnbIcon className="w-5 h-5 text-[#FF385C]" />
+                    <AirbnbIcon className="w-3.5 h-3.5 text-[#FF385C]" />
                   ) : (
-                    <BookingIcon className="w-5 h-5 text-sky-400" />
+                    <BookingIcon className="w-3.5 h-3.5 text-sky-400" />
                   )}
-                  <span>{t.officialListing} {apartment.platform}</span>
-                </div>
-                <p className="text-xs text-stone-300 leading-relaxed">
-                  {isAirbnb ? t.airbnbGuarantee : t.bookingGuarantee}
-                </p>
-              </div>
-
-              {/* Key Features Bullet Points */}
-              <div className="space-y-2 text-xs text-stone-300">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>{t.liveCalendar}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>{t.instantConfirmation}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>{t.hostSupport}</span>
-                </div>
-              </div>
-
-              {/* Primary Call to Action */}
-              <a
-                href={apartment.platformUrl}
-                target="_blank"
-                rel="noreferrer"
-                className={`w-full py-4 px-6 rounded-2xl font-bold text-sm text-white flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-xl ${
-                  isAirbnb
-                    ? 'bg-[#FF385C] hover:bg-[#e03150] shadow-[#FF385C]/30'
-                    : 'bg-[#003580] hover:bg-[#002660] shadow-[#003580]/30'
-                }`}
-              >
-                {isAirbnb ? (
-                  <AirbnbIcon className="w-5 h-5" />
-                ) : (
-                  <BookingIcon className="w-5 h-5 text-sky-400" />
-                )}
-                <span>{t.bookButton} {apartment.platform}</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-
-              <div className="text-center text-[11px] text-stone-400">
-                {t.redirectNotice}
+                  <span>{apartment.platform}</span>
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                </a>
               </div>
 
               {/* Legal Hospitality Registration Codes */}

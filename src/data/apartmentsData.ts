@@ -11,7 +11,7 @@ export const baseApartments: Apartment[] = [
     platformUrl: 'https://www.airbnb.it/rooms/1540725503663066319', 
     rating: 4.5,
     reviewCount: 2,
-    badgeText: 'Airbnb Amato dagli ospiti',
+    badgeText: '',
     capacity: {
       guests: 2,
       bedrooms: 1,
@@ -103,9 +103,9 @@ export const baseApartments: Apartment[] = [
     subtitle: 'Romantico appartamento immerso in un’atmosfera calda e rilassante',
     platform: 'Booking.com',
     platformUrl: 'https://www.booking.com/Share-qytECBi', 
-    rating: 10.0,
+    rating: 9.8,
     reviewCount: 3,
-    badgeText: 'Booking.com 10/10 Eccezionale',
+    badgeText: '',
     capacity: {
       guests: 2,
       bedrooms: 1,
@@ -116,7 +116,7 @@ export const baseApartments: Apartment[] = [
     description:
       'In una posizione privilegiata nel pieno centro di Torino, La Melina offre un ambiente caldo e romantico, particolarmente silenzioso con vista sulla Mole. L’appartamento climatizzato comprende: un accogliente soggiorno con angolo cottura accessoriato, dotato di frigorifero, Nespresso e bollitore elettrico; un soppalco di charme con letto matrimoniale e bagno privato dotato di tutti i comfort.',
     story:
-      'Situato in posizione d’eccellenza in Via Po, La Melina offre un’esperienza sabauda indimenticabile con punteggio perfetto di 10/10 per la posizione. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
+      'Situato in posizione d’eccellenza in Via Po, La Melina offre un’esperienza sabauda indimenticabile nel pieno centro storico. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
     heroImage: '/images/melina-mole/living-stairs.jpg',
     galleryImages: [
       {
@@ -279,6 +279,66 @@ export const hostInfo: HostInfo = {
   superhost: true,
   bookingAward: true,
   social: socialLinks,
+}
+
+export const getWhatsAppInquiryUrl = (
+  apartmentName?: string,
+  lang: Language = 'it',
+  dates?: { checkIn?: string; checkOut?: string; guests?: string }
+): string => {
+  const phone = '393283299346'
+  let message = ''
+
+  if (lang === 'it') {
+    message = `Buongiorno Alessandra! Ti contatto dal sito web La Melina.`
+    if (apartmentName) {
+      message += ` Vorrei verificare la disponibilità per "${apartmentName}".`
+    } else {
+      message += ` Vorrei informazioni sulla disponibilità degli appartamenti.`
+    }
+    if (dates?.checkIn && dates?.checkOut) {
+      message += ` Date desiderate: dal ${dates.checkIn} al ${dates.checkOut}.`
+    }
+    if (dates?.guests) {
+      message += ` Ospiti: ${dates.guests}.`
+    }
+  } else if (lang === 'fr') {
+    message = `Bonjour Alessandra ! Je vous contacte depuis le site La Melina.`
+    if (apartmentName) {
+      message += ` Je souhaite vérifier la disponibilité directe pour "${apartmentName}".`
+    } else {
+      message += ` Je souhaite des informations sur la disponibilité des appartements.`
+    }
+    if (dates?.checkIn && dates?.checkOut) {
+      message += ` Dates souhaitées : du ${dates.checkIn} au ${dates.checkOut}.`
+    }
+  } else if (lang === 'de') {
+    message = `Guten Tag Alessandra! Ich kontaktiere Sie über die Website La Melina.`
+    if (apartmentName) {
+      message += ` Ich möchte die Verfügbarkeit für "${apartmentName}" anfragen.`
+    } else {
+      message += ` Ich möchte mich über die Verfügbarkeit der Wohnungen erkundigen.`
+    }
+    if (dates?.checkIn && dates?.checkOut) {
+      message += ` Zeitraum: vom ${dates.checkIn} bis ${dates.checkOut}.`
+    }
+  } else {
+    // English default
+    message = `Hello Alessandra! I am contacting you from La Melina website.`
+    if (apartmentName) {
+      message += ` I would like to check availability for "${apartmentName}".`
+    } else {
+      message += ` I would like to ask about apartment availability.`
+    }
+    if (dates?.checkIn && dates?.checkOut) {
+      message += ` Dates: from ${dates.checkIn} to ${dates.checkOut}.`
+    }
+    if (dates?.guests) {
+      message += ` Guests: ${dates.guests}.`
+    }
+  }
+
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 }
 
 export const locationHighlights: LocationHighlight[] = [

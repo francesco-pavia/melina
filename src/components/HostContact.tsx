@@ -7,8 +7,10 @@ import {
   AlertCircle,
   ShieldCheck,
   Send,
+  Calendar,
+  Users,
 } from 'lucide-react'
-import { hostInfo, getLocalizedApartments, socialLinks } from '../data/apartmentsData'
+import { hostInfo, getLocalizedApartments, socialLinks, getWhatsAppInquiryUrl } from '../data/apartmentsData'
 import { WhatsappIcon, InstagramIcon, FacebookIcon } from './Icons'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
@@ -25,6 +27,10 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
+    checkIn: '',
+    checkOut: '',
+    guests: '2',
     apartment: t.bothOption,
     message: '',
   })
@@ -41,7 +47,6 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       errs.email = 'Please enter a valid email.'
     }
-    if (!formData.message.trim()) errs.message = 'Please enter your question.'
     return errs
   }
 
@@ -67,9 +72,13 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
+          phone: formData.phone || 'Non specificato',
+          checkIn: formData.checkIn || 'Da definire',
+          checkOut: formData.checkOut || 'Da definire',
+          guests: formData.guests,
           apartment: formData.apartment,
-          message: formData.message,
-          _subject: `Nuova richiesta da ${formData.name} - La Melina`,
+          message: formData.message || 'Richiesta di disponibilità e preventivo diretto.',
+          _subject: `Richiesta Preventivo Diretto da ${formData.name} - La Melina`,
           _template: 'table',
           _captcha: 'false',
         }),
@@ -77,12 +86,30 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
 
       if (response.ok) {
         setSubmitted(true)
-        setFormData({ name: '', email: '', apartment: t.bothOption, message: '' })
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          checkIn: '',
+          checkOut: '',
+          guests: '2',
+          apartment: t.bothOption,
+          message: '',
+        })
       } else {
         const result = await response.json().catch(() => ({}))
         if (result?.message && typeof result.message === 'string' && result.message.toLowerCase().includes('activate')) {
           setSubmitted(true)
-          setFormData({ name: '', email: '', apartment: t.bothOption, message: '' })
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            checkIn: '',
+            checkOut: '',
+            guests: '2',
+            apartment: t.bothOption,
+            message: '',
+          })
         } else {
           setSubmitError(
             'Si è verificato un errore durante l’invio. Ti invitiamo a scriverci direttamente via WhatsApp o email.'
@@ -130,7 +157,7 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
                     />
                     <span
                       className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-stone-900 rounded-full"
-                      title="Superhost Verificato"
+                      title="Host Verificato"
                     />
                   </div>
                   <div>
@@ -170,20 +197,38 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
 
               {/* Direct channels */}
               <div className="space-y-3 pt-6 mt-6 border-t border-stone-800/80">
-                <a
-                  href={hostInfo.whatsapp}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between p-3.5 rounded-xl bg-emerald-950/30 hover:bg-emerald-950/50 border border-emerald-800/40 text-emerald-300 text-xs font-semibold transition-colors group"
-                >
-                  <div className="flex items-center gap-3">
-                    <WhatsappIcon className="w-5 h-5 text-emerald-400" />
-                    <span>{t.whatsappCta}</span>
+                {/* 1-Click WhatsApp Direct Inquiries */}
+                <div className="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-800/40 space-y-2.5">
+                  <div className="flex items-center gap-2">
+                    <WhatsappIcon className="w-4 h-4 text-emerald-400" />
+                    <span className="font-semibold text-xs text-emerald-300">
+                      {t.whatsappInstantTitle}
+                    </span>
                   </div>
-                  <span className="text-[11px] text-emerald-400/80 group-hover:translate-x-0.5 transition-transform">
-                    {t.whatsappSub} →
-                  </span>
-                </a>
+                  <p className="text-[11px] text-stone-300 leading-relaxed">
+                    {t.whatsappInstantDesc}
+                  </p>
+                  <div className="flex flex-col gap-1.5 pt-1">
+                    <a
+                      href={getWhatsAppInquiryUrl(apt1.name, language)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-between px-3 py-2 rounded-xl bg-emerald-900/40 hover:bg-emerald-900/70 border border-emerald-700/50 text-emerald-200 text-xs font-medium transition-colors group"
+                    >
+                      <span className="truncate">{apt1.name}</span>
+                      <span className="text-[11px] text-emerald-400 group-hover:translate-x-0.5 transition-transform shrink-0 ml-1">WhatsApp →</span>
+                    </a>
+                    <a
+                      href={getWhatsAppInquiryUrl(apt2.name, language)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-between px-3 py-2 rounded-xl bg-emerald-900/40 hover:bg-emerald-900/70 border border-emerald-700/50 text-emerald-200 text-xs font-medium transition-colors group"
+                    >
+                      <span className="truncate">{apt2.name}</span>
+                      <span className="text-[11px] text-emerald-400 group-hover:translate-x-0.5 transition-transform shrink-0 ml-1">WhatsApp →</span>
+                    </a>
+                  </div>
+                </div>
 
                 <a
                   href={`mailto:${hostInfo.email}`}
@@ -275,8 +320,8 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
 
                   <form onSubmit={handleSubmit} className="flex-1 flex flex-col justify-between">
                     <div className="flex-1 flex flex-col space-y-4 min-h-0">
+                      {/* Name & Email */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {/* Name */}
                         <div>
                           <label
                             htmlFor="host-name"
@@ -304,7 +349,6 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
                           )}
                         </div>
 
-                        {/* Email */}
                         <div>
                           <label
                             htmlFor="host-email"
@@ -333,30 +377,109 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
                         </div>
                       </div>
 
-                      {/* Apartment selection */}
-                      <div>
-                        <label
-                          htmlFor="host-apartment"
-                          className="block text-xs font-medium text-stone-300 mb-1.5"
-                        >
-                          {t.inquiryApartment}
-                        </label>
-                        <select
-                          id="host-apartment"
-                          value={formData.apartment}
-                          onChange={(e) =>
-                            setFormData({ ...formData, apartment: e.target.value })
-                          }
-                          className="w-full px-4 py-2.5 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
-                        >
-                          <option value={t.bothOption}>{t.bothOption}</option>
-                          <option value={apt1.name}>
-                            {apt1.name} ({apt1.platform})
-                          </option>
-                          <option value={apt2.name}>
-                            {apt2.name} ({apt2.platform})
-                          </option>
-                        </select>
+                      {/* Phone & Apartment Selection */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label
+                            htmlFor="host-phone"
+                            className="block text-xs font-medium text-stone-300 mb-1.5"
+                          >
+                            {t.yourPhone}
+                          </label>
+                          <input
+                            type="tel"
+                            id="host-phone"
+                            value={formData.phone}
+                            onChange={(e) =>
+                              setFormData({ ...formData, phone: e.target.value })
+                            }
+                            placeholder="+39 333 1234567"
+                            className="w-full px-4 py-2.5 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor="host-apartment"
+                            className="block text-xs font-medium text-stone-300 mb-1.5"
+                          >
+                            {t.inquiryApartment}
+                          </label>
+                          <select
+                            id="host-apartment"
+                            value={formData.apartment}
+                            onChange={(e) =>
+                              setFormData({ ...formData, apartment: e.target.value })
+                            }
+                            className="w-full px-4 py-2.5 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
+                          >
+                            <option value={t.bothOption}>{t.bothOption}</option>
+                            <option value={apt1.name}>{apt1.name}</option>
+                            <option value={apt2.name}>{apt2.name}</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      {/* Stay Dates & Guests */}
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div>
+                          <label
+                            htmlFor="host-checkin"
+                            className="block text-xs font-medium text-stone-300 mb-1.5 flex items-center gap-1.5"
+                          >
+                            <Calendar className="w-3.5 h-3.5 text-amber-400" />
+                            <span>{t.checkInDate}</span>
+                          </label>
+                          <input
+                            type="date"
+                            id="host-checkin"
+                            value={formData.checkIn}
+                            onChange={(e) =>
+                              setFormData({ ...formData, checkIn: e.target.value })
+                            }
+                            className="w-full px-3 py-2 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor="host-checkout"
+                            className="block text-xs font-medium text-stone-300 mb-1.5 flex items-center gap-1.5"
+                          >
+                            <Calendar className="w-3.5 h-3.5 text-amber-400" />
+                            <span>{t.checkOutDate}</span>
+                          </label>
+                          <input
+                            type="date"
+                            id="host-checkout"
+                            value={formData.checkOut}
+                            onChange={(e) =>
+                              setFormData({ ...formData, checkOut: e.target.value })
+                            }
+                            className="w-full px-3 py-2 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500"
+                          />
+                        </div>
+
+                        <div>
+                          <label
+                            htmlFor="host-guests"
+                            className="block text-xs font-medium text-stone-300 mb-1.5 flex items-center gap-1.5"
+                          >
+                            <Users className="w-3.5 h-3.5 text-amber-400" />
+                            <span>{t.guestsLabel}</span>
+                          </label>
+                          <select
+                            id="host-guests"
+                            value={formData.guests}
+                            onChange={(e) =>
+                              setFormData({ ...formData, guests: e.target.value })
+                            }
+                            className="w-full px-3 py-2 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500"
+                          >
+                            <option value="1">{t.guestOption1}</option>
+                            <option value="2">{t.guestOption2}</option>
+                          </select>
+                        </div>
                       </div>
 
                       {/* Message */}
@@ -374,16 +497,8 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
                             setFormData({ ...formData, message: e.target.value })
                           }
                           placeholder={t.messagePlaceholder}
-                          className={`w-full flex-1 min-h-[140px] px-4 py-3 rounded-xl bg-stone-800/80 border ${
-                            errors.message ? 'border-rose-500' : 'border-stone-700'
-                          } text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none`}
+                          className="w-full flex-1 min-h-[90px] px-4 py-2.5 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none"
                         />
-                        {errors.message && (
-                          <p className="mt-1 text-xs text-rose-400 flex items-center gap-1">
-                            <AlertCircle className="w-3.5 h-3.5" />
-                            {errors.message}
-                          </p>
-                        )}
                       </div>
                     </div>
 
@@ -428,7 +543,7 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
                       </button>
                       <div className="text-[11px] text-stone-400 flex items-center gap-1.5">
                         <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                        <span>Direct response · No booking fees</span>
+                        <span>{t.directPerkBadge}</span>
                       </div>
                     </div>
                   </form>

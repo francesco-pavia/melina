@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Menu, X, Globe, Check, ChevronDown } from 'lucide-react'
+import { Menu, X, Globe, Check, ChevronDown, Sparkles } from 'lucide-react'
 import { useLanguage, languageOptions, type Language } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 
@@ -101,6 +101,15 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
           {/* Right Action: Language Selector */}
           <div className="flex items-center gap-3">
+            {/* Direct Booking CTA */}
+            <a
+              href="#contact"
+              className="hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-semibold text-xs transition-all shadow-md shadow-amber-900/30 hover:scale-[1.02]"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-amber-200" />
+              <span>{t.bookDirect}</span>
+            </a>
+
             {/* Language Switcher Dropdown */}
             <div className="relative" ref={langDropdownRef}>
               <button
@@ -162,6 +171,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden border-b border-stone-800 bg-stone-950/98 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2">
+          {/* Direct Booking Highlight in Mobile Menu */}
+          <a
+            href="#contact"
+            onClick={() => setMobileMenuOpen(false)}
+            className="w-full mb-3 py-2.5 px-4 rounded-xl text-center text-xs font-semibold bg-gradient-to-r from-amber-600 to-amber-500 text-white flex items-center justify-center gap-2 shadow-lg shadow-amber-900/30"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-amber-200" />
+            <span>{t.bookDirect}</span>
+          </a>
+
           {navLinks.map((link) => (
             <a
               key={link.href}
