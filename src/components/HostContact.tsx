@@ -94,16 +94,23 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
           message: '',
         })
       } else {
-        const result = await response.json().catch(() => ({}))
+        const text = await response.text()
+        let result: any = {}
+        try {
+          result = JSON.parse(text)
+        } catch {
+          console.error('Non-JSON response from server:', text)
+        }
         setSubmitError(
           result?.error ||
-            'Si è verificato un errore durante l’invio. Ti invitiamo a scriverci direttamente via WhatsApp o email.'
+            `Errore (${response.status}): ti invitiamo a scriverci direttamente via WhatsApp o email.`
         )
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Contact form error:', err)
       setSubmitError(
-        'Impossibile inviare il messaggio in questo momento. Ti invitiamo a scriverci direttamente via WhatsApp o email.'
+        err?.message ||
+          'Impossibile inviare il messaggio in questo momento. Ti invitiamo a scriverci direttamente via WhatsApp o email.'
       )
     } finally {
       setIsSubmitting(false)

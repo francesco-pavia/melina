@@ -1,4 +1,4 @@
-import type { IncomingMessage, ServerResponse } from 'http'
+import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 interface ContactRequestBody {
   name?: string
@@ -9,20 +9,6 @@ interface ContactRequestBody {
   guests?: string
   apartment?: string
   message?: string
-}
-
-function sendResponse(
-  res: ServerResponse & { status?: (code: number) => any; json?: (data: any) => void },
-  statusCode: number,
-  data: Record<string, any>
-) {
-  if (typeof res.status === 'function' && typeof res.json === 'function') {
-    res.status(statusCode).json(data)
-  } else {
-    res.statusCode = statusCode
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify(data))
-  }
 }
 
 function escapeHtml(str: string): string {
@@ -205,133 +191,90 @@ function buildHtmlTemplate(data: ContactRequestBody): string {
       </div>
     </div>
     <div class="footer">
-      Messaggio ricevuto dal form contatti di lamelinatorino.it
+      Messaggio inviato dal form contatti La Melina
     </div>
   </div>
 </body>
 </html>`
 }
 
-export default async function handler(
-  req: IncomingMessage & { body?: any; method?: string },
-  res: ServerResponse & { status?: (code: number) => any; json?: (data: any) => void }
-) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   // CORS
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
 
   if (req.method === 'OPTIONS') {
-    res.statusCode = 200
-    res.end()
-    return
+    return res.status(200).end()
   }
 
   if (req.method !== 'POST') {
-    sendResponse(res, 405, { error: 'Metodo non consentito. Utilizzare POST.' })
-    return
+    return res.status(405).json({ error: 'Metodo non consentito. Utilizzare POST.' })
   }
 
-  let data: ContactRequestBody = {}
-  try {
-    if (typeof req.body === 'object' && req.body !== null) {
-      data = req.body
-    } else {
-      const raw = await new Promise<string>((resolve, reject) => {
-        let acc = ''
-        req.on('data', chunk => { acc += chunk })
-        req.on('end', () => resolve(acc))
-        req.on('error', reject)
-      })
-      data = raw ? JSON.parse(raw) : {}
+  let data: ContactRequestBody = req.body
+  if (typeof data === 'string') {
+    try {
+      data = JSON.parse(data)
+    } catch {
+      return res.status(400).json({ error: 'Payload JSON non valido.' })
     }
-  } catch {
-    sendResponse(res, 400, { error: 'Payload JSON non valido.' })
-    return
   }
 
-  const { name, email, phone, checkIn, checkOut, guests, apartment, message } = data
+  const { name, email, phone, checkIn, checkOut, guests, apartment, message } = data || {}
 
   if (!name || !email) {
-    sendResponse(res, 422, { error: 'Nome ed email sono campi obbligatori.' })
-    return
+    return res.status(422).json({ error: 'Nome ed email sono campi obbligatori.' })
   }
 
   const recipientEmail = process.env.HOST_EMAIL || 'info.lamelina@gmail.com'
   const resendApiKey = process.env.RESEND_API_KEY
 
+  if (!resendApiKey) {
+    console.error('RESEND_API_KEY non trovata su Vercel.')
+    return res.status(500).json({
+      error: 'Variabile RESEND_API_KEY non trovata su Vercel. Ricordati di fare il Redeploy su Vercel dopo averla aggiunta.',
+    })
+  }
+
   const htmlContent = buildHtmlTemplate(data)
   const subject = `Nuova Richiesta da ${name} - La Melina (${apartment || 'Generale'})`
 
-  // 1. Resend (Primary: lightning fast ~150ms)
-  if (resendApiKey) {
-    try {
-      const resendRes = await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${resendApiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          from: process.env.RESEND_FROM_EMAIL || 'La Melina <onboarding@resend.dev>',
-          to: [recipientEmail],
-          reply_to: email,
-          subject,
-          html: htmlContent,
-        }),
-      })
-
-      if (resendRes.ok) {
-        sendResponse(res, 200, {
-          success: true,
-          message: 'Richiesta inviata con successo via Resend.',
-        })
-        return
-      }
-
-      const resendError = await resendRes.text()
-      console.error('Errore Resend API:', resendError)
-    } catch (err) {
-      console.error('Eccezione chiamata Resend:', err)
-    }
-  }
-
-  // 2. Fallback FormSubmit (runs seamlessly if RESEND_API_KEY is not set)
   try {
-    const fallbackRes = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+    const resendRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
+        'Authorization': `Bearer ${resendApiKey.trim()}`,
         'Content-Type': 'application/json',
-        Accept: 'application/json',
       },
       body: JSON.stringify({
-        name,
-        email,
-        phone: phone || 'Non specificato',
-        checkIn: checkIn || 'Da definire',
-        checkOut: checkOut || 'Da definire',
-        guests: guests || '2',
-        apartment: apartment || 'Da valutare',
-        message: message || 'Richiesta di disponibilità e preventivo diretto.',
-        _subject: subject,
-        _template: 'table',
-        _captcha: 'false',
+        from: process.env.RESEND_FROM_EMAIL || 'La Melina <onboarding@resend.dev>',
+        to: [recipientEmail],
+        reply_to: email,
+        subject,
+        html: htmlContent,
       }),
     })
 
-    if (fallbackRes.ok) {
-      sendResponse(res, 200, {
-        success: true,
-        fallback: true,
-        message: 'Richiesta inviata con successo (fallback FormSubmit).',
-      })
-      return
-    }
-  } catch (fallbackErr) {
-    console.error('Eccezione Fallback FormSubmit:', fallbackErr)
-  }
+    const resendJson: any = await resendRes.json().catch(() => ({}))
 
-  sendResponse(res, 500, {
-    error: 'Impossibile inviare il messaggio in questo momento. Ti invitiamo a scriverci direttamente via WhatsApp o email.',
-  })
+    if (!resendRes.ok) {
+      console.error('Errore Resend API:', resendRes.status, resendJson)
+      return res.status(resendRes.status).json({
+        error: resendJson?.message || 'Errore durante l’invio con Resend.',
+        details: resendJson,
+      })
+    }
+
+    return res.status(200).json({
+      success: true,
+      id: resendJson?.id,
+      message: 'Richiesta inviata con successo!',
+    })
+  } catch (err: any) {
+    console.error('Eccezione chiamata Resend:', err)
+    return res.status(500).json({
+      error: err?.message || 'Errore di connessione con il servizio email.',
+    })
+  }
 }
