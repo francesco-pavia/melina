@@ -227,7 +227,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(422).json({ error: 'Nome ed email sono campi obbligatori.' })
   }
 
-  const recipientEmail = process.env.HOST_EMAIL || 'info.lamelina@gmail.com'
+  // In testing mode without a verified custom domain, Resend only permits sending to
+  // the email address registered on the Resend account (francesco.pavia7@icloud.com).
+  // In production with a verified domain, set HOST_EMAIL=info.lamelina@gmail.com in Vercel.
+  const recipientEmail = process.env.HOST_EMAIL || 'francesco.pavia7@icloud.com'
   const resendApiKey = process.env.RESEND_API_KEY
 
   if (!resendApiKey) {

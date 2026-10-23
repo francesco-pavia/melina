@@ -3,9 +3,10 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://melina-xi.vercel.app/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://melina-xi.vercel.app/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://melina-xi.vercel.app/?lang=it"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://melina-xi.vercel.app/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://melina-xi.vercel.app/?lang=fr"/>
