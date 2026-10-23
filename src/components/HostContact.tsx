@@ -63,7 +63,7 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${hostInfo.email}`, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,15 +72,12 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          phone: formData.phone || 'Non specificato',
-          checkIn: formData.checkIn || 'Da definire',
-          checkOut: formData.checkOut || 'Da definire',
+          phone: formData.phone || '',
+          checkIn: formData.checkIn || '',
+          checkOut: formData.checkOut || '',
           guests: formData.guests,
           apartment: formData.apartment,
-          message: formData.message || 'Richiesta di disponibilità e preventivo diretto.',
-          _subject: `Richiesta Preventivo Diretto da ${formData.name} - La Melina`,
-          _template: 'table',
-          _captcha: 'false',
+          message: formData.message || '',
         }),
       })
 
@@ -98,23 +95,10 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
         })
       } else {
         const result = await response.json().catch(() => ({}))
-        if (result?.message && typeof result.message === 'string' && result.message.toLowerCase().includes('activate')) {
-          setSubmitted(true)
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            checkIn: '',
-            checkOut: '',
-            guests: '2',
-            apartment: t.bothOption,
-            message: '',
-          })
-        } else {
-          setSubmitError(
+        setSubmitError(
+          result?.error ||
             'Si è verificato un errore durante l’invio. Ti invitiamo a scriverci direttamente via WhatsApp o email.'
-          )
-        }
+        )
       }
     } catch (err) {
       console.error('Contact form error:', err)
