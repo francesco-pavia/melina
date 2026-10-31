@@ -116,7 +116,7 @@ export const baseApartments: Apartment[] = [
     description:
       'In una posizione privilegiata nel pieno centro di Torino, La Melina offre un ambiente caldo e romantico, particolarmente silenzioso con vista sulla Mole. L’appartamento climatizzato comprende: un accogliente soggiorno con angolo cottura accessoriato, dotato di frigorifero, Nespresso e bollitore elettrico; un soppalco di charme con letto matrimoniale e bagno privato dotato di tutti i comfort.',
     story:
-      'Situato in posizione d’eccellenza in Via Po, La Melina offre un’esperienza sabauda indimenticabile nel pieno centro storico. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
+      'Situato in posizione strategica in Via Po, La Melina è una tappa ideale per ammirare l’elegante città. Pur essendo in pieno centro storico, gode di un’atmosfera romantica, particolarmente silenziosa e suggestiva grazie alle aree soppalcate.',
     heroImage: '/images/melina-mole/living-stairs.jpg',
     galleryImages: [
       {
@@ -267,7 +267,7 @@ export const propertyCodes = {
 }
 
 export const hostInfo: HostInfo = {
-  name: 'Alessandra Mela',
+  name: 'Alessandra',
   title: 'Host & Property Manager · La Melina',
   bio: `Benvenuti a Torino! La Melina è la tappa ideale per vivere l’eleganza e il fascino sabaudo: sotto i portici storici di Via Po, a due passi dalla Mole Antonelliana e da Piazza Vittorio Veneto. Rimango sempre a vostra disposizione per informazioni, accoglienza e consigli autentici sulla città.`,
   avatarUrl: '/images/host-alessandra.jpg',

@@ -444,7 +444,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formTitle: 'Invia un Messaggio Diretto',
       formSubtitle: 'Richiesta informazioni o disponibilità date',
       formBadge: 'Risposta personale entro poche ore',
-      hostTitle: 'Alessandra Mela',
+      hostTitle: 'Alessandra',
       hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Lingue parlate:',
       whatsappCta: 'Scrivimi su WhatsApp',
@@ -492,7 +492,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Ultimo aggiornamento: Ottobre 2026',
       controllerTitle: '1. Titolare del Trattamento',
       controllerText:
-        'Il Titolare del trattamento dei dati personali è Alessandra Mela, referente per gli appartamenti vacanze "La Melina" situati in Via Po, 10124 Torino (TO), Italia.\n\nPer qualsiasi informazione, richiesta o per l’esercizio dei tuoi diritti in materia di protezione dei dati, puoi contattarci direttamente all’indirizzo email: info.lamelina@gmail.com.',
+        'Il Titolare del trattamento dei dati personali è Alessandra, referente per gli appartamenti vacanze "La Melina" situati in Via Po, 10124 Torino (TO), Italia.\n\nPer qualsiasi informazione, richiesta o per l’esercizio dei tuoi diritti in materia di protezione dei dati, puoi contattarci direttamente all’indirizzo email: info.lamelina@gmail.com.',
       dataTitle: '2. Dati Raccolti, Canali di Contatto e Log Server',
       dataText:
         'Raccogliamo i dati personali forniti volontariamente tramite il nostro modulo di contatto (nome, indirizzo email, appartamento d’interesse e messaggio) o mediante i recapiti diretti presenti sul sito (WhatsApp al +39 328 329 9346 ed email).\n\nNatura del conferimento: Il conferimento dei dati è facoltativo, ma l’eventuale mancato inserimento rende impossibile rispondere alle tue richieste di preventivo, disponibilità o assistenza sul soggiorno.\n\nDati tecnici e log di navigazione: Durante la consultazione del sito, l’infrastruttura di hosting (Vercel Inc.) registra automaticamente nei log di sistema alcune informazioni tecniche (indirizzo IP, identificativo del browser User-Agent, data e ora della richiesta). Tale raccolta avviene sulla base del legittimo interesse (Art. 6, par. 1, lett. f GDPR) per garantire la sicurezza della rete, prevenire attacchi informatici e assicurare il corretto funzionamento tecnico della piattaforma.',
@@ -544,7 +544,7 @@ export const translations: Record<Language, SiteTranslations> = {
         description:
           'In una posizione privilegiata nel pieno centro di Torino, La Melina offre un ambiente caldo e romantico, particolarmente silenzioso con vista sulla Mole. L’appartamento climatizzato comprende: un accogliente soggiorno con angolo cottura accessoriato, dotato di frigorifero, Nespresso e bollitore elettrico; un soppalco di charme con letto matrimoniale e bagno privato dotato di tutti i comfort.',
         story:
-          'Situato in posizione d’eccellenza in Via Po, La Melina offre un’esperienza sabauda indimenticabile nel pieno centro storico. Goditi la colazione sul terrazzo privato ammirando la Mole Antonelliana o rilassati al tramonto sui tetti torinesi. L’alloggio dispone di ascensore, climatizzazione, Wi-Fi gratuito e tutto il necessario per un soggiorno confortevole.',
+          'Situato in posizione strategica in Via Po, La Melina è una tappa ideale per ammirare l’elegante città. Pur essendo in pieno centro storico, gode di un’atmosfera romantica, particolarmente silenziosa e suggestiva grazie alle aree soppalcate.',
         highlights: [
           'Posizione privilegiata con ascensore nel cuore di Torino',
           'Atmosfera romantica e silenziosa',
@@ -795,7 +795,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formTitle: 'Send a Direct Message',
       formSubtitle: 'Inquiry or date availability question',
       formBadge: 'Personal reply within a few hours',
-      hostTitle: 'Alessandra Mela',
+      hostTitle: 'Alessandra',
       hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Languages spoken:',
       whatsappCta: 'Chat on WhatsApp',
@@ -843,7 +843,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Last updated: October 2026',
       controllerTitle: '1. Data Controller',
       controllerText:
-        'The Data Controller is Alessandra Mela, property manager for "La Melina" holiday apartments situated at Via Po, 10124 Turin (TO), Italy.\n\nFor any questions, information requests, or to exercise your statutory data protection rights, please contact us directly at: info.lamelina@gmail.com.',
+        'The Data Controller is Alessandra, property manager for "La Melina" holiday apartments situated at Via Po, 10124 Turin (TO), Italy.\n\nFor any questions, information requests, or to exercise your statutory data protection rights, please contact us directly at: info.lamelina@gmail.com.',
       dataTitle: '2. Data Collected, Contact Channels & Server Logs',
       dataText:
         'We collect personal information that you voluntarily submit through our inquiry form (name, email address, chosen apartment, and message) or through our direct contact channels (WhatsApp at +39 328 329 9346 and direct email).\n\nNature of provision: Providing your personal data is voluntary; however, without it we cannot reply to your requests or assist with your stay planning.\n\nTechnical connection data & server logs: When you visit our website, our cloud hosting infrastructure (Vercel Inc.) automatically records technical connection logs (including IP addresses, browser User-Agent strings, and access timestamps). This technical logging is conducted on the basis of legitimate interest (Art. 6(1)(f) GDPR) to ensure server stability, cyber threat prevention, and proper platform functioning.',
@@ -895,7 +895,7 @@ export const translations: Record<Language, SiteTranslations> = {
         description:
           'In a privileged location right in the heart of Turin, La Melina offers a warm, romantic, and exceptionally peaceful atmosphere with views of the Mole. This air-conditioned apartment includes: a cozy living room with an equipped kitchenette (refrigerator, Nespresso machine, and electric kettle); a charming mezzanine with double bed, and a private bathroom equipped with all comforts.',
         story:
-          'Situated in an exceptional location on historic Via Po, La Melina delivers an authentic Savoyard stay in the very heart of the historic center. Enjoy breakfast on your private terrace gazing at the Mole Antonelliana or unwind at sunset over Turin’s rooftops. Complete with elevator access, air conditioning, heating, free high-speed Wi-Fi, and plush amenities.',
+          'Strategically located on Via Po, La Melina is an ideal base for admiring the elegant city. Despite being right in the historic center, it enjoys a romantic, remarkably quiet and charming atmosphere thanks to its mezzanine spaces.',
         highlights: [
           'Prime location with elevator access in the heart of Turin',
           'Romantic and quiet atmosphere',
@@ -1146,7 +1146,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formTitle: 'Envoyer un Message Direct',
       formSubtitle: 'Demande d’information ou de dates disponibles',
       formBadge: 'Réponse personnelle en quelques heures',
-      hostTitle: 'Alessandra Mela',
+      hostTitle: 'Alessandra',
       hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Langues parlées :',
       whatsappCta: 'Discuter sur WhatsApp',
@@ -1194,7 +1194,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Dernière mise à jour : Octobre 2026',
       controllerTitle: '1. Responsable du Traitement',
       controllerText:
-        'Le responsable du traitement des données personnelles est Alessandra Mela pour les hébergements touristiques "La Melina", Via Po, 10124 Turin (TO), Italie.\n\nPour toute demande d’information ou pour exercer vos droits relatifs à vos données personnelles, vous pouvez nous écrire directement à : info.lamelina@gmail.com.',
+        'Le responsable du traitement des données personnelles est Alessandra pour les hébergements touristiques "La Melina", Via Po, 10124 Turin (TO), Italie.\n\nPour toute demande d’information ou pour exercer vos droits relatifs à vos données personnelles, vous pouvez nous écrire directement à : info.lamelina@gmail.com.',
       dataTitle: '2. Données Collectées, Canaux de Contact et Journaux Serveur',
       dataText:
         'Nous recueillons les données personnelles transmises volontairement via le formulaire de contact (nom, adresse email, hébergement souhaité et message) ou par nos canaux directs (WhatsApp au +39 328 329 9346 et email direct).\n\nCaractère facultatif : La transmission de vos données est facultative, mais son omission empêche de répondre à vos demandes de renseignement ou de disponibilité.\n\nDonnées techniques et journaux de connexion : Lors de votre consultation du site, l’hébergeur d’infrastructure (Vercel Inc.) enregistre automatiquement des informations techniques dans les journaux système (adresse IP, User-Agent du navigateur, date et heure d’accès). Ce traitement repose sur notre intérêt légitime (Art. 6.1.f RGPD) afin de garantir la sécurité du réseau, prévenir les attaques et assurer le bon fonctionnement du site.',
@@ -1246,7 +1246,7 @@ export const translations: Record<Language, SiteTranslations> = {
         description:
           'Bénéficiant d’un emplacement privilégié en plein cœur de Turin, La Melina offre un cadre chaleureux et romantique, particulièrement silencieux avec vue sur la Mole. Cet appartement climatisé comprend : un salon chaleureux avec kitchenette équipée (réfrigérateur, Nespresso et bouilloire électrique) ; une charmante mezzanine avec lit double et une salle de bain privée pourvue de tout le confort.',
         story:
-          'Situé à une adresse d’exception sur la Via Po, La Melina offre une expérience piémontaise mémorable au cœur même du centre historique de Turin. Savourez votre petit-déjeuner en terrasse face à la Mole Antonelliana ou admirez le coucher de soleil sur les toits de Turin. L’immeuble dispose d’un ascenseur, de la climatisation, du chauffage et du Wi-Fi haut débit.',
+          'Idéalement située sur la Via Po, La Melina est une étape parfaite pour admirer l’élégante ville. Bien qu’en plein cœur du centre historique, elle bénéficie d’une atmosphère romantique, particulièrement silencieuse et chaleureuse grâce à ses espaces en mezzanine.',
         highlights: [
           'Emplacement privilégié avec ascenseur au cœur de Turin',
           'Atmosphère romantique et silencieuse',
@@ -1497,7 +1497,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formTitle: 'Direkte Nachricht Senden',
       formSubtitle: 'Anfrage zu Informationen oder Reisedaten',
       formBadge: 'Persönliche Antwort in wenigen Stunden',
-      hostTitle: 'Alessandra Mela',
+      hostTitle: 'Alessandra',
       hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Gesprochene Sprachen:',
       whatsappCta: 'Per WhatsApp schreiben',
@@ -1545,7 +1545,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Zuletzt aktualisiert: Oktober 2026',
       controllerTitle: '1. Verantwortliche Stelle',
       controllerText:
-        'Verantwortliche Stelle für die Datenverarbeitung ist Alessandra Mela für die Ferienunterkünfte "La Melina", Via Po, 10124 Turin (TO), Italien.\n\nFür Auskünfte, Anfragen oder zur Wahrnehmung Ihrer Datenschutzrechte wenden Sie sich bitte direkt per E-Mail an: info.lamelina@gmail.com.',
+        'Verantwortliche Stelle für die Datenverarbeitung ist Alessandra für die Ferienunterkünfte "La Melina", Via Po, 10124 Turin (TO), Italien.\n\nFür Auskünfte, Anfragen oder zur Wahrnehmung Ihrer Datenschutzrechte wenden Sie sich bitte direkt per E-Mail an: info.lamelina@gmail.com.',
       dataTitle: '2. Erhobene Daten, Kontaktkanäle & Server-Protokolle',
       dataText:
         'Wir erheben personenbezogene Daten, die Sie uns freiwillig über das Anfrageformular (Name, E-Mail-Adresse, gewähltes Apartment und Nachricht) oder über unsere Direktkanäle (WhatsApp unter +39 328 329 9346 sowie direkte E-Mail) mitteilen.\n\nFreiwilligkeit der Bereitstellung: Die Bereitstellung Ihrer Daten ist freiwillig; ohne diese Angaben ist eine Beantwortung Ihrer Anfrage oder Auskunft zu Verfügbarkeiten jedoch nicht möglich.\n\nTechnische Verbindungsdaten & Server-Logs: Beim Aufruf der Website registriert die Hosting-Infrastruktur (Vercel Inc.) aus technischen Gründen Logfiles (u.a. IP-Adresse, Browser-Kennung User-Agent sowie Zugriffszeitpunkt). Diese Speicherung erfolgt auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO), um Systemsicherheit, Abwehr von Cyberangriffen und zuverlässigen Betrieb zu gewährleisten.',
@@ -1597,7 +1597,7 @@ export const translations: Record<Language, SiteTranslations> = {
         description:
           'In privilegierter Lage im Herzen von Turin bietet La Melina ein warmes, romantisches und besonders ruhiges Ambiente mit Blick auf die Mole Antonelliana. Das klimatisierte Apartment umfasst: ein gemütliches Wohnzimmer mit ausgestatteter Küchenzeile (Kühlschrank, Nespresso und Wasserkocher); eine charmante Galerie mit Doppelbett und ein privates Badezimmer mit allem Komfort.',
         story:
-          'In privilegierter Lage in der Via Po bietet La Melina ein unvergleichliches Piemont-Erlebnis im Herzen der historischen Altstadt. Frühstücken Sie auf der privaten Terrasse mit Blick auf die Mole Antonelliana oder genießen Sie den Sonnenuntergang über den Turiner Dächern. Das Gebäude verfügt über einen Aufzug, Klimaanlage, Heizung und Highspeed-WLAN.',
+          'In strategischer Lage an der Via Po ist La Melina der ideale Ausgangspunkt, um die elegante Stadt zu bewundern. Mitten im historischen Zentrum gelegen, genießt sie eine romantische, besonders ruhige und stimmungsvolle Atmosphäre dank der charmanten Galeriebereiche.',
         highlights: [
           'Privilegierte Lage mit Aufzug im Herzen von Turin',
           'Romantische und ruhige Atmosphäre',
@@ -1848,7 +1848,7 @@ export const translations: Record<Language, SiteTranslations> = {
       formTitle: 'Enviar un Mensaje Directo',
       formSubtitle: 'Consulta de información o fechas disponibles',
       formBadge: 'Respuesta personal en pocas horas',
-      hostTitle: 'Alessandra Mela',
+      hostTitle: 'Alessandra',
       hostRole: 'Host & Property Manager · La Melina',
       languagesLabel: 'Idiomas:',
       whatsappCta: 'Escribir por WhatsApp',
@@ -1896,7 +1896,7 @@ export const translations: Record<Language, SiteTranslations> = {
       lastUpdated: 'Última actualización: Octubre 2026',
       controllerTitle: '1. Responsable del Tratamiento',
       controllerText:
-        'La responsable del tratamiento de los datos personales es Alessandra Mela para los alojamientos "La Melina", sitos en Via Po, 10124 Turín (TO), Italia.\n\nPara cualquier consulta, aclaración o para el ejercicio de tus derechos de protección de datos, puedes contactarnos directamente en: info.lamelina@gmail.com.',
+        'La responsable del tratamiento de los datos personales es Alessandra para los alojamientos "La Melina", sitos en Via Po, 10124 Turín (TO), Italia.\n\nPara cualquier consulta, aclaración o para el ejercicio de tus derechos de protección de datos, puedes contactarnos directamente en: info.lamelina@gmail.com.',
       dataTitle: '2. Datos Recopilados, Canales de Contacto y Registros del Servidor',
       dataText:
         'Recopilamos los datos personales proporcionados voluntariamente mediante el formulario de consulta (nombre, correo electrónico, apartamento de interés y mensaje) o a través de los canales directos del sitio (WhatsApp en el +39 328 329 9346 y correo directo).\n\nCarácter potestativo del suministro: La aportación de datos es voluntaria; no obstante, su omisión impide atender a tus dudas o comprobar la disponibilidad del alojamiento.\n\nDatos técnicos y registros de navegación: Durante la navegación, el proveedor de alojamiento en la nube (Vercel Inc.) registra de forma automática información técnica en los registros del servidor (dirección IP, identificador User-Agent del navegador y marcas de tiempo). Esta recogida responde a nuestro interés legítimo (Art. 6.1.f RGPD) para preservar la ciberseguridad, prevenir incidentes técnicos y garantizar el correcto funcionamiento del servicio.',
@@ -1948,7 +1948,7 @@ export const translations: Record<Language, SiteTranslations> = {
         description:
           'En una ubicación privilegiada en pleno centro de Turín, La Melina ofrece un ambiente cálido y romántico, especialmente silencioso con vistas a la Mole. El apartamento climatizado comprende: una acogedora sala de estar con cocina americana equipada (frigorífico, Nespresso y hervidor eléctrico); un coqueto altillo con cama de matrimonio y baño privado dotado de todas las comodidades.',
         story:
-          'Situado en una ubicación excepcional en Via Po, La Melina brinda una experiencia turinesa inmejorable en pleno centro histórico de Turín. Desayuna en la terraza privada contemplando la Mole Antonelliana o admira el atardecer sobre los tejados de Turín. El edificio cuenta con ascensor, climatización, calefacción y Wi-Fi de alta velocidad.',
+          'Situada en una posición estratégica en Via Po, La Melina es una parada ideal para admirar la elegante ciudad. A pesar de estar en pleno centro histórico, disfruta de una atmósfera romántica, especialmente silenciosa y sugerente gracias a sus zonas en altillo.',
         highlights: [
           'Ubicación privilegiada con ascensor en el corazón de Turín',
           'Atmósfera romántica y silenciosa',
