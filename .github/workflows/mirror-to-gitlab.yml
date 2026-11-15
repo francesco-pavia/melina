@@ -1,0 +1,24 @@
+name: Mirror to GitLab
+
+on:
+  push:
+    branches:
+      - '**'   # all branches (main, dev, feature/*)
+
+jobs:
+  mirror:
+    name: Push to GitLab
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # needed to mirror all branches & tags
+
+      - name: Mirror to GitLab
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.com/francesco_pavia/melina.git
+          git push --mirror gitlab
