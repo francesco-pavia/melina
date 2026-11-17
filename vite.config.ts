@@ -6,7 +6,7 @@ function devApiPlugin(): Plugin {
   return {
     name: 'dev-api-contact-handler',
     configureServer(server) {
-      server.middlewares.use('/api/contact', (req, res) => {
+      const handleDevRequest = (req: import('http').IncomingMessage, res: import('http').ServerResponse) => {
         if (req.method !== 'POST') {
           res.statusCode = 405
           res.setHeader('Content-Type', 'application/json')
@@ -20,21 +20,16 @@ function devApiPlugin(): Plugin {
         })
         req.on('end', () => {
           try {
-            const data = body ? JSON.parse(body) : {}
-            console.log('\n📬 [DEV Server] Richiesta form ricevuta:')
-            console.log(`   Ospite: ${data.name} (${data.email})`)
-            console.log(`   Appartamento: ${data.apartment}`)
-            console.log(`   Date: ${data.checkIn || '-'} -> ${data.checkOut || '-'}`)
-            console.log(`   Ospiti: ${data.guests}`)
-            console.log(`   Messaggio: ${data.message || '(nessuno)'}\n`)
+            if (body) JSON.parse(body)
+            // Keep submitted contact details and travel plans out of development logs.
 
             res.statusCode = 200
             res.setHeader('Content-Type', 'application/json')
             res.end(
               JSON.stringify({
                 success: true,
+                message: 'Local development mode: this request was simulated and no email was sent.',
                 dev: true,
-                message: 'Richiesta ricevuta in locale dal dev server Vite.',
               })
             )
           } catch {
@@ -43,7 +38,9 @@ function devApiPlugin(): Plugin {
             res.end(JSON.stringify({ error: 'Invalid JSON payload' }))
           }
         })
-      })
+      }
+      server.middlewares.use('/api/contact', handleDevRequest)
+      server.middlewares.use('/api/feedback', handleDevRequest)
     },
   }
 }

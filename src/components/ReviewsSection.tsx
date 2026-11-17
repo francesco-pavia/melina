@@ -49,7 +49,7 @@ export const ReviewsSection: React.FC = () => {
             </div>
             <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1">
               <CheckCircle2 className="w-3.5 h-3.5" />
-              9.8 Superb
+              9.8 {t.exceptionalBooking}
             </span>
           </div>
 

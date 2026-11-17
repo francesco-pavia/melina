@@ -14,6 +14,7 @@ import { hostInfo, getLocalizedApartments, socialLinks, getWhatsAppInquiryUrl } 
 import { WhatsappIcon, InstagramIcon, FacebookIcon } from './Icons'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
+import { PrivateFeedback } from './PrivateFeedback'
 
 interface HostContactProps {
   onOpenPrivacy?: () => void
@@ -31,7 +32,7 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
     checkIn: '',
     checkOut: '',
     guests: '2',
-    apartment: t.bothOption,
+    apartment: 'both',
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
@@ -41,11 +42,11 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
 
   const validate = () => {
     const errs: Record<string, string> = {}
-    if (!formData.name.trim()) errs.name = 'Please provide your name.'
+    if (!formData.name.trim()) errs.name = t.nameRequiredError
     if (!formData.email.trim()) {
-      errs.email = 'Please provide your email address.'
+      errs.email = t.emailRequiredError
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errs.email = 'Please enter a valid email.'
+      errs.email = t.emailInvalidError
     }
     return errs
   }
@@ -81,7 +82,11 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
         }),
       })
 
-      if (response.ok) {
+      const result = await response.json().catch(() => ({}))
+
+      if (result?.dev) {
+        setSubmitError(t.devSimulationMessage)
+      } else if (response.ok) {
         setSubmitted(true)
         setFormData({
           name: '',
@@ -90,28 +95,25 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
           checkIn: '',
           checkOut: '',
           guests: '2',
-          apartment: t.bothOption,
+          apartment: 'both',
           message: '',
         })
       } else {
-        const text = await response.text()
-        let result: any = {}
-        try {
-          result = JSON.parse(text)
-        } catch {
-          console.error('Non-JSON response from server:', text)
+        const localizedApiErrors: Record<string, string> = {
+          invalid_origin: t.originRejectedError,
+          too_many_requests: t.tooManyRequestsError,
+          invalid_json: t.invalidFormError,
+          required_fields: t.invalidFormError,
+          invalid_fields: t.invalidFormError,
+          email_unavailable: t.emailUnavailableError,
+          email_failed: t.emailFailedError,
+          server_error: t.emailFailedError,
         }
-        setSubmitError(
-          result?.error ||
-            `Errore (${response.status}): ti invitiamo a scriverci direttamente via WhatsApp o email.`
-        )
+        setSubmitError(localizedApiErrors[result?.code] || t.emailFailedError)
       }
     } catch (err: any) {
       console.error('Contact form error:', err)
-      setSubmitError(
-        err?.message ||
-          'Impossibile inviare il messaggio in questo momento. Ti invitiamo a scriverci direttamente via WhatsApp o email.'
-      )
+      setSubmitError(t.networkError)
     } finally {
       setIsSubmitting(false)
     }
@@ -148,7 +150,7 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
                     />
                     <span
                       className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-stone-900 rounded-full"
-                      title="Host Verificato"
+                      title={t.verifiedHostTitle}
                     />
                   </div>
                   <div>
@@ -162,19 +164,19 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
                 </div>
 
                 <p className="text-stone-300 text-sm leading-relaxed">
-                  {hostInfo.bio}
+                  {t.hostBio}
                 </p>
 
                 {/* Address */}
                 <div className="text-xs text-stone-400 font-mono">
-                  📍 {hostInfo.address}
+                  📍 {translations[language].location.fullAddress}
                 </div>
 
                 {/* Languages */}
                 <div className="pt-4 border-t border-stone-800/80">
                   <div className="text-xs text-stone-400 mb-2">{t.languagesLabel}</div>
                   <div className="flex flex-wrap gap-1.5">
-                    {hostInfo.languages.map((lang) => (
+                    {t.spokenLanguages.map((lang) => (
                       <span
                         key={lang}
                         className="px-2.5 py-1 rounded-lg bg-stone-850 text-stone-300 text-xs font-medium"
@@ -404,9 +406,9 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
                             }
                             className="w-full px-4 py-2.5 rounded-xl bg-stone-800/80 border border-stone-700 text-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
                           >
-                            <option value={t.bothOption}>{t.bothOption}</option>
-                            <option value={apt1.name}>{apt1.name}</option>
-                            <option value={apt2.name}>{apt2.name}</option>
+                            <option value="both">{t.bothOption}</option>
+                            <option value="melina-po">{apt1.name}</option>
+                            <option value="melina-mole">{apt2.name}</option>
                           </select>
                         </div>
                       </div>
@@ -543,6 +545,7 @@ export const HostContact: React.FC<HostContactProps> = ({ onOpenPrivacy }) => {
             </div>
           </div>
         </div>
+        <PrivateFeedback />
       </div>
     </section>
   )

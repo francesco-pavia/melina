@@ -9,12 +9,31 @@ import { HostContact } from './components/HostContact'
 import { Footer } from './components/Footer'
 import { PrivacyPolicyModal } from './components/PrivacyPolicyModal'
 import { getLocalizedApartments } from './data/apartmentsData'
+import { translations } from './data/translations'
 
 function AppContent() {
   const { language } = useLanguage()
   const localizedApartments = getLocalizedApartments(language)
+  const metadata = translations[language].metadata
   const [activeSection, setActiveSection] = useState<string>('hero')
   const [privacyModalOpen, setPrivacyModalOpen] = useState(false)
+
+  useEffect(() => {
+    document.title = metadata.title
+    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]')
+    if (description) description.content = metadata.description
+
+    const socialTags = [
+      ['meta[property="og:title"]', metadata.title],
+      ['meta[property="og:description"]', metadata.description],
+      ['meta[name="twitter:title"]', metadata.title],
+      ['meta[name="twitter:description"]', metadata.description],
+    ] as const
+    for (const [selector, content] of socialTags) {
+      const tag = document.querySelector<HTMLMetaElement>(selector)
+      if (tag) tag.content = content
+    }
+  }, [metadata])
 
   useEffect(() => {
     const sections = [
