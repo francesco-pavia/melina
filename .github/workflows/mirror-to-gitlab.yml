@@ -1,9 +1,7 @@
 name: Mirror to GitLab
 
 on:
-  push:
-    branches:
-      - '**'   # all branches (main, dev, feature/*)
+  workflow_dispatch:
 
 jobs:
   mirror:
