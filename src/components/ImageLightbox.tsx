@@ -1,5 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useRef } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useModalBehavior } from '../hooks/useModalBehavior'
+import { useLanguage } from '../context/LanguageContext'
+import { translations } from '../data/translations'
 
 interface ImageLightboxProps {
   images: { url: string; caption: string }[]
@@ -16,43 +19,56 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
   onClose,
   onNavigate,
 }) => {
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isOpen) return
-      if (e.key === 'Escape') onClose()
-      if (e.key === 'ArrowLeft') onNavigate((currentIndex - 1 + images.length) % images.length)
-      if (e.key === 'ArrowRight') onNavigate((currentIndex + 1) % images.length)
-    }
+  const { language } = useLanguage()
+  const t = translations[language].apartmentSection
+  const dialogRef = useRef<HTMLDivElement>(null)
+  useModalBehavior(isOpen, onClose, dialogRef)
 
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-      window.addEventListener('keydown', handleKeyDown)
-    }
+  const onNavigateRef = useRef(onNavigate)
+  onNavigateRef.current = onNavigate
 
-    return () => {
-      document.body.style.overflow = 'auto'
-      window.removeEventListener('keydown', handleKeyDown)
+  React.useEffect(() => {
+    if (!isOpen) return
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft') {
+        onNavigateRef.current((currentIndex - 1 + images.length) % images.length)
+      } else if (event.key === 'ArrowRight') {
+        onNavigateRef.current((currentIndex + 1) % images.length)
+      }
     }
-  }, [isOpen, currentIndex, images.length, onClose, onNavigate])
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, currentIndex, images.length])
 
   if (!isOpen || images.length === 0) return null
 
   const currentImage = images[currentIndex]
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md">
+    <div
+      ref={dialogRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={t.photoViewerLabel}
+      aria-describedby={currentImage.caption ? 'lightbox-caption' : undefined}
+      tabIndex={-1}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md"
+    >
       {/* Close button */}
       <button
         type="button"
         onClick={onClose}
-        className="absolute top-5 right-5 z-50 p-2.5 rounded-full bg-stone-900/80 text-white hover:bg-stone-800 transition-colors focus:outline-none"
-        aria-label="Close photo viewer"
+        className="absolute top-5 right-5 z-50 p-2.5 rounded-full bg-stone-900/80 text-white hover:bg-stone-800 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+        aria-label={t.closePhotoViewer}
       >
         <X className="w-6 h-6" />
       </button>
 
       {/* Image Counter */}
-      <div className="absolute top-6 left-6 z-50 px-3 py-1 rounded-full bg-stone-900/80 text-xs font-mono text-stone-300">
+      <div
+        aria-live="polite"
+        className="absolute top-6 left-6 z-50 px-3 py-1 rounded-full bg-stone-900/80 text-xs font-mono text-stone-300"
+      >
         {currentIndex + 1} / {images.length}
       </div>
 
@@ -63,8 +79,8 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
           e.stopPropagation()
           onNavigate((currentIndex - 1 + images.length) % images.length)
         }}
-        className="absolute left-4 sm:left-8 z-50 p-3 rounded-full bg-stone-900/70 hover:bg-stone-800 text-white transition-all focus:outline-none"
-        aria-label="Previous photo"
+        className="absolute left-4 sm:left-8 z-50 p-3 rounded-full bg-stone-900/70 hover:bg-stone-800 text-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+        aria-label={t.previousPhoto}
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
@@ -76,8 +92,8 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
           e.stopPropagation()
           onNavigate((currentIndex + 1) % images.length)
         }}
-        className="absolute right-4 sm:right-8 z-50 p-3 rounded-full bg-stone-900/70 hover:bg-stone-800 text-white transition-all focus:outline-none"
-        aria-label="Next photo"
+        className="absolute right-4 sm:right-8 z-50 p-3 rounded-full bg-stone-900/70 hover:bg-stone-800 text-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+        aria-label={t.nextPhoto}
       >
         <ChevronRight className="w-6 h-6" />
       </button>
@@ -90,7 +106,10 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
           className="max-h-[75vh] w-auto max-w-full object-contain rounded-xl shadow-2xl"
         />
         {currentImage.caption && (
-          <p className="mt-4 text-center text-sm text-stone-300 max-w-xl">
+          <p
+            id="lightbox-caption"
+            className="mt-4 text-center text-sm text-stone-300 max-w-xl"
+          >
             {currentImage.caption}
           </p>
         )}

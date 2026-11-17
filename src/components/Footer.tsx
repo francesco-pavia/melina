@@ -13,6 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
   const { language } = useLanguage()
   const t = translations[language].footer
   const navT = translations[language].nav
+  const locationT = translations[language].location
   const [apt1, apt2] = getLocalizedApartments(language)
 
   const scrollToTop = () => {
@@ -44,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
             </p>
             <div className="flex items-center gap-1.5 text-xs text-stone-400">
               <MapPin className="w-3.5 h-3.5 text-amber-500" />
-              <span>Via Po - 10124 Torino (TO), Italia</span>
+              <span>{locationT.fullAddress}</span>
             </div>
 
             {/* Official Registration Codes (CIN & CIR) */}
@@ -99,7 +100,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
                   className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-semibold transition-colors"
                 >
                   <Sparkles className="w-4 h-4 text-amber-400" />
-                  <span>Richiedi Soggiorno Diretto</span>
+                  <span>{t.directStayInquiry}</span>
                 </a>
               </li>
               <li>
@@ -110,7 +111,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
                   className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
                 >
                   <WhatsappIcon className="w-4 h-4" />
-                  <span>WhatsApp Host Inquiry</span>
+                  <span>{t.whatsappInquiry}</span>
                 </a>
               </li>
               {[apt1, apt2].map((apt) => {
@@ -144,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
             </h4>
             <div className="flex flex-col space-y-1.5 text-xs text-stone-400">
               <a href="#hero" className="hover:text-white transition-colors">
-                Home Overview
+                {t.homeOverview}
               </a>
               <a href="#apartments" className="hover:text-white transition-colors">
                 {navT.apartments}

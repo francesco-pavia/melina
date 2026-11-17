@@ -122,9 +122,11 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
         {/* Photo Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-3 mb-12 h-auto md:h-[480px]">
           {/* Main Large Photo */}
-          <div
+          <button
+            type="button"
+            aria-label={apartment.galleryImages[0].caption}
             onClick={() => openLightbox(0)}
-            className="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden cursor-pointer group bg-stone-900 h-64 sm:h-80 md:h-auto"
+            className="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden cursor-pointer group bg-stone-900 h-64 sm:h-80 md:h-auto w-full border-0 p-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             <img
               src={apartment.galleryImages[0].url}
@@ -135,17 +137,23 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
             <div className="absolute bottom-4 left-4 right-4 bg-stone-950/70 backdrop-blur-md px-3.5 py-2 rounded-xl text-xs text-white">
               {apartment.galleryImages[0].caption}
             </div>
-          </div>
+          </button>
 
           {/* 4 Supporting Photos */}
           {apartment.galleryImages.slice(1, 5).map((img, idx) => {
             const actualIndex = idx + 1
             const isLast = idx === 3
             return (
-              <div
+              <button
+                type="button"
                 key={img.url}
+                aria-label={
+                  isLast
+                    ? `${t.viewAllPhotos} (${apartment.galleryImages.length})`
+                    : img.caption
+                }
                 onClick={() => openLightbox(actualIndex)}
-                className="relative rounded-2xl overflow-hidden cursor-pointer group bg-stone-900 h-48 md:h-auto"
+                className="relative rounded-2xl overflow-hidden cursor-pointer group bg-stone-900 h-48 md:h-auto w-full border-0 p-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               >
                 <img
                   src={img.url}
@@ -162,7 +170,7 @@ export const ApartmentSection: React.FC<ApartmentSectionProps> = ({ apartment })
                     <span>{t.viewAllPhotos} ({apartment.galleryImages.length})</span>
                   </div>
                 )}
-              </div>
+              </button>
             )
           })}
         </div>

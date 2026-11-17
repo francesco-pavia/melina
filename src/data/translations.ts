@@ -42,7 +42,16 @@ export interface StayGuideTranslations {
 }
 
 export interface SiteTranslations {
+  metadata: {
+    title: string
+    description: string
+  }
   nav: {
+    home: string
+    selectLanguage: string
+    languageMenuTitle: string
+    mobileLanguageTitle: string
+    toggleMenu: string
     apartments: string
     terrace: string
     garden: string
@@ -78,6 +87,7 @@ export interface SiteTranslations {
     directRateBadge: string
     requestAvailability: string
     viewOnPlatform: string
+    panoramaAlt: string
   }
   apartmentSection: {
     guests: string
@@ -132,6 +142,10 @@ export interface SiteTranslations {
     inquireWhatsapp: string
     inquireEmail: string
     orBookOnPlatform: string
+    photoViewerLabel: string
+    closePhotoViewer: string
+    previousPhoto: string
+    nextPhoto: string
   }
   amenities: {
     badge: string
@@ -194,6 +208,9 @@ export interface SiteTranslations {
     formBadge: string
     hostTitle: string
     hostRole: string
+    hostBio: string
+    spokenLanguages: string[]
+    verifiedHostTitle: string
     languagesLabel: string
     whatsappCta: string
     whatsappSub: string
@@ -220,6 +237,16 @@ export interface SiteTranslations {
     directPerkBadge: string
     whatsappInstantTitle: string
     whatsappInstantDesc: string
+    nameRequiredError: string
+    emailRequiredError: string
+    emailInvalidError: string
+    invalidFormError: string
+    tooManyRequestsError: string
+    emailUnavailableError: string
+    emailFailedError: string
+    originRejectedError: string
+    networkError: string
+    devSimulationMessage: string
   }
   footer: {
     tagline: string
@@ -229,6 +256,9 @@ export interface SiteTranslations {
     backToTop: string
     followUs: string
     privacyPolicy: string
+    directStayInquiry: string
+    whatsappInquiry: string
+    homeOverview: string
   }
   privacyModal: {
     title: string
@@ -257,7 +287,16 @@ export interface SiteTranslations {
 
 export const translations: Record<Language, SiteTranslations> = {
   it: {
+    metadata: {
+      title: 'La Melina · Appartamenti Vacanze Torino Centro | Via Po',
+      description: 'La Melina offre due eleganti appartamenti vacanza nel centro storico di Torino, in Via Po, vicino alla Mole Antonelliana e a Piazza Vittorio Veneto.',
+    },
     nav: {
+      home: 'Home',
+      selectLanguage: 'Seleziona lingua',
+      languageMenuTitle: 'Lingua',
+      mobileLanguageTitle: 'Seleziona lingua',
+      toggleMenu: 'Apri o chiudi il menu di navigazione',
       apartments: 'Gli Appartamenti',
       terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
@@ -294,6 +333,7 @@ export const translations: Record<Language, SiteTranslations> = {
       directRateBadge: 'Prenotazione Diretta con l’Host',
       requestAvailability: 'Richiedi Disponibilità',
       viewOnPlatform: 'Recensioni su',
+      panoramaAlt: 'Panorama di Torino',
     },
     apartmentSection: {
       guests: 'Ospiti',
@@ -342,6 +382,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'Vedi Disponibilità e Prenota su',
       redirectNotice: 'Verrai reindirizzato alla pagina ufficiale dell’annuncio.',
       viewAllPhotos: 'Guarda tutte le foto',
+      photoViewerLabel: 'Galleria fotografica',
+      closePhotoViewer: 'Chiudi la galleria fotografica',
+      previousPhoto: 'Foto precedente',
+      nextPhoto: 'Foto successiva',
       bestRateGuarantee: 'Prenotazione Diretta',
       directPerksTitle: 'Perché Prenotare Direttamente?',
       directPerk1: 'Prenotazione diretta senza intermediari',
@@ -445,7 +489,10 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Richiesta informazioni o disponibilità date',
       formBadge: 'Risposta personale entro poche ore',
       hostTitle: 'Alessandra',
-      hostRole: 'Host & Property Manager · La Melina',
+      hostRole: 'Host e responsabile della struttura · La Melina',
+      hostBio: 'Benvenuti a Torino! La Melina è la tappa ideale per vivere l’eleganza e il fascino sabaudo: sotto i portici storici di Via Po, a due passi dalla Mole Antonelliana e da Piazza Vittorio Veneto. Rimango sempre a vostra disposizione per informazioni, accoglienza e consigli autentici sulla città.',
+      spokenLanguages: ['Italiano', 'Inglese'],
+      verifiedHostTitle: 'Host verificata',
       languagesLabel: 'Lingue parlate:',
       whatsappCta: 'Scrivimi su WhatsApp',
       whatsappSub: 'Risposta rapida',
@@ -474,6 +521,16 @@ export const translations: Record<Language, SiteTranslations> = {
       directPerkBadge: 'Risposta rapida e contatto diretto con l’host',
       whatsappInstantTitle: 'Preferisci una risposta immediata?',
       whatsappInstantDesc: 'Scrivi direttamente ad Alessandra su WhatsApp per verificare date e preventivo in tempo reale.',
+      nameRequiredError: 'Inserisci il tuo nome.',
+      emailRequiredError: 'Inserisci il tuo indirizzo email.',
+      emailInvalidError: 'Inserisci un indirizzo email valido.',
+      invalidFormError: 'Controlla i dati inseriti e riprova.',
+      tooManyRequestsError: 'Troppe richieste. Riprova tra qualche minuto.',
+      emailUnavailableError: 'Il modulo non è disponibile al momento. Contattaci via WhatsApp o email.',
+      emailFailedError: 'Non è stato possibile inviare il messaggio. Riprova o contattaci via WhatsApp o email.',
+      originRejectedError: 'Richiesta non consentita. Ricarica la pagina e riprova.',
+      networkError: 'Impossibile inviare il messaggio. Controlla la connessione o contattaci via WhatsApp o email.',
+      devSimulationMessage: 'Modalità di sviluppo: richiesta simulata, non è stata inviata alcuna email.',
     },
     footer: {
       tagline:
@@ -485,6 +542,9 @@ export const translations: Record<Language, SiteTranslations> = {
       backToTop: 'Torna su',
       followUs: 'Seguici sui social',
       privacyPolicy: 'Informativa Privacy & Cookie',
+      directStayInquiry: 'Richiedi un soggiorno diretto',
+      whatsappInquiry: 'Contatta l’host su WhatsApp',
+      homeOverview: 'Panoramica iniziale',
     },
     privacyModal: {
       title: 'Informativa sulla Privacy & Cookie Policy',
@@ -495,16 +555,16 @@ export const translations: Record<Language, SiteTranslations> = {
         'Il Titolare del trattamento dei dati personali è Alessandra, referente per gli appartamenti vacanze "La Melina" situati in Via Po, 10124 Torino (TO), Italia.\n\nPer qualsiasi informazione, richiesta o per l’esercizio dei tuoi diritti in materia di protezione dei dati, puoi contattarci direttamente all’indirizzo email: info.lamelina@gmail.com.',
       dataTitle: '2. Dati Raccolti, Canali di Contatto e Log Server',
       dataText:
-        'Raccogliamo i dati personali forniti volontariamente tramite il nostro modulo di contatto (nome, indirizzo email, appartamento d’interesse e messaggio) o mediante i recapiti diretti presenti sul sito (WhatsApp al +39 328 329 9346 ed email).\n\nNatura del conferimento: Il conferimento dei dati è facoltativo, ma l’eventuale mancato inserimento rende impossibile rispondere alle tue richieste di preventivo, disponibilità o assistenza sul soggiorno.\n\nDati tecnici e log di navigazione: Durante la consultazione del sito, l’infrastruttura di hosting (Vercel Inc.) registra automaticamente nei log di sistema alcune informazioni tecniche (indirizzo IP, identificativo del browser User-Agent, data e ora della richiesta). Tale raccolta avviene sulla base del legittimo interesse (Art. 6, par. 1, lett. f GDPR) per garantire la sicurezza della rete, prevenire attacchi informatici e assicurare il corretto funzionamento tecnico della piattaforma.',
+        'Raccogliamo i dati personali forniti volontariamente tramite il nostro modulo di contatto (nome, indirizzo email, appartamento d’interesse e messaggio) o mediante i recapiti diretti presenti sul sito (WhatsApp al +39 328 329 9346 ed email).\n\nNatura del conferimento: Il conferimento dei dati è facoltativo, ma l’eventuale mancato inserimento rende impossibile rispondere alle tue richieste di preventivo, disponibilità o assistenza sul soggiorno.\n\nDati tecnici e log di navigazione: Durante la consultazione del sito, l’infrastruttura di hosting (Vercel Inc.) registra automaticamente nei log di sistema alcune informazioni tecniche (indirizzo IP, identificativo del browser User-Agent, data e ora della richiesta). Tale raccolta avviene sulla base del legittimo interesse (Art. 6, par. 1, lett. f GDPR) per garantire la sicurezza della rete, prevenire attacchi informatici e assicurare il corretto funzionamento tecnico della piattaforma.\n\nIl modulo facoltativo di feedback privato raccoglie l’appartamento, una valutazione facoltativa, commenti su cosa è andato bene o cosa migliorare e, facoltativamente, nome ed email. Le risposte vengono inviate via email all’host e non sono pubblicate sul sito.',
       purposeTitle: '3. Finalità, Base Giuridica e Responsabili del Trattamento',
       purposeText:
-        'I dati sono trattati esclusivamente per rispondere alle tue domande, fornirti informazioni e pianificare il tuo soggiorno (misure precontrattuali ai sensi dell’Art. 6, par. 1, lett. b GDPR), nonché per presidiare la sicurezza dell’infrastruttura informatica (Art. 6, par. 1, lett. f GDPR).\n\nNon vendiamo né cediamo mai i tuoi dati personali a terzi per scopi promozionali o di marketing.\n\nFornitori tecnici e trasferimenti internazionali: I dati sono trattati unicamente tramite fornitori di servizi affidabili che operano quali Responsabili del Trattamento ai sensi dell’Art. 28 GDPR: Vercel Inc. per l’hosting web, FormSubmit per l’inoltro cifrato delle richieste e Google Workspace / Gmail per la ricezione della corrispondenza. Poiché tali provider hanno sede o server negli Stati Uniti, i flussi di dati extra-UE sono protetti dalle garanzie dell’EU-US Data Privacy Framework (DPF) e dalle Clausole Contrattuali Standard (SCC) della Commissione Europea.\n\nLe prenotazioni e i relativi pagamenti avvengono in modo autonomo e sicuro direttamente sui portali ufficiali Airbnb e Booking.com.',
+        'I dati sono trattati esclusivamente per rispondere alle tue domande, fornirti informazioni e pianificare il tuo soggiorno (misure precontrattuali ai sensi dell’Art. 6, par. 1, lett. b GDPR), nonché per presidiare la sicurezza dell’infrastruttura informatica (Art. 6, par. 1, lett. f GDPR).\n\nNon vendiamo né cediamo mai i tuoi dati personali a terzi per scopi promozionali o di marketing.\n\nFornitori tecnici e trasferimenti internazionali: Vercel Inc. fornisce l’hosting web, Resend invia le richieste via email e il provider della casella email destinataria le riceve. Questi fornitori possono trattare dati al di fuori dello Spazio Economico Europeo; in tal caso, i trasferimenti devono essere tutelati dalle garanzie previste dalla normativa applicabile.\n\nLe prenotazioni e i relativi pagamenti avvengono in modo autonomo e sicuro direttamente sui portali ufficiali Airbnb e Booking.com.',
       cookiesTitle: '4. Cookie e Archiviazione Locale (Nessun Banner)',
       cookiesText:
         'Questo sito web è progettato nel rispetto totale della tua privacy: NON utilizziamo cookie di profilazione, cookie pubblicitari né strumenti di tracciamento o profilazione di terze parti (come Google Analytics o Meta Pixel).\n\nUtilizziamo esclusivamente lo storage tecnico del browser (localStorage con chiave "melina_lang") per memorizzare la preferenza linguistica da te selezionata (italiano, inglese, francese, tedesco o spagnolo). Poiché si tratta di una funzionalità tecnica essenziale ed esente da consenso preventivo ai sensi delle linee guida del Garante Privacy e della Direttiva ePrivacy europea, la navigazione è priva di fastidiosi banner per i cookie.',
       rightsTitle: '5. Diritti dell’Interessato, Tempi di Conservazione e Reclamo',
       rightsText:
-        'Tempi di conservazione: I dati personali inviati tramite modulo di contatto, email o WhatsApp vengono conservati per il tempo strettamente necessario a gestire la richiesta e in ogni caso per non oltre 12 mesi dall’ultima comunicazione, a meno che non segua una prenotazione confermata o sussistano specifici obblighi di legge contabili e fiscali. I log tecnici di sistema vengono cancellati secondo le normali finestre di sicurezza dell’hosting provider.\n\nI tuoi diritti: Ai sensi degli artt. 15-22 del GDPR, puoi esercitare in ogni momento il diritto di accesso, rettifica, cancellazione (diritto all’oblio), limitazione del trattamento o opposizione, scrivendo a info.lamelina@gmail.com.\n\nDiritto di reclamo: Hai inoltre il diritto di proporre reclamo all’Autorità Garante per la Protezione dei Dati Personali italiana (Piazza Venezia 11, 00187 Roma - www.garanteprivacy.it) o all’autorità di controllo del tuo Paese di residenza.',
+        'Tempi di conservazione: I dati personali inviati tramite modulo di contatto, email o WhatsApp vengono conservati per il tempo strettamente necessario a gestire la richiesta e in ogni caso per non oltre 12 mesi dall’ultima comunicazione, a meno che non segua una prenotazione confermata o sussistano specifici obblighi di legge contabili e fiscali. I log tecnici di sistema vengono cancellati secondo le normali finestre di sicurezza dell’hosting provider.\n\nI tuoi diritti: Ai sensi degli artt. 15-22 del GDPR, puoi esercitare in ogni momento il diritto di accesso, rettifica, cancellazione (diritto all’oblio), limitazione del trattamento o opposizione, scrivendo a info.lamelina@gmail.com.\n\nDiritto di reclamo: Hai inoltre il diritto di proporre reclamo all’Autorità Garante per la Protezione dei Dati Personali italiana (Piazza Venezia 11, 00187 Roma - www.garanteprivacy.it) o all’autorità di controllo del tuo Paese di residenza.\n\nI feedback privati sono conservati con le altre comunicazioni per non oltre 12 mesi dall’ultima comunicazione.',
       closeButton: 'Chiudi',
       controllerEmailLabel: 'Email del Titolare:',
       sslSecurity: 'Sicurezza SSL / Connessione Protetta',
@@ -608,7 +668,16 @@ export const translations: Record<Language, SiteTranslations> = {
     },
   },
   en: {
+    metadata: {
+      title: 'La Melina · Holiday Apartments in Central Turin | Via Po',
+      description: 'La Melina offers two elegant holiday apartments in Turin’s historic centre on Via Po, near the Mole Antonelliana and Piazza Vittorio Veneto.',
+    },
     nav: {
+      home: 'Home',
+      selectLanguage: 'Select language',
+      languageMenuTitle: 'Language',
+      mobileLanguageTitle: 'Choose a language',
+      toggleMenu: 'Toggle navigation menu',
       apartments: 'The Apartments',
       terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
@@ -645,6 +714,7 @@ export const translations: Record<Language, SiteTranslations> = {
           directRateBadge: 'Direct Booking with the Host',
       requestAvailability: 'Request Availability',
       viewOnPlatform: 'Reviews on',
+      panoramaAlt: 'Turin city panorama',
     },
     apartmentSection: {
       guests: 'Guests',
@@ -693,6 +763,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'View Availability & Book on',
       redirectNotice: 'You will be redirected to the official listing page.',
       viewAllPhotos: 'View all photos',
+      photoViewerLabel: 'Photo gallery',
+      closePhotoViewer: 'Close photo gallery',
+      previousPhoto: 'Previous photo',
+      nextPhoto: 'Next photo',
       bestRateGuarantee: 'Direct Booking',
       directPerksTitle: 'Why Book Directly?',
       directPerk1: 'Direct booking without intermediaries',
@@ -797,6 +871,9 @@ export const translations: Record<Language, SiteTranslations> = {
       formBadge: 'Personal reply within a few hours',
       hostTitle: 'Alessandra',
       hostRole: 'Host & Property Manager · La Melina',
+      hostBio: 'Welcome to Turin! La Melina is a lovely base for experiencing the city’s Savoy charm, beneath the historic arcades of Via Po and just steps from the Mole Antonelliana and Piazza Vittorio Veneto. I’m always happy to help with information, a warm welcome, and local recommendations.',
+      spokenLanguages: ['Italian', 'English'],
+      verifiedHostTitle: 'Verified host',
       languagesLabel: 'Languages spoken:',
       whatsappCta: 'Chat on WhatsApp',
       whatsappSub: 'Instant reply',
@@ -825,6 +902,16 @@ export const translations: Record<Language, SiteTranslations> = {
       directPerkBadge: 'Fast response and direct contact with your host',
       whatsappInstantTitle: 'Prefer an instant reply?',
       whatsappInstantDesc: 'Message Alessandra directly on WhatsApp for real-time availability and private rates.',
+      nameRequiredError: 'Please enter your name.',
+      emailRequiredError: 'Please enter your email address.',
+      emailInvalidError: 'Please enter a valid email address.',
+      invalidFormError: 'Check the information you entered and try again.',
+      tooManyRequestsError: 'Too many requests. Please try again in a few minutes.',
+      emailUnavailableError: 'The form is temporarily unavailable. Contact us by WhatsApp or email.',
+      emailFailedError: 'Your message could not be sent. Try again or contact us by WhatsApp or email.',
+      originRejectedError: 'This request was not allowed. Reload the page and try again.',
+      networkError: 'We could not send your message. Check your connection or contact us by WhatsApp or email.',
+      devSimulationMessage: 'Development mode: this request was simulated and no email was sent.',
     },
     footer: {
       tagline:
@@ -836,6 +923,9 @@ export const translations: Record<Language, SiteTranslations> = {
       backToTop: 'Back to Top',
       followUs: 'Follow us',
       privacyPolicy: 'Privacy & Cookie Policy',
+      directStayInquiry: 'Request a direct stay',
+      whatsappInquiry: 'Contact the host on WhatsApp',
+      homeOverview: 'Home overview',
     },
     privacyModal: {
       title: 'Privacy & Cookie Policy',
@@ -846,16 +936,16 @@ export const translations: Record<Language, SiteTranslations> = {
         'The Data Controller is Alessandra, property manager for "La Melina" holiday apartments situated at Via Po, 10124 Turin (TO), Italy.\n\nFor any questions, information requests, or to exercise your statutory data protection rights, please contact us directly at: info.lamelina@gmail.com.',
       dataTitle: '2. Data Collected, Contact Channels & Server Logs',
       dataText:
-        'We collect personal information that you voluntarily submit through our inquiry form (name, email address, chosen apartment, and message) or through our direct contact channels (WhatsApp at +39 328 329 9346 and direct email).\n\nNature of provision: Providing your personal data is voluntary; however, without it we cannot reply to your requests or assist with your stay planning.\n\nTechnical connection data & server logs: When you visit our website, our cloud hosting infrastructure (Vercel Inc.) automatically records technical connection logs (including IP addresses, browser User-Agent strings, and access timestamps). This technical logging is conducted on the basis of legitimate interest (Art. 6(1)(f) GDPR) to ensure server stability, cyber threat prevention, and proper platform functioning.',
+        'We collect personal information that you voluntarily submit through our inquiry form (name, email address, chosen apartment, and message) or through our direct contact channels (WhatsApp at +39 328 329 9346 and direct email).\n\nNature of provision: Providing your personal data is voluntary; however, without it we cannot reply to your requests or assist with your stay planning.\n\nTechnical connection data & server logs: When you visit our website, our cloud hosting infrastructure (Vercel Inc.) automatically records technical connection logs (including IP addresses, browser User-Agent strings, and access timestamps). This technical logging is conducted on the basis of legitimate interest (Art. 6(1)(f) GDPR) to ensure server stability, cyber threat prevention, and proper platform functioning.\n\nThe optional private feedback form collects the apartment, an optional rating, comments on what went well or could improve, and optionally a name and email address. Responses are emailed to the host and are not published on the website.',
       purposeTitle: '3. Purpose, Legal Basis & Data Processors',
       purposeText:
-        'Your data is processed exclusively to address your inquiries, verify rates and availability, and assist with stay arrangements (pre-contractual measures under Art. 6(1)(b) GDPR), as well as to safeguard network security (Art. 6(1)(f) GDPR).\n\nWe never sell or share your personal data with third parties for commercial or marketing purposes.\n\nTechnical service providers & international transfers: Data processing relies strictly on trusted technical service providers acting as Data Processors under Art. 28 GDPR: Vercel Inc. (web infrastructure and hosting), FormSubmit (encrypted inquiry transmission), and Google Workspace / Gmail (email reception). Where these providers operate in the United States, cross-border data transfers are safeguarded under the EU-US Data Privacy Framework (DPF) and the European Commission’s Standard Contractual Clauses (SCC).\n\nFinal reservations and financial transactions take place independently and securely directly through official Airbnb and Booking.com platforms.',
+        'Your data is processed exclusively to address your inquiries, verify rates and availability, and assist with stay arrangements (pre-contractual measures under Art. 6(1)(b) GDPR), as well as to safeguard network security (Art. 6(1)(f) GDPR).\n\nWe never sell or share your personal data with third parties for commercial or marketing purposes.\n\nTechnical service providers and international transfers: Vercel Inc. provides web hosting, Resend sends inquiry emails, and the recipient mailbox provider receives them. These providers may process data outside the European Economic Area; where that occurs, transfers must be protected by safeguards required under applicable law.\n\nFinal reservations and financial transactions take place independently and securely directly through official Airbnb and Booking.com platforms.',
       cookiesTitle: '4. Cookies & Local Storage (No Cookie Banner)',
       cookiesText:
         'This website is engineered with strict privacy standards: we DO NOT use profiling cookies, advertising cookies, or third-party behavioral trackers (such as Google Analytics or Meta Pixel).\n\nWe only use browser local technical storage (localStorage key "melina_lang") to preserve your preferred browsing language (Italian, English, French, German, or Spanish). Because this is an essential technical setting exempt from prior consent under Italian Garante and EU ePrivacy guidelines, this site is free of annoying cookie banners.',
       rightsTitle: '5. Data Retention, Your Rights & Complaints',
       rightsText:
-        'Data retention: Inquiries submitted via the form, email, or WhatsApp are retained only as long as necessary to handle the communication, and in any case for no longer than 12 months from the last contact, unless followed by a confirmed reservation or required by statutory accounting/legal retention obligations. Technical server logs are purged according to hosting provider security cycles.\n\nYour rights: Under Articles 15-22 of the GDPR, you have the right to access, rectify, delete (right to be forgotten), restrict processing, or object to the processing of your data by contacting info.lamelina@gmail.com.\n\nRight to lodge a complaint: You also have the right to lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rome - www.garanteprivacy.it) or with your local supervisory authority within the EU.',
+        'Data retention: Inquiries submitted via the form, email, or WhatsApp are retained only as long as necessary to handle the communication, and in any case for no longer than 12 months from the last contact, unless followed by a confirmed reservation or required by statutory accounting/legal retention obligations. Technical server logs are purged according to hosting provider security cycles.\n\nYour rights: Under Articles 15-22 of the GDPR, you have the right to access, rectify, delete (right to be forgotten), restrict processing, or object to the processing of your data by contacting info.lamelina@gmail.com.\n\nRight to lodge a complaint: You also have the right to lodge a complaint with the Italian Data Protection Authority (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rome - www.garanteprivacy.it) or with your local supervisory authority within the EU.\n\nPrivate feedback is retained with other communications for no longer than 12 months from the last contact.',
       closeButton: 'Close',
       controllerEmailLabel: 'Data Controller Email:',
       sslSecurity: 'SSL Security / Encrypted Connection',
@@ -959,7 +1049,16 @@ export const translations: Record<Language, SiteTranslations> = {
     },
   },
   fr: {
+    metadata: {
+      title: 'La Melina · Appartements de vacances au centre de Turin | Via Po',
+      description: 'La Melina propose deux élégants appartements de vacances dans le centre historique de Turin, Via Po, près de la Mole Antonelliana et de Piazza Vittorio Veneto.',
+    },
     nav: {
+      home: 'Accueil',
+      selectLanguage: 'Choisir la langue',
+      languageMenuTitle: 'Langue',
+      mobileLanguageTitle: 'Choisir une langue',
+      toggleMenu: 'Ouvrir ou fermer le menu de navigation',
       apartments: 'Les Appartements',
       terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
@@ -996,6 +1095,7 @@ export const translations: Record<Language, SiteTranslations> = {
           directRateBadge: 'Réservation Directe avec l’Hôte',
       requestAvailability: 'Demander la disponibilité',
       viewOnPlatform: 'Avis sur',
+      panoramaAlt: 'Panorama de Turin',
     },
     apartmentSection: {
       guests: 'Voyageurs',
@@ -1044,6 +1144,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'Voir Disponibilités & Réserver sur',
       redirectNotice: 'Vous serez redirigé vers l’annonce officielle.',
       viewAllPhotos: 'Voir toutes les photos',
+      photoViewerLabel: 'Galerie de photos',
+      closePhotoViewer: 'Fermer la galerie de photos',
+      previousPhoto: 'Photo précédente',
+      nextPhoto: 'Photo suivante',
       bestRateGuarantee: 'Réservation Directe',
       directPerksTitle: 'Pourquoi Réserver en Direct ?',
       directPerk1: 'Réservation directe sans intermédiaires',
@@ -1147,7 +1251,10 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Demande d’information ou de dates disponibles',
       formBadge: 'Réponse personnelle en quelques heures',
       hostTitle: 'Alessandra',
-      hostRole: 'Host & Property Manager · La Melina',
+      hostRole: 'Hôte et responsable du logement · La Melina',
+      hostBio: 'Bienvenue à Turin ! La Melina est le point de départ idéal pour découvrir le charme de la ville, sous les arcades historiques de la Via Po et à deux pas de la Mole Antonelliana et de la Piazza Vittorio Veneto. Je reste à votre disposition pour vous renseigner, vous accueillir et partager mes bonnes adresses.',
+      spokenLanguages: ['Italien', 'Anglais'],
+      verifiedHostTitle: 'Hôte vérifiée',
       languagesLabel: 'Langues parlées :',
       whatsappCta: 'Discuter sur WhatsApp',
       whatsappSub: 'Réponse rapide',
@@ -1176,6 +1283,16 @@ export const translations: Record<Language, SiteTranslations> = {
       directPerkBadge: 'Réponse rapide et contact direct avec l’hôte',
       whatsappInstantTitle: 'Vous préférez une réponse immédiate ?',
       whatsappInstantDesc: 'Écrivez directement à Alessandra sur WhatsApp pour vérifier les disponibilités et tarifs en direct.',
+      nameRequiredError: 'Veuillez saisir votre nom.',
+      emailRequiredError: 'Veuillez saisir votre adresse e-mail.',
+      emailInvalidError: 'Veuillez saisir une adresse e-mail valide.',
+      invalidFormError: 'Vérifiez les informations saisies et réessayez.',
+      tooManyRequestsError: 'Trop de demandes. Veuillez réessayer dans quelques minutes.',
+      emailUnavailableError: 'Le formulaire est temporairement indisponible. Contactez-nous par WhatsApp ou e-mail.',
+      emailFailedError: 'Votre message n’a pas pu être envoyé. Réessayez ou contactez-nous par WhatsApp ou e-mail.',
+      originRejectedError: 'Cette demande n’est pas autorisée. Rechargez la page et réessayez.',
+      networkError: 'Impossible d’envoyer votre message. Vérifiez votre connexion ou contactez-nous par WhatsApp ou e-mail.',
+      devSimulationMessage: 'Mode développement : demande simulée, aucun e-mail n’a été envoyé.',
     },
     footer: {
       tagline:
@@ -1187,6 +1304,9 @@ export const translations: Record<Language, SiteTranslations> = {
       backToTop: 'Retour en haut',
       followUs: 'Suivez-nous',
       privacyPolicy: 'Politique de Confidentialité',
+      directStayInquiry: 'Demander un séjour direct',
+      whatsappInquiry: 'Contacter l’hôte sur WhatsApp',
+      homeOverview: 'Page d’accueil',
     },
     privacyModal: {
       title: 'Politique de Confidentialité & Cookies',
@@ -1197,16 +1317,16 @@ export const translations: Record<Language, SiteTranslations> = {
         'Le responsable du traitement des données personnelles est Alessandra pour les hébergements touristiques "La Melina", Via Po, 10124 Turin (TO), Italie.\n\nPour toute demande d’information ou pour exercer vos droits relatifs à vos données personnelles, vous pouvez nous écrire directement à : info.lamelina@gmail.com.',
       dataTitle: '2. Données Collectées, Canaux de Contact et Journaux Serveur',
       dataText:
-        'Nous recueillons les données personnelles transmises volontairement via le formulaire de contact (nom, adresse email, hébergement souhaité et message) ou par nos canaux directs (WhatsApp au +39 328 329 9346 et email direct).\n\nCaractère facultatif : La transmission de vos données est facultative, mais son omission empêche de répondre à vos demandes de renseignement ou de disponibilité.\n\nDonnées techniques et journaux de connexion : Lors de votre consultation du site, l’hébergeur d’infrastructure (Vercel Inc.) enregistre automatiquement des informations techniques dans les journaux système (adresse IP, User-Agent du navigateur, date et heure d’accès). Ce traitement repose sur notre intérêt légitime (Art. 6.1.f RGPD) afin de garantir la sécurité du réseau, prévenir les attaques et assurer le bon fonctionnement du site.',
+        'Nous recueillons les données personnelles transmises volontairement via le formulaire de contact (nom, adresse email, hébergement souhaité et message) ou par nos canaux directs (WhatsApp au +39 328 329 9346 et email direct).\n\nCaractère facultatif : La transmission de vos données est facultative, mais son omission empêche de répondre à vos demandes de renseignement ou de disponibilité.\n\nDonnées techniques et journaux de connexion : Lors de votre consultation du site, l’hébergeur d’infrastructure (Vercel Inc.) enregistre automatiquement des informations techniques dans les journaux système (adresse IP, User-Agent du navigateur, date et heure d’accès). Ce traitement repose sur notre intérêt légitime (Art. 6.1.f RGPD) afin de garantir la sécurité du réseau, prévenir les attaques et assurer le bon fonctionnement du site.\n\nLe formulaire facultatif d’avis privé recueille le logement, une note facultative, des commentaires sur les points appréciés ou à améliorer et, facultativement, le nom et l’adresse e-mail. Les réponses sont envoyées par e-mail à l’hôte et ne sont pas publiées sur le site.',
       purposeTitle: '3. Finalités, Base Juridique et Sous-traitants',
       purposeText:
-        'Vos données sont traitées exclusivement pour répondre à vos demandes, établir des devis et vous assister dans l’organisation de votre séjour (mesures précontractuelles, Art. 6.1.b RGPD), ainsi que pour sécuriser l’infrastructure (Art. 6.1.f RGPD).\n\nNous ne vendons ni ne cédons jamais vos données personnelles à des tiers à des fins promotionnelles ou de marketing.\n\nSous-traitants techniques et transferts hors UE : Les données sont traitées uniquement par des prestataires techniques de confiance agissant en qualité de sous-traitants (Art. 28 RGPD) : Vercel Inc. pour l’hébergement web, FormSubmit pour l’acheminement sécurisé des messages et Google Workspace / Gmail pour la messagerie. Les transferts vers leurs infrastructures situées aux États-Unis sont encadrés par le cadre UE-États-Unis de protection des données (DPF) et les Clauses Contractuelles Types (CCT) de la Commission européenne.\n\nLes réservations et paiements s’effectuent de manière indépendante et sécurisée directement sur les plateformes officielles Airbnb et Booking.com.',
+        'Vos données sont traitées exclusivement pour répondre à vos demandes, établir des devis et vous assister dans l’organisation de votre séjour (mesures précontractuelles, Art. 6.1.b RGPD), ainsi que pour sécuriser l’infrastructure (Art. 6.1.f RGPD).\n\nNous ne vendons ni ne cédons jamais vos données personnelles à des tiers à des fins promotionnelles ou de marketing.\n\nPrestataires techniques et transferts internationaux : Vercel Inc. fournit l’hébergement du site, Resend envoie les demandes par e-mail et le fournisseur de la boîte de réception destinataire les reçoit. Ces prestataires peuvent traiter des données hors de l’Espace économique européen ; dans ce cas, les transferts doivent bénéficier des garanties prévues par la réglementation applicable.\n\nLes réservations et paiements s’effectuent de manière indépendante et sécurisée directement sur les plateformes officielles Airbnb et Booking.com.',
       cookiesTitle: '4. Cookies et Stockage Local (Sans Bannière)',
       cookiesText:
         'Ce site est conçu dans le plus strict respect de votre vie privée : AUCUN cookie de profilage, cookie publicitaire ou traceur de comportement tiers (tel que Google Analytics ou le Pixel Meta) n’est utilisé.\n\nNous employons exclusivement le stockage technique local du navigateur (localStorage avec la clé "melina_lang") pour mémoriser votre choix de langue (italien, anglais, français, allemand ou espagnol). S’agissant d’une technologie strictement technique dispensée de consentement selon les directives des autorités de protection des données et la directive ePrivacy, aucune bannière de cookies n’est imposée.',
       rightsTitle: '5. Conservation des Données, Vos Droits et Réclamations',
       rightsText:
-        'Durée de conservation : Les données transmises par formulaire, email ou WhatsApp sont conservées pendant la durée nécessaire au traitement de votre demande et pour un maximum de 12 mois après le dernier contact, sauf réservation effective ou obligations légales et comptables de conservation. Les journaux serveur sont purgés selon les cycles de sécurité de l’hébergeur.\n\nVos droits : Conformément aux articles 15 à 22 du RGPD, vous disposez à tout moment d’un droit d’accès, de rectification, d’effacement (droit à l’oubli), de limitation et d’opposition en écrivant à info.lamelina@gmail.com.\n\nDroit de réclamation : Vous avez également le droit d’introduire une réclamation auprès de l’autorité de protection des données italienne (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rome - www.garanteprivacy.it) ou de l’autorité de contrôle de votre pays de résidence dans l’UE (ex. la CNIL en France).',
+        'Durée de conservation : Les données transmises par formulaire, email ou WhatsApp sont conservées pendant la durée nécessaire au traitement de votre demande et pour un maximum de 12 mois après le dernier contact, sauf réservation effective ou obligations légales et comptables de conservation. Les journaux serveur sont purgés selon les cycles de sécurité de l’hébergeur.\n\nVos droits : Conformément aux articles 15 à 22 du RGPD, vous disposez à tout moment d’un droit d’accès, de rectification, d’effacement (droit à l’oubli), de limitation et d’opposition en écrivant à info.lamelina@gmail.com.\n\nDroit de réclamation : Vous avez également le droit d’introduire une réclamation auprès de l’autorité de protection des données italienne (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rome - www.garanteprivacy.it) ou de l’autorité de contrôle de votre pays de résidence dans l’UE (ex. la CNIL en France).\n\nLes avis privés sont conservés avec les autres communications pendant 12 mois au maximum après le dernier contact.',
       closeButton: 'Fermer',
       controllerEmailLabel: 'Email du Responsable :',
       sslSecurity: 'Sécurité SSL / Connexion Protégée',
@@ -1310,7 +1430,16 @@ export const translations: Record<Language, SiteTranslations> = {
     },
   },
   de: {
+    metadata: {
+      title: 'La Melina · Ferienwohnungen im Zentrum von Turin | Via Po',
+      description: 'La Melina bietet zwei elegante Ferienwohnungen in der historischen Turiner Innenstadt an der Via Po, nahe der Mole Antonelliana und der Piazza Vittorio Veneto.',
+    },
     nav: {
+      home: 'Startseite',
+      selectLanguage: 'Sprache auswählen',
+      languageMenuTitle: 'Sprache',
+      mobileLanguageTitle: 'Sprache auswählen',
+      toggleMenu: 'Navigationsmenü öffnen oder schließen',
       apartments: 'Die Apartments',
       terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
@@ -1347,6 +1476,7 @@ export const translations: Record<Language, SiteTranslations> = {
           directRateBadge: 'Direktbuchung beim Gastgeber',
       requestAvailability: 'Verfügbarkeit anfragen',
       viewOnPlatform: 'Bewertungen auf',
+      panoramaAlt: 'Panorama von Turin',
     },
     apartmentSection: {
       guests: 'Gäste',
@@ -1395,6 +1525,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'Verfügbarkeit prüfen & buchen auf',
       redirectNotice: 'Sie werden zum offiziellen Inserat weitergeleitet.',
       viewAllPhotos: 'Alle Fotos ansehen',
+      photoViewerLabel: 'Fotogalerie',
+      closePhotoViewer: 'Fotogalerie schließen',
+      previousPhoto: 'Vorheriges Foto',
+      nextPhoto: 'Nächstes Foto',
       bestRateGuarantee: 'Direktbuchung',
       directPerksTitle: 'Warum direkt buchen?',
       directPerk1: 'Direktbuchung ohne Zwischenhändler',
@@ -1498,7 +1632,10 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Anfrage zu Informationen oder Reisedaten',
       formBadge: 'Persönliche Antwort in wenigen Stunden',
       hostTitle: 'Alessandra',
-      hostRole: 'Host & Property Manager · La Melina',
+      hostRole: 'Gastgeberin und Unterkunftsverwaltung · La Melina',
+      hostBio: 'Willkommen in Turin! La Melina ist der ideale Ausgangspunkt, um den Charme der Stadt zu erleben – unter den historischen Arkaden der Via Po und nur wenige Schritte von der Mole Antonelliana und der Piazza Vittorio Veneto entfernt. Ich helfe Ihnen gerne mit Informationen, einem herzlichen Empfang und persönlichen Tipps für die Stadt.',
+      spokenLanguages: ['Italienisch', 'Englisch'],
+      verifiedHostTitle: 'Verifizierte Gastgeberin',
       languagesLabel: 'Gesprochene Sprachen:',
       whatsappCta: 'Per WhatsApp schreiben',
       whatsappSub: 'Schnelle Rückmeldung',
@@ -1527,6 +1664,16 @@ export const translations: Record<Language, SiteTranslations> = {
       directPerkBadge: 'Schnelle Antwort und direkter Kontakt mit der Gastgeberin',
       whatsappInstantTitle: 'Bevorzugen Sie eine sofortige Antwort?',
       whatsappInstantDesc: 'Schreiben Sie Alessandra direkt auf WhatsApp für Verfügbarkeit und Direktpreise in Echtzeit.',
+      nameRequiredError: 'Bitte geben Sie Ihren Namen ein.',
+      emailRequiredError: 'Bitte geben Sie Ihre E-Mail-Adresse ein.',
+      emailInvalidError: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+      invalidFormError: 'Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.',
+      tooManyRequestsError: 'Zu viele Anfragen. Bitte versuchen Sie es in einigen Minuten erneut.',
+      emailUnavailableError: 'Das Formular ist derzeit nicht verfügbar. Kontaktieren Sie uns per WhatsApp oder E-Mail.',
+      emailFailedError: 'Ihre Nachricht konnte nicht gesendet werden. Versuchen Sie es erneut oder kontaktieren Sie uns per WhatsApp oder E-Mail.',
+      originRejectedError: 'Diese Anfrage ist nicht zulässig. Laden Sie die Seite neu und versuchen Sie es erneut.',
+      networkError: 'Ihre Nachricht konnte nicht gesendet werden. Prüfen Sie Ihre Verbindung oder kontaktieren Sie uns per WhatsApp oder E-Mail.',
+      devSimulationMessage: 'Entwicklungsmodus: Anfrage simuliert, es wurde keine E-Mail gesendet.',
     },
     footer: {
       tagline:
@@ -1538,6 +1685,9 @@ export const translations: Record<Language, SiteTranslations> = {
       backToTop: 'Nach oben',
       followUs: 'Folgen Sie uns',
       privacyPolicy: 'Datenschutz & Cookies',
+      directStayInquiry: 'Direkten Aufenthalt anfragen',
+      whatsappInquiry: 'Gastgeberin per WhatsApp kontaktieren',
+      homeOverview: 'Startseite',
     },
     privacyModal: {
       title: 'Datenschutzerklärung & Cookie-Richtlinie',
@@ -1548,16 +1698,16 @@ export const translations: Record<Language, SiteTranslations> = {
         'Verantwortliche Stelle für die Datenverarbeitung ist Alessandra für die Ferienunterkünfte "La Melina", Via Po, 10124 Turin (TO), Italien.\n\nFür Auskünfte, Anfragen oder zur Wahrnehmung Ihrer Datenschutzrechte wenden Sie sich bitte direkt per E-Mail an: info.lamelina@gmail.com.',
       dataTitle: '2. Erhobene Daten, Kontaktkanäle & Server-Protokolle',
       dataText:
-        'Wir erheben personenbezogene Daten, die Sie uns freiwillig über das Anfrageformular (Name, E-Mail-Adresse, gewähltes Apartment und Nachricht) oder über unsere Direktkanäle (WhatsApp unter +39 328 329 9346 sowie direkte E-Mail) mitteilen.\n\nFreiwilligkeit der Bereitstellung: Die Bereitstellung Ihrer Daten ist freiwillig; ohne diese Angaben ist eine Beantwortung Ihrer Anfrage oder Auskunft zu Verfügbarkeiten jedoch nicht möglich.\n\nTechnische Verbindungsdaten & Server-Logs: Beim Aufruf der Website registriert die Hosting-Infrastruktur (Vercel Inc.) aus technischen Gründen Logfiles (u.a. IP-Adresse, Browser-Kennung User-Agent sowie Zugriffszeitpunkt). Diese Speicherung erfolgt auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO), um Systemsicherheit, Abwehr von Cyberangriffen und zuverlässigen Betrieb zu gewährleisten.',
+        'Wir erheben personenbezogene Daten, die Sie uns freiwillig über das Anfrageformular (Name, E-Mail-Adresse, gewähltes Apartment und Nachricht) oder über unsere Direktkanäle (WhatsApp unter +39 328 329 9346 sowie direkte E-Mail) mitteilen.\n\nFreiwilligkeit der Bereitstellung: Die Bereitstellung Ihrer Daten ist freiwillig; ohne diese Angaben ist eine Beantwortung Ihrer Anfrage oder Auskunft zu Verfügbarkeiten jedoch nicht möglich.\n\nTechnische Verbindungsdaten & Server-Logs: Beim Aufruf der Website registriert die Hosting-Infrastruktur (Vercel Inc.) aus technischen Gründen Logfiles (u.a. IP-Adresse, Browser-Kennung User-Agent sowie Zugriffszeitpunkt). Diese Speicherung erfolgt auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO), um Systemsicherheit, Abwehr von Cyberangriffen und zuverlässigen Betrieb zu gewährleisten.\n\nDas optionale private Feedbackformular erfasst das Apartment, eine optionale Bewertung, Kommentare zu positiven Aspekten und Verbesserungsmöglichkeiten sowie optional Name und E-Mail-Adresse. Die Antworten werden per E-Mail an die Gastgeberin gesendet und nicht auf der Website veröffentlicht.',
       purposeTitle: '3. Zweck, Rechtsgrundlagen & Auftragsverarbeiter',
       purposeText:
-        'Ihre Daten werden ausschließlich zur Beantwortung von Fragen, Angebotserstellung und Reisevorbereitung (vorvertragliche Maßnahmen gem. Art. 6 Abs. 1 lit. b DSGVO) sowie zur Systemsicherheit (Art. 6 Abs. 1 lit. f DSGVO) verarbeitet.\n\nWir verkaufen oder übermitteln Ihre Daten zu keinem Zeitpunkt an Dritte zu Marketing- oder Werbezwecken.\n\nTechnische Dienstleister & Drittlandübermittlung: Die Verarbeitung erfolgt über sorgfältig eingebundene technische Dienstleister als Auftragsverarbeiter (Art. 28 DSGVO): Vercel Inc. für das Webhosting, FormSubmit für die verschlüsselte Formularweiterleitung und Google Workspace / Gmail für den Mail-Empfang. Da diese Dienstleister Standorte in den USA unterhalten, sind Übermittlungen durch das EU-US Data Privacy Framework (DPF) und Standardvertragsklauseln (SCC) der Europäischen Kommission abgesichert.\n\nBuchungen und Zahlungen erfolgen eigenständig und sicher über die offiziellen Portale Airbnb und Booking.com.',
+        'Ihre Daten werden ausschließlich zur Beantwortung von Fragen, Angebotserstellung und Reisevorbereitung (vorvertragliche Maßnahmen gem. Art. 6 Abs. 1 lit. b DSGVO) sowie zur Systemsicherheit (Art. 6 Abs. 1 lit. f DSGVO) verarbeitet.\n\nWir verkaufen oder übermitteln Ihre Daten zu keinem Zeitpunkt an Dritte zu Marketing- oder Werbezwecken.\n\nTechnische Dienstleister und internationale Übermittlungen: Vercel Inc. stellt das Webhosting bereit, Resend versendet Anfragen per E-Mail und der Anbieter des Empfängerpostfachs empfängt sie. Diese Anbieter können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten; in diesem Fall müssen die Übermittlungen durch die geltenden gesetzlichen Garantien geschützt werden.\n\nBuchungen und Zahlungen erfolgen eigenständig und sicher über die offiziellen Portale Airbnb und Booking.com.',
       cookiesTitle: '4. Cookies & Lokale Speicherung (Kein Cookie-Banner)',
       cookiesText:
         'Diese Website respektiert Ihre Privatsphäre: Wir setzen KEINE Profiling-Cookies, Marketing-Tracker oder verhaltensbezogene Drittanbieter-Analysen (wie Google Analytics oder Meta-Pixel) ein.\n\nEs kommt ausschließlich der lokale technische Speicher des Browsers (localStorage mit dem Schlüssel "melina_lang") zum Einsatz, um Ihre gewünschte Spracheinstellung (Italienisch, Englisch, Französisch, Deutsch oder Spanisch) festzuhalten. Da dies eine essenzielle technische Funktion darstellt, die nach ePrivacy-Vorgaben und Behördenleitlinien einwilligungsfrei ist, benötigen wir kein störendes Cookie-Banner.',
       rightsTitle: '5. Speicherdauer, Ihre Rechte & Beschwerdebefugnis',
       rightsText:
-        'Speicherdauer: Übermittelte Anfragedaten werden für die Dauer der Bearbeitung und maximal für einen Zeitraum von 12 Monaten nach dem letzten Kontakt aufbewahrt, es sei denn, es folgt eine Buchung oder es greifen gesetzliche steuer- und handelsrechtliche Aufbewahrungspflichten. Technische Server-Logs werden nach standardisierten Sicherheitszyklen des Hosters gelöscht.\n\nIhre Rechte: Gemäß Art. 15-22 DSGVO haben Sie jederzeit das Recht auf Auskunft, Berichtigung, Löschung (Recht auf Vergessenwerden), Einschränkung der Verarbeitung oder Widerspruch per E-Mail an info.lamelina@gmail.com.\n\nBeschwerderecht: Sie haben zudem das Recht, eine Beschwerde bei der zuständigen italienischen Aufsichtsbehörde (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rom - www.garanteprivacy.it) oder bei der Datenschutzbehörde Ihres Wohnsitzlandes einzureichen.',
+        'Speicherdauer: Übermittelte Anfragedaten werden für die Dauer der Bearbeitung und maximal für einen Zeitraum von 12 Monaten nach dem letzten Kontakt aufbewahrt, es sei denn, es folgt eine Buchung oder es greifen gesetzliche steuer- und handelsrechtliche Aufbewahrungspflichten. Technische Server-Logs werden nach standardisierten Sicherheitszyklen des Hosters gelöscht.\n\nIhre Rechte: Gemäß Art. 15-22 DSGVO haben Sie jederzeit das Recht auf Auskunft, Berichtigung, Löschung (Recht auf Vergessenwerden), Einschränkung der Verarbeitung oder Widerspruch per E-Mail an info.lamelina@gmail.com.\n\nBeschwerderecht: Sie haben zudem das Recht, eine Beschwerde bei der zuständigen italienischen Aufsichtsbehörde (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Rom - www.garanteprivacy.it) oder bei der Datenschutzbehörde Ihres Wohnsitzlandes einzureichen.\n\nPrivates Feedback wird wie andere Kommunikation höchstens 12 Monate nach dem letzten Kontakt gespeichert.',
       closeButton: 'Schließen',
       controllerEmailLabel: 'E-Mail der Verantwortlichen:',
       sslSecurity: 'SSL-Sicherheit / Verschlüsselte Verbindung',
@@ -1661,7 +1811,16 @@ export const translations: Record<Language, SiteTranslations> = {
     },
   },
   es: {
+    metadata: {
+      title: 'La Melina · Apartamentos vacacionales en el centro de Turín | Via Po',
+      description: 'La Melina ofrece dos elegantes apartamentos vacacionales en el centro histórico de Turín, en Via Po, cerca de la Mole Antonelliana y Piazza Vittorio Veneto.',
+    },
     nav: {
+      home: 'Inicio',
+      selectLanguage: 'Elegir idioma',
+      languageMenuTitle: 'Idioma',
+      mobileLanguageTitle: 'Elige un idioma',
+      toggleMenu: 'Abrir o cerrar el menú de navegación',
       apartments: 'Los Apartamentos',
       terrace: 'La Melina sotto la Mole',
       garden: 'La Melina su Via Po',
@@ -1698,6 +1857,7 @@ export const translations: Record<Language, SiteTranslations> = {
           directRateBadge: 'Reserva Directa con la Anfitriona',
       requestAvailability: 'Consultar disponibilidad',
       viewOnPlatform: 'Opiniones en',
+      panoramaAlt: 'Panorama de Turín',
     },
     apartmentSection: {
       guests: 'Huéspedes',
@@ -1746,6 +1906,10 @@ export const translations: Record<Language, SiteTranslations> = {
       bookButton: 'Ver Disponibilidad y Reservar en',
       redirectNotice: 'Serás redirigido a la página oficial del anuncio.',
       viewAllPhotos: 'Ver todas las fotos',
+      photoViewerLabel: 'Galería de fotos',
+      closePhotoViewer: 'Cerrar la galería de fotos',
+      previousPhoto: 'Foto anterior',
+      nextPhoto: 'Foto siguiente',
           bestRateGuarantee: 'Reserva Directa',
       directPerksTitle: '¿Por qué reservar directamente?',
       directPerk1: 'Reserva directa sin intermediarios',
@@ -1849,7 +2013,10 @@ export const translations: Record<Language, SiteTranslations> = {
       formSubtitle: 'Consulta de información o fechas disponibles',
       formBadge: 'Respuesta personal en pocas horas',
       hostTitle: 'Alessandra',
-      hostRole: 'Host & Property Manager · La Melina',
+      hostRole: 'Anfitriona y gestora del alojamiento · La Melina',
+      hostBio: '¡Bienvenidos a Turín! La Melina es el punto de partida ideal para disfrutar del encanto de la ciudad, bajo los históricos soportales de Via Po y a pocos pasos de la Mole Antonelliana y Piazza Vittorio Veneto. Estoy a tu disposición para ayudarte, darte la bienvenida y compartir recomendaciones locales.',
+      spokenLanguages: ['Italiano', 'Inglés'],
+      verifiedHostTitle: 'Anfitriona verificada',
       languagesLabel: 'Idiomas:',
       whatsappCta: 'Escribir por WhatsApp',
       whatsappSub: 'Respuesta inmediata',
@@ -1878,6 +2045,16 @@ export const translations: Record<Language, SiteTranslations> = {
       directPerkBadge: 'Respuesta rápida y trato directo con la anfitriona',
       whatsappInstantTitle: '¿Prefieres una respuesta inmediata?',
       whatsappInstantDesc: 'Escribe directamente a Alessandra por WhatsApp para comprobar fechas y tarifas al instante.',
+      nameRequiredError: 'Escribe tu nombre.',
+      emailRequiredError: 'Escribe tu correo electrónico.',
+      emailInvalidError: 'Escribe una dirección de correo electrónico válida.',
+      invalidFormError: 'Revisa los datos y vuelve a intentarlo.',
+      tooManyRequestsError: 'Demasiadas solicitudes. Inténtalo de nuevo dentro de unos minutos.',
+      emailUnavailableError: 'El formulario no está disponible temporalmente. Contáctanos por WhatsApp o correo electrónico.',
+      emailFailedError: 'No se pudo enviar el mensaje. Inténtalo de nuevo o contáctanos por WhatsApp o correo electrónico.',
+      originRejectedError: 'Esta solicitud no está permitida. Recarga la página e inténtalo de nuevo.',
+      networkError: 'No se pudo enviar el mensaje. Comprueba tu conexión o contáctanos por WhatsApp o correo electrónico.',
+      devSimulationMessage: 'Modo de desarrollo: solicitud simulada, no se envió ningún correo electrónico.',
     },
     footer: {
       tagline:
@@ -1889,6 +2066,9 @@ export const translations: Record<Language, SiteTranslations> = {
       backToTop: 'Volver arriba',
       followUs: 'Síguenos',
       privacyPolicy: 'Política de Privacidad & Cookies',
+      directStayInquiry: 'Solicitar estancia directa',
+      whatsappInquiry: 'Contactar con la anfitriona por WhatsApp',
+      homeOverview: 'Inicio',
     },
     privacyModal: {
       title: 'Política de Privacidad y Cookies',
@@ -1899,16 +2079,16 @@ export const translations: Record<Language, SiteTranslations> = {
         'La responsable del tratamiento de los datos personales es Alessandra para los alojamientos "La Melina", sitos en Via Po, 10124 Turín (TO), Italia.\n\nPara cualquier consulta, aclaración o para el ejercicio de tus derechos de protección de datos, puedes contactarnos directamente en: info.lamelina@gmail.com.',
       dataTitle: '2. Datos Recopilados, Canales de Contacto y Registros del Servidor',
       dataText:
-        'Recopilamos los datos personales proporcionados voluntariamente mediante el formulario de consulta (nombre, correo electrónico, apartamento de interés y mensaje) o a través de los canales directos del sitio (WhatsApp en el +39 328 329 9346 y correo directo).\n\nCarácter potestativo del suministro: La aportación de datos es voluntaria; no obstante, su omisión impide atender a tus dudas o comprobar la disponibilidad del alojamiento.\n\nDatos técnicos y registros de navegación: Durante la navegación, el proveedor de alojamiento en la nube (Vercel Inc.) registra de forma automática información técnica en los registros del servidor (dirección IP, identificador User-Agent del navegador y marcas de tiempo). Esta recogida responde a nuestro interés legítimo (Art. 6.1.f RGPD) para preservar la ciberseguridad, prevenir incidentes técnicos y garantizar el correcto funcionamiento del servicio.',
+        'Recopilamos los datos personales proporcionados voluntariamente mediante el formulario de consulta (nombre, correo electrónico, apartamento de interés y mensaje) o a través de los canales directos del sitio (WhatsApp en el +39 328 329 9346 y correo directo).\n\nCarácter potestativo del suministro: La aportación de datos es voluntaria; no obstante, su omisión impide atender a tus dudas o comprobar la disponibilidad del alojamiento.\n\nDatos técnicos y registros de navegación: Durante la navegación, el proveedor de alojamiento en la nube (Vercel Inc.) registra de forma automática información técnica en los registros del servidor (dirección IP, identificador User-Agent del navegador y marcas de tiempo). Esta recogida responde a nuestro interés legítimo (Art. 6.1.f RGPD) para preservar la ciberseguridad, prevenir incidentes técnicos y garantizar el correcto funcionamiento del servicio.\n\nEl formulario opcional de opinión privada recoge el apartamento, una valoración opcional, comentarios sobre lo que fue bien o podría mejorar y, de forma opcional, nombre y correo electrónico. Las respuestas se envían por correo a la anfitriona y no se publican en la web.',
       purposeTitle: '3. Finalidad, Base Jurídica y Encargados del Tratamiento',
       purposeText:
-        'Tus datos se tratan exclusivamente para responder a tus consultas, facilitar presupuestos y coordinar tu estancia (medidas precontractuales según el Art. 6.1.b del RGPD), así como para garantizar la seguridad de la infraestructura (Art. 6.1.f del RGPD).\n\nNunca vendemos ni cedemos tus datos personales a terceros con fines publicitarios o de mercadotecnia.\n\nProveedores técnicos y transferencias internacionales: El tratamiento se efectúa mediante proveedores técnicos contrastados que operan como Encargados del Tratamiento (Art. 28 RGPD): Vercel Inc. para el alojamiento web, FormSubmit para la transmisión cifrada del formulario y Google Workspace / Gmail para la gestión del correo. Dado que sus servidores o sedes se encuentran en Estados Unidos, las transferencias internacionales están reguladas por el Marco de Privacidad de Datos UE-EE. UU. (DPF) y las Cláusulas Contractuales Tipo (CCT) de la Comisión Europea.\n\nLas reservas finales y los pagos se formalizan de manera independiente y protegida a través de las plataformas oficiales de Airbnb y Booking.com.',
+        'Tus datos se tratan exclusivamente para responder a tus consultas, facilitar presupuestos y coordinar tu estancia (medidas precontractuales según el Art. 6.1.b del RGPD), así como para garantizar la seguridad de la infraestructura (Art. 6.1.f del RGPD).\n\nNunca vendemos ni cedemos tus datos personales a terceros con fines publicitarios o de mercadotecnia.\n\nProveedores técnicos y transferencias internacionales: Vercel Inc. proporciona el alojamiento web, Resend envía las solicitudes por correo electrónico y el proveedor del buzón destinatario las recibe. Estos proveedores pueden tratar datos fuera del Espacio Económico Europeo; en ese caso, las transferencias deben contar con las garantías exigidas por la normativa aplicable.\n\nLas reservas finales y los pagos se formalizan de manera independiente y protegida a través de las plataformas oficiales de Airbnb y Booking.com.',
       cookiesTitle: '4. Cookies y Almacenamiento Local (Sin Banner de Cookies)',
       cookiesText:
         'Este sitio web está concebido para respetar plenamente tu privacidad: NO utilizamos cookies de perfilado, cookies publicitarias ni rastreadores de comportamiento de terceros (como Google Analytics o el Píxel de Meta).\n\nÚnicamente empleamos el almacenamiento técnico local del navegador (localStorage con la clave "melina_lang") para guardar tu preferencia de idioma seleccionada (italiano, inglés, francés, alemán o español). Al ser un mecanismo estrictamente técnico y exento de consentimiento según las directrices de las autoridades de protección de datos y la directiva ePrivacy, el sitio no requiere avisos ni banners de cookies molestos.',
       rightsTitle: '5. Conservación de Datos, Derechos del Usuario y Reclamaciones',
       rightsText:
-        'Plazos de conservación: Los datos facilitados por formulario, correo o WhatsApp se conservan durante el tiempo estrictamente necesario para gestionar la solicitud y, a lo sumo, por un plazo máximo de 12 meses desde la última interacción, salvo formalización de una reserva o cumplimiento de obligaciones fiscales y legales. Los registros técnicos de navegación se cancelan conforme a los estándares de seguridad del hosting.\n\nTus derechos: Conforme a los artículos 15 a 22 del RGPD, puedes solicitar en todo momento el acceso, rectificación, supresión (derecho al olvido), limitación u oposición enviando un correo a info.lamelina@gmail.com.\n\nDerecho de reclamación: Asimismo, te asiste el derecho a formular una reclamación ante la autoridad italiana de control (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Roma - www.garanteprivacy.it) o ante la agencia de protección de datos de tu lugar de residencia habitual en la UE.',
+        'Plazos de conservación: Los datos facilitados por formulario, correo o WhatsApp se conservan durante el tiempo estrictamente necesario para gestionar la solicitud y, a lo sumo, por un plazo máximo de 12 meses desde la última interacción, salvo formalización de una reserva o cumplimiento de obligaciones fiscales y legales. Los registros técnicos de navegación se cancelan conforme a los estándares de seguridad del hosting.\n\nTus derechos: Conforme a los artículos 15 a 22 del RGPD, puedes solicitar en todo momento el acceso, rectificación, supresión (derecho al olvido), limitación u oposición enviando un correo a info.lamelina@gmail.com.\n\nDerecho de reclamación: Asimismo, te asiste el derecho a formular una reclamación ante la autoridad italiana de control (Garante per la protezione dei dati personali, Piazza Venezia 11, 00187 Roma - www.garanteprivacy.it) o ante la agencia de protección de datos de tu lugar de residencia habitual en la UE.\n\nLas opiniones privadas se conservan junto con las demás comunicaciones durante un máximo de 12 meses desde el último contacto.',
       closeButton: 'Cerrar',
       controllerEmailLabel: 'Correo de la Responsable:',
       sslSecurity: 'Seguridad SSL / Conexión Segura',

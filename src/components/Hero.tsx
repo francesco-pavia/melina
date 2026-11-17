@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
       <div className="absolute top-0 left-0 right-0 h-[840px] sm:h-[920px] lg:h-[1020px] pointer-events-none z-0 overflow-hidden">
         <img
           src="/turin_bg.jpg"
-          alt="Turin Panorama"
+          alt={t.panoramaAlt}
           className="w-full h-full object-cover object-[center_30%] brightness-[0.88] contrast-[1.05]"
         />
         {/* Top gradient to keep navbar readable */}
@@ -89,7 +89,7 @@ export const Hero: React.FC = () => {
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-black/60 hover:bg-black/80 text-stone-200 border border-white/10 backdrop-blur-md transition-colors"
-                      title={`Vedi su ${apt.platform}`}
+                      title={`${t.viewOnPlatform} ${apt.platform}`}
                     >
                       {isAirbnb ? (
                         <AirbnbIcon className="w-3.5 h-3.5 text-[#FF385C]" />

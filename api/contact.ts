@@ -11,6 +11,43 @@ interface ContactRequestBody {
   message?: string
 }
 
+const apartmentLabels: Record<string, string> = {
+  both: 'Entrambi / Da valutare',
+  'melina-po': 'La Melina su Via Po',
+  'melina-mole': 'La Melina sotto la Mole',
+}
+
+const rateLimitWindowMs = 15 * 60 * 1000
+const maxRequestsPerWindow = 5
+const requestsByIp = new Map<string, { count: number; resetAt: number }>()
+
+function isValidDate(value: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false
+  const date = new Date(`${value}T00:00:00.000Z`)
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value
+}
+
+function isRateLimited(ip: string, now = Date.now()): boolean {
+  const current = requestsByIp.get(ip)
+  if (!current || current.resetAt <= now) {
+    requestsByIp.set(ip, { count: 1, resetAt: now + rateLimitWindowMs })
+    if (requestsByIp.size > 5000) {
+      for (const [key, value] of requestsByIp) {
+        if (value.resetAt <= now) requestsByIp.delete(key)
+      }
+      while (requestsByIp.size > 5000) {
+        const oldestKey = requestsByIp.keys().next().value
+        if (oldestKey === undefined) break
+        requestsByIp.delete(oldestKey)
+      }
+    }
+    return false
+  }
+
+  current.count += 1
+  return current.count > maxRequestsPerWindow
+}
+
 function escapeHtml(str: string): string {
   return str
     .replace(/&/g, '&amp;')
@@ -199,17 +236,33 @@ function buildHtmlTemplate(data: ContactRequestBody): string {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // CORS
-  res.setHeader('Access-Control-Allow-Origin', '*')
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
-
   if (req.method === 'OPTIONS') {
-    return res.status(200).end()
+    return res.status(204).end()
   }
 
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Metodo non consentito. Utilizzare POST.' })
+  }
+
+  const origin = req.headers.origin
+  const host = req.headers.host
+  if (origin && host) {
+    try {
+      if (new URL(origin).host.toLowerCase() !== host.toLowerCase()) {
+        return res.status(403).json({ code: 'invalid_origin', error: 'Richiesta non consentita.' })
+      }
+    } catch {
+      return res.status(403).json({ code: 'invalid_origin', error: 'Richiesta non consentita.' })
+    }
+  }
+
+  const forwardedFor = req.headers['x-forwarded-for']
+  const ip = (Array.isArray(forwardedFor) ? forwardedFor[0] : forwardedFor)?.split(',')[0]?.trim()
+    || req.socket.remoteAddress
+    || 'unknown'
+  if (isRateLimited(ip)) {
+    res.setHeader('Retry-After', String(Math.ceil(rateLimitWindowMs / 1000)))
+    return res.status(429).json({ code: 'too_many_requests', error: 'Troppe richieste.' })
   }
 
   let data: ContactRequestBody = req.body
@@ -217,14 +270,55 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     try {
       data = JSON.parse(data)
     } catch {
-      return res.status(400).json({ error: 'Payload JSON non valido.' })
+      return res.status(400).json({ code: 'invalid_json', error: 'Payload JSON non valido.' })
     }
   }
 
-  const { name, email, phone, checkIn, checkOut, guests, apartment, message } = data || {}
+  if (!data || typeof data !== 'object' || Array.isArray(data)) {
+    return res.status(400).json({ code: 'invalid_json', error: 'Payload JSON non valido.' })
+  }
+  const optionalStringFields: (keyof ContactRequestBody)[] = [
+    'phone', 'checkIn', 'checkOut', 'message',
+  ]
+  if (optionalStringFields.some((field) => data[field] !== undefined && typeof data[field] !== 'string')) {
+    return res.status(422).json({ code: 'invalid_fields', error: 'Uno o più campi non sono validi.' })
+  }
+
+  const name = typeof data.name === 'string' ? data.name.trim() : ''
+  const email = typeof data.email === 'string' ? data.email.trim() : ''
+  const phone = typeof data.phone === 'string' ? data.phone.trim() : ''
+  const checkIn = typeof data.checkIn === 'string' ? data.checkIn.trim() : ''
+  const checkOut = typeof data.checkOut === 'string' ? data.checkOut.trim() : ''
+  const guests = typeof data.guests === 'string' ? data.guests : ''
+  const apartment = typeof data.apartment === 'string' ? data.apartment : ''
+  const message = typeof data.message === 'string' ? data.message.trim() : ''
 
   if (!name || !email) {
-    return res.status(422).json({ error: 'Nome ed email sono campi obbligatori.' })
+    return res.status(422).json({ code: 'required_fields', error: 'Nome ed email sono campi obbligatori.' })
+  }
+  if (
+    name.length > 100 || /[\u0000-\u001f\u007f]/.test(name) ||
+    email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+    phone.length > 40 || /[\u0000-\u001f\u007f]/.test(phone) ||
+    message.length > 2000 ||
+    (checkIn && !isValidDate(checkIn)) ||
+    (checkOut && !isValidDate(checkOut)) ||
+    (checkIn && checkOut && checkOut <= checkIn) ||
+    !['1', '2'].includes(guests) ||
+    !Object.hasOwn(apartmentLabels, apartment)
+  ) {
+    return res.status(422).json({ code: 'invalid_fields', error: 'Uno o più campi non sono validi.' })
+  }
+
+  data = {
+    name,
+    email,
+    phone,
+    checkIn,
+    checkOut,
+    guests,
+    apartment: apartmentLabels[apartment],
+    message,
   }
 
   // In testing mode without a verified custom domain, Resend only permits sending to
@@ -236,12 +330,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!resendApiKey) {
     console.error('RESEND_API_KEY non trovata su Vercel.')
     return res.status(500).json({
+      code: 'email_unavailable',
       error: 'Variabile RESEND_API_KEY non trovata su Vercel. Ricordati di fare il Redeploy su Vercel dopo averla aggiunta.',
     })
   }
 
   const htmlContent = buildHtmlTemplate(data)
-  const subject = `Nuova Richiesta da ${name} - La Melina (${apartment || 'Generale'})`
+  const subject = `Nuova Richiesta da ${name} - La Melina (${data.apartment})`
 
   try {
     const resendRes = await fetch('https://api.resend.com/emails', {
@@ -263,10 +358,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     if (!resendRes.ok) {
       console.error('Errore Resend API:', resendRes.status, resendJson)
-      return res.status(resendRes.status).json({
-        error: resendJson?.message || 'Errore durante l’invio con Resend.',
-        details: resendJson,
-      })
+      return res.status(502).json({ code: 'email_failed', error: 'Errore durante l’invio del messaggio.' })
     }
 
     return res.status(200).json({
@@ -277,6 +369,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   } catch (err: any) {
     console.error('Eccezione chiamata Resend:', err)
     return res.status(500).json({
+      code: 'server_error',
       error: err?.message || 'Errore di connessione con il servizio email.',
     })
   }

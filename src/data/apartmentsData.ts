@@ -1,6 +1,7 @@
 import type { Apartment, LocationHighlight, GuestReview, HostInfo, SocialLinks } from '../types'
 import { translations } from './translations'
 import type { Language } from '../context/LanguageContext'
+import { localizeAmenity } from './apartmentAmenityTranslations'
 
 export const baseApartments: Apartment[] = [
   {
@@ -212,6 +213,10 @@ export const getLocalizedApartments = (lang: Language): Apartment[] => {
       description: t.garden.description,
       story: t.garden.story,
       highlights: t.garden.highlights,
+      amenities: baseApartments[0].amenities.map((amenity) => ({
+        ...amenity,
+        name: localizeAmenity(amenity.name, lang),
+      })),
       galleryImages: baseApartments[0].galleryImages.map((img, i) => ({
         ...img,
         caption: t.garden.galleryCaptions[i] || img.caption,
@@ -231,6 +236,10 @@ export const getLocalizedApartments = (lang: Language): Apartment[] => {
       description: t.terrace.description,
       story: t.terrace.story,
       highlights: t.terrace.highlights,
+      amenities: baseApartments[1].amenities.map((amenity) => ({
+        ...amenity,
+        name: localizeAmenity(amenity.name, lang),
+      })),
       galleryImages: baseApartments[1].galleryImages.map((img, i) => ({
         ...img,
         caption: t.terrace.galleryCaptions[i] || img.caption,
@@ -312,6 +321,9 @@ export const getWhatsAppInquiryUrl = (
     if (dates?.checkIn && dates?.checkOut) {
       message += ` Dates souhaitées : du ${dates.checkIn} au ${dates.checkOut}.`
     }
+    if (dates?.guests) {
+      message += ` Nombre de voyageurs : ${dates.guests}.`
+    }
   } else if (lang === 'de') {
     message = `Guten Tag Alessandra! Ich kontaktiere Sie über die Website La Melina.`
     if (apartmentName) {
@@ -321,6 +333,22 @@ export const getWhatsAppInquiryUrl = (
     }
     if (dates?.checkIn && dates?.checkOut) {
       message += ` Zeitraum: vom ${dates.checkIn} bis ${dates.checkOut}.`
+    }
+    if (dates?.guests) {
+      message += ` Gäste: ${dates.guests}.`
+    }
+  } else if (lang === 'es') {
+    message = `¡Hola, Alessandra! Te escribo desde la web de La Melina.`
+    if (apartmentName) {
+      message += ` Me gustaría consultar la disponibilidad de "${apartmentName}".`
+    } else {
+      message += ` Me gustaría consultar la disponibilidad de los apartamentos.`
+    }
+    if (dates?.checkIn && dates?.checkOut) {
+      message += ` Fechas: del ${dates.checkIn} al ${dates.checkOut}.`
+    }
+    if (dates?.guests) {
+      message += ` Huéspedes: ${dates.guests}.`
     }
   } else {
     // English default

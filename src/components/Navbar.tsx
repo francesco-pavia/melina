@@ -116,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 type="button"
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-stone-900/80 hover:bg-stone-850 border border-stone-800 text-stone-200 hover:text-white text-xs font-medium transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500/50"
-                aria-label="Select Language"
+                aria-label={t.selectLanguage}
               >
                 <Globe className="w-3.5 h-3.5 text-amber-400" />
                 <span className="text-sm leading-none">{currentOption.flag}</span>
@@ -128,7 +128,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               {langMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 rounded-2xl bg-stone-900 border border-stone-800 shadow-2xl overflow-hidden py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
                   <div className="px-3 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-stone-400 border-b border-stone-800/80 font-mono">
-                    Lingua / Language
+                    {t.languageMenuTitle}
                   </div>
                   {languageOptions.map((opt) => {
                     const isSelected = opt.code === language
@@ -160,7 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-xl text-stone-300 hover:text-white hover:bg-stone-800 focus:outline-none"
-              aria-label="Toggle navigation menu"
+              aria-label={t.toggleMenu}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -195,7 +195,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           {/* Mobile Language Selector Pills */}
           <div className="pt-3 border-t border-stone-850">
             <div className="text-[11px] font-mono uppercase tracking-wider text-stone-400 px-3 mb-2">
-              Seleziona Lingua:
+              {t.mobileLanguageTitle}
             </div>
             <div className="grid grid-cols-2 gap-1.5 px-1">
               {languageOptions.map((opt) => (

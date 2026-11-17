@@ -72,7 +72,7 @@ export const LocationSection: React.FC = () => {
           {/* Interactive Google Map Embed */}
           <div className="relative w-full h-[400px] sm:h-[480px] bg-stone-950">
             <iframe
-              title="Google Maps - Via Po Torino"
+              title={`${t.fullAddress} · Google Maps`}
               src="https://maps.google.com/maps?q=Via+Po,+Torino,+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"

@@ -28,13 +28,23 @@ const LanguageContext = createContext<LanguageContextType>({
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem('melina_lang') as Language
-    return saved && ['it', 'en', 'fr', 'de', 'es'].includes(saved) ? saved : 'it'
+    let saved: string | null = null
+    try {
+      saved = window.localStorage.getItem('melina_lang')
+    } catch {
+      // Storage may be disabled by the browser; the site still works in Italian.
+    }
+    const supportedLanguages: Language[] = ['it', 'en', 'fr', 'de', 'es']
+    return saved && supportedLanguages.includes(saved as Language) ? (saved as Language) : 'it'
   })
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang)
-    localStorage.setItem('melina_lang', lang)
+    try {
+      window.localStorage.setItem('melina_lang', lang)
+    } catch {
+      // Keep the selected language for this session even when storage is unavailable.
+    }
   }
 
   useEffect(() => {

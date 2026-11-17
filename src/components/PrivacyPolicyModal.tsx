@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useRef } from 'react'
 import { X, ShieldCheck, Mail, Lock } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../data/translations'
+import { useModalBehavior } from '../hooks/useModalBehavior'
 
 interface PrivacyPolicyModalProps {
   isOpen: boolean
@@ -14,28 +15,14 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
 }) => {
   const { language } = useLanguage()
   const t = translations[language].privacyModal
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isOpen) return
-      if (e.key === 'Escape') onClose()
-    }
-
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-      window.addEventListener('keydown', handleKeyDown)
-    }
-
-    return () => {
-      document.body.style.overflow = 'auto'
-      window.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [isOpen, onClose])
+  const dialogRef = useRef<HTMLDivElement>(null)
+  useModalBehavior(isOpen, onClose, dialogRef)
 
   if (!isOpen) return null
 
   return (
     <div
+      ref={dialogRef}
       className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200"
       onClick={onClose}
       role="dialog"
@@ -73,7 +60,11 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-6 sm:p-7 overflow-y-auto space-y-6 text-xs sm:text-sm text-stone-300 leading-relaxed font-sans">
+        <div
+          tabIndex={0}
+          aria-label={t.title}
+          className="p-6 sm:p-7 overflow-y-auto space-y-6 text-xs sm:text-sm text-stone-300 leading-relaxed font-sans"
+        >
           {/* Section 1 */}
           <div className="space-y-2">
             <h3 className="text-sm sm:text-base font-serif font-bold text-white flex items-center gap-2">
